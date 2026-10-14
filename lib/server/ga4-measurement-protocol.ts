@@ -1,4 +1,5 @@
 import "server-only";
+import { env } from "@/lib/config";
 import crypto from "node:crypto";
 import { money } from "@/lib/analytics";
 
@@ -8,9 +9,9 @@ import { money } from "@/lib/analytics";
  * nothing here duplicates them. The API secret never leaves the server.
  */
 
-const MEASUREMENT_ID = process.env.GA4_MEASUREMENT_ID || "";
-const API_SECRET = process.env.GA4_API_SECRET || "";
-const DEBUG = process.env.GA4_MP_DEBUG === "1";
+const MEASUREMENT_ID = env.GA4_MEASUREMENT_ID || "";
+const API_SECRET = env.GA4_API_SECRET || "";
+const DEBUG = env.GA4_MP_DEBUG === "1";
 
 export function isGa4MeasurementProtocolConfigured() {
   return Boolean(MEASUREMENT_ID && API_SECRET);

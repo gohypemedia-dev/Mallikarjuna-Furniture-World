@@ -1,9 +1,9 @@
 import { defineConfig } from "prisma/config";
-import "dotenv/config";
 
+// No .env: point this at your own database when you connect a backend.
 export default defineConfig({
   schema: "./prisma/schema.prisma",
   datasource: {
-    url: process.env.DATABASE_URL!,
+    url: "postgresql://user:password@localhost:5432/xelectron",
   },
 });

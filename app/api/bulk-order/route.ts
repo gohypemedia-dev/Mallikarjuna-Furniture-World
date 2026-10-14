@@ -1,3 +1,4 @@
+import { env } from "@/lib/config";
 import { db } from "@/lib/db";
 import { z } from "zod";
 import { NextRequest, NextResponse } from "next/server";
@@ -37,10 +38,10 @@ export async function POST(request: NextRequest) {
       message,
     } = parsed.data;
 
-    const salesEmail = process.env.SALES_EMAIL?.trim() || "sales@xelectron.com";
+    const salesEmail = env.SALES_EMAIL?.trim() || "sales@xelectron.com";
     const backupAdminEmail =
-      process.env.SMTP_USER?.trim() && process.env.SMTP_USER.trim() !== salesEmail
-        ? process.env.SMTP_USER.trim()
+      env.SMTP_USER?.trim() && env.SMTP_USER.trim() !== salesEmail
+        ? env.SMTP_USER.trim()
         : undefined;
 
     // 1. Save to SupportRequest table with kind "BULK_ORDER"

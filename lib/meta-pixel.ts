@@ -1,3 +1,4 @@
+import { env } from "@/lib/config";
 /**
  * Meta Pixel browser layer.
  *
@@ -44,7 +45,7 @@ declare global {
   }
 }
 
-const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "";
+const PIXEL_ID = env.NEXT_PUBLIC_META_PIXEL_ID || "";
 const RELAY_ENDPOINT = "/api/meta/events";
 /** Query keys that are safe to include in event_source_url (never payment state, order IDs, or email). */
 export const TRACKED_QUERY_KEYS = ["filter", "category", "product", "id"] as const;

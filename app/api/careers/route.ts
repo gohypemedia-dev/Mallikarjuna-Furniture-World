@@ -1,3 +1,4 @@
+import { env } from "@/lib/config";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { db } from "@/lib/db";
@@ -23,7 +24,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: false, error: "Check your name, email, phone, role, and resume link. Resume links must start with https:// or http://." }, { status: 400 });
   }
 
-  const inbox = process.env.CAREERS_EMAIL?.trim() || process.env.SMTP_USER?.trim();
+  const inbox = env.CAREERS_EMAIL?.trim() || env.SMTP_USER?.trim();
   if (!inbox || !z.email().safeParse(inbox).success) {
     return NextResponse.json({ success: false, error: "Applications are temporarily unavailable. Please try again later." }, { status: 503 });
   }

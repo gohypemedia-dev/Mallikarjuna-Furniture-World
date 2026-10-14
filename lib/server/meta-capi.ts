@@ -1,4 +1,5 @@
 import "server-only";
+import { env } from "@/lib/config";
 import crypto from "node:crypto";
 import type { NextRequest } from "next/server";
 import type { MetaCustomData, MetaEventName } from "@/lib/meta-pixel";
@@ -32,10 +33,10 @@ export type MetaRequestContext = {
   origin?: string;
 };
 
-const PIXEL_ID = process.env.META_PIXEL_ID || process.env.NEXT_PUBLIC_META_PIXEL_ID || "";
-const ACCESS_TOKEN = process.env.META_CAPI_ACCESS_TOKEN || "";
-const API_VERSION = process.env.META_GRAPH_API_VERSION || "v26.0";
-const TEST_EVENT_CODE = process.env.META_TEST_EVENT_CODE || "";
+const PIXEL_ID = env.META_PIXEL_ID || env.NEXT_PUBLIC_META_PIXEL_ID || "";
+const ACCESS_TOKEN = env.META_CAPI_ACCESS_TOKEN || "";
+const API_VERSION = env.META_GRAPH_API_VERSION || "v26.0";
+const TEST_EVENT_CODE = env.META_TEST_EVENT_CODE || "";
 const COOKIE_PATTERN = /^fb\.\d\.\d+\.[A-Za-z0-9_.-]+$/;
 
 export function isMetaCapiConfigured() {

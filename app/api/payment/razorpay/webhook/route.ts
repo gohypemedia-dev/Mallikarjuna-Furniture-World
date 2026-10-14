@@ -1,3 +1,4 @@
+import { env } from "@/lib/config";
 import { after, NextRequest, NextResponse } from "next/server";
 import { verifyRazorpayWebhook } from "@/lib/server/razorpay";
 import { db } from "@/lib/db";
@@ -17,7 +18,7 @@ export async function POST(request: NextRequest) {
   try {
     const rawBody = await request.text();
     const signature = request.headers.get("x-razorpay-signature");
-    const webhookSecret = process.env.RAZORPAY_WEBHOOK_SECRET;
+    const webhookSecret = env.RAZORPAY_WEBHOOK_SECRET;
 
     if (!webhookSecret) {
       return NextResponse.json({ success: false, error: "Webhook verification is not configured" }, { status: 503 });

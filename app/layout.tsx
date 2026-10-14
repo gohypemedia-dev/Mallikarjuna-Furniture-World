@@ -1,16 +1,18 @@
+import { env } from "@/lib/config";
 import { Suspense } from "react";
 import PageTracking from "@/components/analytics/page-tracking";
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import "./lujo.css";
 import { cn } from "@/lib/utils";
 import CartProvider from "@/components/providers/cart-provider";
 import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider";
-import FestiveOfferPopup from "@/components/common/festive-offer-popup";
 import ChunkErrorHandler from "@/components/common/chunk-error-handler";
+import ForceReload from "@/components/lujo/force-reload";
 
 export const metadata: Metadata = {
-  title: "XElectron",
+  title: "Casablanca",
   description: "Discover premium XElectron products, smart tech, and official support for home entertainment, lifestyle, and everyday innovation.",
   icons: {
     icon: [
@@ -49,7 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       </head>
-      <body className="min-h-dvh flex flex-col">
+      <body className="min-h-dvh flex flex-col" suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -61,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {/* Meta Pixel: the JS loader lives in lib/meta-pixel.ts and fires on the first tracked page view. */}
-        {process.env.NEXT_PUBLIC_META_PIXEL_ID ? (
+        {env.NEXT_PUBLIC_META_PIXEL_ID ? (
           <noscript>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -69,15 +71,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               width="1"
               style={{ display: "none" }}
               alt=""
-              src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_META_PIXEL_ID}&ev=PageView&noscript=1`}
+              src={`https://www.facebook.com/tr?id=${env.NEXT_PUBLIC_META_PIXEL_ID}&ev=PageView&noscript=1`}
             />
           </noscript>
         ) : null}
         <ChunkErrorHandler />
+        <ForceReload />
         <Suspense fallback={null}><PageTracking /></Suspense>
         <CartProvider>
           <SmoothScrollProvider>{children}</SmoothScrollProvider>
-          <FestiveOfferPopup />
         </CartProvider>
       </body>
     </html>

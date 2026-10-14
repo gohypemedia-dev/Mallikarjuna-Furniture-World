@@ -1,3 +1,4 @@
+import { env } from "@/lib/config";
 import crypto from "crypto";
 
 export interface VelocityCustomerAddress {
@@ -94,17 +95,17 @@ function extractVelocityOrderResponse(value: unknown): VelocityOrderResponse | n
 }
 
 export function getVelocityConfig() {
-  const isProd = process.env.VELOCITY_ENVIRONMENT === "production";
-  const apiKey = process.env.VELOCITY_API_KEY || "";
-  const apiSecret = process.env.VELOCITY_API_SECRET || "";
-  const publicApiKey = process.env.VELOCITY_PUBLIC_API_KEY || apiKey;
-  const configuredMerchantId = process.env.VELOCITY_MERCHANT_ID || "";
+  const isProd = env.VELOCITY_ENVIRONMENT === "production";
+  const apiKey = env.VELOCITY_API_KEY || "";
+  const apiSecret = env.VELOCITY_API_SECRET || "";
+  const publicApiKey = env.VELOCITY_PUBLIC_API_KEY || apiKey;
+  const configuredMerchantId = env.VELOCITY_MERCHANT_ID || "";
   // A webhook endpoint was mistakenly configured as the merchant ID. Merchant
   // IDs are issued by Velocity and must not be URLs.
   const merchantId = /^https?:\/\//i.test(configuredMerchantId)
     ? ""
     : configuredMerchantId;
-  const webhookSecret = process.env.VELOCITY_WEBHOOK_SECRET || "";
+  const webhookSecret = env.VELOCITY_WEBHOOK_SECRET || "";
 
   const apiBaseUrl = isProd
     ? "https://loki.velocity.in"

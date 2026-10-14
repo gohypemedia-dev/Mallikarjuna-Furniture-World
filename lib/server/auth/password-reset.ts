@@ -1,4 +1,5 @@
 import "server-only";
+import { env } from "@/lib/config";
 import { randomBytes, createHash } from "node:crypto";
 import bcrypt from "bcryptjs";
 import type { Prisma } from "@prisma/client";
@@ -16,7 +17,7 @@ export const INVALID_RESET = "This reset link is invalid or has expired. Please 
 const hash = (token: string) => createHash("sha256").update(token).digest("hex");
 
 export function getResetOrigin(developmentOrigin?: string) {
-  const configured = process.env.NEXT_PUBLIC_APP_URL || process.env.NEXTAUTH_URL;
+  const configured = env.NEXT_PUBLIC_APP_URL || env.NEXTAUTH_URL;
   let fallback = "https://xelectron.com";
   if (process.env.NODE_ENV !== "production") {
     const local = new URL(developmentOrigin || "http://localhost:3000");

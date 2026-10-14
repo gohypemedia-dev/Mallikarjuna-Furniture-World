@@ -1,3 +1,4 @@
+import { env } from "@/lib/config";
 import { NextRequest, NextResponse } from "next/server";
 import {
   assertVelocityConfig,
@@ -184,9 +185,9 @@ export async function POST(request: NextRequest) {
     // 3. Build Velocity Payload
     const cleanPhone = (customerPhone || "").replace(/[^0-9]/g, "").slice(-10);
     const origin =
-      process.env.VELOCITY_REDIRECT_URI ||
+      env.VELOCITY_REDIRECT_URI ||
       request.headers.get("origin") ||
-      process.env.NEXTAUTH_URL ||
+      env.NEXTAUTH_URL ||
       "http://localhost:3000";
 
     const velocityPayload = {
@@ -235,7 +236,7 @@ export async function POST(request: NextRequest) {
 
     // 6. Build Hosted Checkout Redirection URL
     const stateToken = createVelocityStateToken(createdOrder.id);
-    const redirectUri = process.env.VELOCITY_REDIRECT_URI || `${origin}/checkout/velocity-callback`;
+    const redirectUri = env.VELOCITY_REDIRECT_URI || `${origin}/checkout/velocity-callback`;
 
     const redirectUrl = buildVelocityRedirectUrl({
       velocityOrderId: velocityRes.velocity_order_id,

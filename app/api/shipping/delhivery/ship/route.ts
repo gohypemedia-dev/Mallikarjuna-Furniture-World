@@ -1,3 +1,4 @@
+import { env } from "@/lib/config";
 import { NextRequest, NextResponse } from "next/server";
 import { Prisma } from "@prisma/client";
 import { randomUUID } from "node:crypto";
@@ -23,7 +24,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "This order cannot be booked in its current status." }, { status: 409 });
     }
     const previous = order.deliveryBooking as DeliveryBooking | null;
-    const environment = process.env.DELHIVERY_ENVIRONMENT?.toLowerCase() === "staging" ? "staging" : "production";
+    const environment = env.DELHIVERY_ENVIRONMENT?.toLowerCase() === "staging" ? "staging" : "production";
     if (previous && previous.environment !== environment) throw new Error("This booking belongs to a different Delhivery environment. Restore its original environment.");
     const respond = (data: unknown, message: string) => NextResponse.json({ success: true, data, message });
     const claim = async (booking: DeliveryBooking) => {

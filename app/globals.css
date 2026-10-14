@@ -127,7 +127,7 @@
   html {
     @apply font-sans;
     scroll-behavior: smooth;
-    scrollbar-color: #2563eb #f1f5f9;
+    scrollbar-color: #5c5951 #fbf7ef;
     scrollbar-width: auto;
   }
 
@@ -138,16 +138,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: #fbf7ef;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #2563eb;
-    border-radius: 5px;
+    background: #5c5951;
+    border-radius: 0;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #1d4ed8;
+    background: #000;
   }
 }
 
@@ -250,3 +250,9 @@ html.lenis body {
   }
 }
 
+
+/* never allow sideways page scroll (full-bleed sections, off-canvas drawers) */
+html,
+body {
+  overflow-x: clip;
+}

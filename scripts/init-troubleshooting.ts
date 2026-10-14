@@ -1,4 +1,3 @@
-import "dotenv/config";
 import { createPrismaClient } from "../lib/db";
 import { defaultTroubleshootingContent } from "../lib/shared/troubleshooting";
 

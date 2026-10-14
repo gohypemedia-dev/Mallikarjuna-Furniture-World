@@ -1,3 +1,4 @@
+import { env } from "@/lib/config";
 import { getPurchaseAnalytics } from "@/lib/server/purchase-analytics";
 import { metaRequestContext } from "@/lib/server/meta-capi";
 import { sendMetaPurchase } from "@/lib/server/meta-purchase";
@@ -26,7 +27,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const keySecret = process.env.RAZORPAY_KEY_SECRET;
+    const keySecret = env.RAZORPAY_KEY_SECRET;
     if (!keySecret) {
       return NextResponse.json(
         { success: false, error: "Razorpay secret key is not configured" },

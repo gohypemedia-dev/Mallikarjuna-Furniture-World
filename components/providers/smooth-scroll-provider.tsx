@@ -12,7 +12,8 @@ interface SmoothScrollProviderProps {
 
 export default function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
   const pathname = usePathname();
-  const isDashboard = pathname?.startsWith("/dashboard");
+  // The home page keeps native scrolling (its pinned/sticky sections are tuned for it).
+  const isDashboard = pathname?.startsWith("/dashboard") || pathname === "/";
 
   useEffect(() => {
     if (isDashboard) return;

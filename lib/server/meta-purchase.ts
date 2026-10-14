@@ -1,4 +1,5 @@
 import "server-only";
+import { env } from "@/lib/config";
 import { db } from "@/lib/db";
 import { money } from "@/lib/analytics";
 import { isOrderPaidOrCod } from "@/lib/server/orders-filter";
@@ -6,7 +7,7 @@ import { isMetaCapiConfigured, sendMetaEvent, type MetaRequestContext } from "@/
 
 /** Written to internalNotes after a successful send so webhook retries and confirmation polling stay quiet. */
 export const META_PURCHASE_MARKER = "Meta Purchase event sent";
-const DEFAULT_ORIGIN = process.env.SITE_URL || "https://www.xelectron.com";
+const DEFAULT_ORIGIN = env.SITE_URL || "https://www.xelectron.com";
 
 type PurchaseItem = { productId: string; quantity: number; unitPrice: number; product: { name: string; category: { title: string } | null } };
 

@@ -1,9 +1,10 @@
+import { env } from "@/lib/config";
 import Razorpay from "razorpay";
 import crypto from "crypto";
 
 export function getRazorpayInstance() {
-  const keyId = process.env.RAZORPAY_KEY_ID?.trim() || "";
-  const keySecret = process.env.RAZORPAY_KEY_SECRET?.trim() || "";
+  const keyId = env.RAZORPAY_KEY_ID?.trim() || "";
+  const keySecret = env.RAZORPAY_KEY_SECRET?.trim() || "";
 
   if (!keyId || !keySecret) {
     throw new Error("Razorpay credentials (RAZORPAY_KEY_ID / RAZORPAY_KEY_SECRET) are missing or empty in .env");

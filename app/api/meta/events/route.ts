@@ -1,3 +1,4 @@
+import { env } from "@/lib/config";
 import { after, NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { z } from "zod";
@@ -16,7 +17,7 @@ import { isMetaCapiConfigured, metaRequestContext, sendMetaEvent } from "@/lib/s
 
 const MAX_BODY_BYTES = 8 * 1024;
 const RATE_LIMIT = { windowMs: 60_000, max: 120 };
-const SITE_HOST = (() => { try { return new URL(process.env.SITE_URL || "https://www.xelectron.com").host; } catch { return ""; } })();
+const SITE_HOST = (() => { try { return new URL(env.SITE_URL || "https://www.xelectron.com").host; } catch { return ""; } })();
 
 const contentSchema = z.object({
   id: z.string().min(1).max(100),

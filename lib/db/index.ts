@@ -1,105 +1,64 @@
-import { PrismaPg } from "@prisma/adapter-pg";
-import { PrismaClient } from "@prisma/client";
+/**
+ * Database stand-in. No database, no DATABASE_URL: every model call resolves with an empty result so pages,
+ * API routes, controllers and DAL files keep their structure but fetch no data.
+ * Replace this file with a real client (e.g. Prisma) when a backend is connected.
+ */
+const asyncValue = <T,>(value: T) => Promise.resolve(value);
 
-const globalForPrisma = globalThis as unknown as {
-  prisma: PrismaClient | undefined;
+const methodDefaults: Record<string, (args: any) => unknown> = {
+  findMany: () => [],
+  findFirst: () => null,
+  findUnique: () => null,
+  findFirstOrThrow: () => null,
+  findUniqueOrThrow: () => null,
+  count: () => 0,
+  aggregate: () => ({ _count: 0, _sum: {}, _avg: {}, _min: {}, _max: {} }),
+  groupBy: () => [],
+  create: (args) => ({ id: "stub", ...(args?.data ?? {}) }),
+  update: (args) => ({ id: "stub", ...(args?.where ?? {}), ...(args?.data ?? {}) }),
+  upsert: (args) => ({ id: "stub", ...(args?.create ?? {}) }),
+  delete: (args) => ({ id: "stub", ...(args?.where ?? {}) }),
+  createMany: () => ({ count: 0 }),
+  updateMany: () => ({ count: 0 }),
+  deleteMany: () => ({ count: 0 }),
 };
 
-type RuntimeModel = {
-  fields?: { name?: string }[];
-};
-
-function hasGeneratedProductField(client: PrismaClient, fieldName: string) {
-  const runtimeDataModel = (client as unknown as {
-    _runtimeDataModel?: { models?: Record<string, RuntimeModel> };
-  })._runtimeDataModel;
-
-  return runtimeDataModel?.models?.Product?.fields?.some((field) => field.name === fieldName) ?? false;
-}
-
-function hasGeneratedCategoryField(client: PrismaClient, fieldName: string) {
-  const runtimeDataModel = (client as unknown as {
-    _runtimeDataModel?: { models?: Record<string, RuntimeModel> };
-  })._runtimeDataModel;
-
-  return runtimeDataModel?.models?.Category?.fields?.some((field) => field.name === fieldName) ?? false;
-}
-
-function getDatabaseUrl() {
-  let databaseUrl = process.env.DATABASE_URL;
-  if (!databaseUrl) {
-    throw new Error("DATABASE_URL is not configured");
-  }
-  // Replace legacy/aliased sslmode with explicit sslmode=verify-full to suppress pg-connection-string warnings
-  if (databaseUrl.includes("sslmode=require")) {
-    databaseUrl = databaseUrl.replace("sslmode=require", "sslmode=verify-full");
-  } else if (databaseUrl.includes("sslmode=prefer")) {
-    databaseUrl = databaseUrl.replace("sslmode=prefer", "sslmode=verify-full");
-  } else if (databaseUrl.includes("sslmode=verify-ca")) {
-    databaseUrl = databaseUrl.replace("sslmode=verify-ca", "sslmode=verify-full");
-  }
-  return databaseUrl;
-}
-
-export function createPrismaClient(): PrismaClient {
-  const adapter = new PrismaPg({
-    connectionString: getDatabaseUrl(),
-  });
-
-  return new PrismaClient({
-    adapter,
-    log: process.env.NODE_ENV === "development" ? ["error", "warn"] : ["error"],
-  });
-}
-
-function getDbInstance(): PrismaClient {
-  if (process.env.NODE_ENV !== "production" && globalForPrisma.prisma) {
-    if (
-      typeof globalForPrisma.prisma.passwordResetToken === "undefined" ||
-      typeof (globalForPrisma.prisma as any).festivePopupSettings === "undefined" ||
-      typeof (globalForPrisma.prisma as any).supportRequest === "undefined" ||
-      !(globalForPrisma.prisma as unknown as { _runtimeDataModel?: { models?: Record<string, RuntimeModel> } })._runtimeDataModel?.models?.Order?.fields?.some((field) => field.name === "deliveryBooking") ||
-      typeof (globalForPrisma.prisma as any).troubleshootingPage === "undefined" ||
-      typeof (globalForPrisma.prisma as any).heroBanner === "undefined" ||
-      typeof (globalForPrisma.prisma as any).announcement === "undefined" ||
-      typeof (globalForPrisma.prisma as any).announcementSettings === "undefined" ||
-      typeof globalForPrisma.prisma.productSpecSettings === "undefined" ||
-      typeof (globalForPrisma.prisma as any).creatorVideo === "undefined" ||
-      typeof (globalForPrisma.prisma as any).productFaq === "undefined" ||
-      typeof (globalForPrisma.prisma as any).productBanner === "undefined" ||
-      typeof (globalForPrisma.prisma as any).productReview === "undefined" ||
-      typeof (globalForPrisma.prisma as any).productVariant === "undefined" ||
-      typeof (globalForPrisma.prisma as any).blogPost === "undefined" ||
-      typeof (globalForPrisma.prisma as any).draftOrder === "undefined" ||
-      typeof (globalForPrisma.prisma as any).brandShowcaseItem === "undefined" ||
-      typeof (globalForPrisma.prisma as any).brandMarqueeItem === "undefined" ||
-      typeof (globalForPrisma.prisma as any).verifiedBuyerReview === "undefined" ||
-      !hasGeneratedProductField(globalForPrisma.prisma, "showInNavbar") ||
-      !hasGeneratedProductField(globalForPrisma.prisma, "showInWarrantyMenu") ||
-      !hasGeneratedCategoryField(globalForPrisma.prisma, "sortOrder")
-    ) {
-      globalForPrisma.prisma = undefined;
+function createModel() {
+  return new Proxy(
+    {},
+    {
+      get(_t, method: string) {
+        const fallback = methodDefaults[method] ?? (() => null);
+        return (args?: unknown) => asyncValue(fallback(args));
+      },
     }
-  }
-
-  if (!globalForPrisma.prisma) {
-    globalForPrisma.prisma = createPrismaClient();
-  }
-
-  return globalForPrisma.prisma;
+  );
 }
 
-export const db: any = new Proxy({} as any, {
-  get(_target, prop) {
-    const instance = getDbInstance();
-    const value = (instance as any)[prop];
-    if (typeof value === "function") {
-      return value.bind(instance);
+function createStubClient(): any {
+  const models = new Map<string, unknown>();
+  const client: any = new Proxy(
+    {},
+    {
+      get(_t, prop: string | symbol) {
+        if (typeof prop !== "string" || prop === "then") return undefined;
+        if (prop === "$transaction") {
+          return (arg: unknown) =>
+            typeof arg === "function" ? (arg as (tx: unknown) => unknown)(client) : Promise.all(arg as unknown[]);
+        }
+        if (prop === "$queryRaw" || prop === "$queryRawUnsafe") return () => asyncValue([]);
+        if (prop === "$executeRaw" || prop === "$executeRawUnsafe") return () => asyncValue(0);
+        if (prop.startsWith("$")) return () => asyncValue(undefined);
+        if (!models.has(prop)) models.set(prop, createModel());
+        return models.get(prop);
+      },
     }
-    return value;
-  },
-  has(_target, prop) {
-    const instance = getDbInstance();
-    return prop in instance;
-  },
-});
+  );
+  return client;
+}
+
+export function createPrismaClient(): any {
+  return createStubClient();
+}
+
+export const db: any = createStubClient();

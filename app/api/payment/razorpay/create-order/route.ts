@@ -1,3 +1,4 @@
+import { env } from "@/lib/config";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { getRazorpayInstance } from "@/lib/server/razorpay";
@@ -39,8 +40,8 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const keyId = process.env.RAZORPAY_KEY_ID?.trim() || "";
-    const keySecret = process.env.RAZORPAY_KEY_SECRET?.trim() || "";
+    const keyId = env.RAZORPAY_KEY_ID?.trim() || "";
+    const keySecret = env.RAZORPAY_KEY_SECRET?.trim() || "";
 
     if (!keyId || !keySecret) {
       return NextResponse.json(
@@ -70,7 +71,7 @@ export async function POST(request: NextRequest) {
       orderId: order.id,
       amount: order.amount,
       currency: order.currency,
-      keyId: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID?.trim() || keyId,
+      keyId: env.NEXT_PUBLIC_RAZORPAY_KEY_ID?.trim() || keyId,
     });
   } catch (error: any) {
     console.error("Razorpay order creation error details:", error);

@@ -1,0 +1,2834 @@
+/* Casablanca storefront styles, scoped under .lujo. */
+/**
+ * Swiper 11.2.10
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * https://swiperjs.com
+ *
+ * Copyright 2014-2025 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: June 28, 2025
+ */
+
+@font-face{font-family:swiper-icons;src:url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA');font-weight:400;font-style:normal}:root{--swiper-theme-color:#007aff}.lujo :host{position:relative;display:block;margin-left:auto;margin-right:auto;z-index:1}.lujo .swiper{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1;display:block}.lujo .swiper-vertical>.swiper-wrapper{flex-direction:column}.lujo .swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;transition-timing-function:var(--swiper-wrapper-transition-timing-function,initial);box-sizing:content-box}.lujo .swiper-android .swiper-slide,.lujo .swiper-ios .swiper-slide,.lujo .swiper-wrapper{transform:translate3d(0px,0,0)}.lujo .swiper-horizontal{touch-action:pan-y}.lujo .swiper-vertical{touch-action:pan-x}.lujo .swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform;display:block}.lujo .swiper-slide-invisible-blank{visibility:hidden}.lujo .swiper-autoheight,.lujo .swiper-autoheight .swiper-slide{height:auto}.lujo .swiper-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.lujo .swiper-backface-hidden .swiper-slide{transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}.lujo .swiper-3d.swiper-css-mode .swiper-wrapper{perspective:1200px}.lujo .swiper-3d .swiper-wrapper{transform-style:preserve-3d}.lujo .swiper-3d{perspective:1200px}.lujo .swiper-3d .swiper-cube-shadow,.lujo .swiper-3d .swiper-slide{transform-style:preserve-3d}.lujo .swiper-css-mode>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none}.lujo .swiper-css-mode>.swiper-wrapper::-webkit-scrollbar{display:none}.lujo .swiper-css-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:start start}.lujo .swiper-css-mode.swiper-horizontal>.swiper-wrapper{scroll-snap-type:x mandatory}.lujo .swiper-css-mode.swiper-vertical>.swiper-wrapper{scroll-snap-type:y mandatory}.lujo .swiper-css-mode.swiper-free-mode>.swiper-wrapper{scroll-snap-type:none}.lujo .swiper-css-mode.swiper-free-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:none}.lujo .swiper-css-mode.swiper-centered>.swiper-wrapper::before{content:'';flex-shrink:0;order:9999}.lujo .swiper-css-mode.swiper-centered>.swiper-wrapper>.swiper-slide{scroll-snap-align:center center;scroll-snap-stop:always}.lujo .swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child{margin-inline-start:var(--swiper-centered-offset-before)}.lujo .swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper::before{height:100%;min-height:1px;width:var(--swiper-centered-offset-after)}.lujo .swiper-css-mode.swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child{margin-block-start:var(--swiper-centered-offset-before)}.lujo .swiper-css-mode.swiper-centered.swiper-vertical>.swiper-wrapper::before{width:100%;min-width:1px;height:var(--swiper-centered-offset-after)}.lujo .swiper-3d .swiper-slide-shadow,.lujo .swiper-3d .swiper-slide-shadow-bottom,.lujo .swiper-3d .swiper-slide-shadow-left,.lujo .swiper-3d .swiper-slide-shadow-right,.lujo .swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.lujo .swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.lujo .swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.lujo .swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.lujo .swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.lujo .swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.lujo .swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;transform-origin:50%;box-sizing:border-box;border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));border-radius:50%;border-top-color:transparent}.lujo .swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader,.lujo .swiper:not(.swiper-watch-progress) .swiper-lazy-preloader{animation:swiper-preloader-spin 1s infinite linear}.lujo .swiper-lazy-preloader-white{--swiper-preloader-color:#fff}.lujo .swiper-lazy-preloader-black{--swiper-preloader-color:#000}@keyframes swiper-preloader-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.lujo .swiper-virtual .swiper-slide{-webkit-backface-visibility:hidden;transform:translateZ(0)}.lujo .swiper-virtual.swiper-css-mode .swiper-wrapper::after{content:'';position:absolute;left:0;top:0;pointer-events:none}.lujo .swiper-virtual.swiper-css-mode.swiper-horizontal .swiper-wrapper::after{height:1px;width:var(--swiper-virtual-size)}.lujo .swiper-virtual.swiper-css-mode.swiper-vertical .swiper-wrapper::after{width:1px;height:var(--swiper-virtual-size)}:root{--swiper-navigation-size:44px}.lujo .swiper-button-next,.lujo .swiper-button-prev{position:absolute;top:var(--swiper-navigation-top-offset,50%);width:calc(var(--swiper-navigation-size)/ 44 * 27);height:var(--swiper-navigation-size);margin-top:calc(0px - (var(--swiper-navigation-size)/ 2));z-index:10;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--swiper-navigation-color,var(--swiper-theme-color))}.lujo .swiper-button-next.swiper-button-disabled,.lujo .swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.lujo .swiper-button-next.swiper-button-hidden,.lujo .swiper-button-prev.swiper-button-hidden{opacity:0;cursor:auto;pointer-events:none}.lujo .swiper-navigation-disabled .swiper-button-next,.lujo .swiper-navigation-disabled .swiper-button-prev{display:none!important}.lujo .swiper-button-next svg,.lujo .swiper-button-prev svg{width:100%;height:100%;object-fit:contain;transform-origin:center}.lujo .swiper-rtl .swiper-button-next svg,.lujo .swiper-rtl .swiper-button-prev svg{transform:rotate(180deg)}.lujo .swiper-button-prev,.lujo .swiper-rtl .swiper-button-next{left:var(--swiper-navigation-sides-offset,10px);right:auto}.lujo .swiper-button-next,.lujo .swiper-rtl .swiper-button-prev{right:var(--swiper-navigation-sides-offset,10px);left:auto}.lujo .swiper-button-lock{display:none}.lujo .swiper-button-next:after,.lujo .swiper-button-prev:after{font-family:swiper-icons;font-size:var(--swiper-navigation-size);text-transform:none!important;letter-spacing:0;font-variant:initial;line-height:1}.lujo .swiper-button-prev:after,.lujo .swiper-rtl .swiper-button-next:after{content:'prev'}.lujo .swiper-button-next,.lujo .swiper-rtl .swiper-button-prev{right:var(--swiper-navigation-sides-offset,10px);left:auto}.lujo .swiper-button-next:after,.lujo .swiper-rtl .swiper-button-prev:after{content:'next'}.lujo .swiper-pagination{position:absolute;text-align:center;transition:.3s opacity;transform:translate3d(0,0,0);z-index:10}.lujo .swiper-pagination.swiper-pagination-hidden{opacity:0}.lujo .swiper-pagination-disabled>.swiper-pagination,.lujo .swiper-pagination.swiper-pagination-disabled{display:none!important}.lujo .swiper-horizontal>.swiper-pagination-bullets,.lujo .swiper-pagination-bullets.swiper-pagination-horizontal,.lujo .swiper-pagination-custom,.lujo .swiper-pagination-fraction{bottom:var(--swiper-pagination-bottom,8px);top:var(--swiper-pagination-top,auto);left:0;width:100%}.lujo .swiper-pagination-bullets-dynamic{overflow:hidden;font-size:0}.lujo .swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transform:scale(.33);position:relative}.lujo .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active{transform:scale(1)}.lujo .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{transform:scale(1)}.lujo .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{transform:scale(.66)}.lujo .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{transform:scale(.33)}.lujo .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{transform:scale(.66)}.lujo .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{transform:scale(.33)}.lujo .swiper-pagination-bullet{width:var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,8px));height:var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px));display:inline-block;border-radius:var(--swiper-pagination-bullet-border-radius,50%);background:var(--swiper-pagination-bullet-inactive-color,#000);opacity:var(--swiper-pagination-bullet-inactive-opacity, .2)}.lujo button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-webkit-appearance:none;appearance:none}.lujo .swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.lujo .swiper-pagination-bullet:only-child{display:none!important}.lujo .swiper-pagination-bullet-active{opacity:var(--swiper-pagination-bullet-opacity, 1);background:var(--swiper-pagination-color,var(--swiper-theme-color))}.lujo .swiper-pagination-vertical.swiper-pagination-bullets,.lujo .swiper-vertical>.swiper-pagination-bullets{right:var(--swiper-pagination-right,8px);left:var(--swiper-pagination-left,auto);top:50%;transform:translate3d(0px,-50%,0)}.lujo .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,.lujo .swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:var(--swiper-pagination-bullet-vertical-gap,6px) 0;display:block}.lujo .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.lujo .swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{top:50%;transform:translateY(-50%);width:8px}.lujo .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.lujo .swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{display:inline-block;transition:.2s transform,.2s top}.lujo .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.lujo .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,4px)}.lujo .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.lujo .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{left:50%;transform:translateX(-50%);white-space:nowrap}.lujo .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.lujo .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s left}.lujo .swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s right}.lujo .swiper-pagination-fraction{color:var(--swiper-pagination-fraction-color,inherit)}.lujo .swiper-pagination-progressbar{background:var(--swiper-pagination-progressbar-bg-color,rgba(0,0,0,.25));position:absolute}.lujo .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:var(--swiper-pagination-color,var(--swiper-theme-color));position:absolute;left:0;top:0;width:100%;height:100%;transform:scale(0);transform-origin:left top}.lujo .swiper-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{transform-origin:right top}.lujo .swiper-horizontal>.swiper-pagination-progressbar,.lujo .swiper-pagination-progressbar.swiper-pagination-horizontal,.lujo .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,.lujo .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{width:100%;height:var(--swiper-pagination-progressbar-size,4px);left:0;top:0}.lujo .swiper-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.lujo .swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite,.lujo .swiper-pagination-progressbar.swiper-pagination-vertical,.lujo .swiper-vertical>.swiper-pagination-progressbar{width:var(--swiper-pagination-progressbar-size,4px);height:100%;left:0;top:0}.lujo .swiper-pagination-lock{display:none}.lujo .swiper-scrollbar{border-radius:var(--swiper-scrollbar-border-radius,10px);position:relative;touch-action:none;background:var(--swiper-scrollbar-bg-color,rgba(0,0,0,.1))}.lujo .swiper-scrollbar-disabled>.swiper-scrollbar,.lujo .swiper-scrollbar.swiper-scrollbar-disabled{display:none!important}.lujo .swiper-horizontal>.swiper-scrollbar,.lujo .swiper-scrollbar.swiper-scrollbar-horizontal{position:absolute;left:var(--swiper-scrollbar-sides-offset,1%);bottom:var(--swiper-scrollbar-bottom,4px);top:var(--swiper-scrollbar-top,auto);z-index:50;height:var(--swiper-scrollbar-size,4px);width:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))}.lujo .swiper-scrollbar.swiper-scrollbar-vertical,.lujo .swiper-vertical>.swiper-scrollbar{position:absolute;left:var(--swiper-scrollbar-left,auto);right:var(--swiper-scrollbar-right,4px);top:var(--swiper-scrollbar-sides-offset,1%);z-index:50;width:var(--swiper-scrollbar-size,4px);height:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))}.lujo .swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:var(--swiper-scrollbar-drag-bg-color,rgba(0,0,0,.5));border-radius:var(--swiper-scrollbar-border-radius,10px);left:0;top:0}.lujo .swiper-scrollbar-cursor-drag{cursor:move}.lujo .swiper-scrollbar-lock{display:none}.lujo .swiper-zoom-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center;text-align:center}.lujo .swiper-zoom-container>canvas,.lujo .swiper-zoom-container>img,.lujo .swiper-zoom-container>svg{max-width:100%;max-height:100%;object-fit:contain}.lujo .swiper-slide-zoomed{cursor:move;touch-action:none}.lujo .swiper .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.lujo .swiper-free-mode>.swiper-wrapper{transition-timing-function:ease-out;margin:0 auto}.lujo .swiper-grid>.swiper-wrapper{flex-wrap:wrap}.lujo .swiper-grid-column>.swiper-wrapper{flex-wrap:wrap;flex-direction:column}.lujo .swiper-fade.swiper-free-mode .swiper-slide{transition-timing-function:ease-out}.lujo .swiper-fade .swiper-slide{pointer-events:none;transition-property:opacity}.lujo .swiper-fade .swiper-slide .swiper-slide{pointer-events:none}.lujo .swiper-fade .swiper-slide-active{pointer-events:auto}.lujo .swiper-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.lujo .swiper.swiper-cube{overflow:visible}.lujo .swiper-cube .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;transform-origin:0 0;width:100%;height:100%}.lujo .swiper-cube .swiper-slide .swiper-slide{pointer-events:none}.lujo .swiper-cube.swiper-rtl .swiper-slide{transform-origin:100% 0}.lujo .swiper-cube .swiper-slide-active,.lujo .swiper-cube .swiper-slide-active .swiper-slide-active{pointer-events:auto}.lujo .swiper-cube .swiper-slide-active,.lujo .swiper-cube .swiper-slide-next,.lujo .swiper-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.lujo .swiper-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0px;width:100%;height:100%;opacity:.6;z-index:0}.lujo .swiper-cube .swiper-cube-shadow:before{content:'';background:#000;position:absolute;left:0;top:0;bottom:0;right:0;filter:blur(50px)}.lujo .swiper-cube .swiper-slide-next+.swiper-slide{pointer-events:auto;visibility:visible}.lujo .swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-bottom,.lujo .swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-left,.lujo .swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-right,.lujo .swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.lujo .swiper.swiper-flip{overflow:visible}.lujo .swiper-flip .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}.lujo .swiper-flip .swiper-slide .swiper-slide{pointer-events:none}.lujo .swiper-flip .swiper-slide-active,.lujo .swiper-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}.lujo .swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-bottom,.lujo .swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-left,.lujo .swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-right,.lujo .swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.lujo .swiper-creative .swiper-slide{-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;transition-property:transform,opacity,height}.lujo .swiper.swiper-cards{overflow:visible}.lujo .swiper-cards .swiper-slide{transform-origin:center bottom;-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden}
+/* ==========================================================================
+   Fonts
+   --------------------------------------------------------------------------
+   The reference site is set in "PP Neue Montreal" (Pangram Pangram) - a commercial typeface that cannot be
+   bundled here. "Inter Tight" (SIL Open Font License 1.1) is bundled instead: measured against the live
+   site its text widths are within ~1% on average, so line breaks and layout come out the same.
+
+   To use the real typeface: put your licensed files in assets/fonts/ and uncomment the block at the bottom.
+   ========================================================================== */
+
+/* Inter Tight - variable weight (100-900), latin-ext + latin subsets */
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/lujo/assets/fonts/InterTight-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/lujo/assets/fonts/InterTight-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* --------------------------------------------------------------------------
+   OPTIONAL - licensed "PP Neue Montreal". Uncomment after adding the .woff2 files, and set the
+   tracking tokens (--ls-caps and the --t*-ls values in base.css) back to the original values listed there.
+   --------------------------------------------------------------------------
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/lujo/assets/fonts/PPNeueMontreal-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/lujo/assets/fonts/PPNeueMontreal-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+:root { --ls-caps: 0.6px; }
+*/
+
+/* ==========================================================================
+   Base: design tokens, reset, typography presets, buttons, utilities
+   ========================================================================== */
+
+:root {
+  /* colour */
+  --c-page: #fbf7ef; /* page background */
+  --c-cream: #f3f0ea; /* cards, footer, "our story", light text on dark */
+  --c-taupe: #b2aea7; /* announcement bar + hero loader */
+  --c-clay: #5c5951; /* muted text / secondary buttons */
+  --c-line: #d7d4cf; /* hairlines */
+  --c-ink: #000;
+  --c-drawer: #efebe5; /* cart drawer */
+
+  /* type */
+  --lujo-font: "PP Neue Montreal", "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ls-caps: 0.755px; /* tracking for 12px uppercase labels (0.6px with the original typeface) */
+
+  /* layout */
+  --height-full: 100dvh;
+  --announcement-height: 30px;
+  --nav-main-height: 56px;
+  --nav-height: calc(var(--nav-main-height) + var(--announcement-height));
+  --height-fill: calc(100dvh - var(--nav-height));
+  --pad-x: 32px;
+
+  /* motion */
+  --ease: ease;
+  --t-base: 0.5s;
+
+  /* type presets (desktop) - see .t-* classes below.
+     Tracking is in em and was measured so Inter Tight sets the page's real strings to the same widths as
+     PP Neue Montreal (original tracking: 0 / 0 / .01em / .01em / .01em / .02em / .02em / .02em).
+     With the licensed font, set these back to the original values. */
+  --t44-size: 44px; --t44-lh: 44px; --t44-ls: -0.0058em;
+  --t40-size: 40px; --t40-lh: 44px; --t40-ls: 0.0024em;
+  --t33-size: 33px; --t33-lh: 38px; --t33-ls: 0.003em;
+  --t24-size: 24px; --t24-lh: 29px; --t24-ls: 0.0081em;
+  --t18-size: 18px; --t18-lh: 22px; --t18-ls: 0.007em;
+  --t16-size: 16px; --t16-lh: 21px; --t16-ls: 0.0131em;
+  --t14-size: 14px; --t14-lh: 18px; --t14-ls: 0.0132em;
+  --t12-size: 12px; --t12-lh: 16px; --t12-ls: 0.0119em;
+
+  /* fixed-size helpers */
+  --ls-14: 0.0132em; /* 14px regular */
+  --ls-12: 0.0119em; /* 12px regular */
+  --ls-nav: 0.0161em; /* 14px medium: menus, links */
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --pad-x: 16px;
+    --t44-size: 32px; --t44-lh: 32px;
+    --t40-size: 30px; --t40-lh: 32px;
+    --t33-size: 24px; --t33-lh: 29px;
+    --t24-size: 18px; --t24-lh: 22px;
+    --t18-size: 16px; --t18-lh: 19px;
+    --t16-size: 14px; --t16-lh: 18px;
+    --t14-size: 12px; --t14-lh: 16px;
+  }
+}
+
+/* ---------- reset ---------- */
+.lujo *,
+.lujo *::before,
+.lujo *::after {
+  box-sizing: border-box;
+}
+
+.lujo {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.lujo {
+  margin: 0;
+  font-family: var(--lujo-font);
+  font-weight: 400;
+  color: var(--c-ink);
+  background: var(--c-page);
+}
+
+.lujo h1, .lujo h2, .lujo h3, .lujo h4, .lujo h5, .lujo h6, .lujo p, .lujo figure, .lujo blockquote { margin: 0; font-weight: 400; }
+.lujo ul, .lujo ol { margin: 0; padding: 0; list-style: none; }
+.lujo a { color: inherit; text-decoration: none; }
+.lujo img, .lujo video, .lujo svg { display: block; max-width: 100%; }
+.lujo button, .lujo input, .lujo select, .lujo textarea { font: inherit; color: inherit; letter-spacing: inherit; margin: 0; }
+.lujo button { background: none; border: 0; padding: 0; cursor: pointer; text-align: inherit; }
+.lujo input, .lujo textarea { border-radius: 0; -webkit-appearance: none; appearance: none; }
+.lujo svg { flex-shrink: 0; fill: none; }
+.lujo [hidden] { display: none !important; }
+
+body.is-locked { overflow: hidden; }
+
+/* keyboard focus only - the original has none, but it is needed for accessibility */
+.lujo :focus-visible { outline: 1px solid currentColor; outline-offset: 3px; }
+.lujo button:focus:not(:focus-visible), .lujo a:focus:not(:focus-visible) { outline: none; }
+
+/* ---------- type presets ---------- */
+.lujo .t-44 { font-size: var(--t44-size); line-height: var(--t44-lh); letter-spacing: var(--t44-ls); }
+.lujo .t-40 { font-size: var(--t40-size); line-height: var(--t40-lh); letter-spacing: var(--t40-ls); }
+.lujo .t-33 { font-size: var(--t33-size); line-height: var(--t33-lh); letter-spacing: var(--t33-ls); }
+.lujo .t-24 { font-size: var(--t24-size); line-height: var(--t24-lh); letter-spacing: var(--t24-ls); }
+.lujo .t-18 { font-size: var(--t18-size); line-height: var(--t18-lh); letter-spacing: var(--t18-ls); }
+.lujo .t-16 { font-size: var(--t16-size); line-height: var(--t16-lh); letter-spacing: var(--t16-ls); }
+.lujo .t-14 { font-size: var(--t14-size); line-height: var(--t14-lh); letter-spacing: var(--t14-ls); }
+.lujo .t-12 { font-size: var(--t12-size); line-height: var(--t12-lh); letter-spacing: var(--t12-ls); }
+
+/* small uppercase label (buttons, tags, tab labels) */
+.lujo .t-caps {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+}
+
+/* ---------- layout helpers ---------- */
+.lujo .container-padding { padding-left: var(--pad-x); padding-right: var(--pad-x); }
+
+.lujo .media-snippet { width: 100%; height: 100%; overflow: hidden; }
+.lujo .media-snippet img,
+.lujo .media-snippet video { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+.lujo .visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.lujo .hidden { display: none !important; }
+
+/* breakpoints used by the original theme: 767.98 (mobile) / 991.98 (tablet) / 899.98 (nav switch) */
+@media (min-width: 900px) { .lujo .show-mobile { display: none !important; } }
+@media (max-width: 899.98px) { .lujo .show-desktop { display: none !important; } }
+@media (min-width: 992px) { .lujo .tablet-down-only { display: none !important; } }
+@media (max-width: 991.98px) { .lujo .desktop-only { display: none !important; } }
+
+/* ---------- buttons ---------- */
+.lujo .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* outlined pill - "SHOP THE RANGE" */
+.lujo .primary-button {
+  position: relative;
+  padding: 8px 27px 6px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 1000px;
+  background: transparent;
+}
+
+.lujo .primary-button .button__text {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.lujo .primary-button--dark { color: #000; border-color: #000; }
+.lujo .primary-button--cream { color: var(--c-cream); border-color: var(--c-cream); }
+.lujo .primary-button--clay { color: var(--c-clay); border-color: var(--c-clay); }
+.lujo .primary-button:disabled { opacity: 0.3; pointer-events: none; }
+
+/* solid pill - checkout / subscribe */
+.lujo .secondary-button {
+  position: relative;
+  padding: 8px 28px;
+  text-align: center;
+  border-radius: 1000px;
+}
+
+.lujo .secondary-button .button__text {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.lujo .secondary-button--dark { color: #fff; background: #000; }
+.lujo .secondary-button--light { color: #000; background: #fff; }
+
+/* Like the original site, transitions are intentionally NOT switched off for "reduce motion" - only the
+   smooth page scroll is. Add `*{transition-duration:.01ms!important}` here if you need full support. */
+@media (prefers-reduced-motion: reduce) {
+  .lujo { }
+}
+
+/* ==========================================================================
+   Header: announcement bar, navbar, currency select, mega menu, search, mobile menu
+   ========================================================================== */
+
+/* ---------- announcement bar ---------- */
+.lujo .navbar__announcement { transition: all 0.5s ease; }
+.lujo .announcement-bar__wrapper { position: relative; }
+
+.lujo .announcement-bar {
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+  height: var(--announcement-height);
+  color: #000;
+  background: var(--c-taupe);
+}
+
+.lujo .announcement-bar__items { position: relative; width: 100%; height: 100%; }
+
+.lujo .announcement-bar__items > li {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 0s linear 1s;
+}
+
+.lujo .announcement-bar__items > li.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 0s;
+}
+
+.lujo .announcement-bar__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 4px 0;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: var(--ls-12);
+  text-align: center;
+}
+
+.lujo .announcement-bar__close {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  z-index: 9;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  transform: translateY(-50%);
+}
+
+.lujo .announcement-bar__close svg { width: 16px; height: 16px; }
+
+@media (max-width: 767.98px) {
+  .lujo .announcement-bar__item { padding-left: 15px; padding-right: 25px; line-height: 15px; }
+  .lujo .announcement-bar__close { top: 52%; }
+}
+
+/* ---------- navbar shell ---------- */
+.lujo .navbar {
+  --fore-color: #000;
+  --back-color: var(--c-page);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9990;
+  transition: transform 0.3s ease;
+}
+
+/* homepage: transparent + light text on top of the hero */
+body.template-index .lujo .navbar { --fore-color: var(--c-page); --back-color: transparent; }
+
+/* once scrolled: solid, dark text - unless the hero is still behind the bar */
+body.template-index.navbar--scrolled .lujo .navbar { --fore-color: #000; --back-color: var(--c-page); }
+body.template-index.navbar--scrolled.hero--in-view .lujo .navbar { --fore-color: var(--c-page); --back-color: transparent; }
+
+/* menus open: always solid */
+body.template-index.navbar--show-megamenu .lujo .navbar,
+body.template-index.navbar--show-search .lujo .navbar,
+body.template-index.navbar--show-mobile-menu .lujo .navbar,
+body.template-index.navbar--scrolled.hero--in-view.navbar--show-megamenu .lujo .navbar,
+body.template-index.navbar--scrolled.hero--in-view.navbar--show-search .lujo .navbar,
+body.template-index.navbar--scrolled.hero--in-view.navbar--show-mobile-menu .lujo .navbar {
+  --fore-color: #000;
+  --back-color: var(--c-page);
+}
+
+/* scrolling: the announcement bar slides away, the bar hides on the way down and returns on the way up */
+body.navbar--scrolled .lujo .navbar { transform: translate3d(0, calc(-1 * var(--announcement-height)), 0); }
+
+body.navbar--scrolled.scrolled-down:not(.navbar--show-megamenu):not(.navbar--show-mobile-menu):not(.navbar--show-search) .lujo .navbar {
+  transform: translateY(-100%);
+}
+
+/* hidden while the sticky "Our story" panel owns the screen */
+body.our-story--in-view .lujo .navbar { transform: translateY(-100%) !important; }
+
+/* page-load sequence: bar fades in once the hero headline has landed */
+body.home-hero--loading .lujo .navbar { opacity: 0; }
+body.template-index .lujo .navbar.hero-transition { transition: all 0.6s ease-out; }
+
+.lujo .navbar__main { position: relative; z-index: 29; }
+.lujo .navbar__sub-nav { position: absolute; top: 100%; width: 100%; z-index: 11; }
+
+.lujo .navbar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 98;
+  background: rgba(251, 247, 239, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+body.navbar--show-megamenu,
+body.navbar--show-search,
+body.navbar--show-mobile-menu { overflow: hidden; }
+
+body.navbar--show-megamenu .lujo .navbar__overlay,
+body.navbar--show-search .lujo .navbar__overlay,
+body.navbar--show-mobile-menu .lujo .navbar__overlay { opacity: 1; visibility: visible; }
+
+/* ---------- main bar ---------- */
+.lujo .navbar-main {
+  position: relative;
+  height: var(--nav-main-height);
+  padding-left: 32px;
+  padding-right: 32px;
+  align-content: center;
+  color: var(--fore-color);
+  background: var(--back-color);
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 767.98px) {
+  .lujo .navbar-main { padding-left: 16px; padding-right: 16px; }
+}
+
+.lujo .navbar-main ul { margin: 0; padding: 0; list-style: none; }
+
+.lujo .navbar-main__logo { display: block; padding-top: 4px; }
+.lujo .navbar-main__logo svg { display: block; width: 50px; height: 34px; }
+
+/* desktop layout: logo | links ........ currency, trade, icons */
+.lujo .navbar-main--left {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 179px;
+  align-items: center;
+  width: 100%;
+}
+
+.lujo .navbar-main__content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.lujo .navbar-main__section--right {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 20px;
+}
+
+.lujo .navbar-main__links { display: flex; align-items: center; gap: 24px; }
+
+.lujo .navbar-main__link {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  letter-spacing: var(--ls-nav);
+}
+
+.lujo .navbar-main__link:hover { text-decoration: none; }
+
+.lujo .navbar-main__icons { display: flex; align-items: center; gap: 8px; }
+
+.lujo .navbar-main__icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.lujo .navbar-main__icon svg { display: block; transition: all 0.5s ease; }
+
+/* tiny dot on the bag when the cart has items */
+.lujo .cart-count-bubble {
+  position: absolute;
+  top: 8px;
+  right: 2px;
+  z-index: 9;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--fore-color);
+  transition: all 0.3s ease;
+}
+
+.lujo .cart-count-bubble.is-empty { opacity: 0; transform: scale(0.5); }
+
+/* mobile layout: logo left, icons + burger right */
+.lujo .navbar-main--mobile-right .navbar-main__grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.lujo .navbar-main--mobile-right .navbar-main__right {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 16px;
+}
+
+@media (max-width: 899.98px) {
+  .lujo .navbar-main__icons { gap: 16px; }
+}
+
+.lujo .mobile-menu__toggle > a { display: grid; }
+.lujo .mobile-menu__toggle > a > span { grid-column: 1; grid-row: 1; width: 20px; height: 20px; transition: all 0.5s ease; }
+.lujo .mobile-menu__toggle > a > span svg { width: 20px; height: 20px; }
+.lujo .mobile-menu__toggle > a .default { display: flex; align-items: center; opacity: 1; visibility: visible; }
+.lujo .mobile-menu__toggle > a .close { opacity: 0; visibility: hidden; }
+body.navbar--show-mobile-menu .lujo .mobile-menu__toggle > a > span.default { opacity: 0; visibility: hidden; }
+body.navbar--show-mobile-menu .lujo .mobile-menu__toggle > a > span.close { opacity: 1; visibility: visible; }
+
+/* ---------- currency / market select ---------- */
+.lujo .custom-select { position: relative; width: 100%; }
+
+.lujo .custom-select__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  width: 100%;
+  height: 30px;
+  padding: 6px 4px;
+  color: inherit;
+  white-space: nowrap;
+  transition: all 0.5s ease;
+}
+
+.lujo .navbar-main__currency .custom-select__trigger,
+.lujo .mobile-menu__currency .custom-select__trigger {
+  font-size: 14px;
+  line-height: 120%;
+  font-weight: 500;
+  letter-spacing: var(--ls-nav);
+}
+
+.lujo .custom-select__trigger svg { transition: all 0.5s ease; }
+.lujo .custom-select__trigger--active svg { transform: rotate(180deg); }
+
+.lujo .custom-select__options {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+  width: 100%;
+  padding: 4px 0 0;
+  color: #414042;
+  background: var(--c-page);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.lujo .custom-select__options--active { opacity: 1; visibility: visible; pointer-events: auto; }
+
+.lujo .custom-select__option {
+  display: flex;
+  align-items: center;
+  min-height: 33px;
+  padding: 0 4px;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: var(--ls-nav);
+  color: #414042;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 992px) {
+  .lujo .custom-select__option:hover { background: #bfbec0; }
+}
+
+/* ---------- mega menu ---------- */
+.lujo .navbar-megamenu {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: var(--height-fill);
+  max-height: 640px;
+  padding: 80px 32px 32px;
+  border-top: 1px solid var(--c-line);
+  background: var(--c-page);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+body.navbar--scrolled .lujo .navbar-megamenu { top: var(--nav-main-height); }
+body.navbar--show-megamenu .lujo .navbar-megamenu { opacity: 1; visibility: inherit; }
+
+.lujo .navbar-megamenu__grid { display: grid; grid-template-columns: 1fr 0.977fr; }
+.lujo .navbar-megamenu__left { display: grid; grid-template-columns: auto 1fr; }
+.lujo .navbar-megamenu__right { display: grid; grid-template-columns: 1fr; justify-content: end; }
+.lujo .navbar-megamenu__submenu-container { display: grid; }
+
+.lujo .navbar-megamenu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 231px;
+  margin: 0;
+  padding: 0 16px 0 0;
+  list-style: none;
+}
+
+.lujo .navbar-megamenu__nav li { height: 18px; }
+
+.lujo .navbar-megamenu__nav li a,
+.lujo .navbar-megamenu__nav li button {
+  position: relative;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: var(--ls-nav);
+  transition: all 0.5s ease;
+}
+
+/* the sliding dash */
+.lujo .navbar-megamenu__nav li a::before,
+.lujo .navbar-megamenu__nav li button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 1px;
+  margin-right: 5px;
+  background: #000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(calc(100% + 5px), -50%);
+  transition: transform 0.5s ease, opacity 0.15s ease;
+}
+
+@media (min-width: 992px) {
+  .lujo .navbar-megamenu__nav li a:hover,
+  .lujo .navbar-megamenu__nav li button:hover { padding-left: 8px; }
+}
+
+.lujo .navbar-megamenu__nav li a.active,
+.lujo .navbar-megamenu__nav li button.active { opacity: 1 !important; padding-left: 19px; }
+
+.lujo .navbar-megamenu__nav li a.active::before,
+.lujo .navbar-megamenu__nav li button.active::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease, opacity 0.5s ease 0.2s;
+}
+
+.lujo .navbar-megamenu__nav .placeholder { display: block; height: 18px; }
+
+/* while a category is open the other main items dim */
+.lujo .navbar-megamenu__nav.active li a,
+.lujo .navbar-megamenu__nav.active li button { opacity: 0.2; }
+
+.lujo .navbar-megamenu__submenu {
+  grid-row: 1;
+  grid-column: 1;
+  width: max-content;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.lujo .navbar-megamenu__submenu.active,
+.lujo .navbar-megamenu__submenu.active li a,
+.lujo .navbar-megamenu__submenu.active li button { opacity: 1; }
+
+body.navbar--show-megamenu .lujo .navbar-megamenu__submenu.active { visibility: visible; opacity: 1; }
+
+.lujo .navbar-megamenu__img-block-container {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: end;
+  gap: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+body.navbar--show-megamenu .lujo .navbar-megamenu__img-block-container.active { opacity: 1; visibility: visible; }
+
+@media (max-width: 1439.98px) {
+  .lujo .navbar-megamenu__img-block-container { grid-template-columns: 1fr 1fr; }
+}
+
+.lujo .navbar-megamenu__img-block { position: relative; }
+.lujo .navbar-megamenu__img-block--right { grid-column: 2; }
+@media (min-width: 992px) { .lujo .navbar-megamenu__img-block { justify-self: right; } }
+
+.lujo .navbar-megamenu__img-block--image {
+  max-height: 426px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  aspect-ratio: 336 / 426;
+}
+
+@media (max-width: 1439.98px) {
+  .lujo .navbar-megamenu__img-block--image { width: 100%; max-height: unset; }
+}
+
+.lujo .navbar-megamenu__img-block--image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+.lujo .navbar-megamenu__img-block--text {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  letter-spacing: var(--ls-nav);
+}
+
+.lujo .navbar-megamenu__img-block--link { position: absolute; inset: 0; }
+
+@media (max-width: 991.98px) {
+  .lujo .navbar-megamenu__img-block--image { max-height: 250px; min-height: 250px; }
+}
+
+/* the desktop mega menu is hidden when the mobile layout is active */
+@media (max-width: 899.98px) {
+  .lujo .navbar-megamenu { display: none; }
+}
+
+/* ---------- search panel ---------- */
+.lujo .navbar__search {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  max-height: var(--height-fill);
+  background: var(--c-page);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  transition: all 0.5s ease;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-clay) transparent;
+}
+
+body.navbar--scrolled .lujo .navbar__search { top: var(--nav-main-height); max-height: calc(100dvh - var(--nav-main-height)); }
+body.navbar--show-search .lujo .navbar__search { opacity: 1; visibility: visible; }
+
+.lujo .search {
+  position: relative;
+  display: block;
+  min-height: 640px;
+  padding: 32px 32px 30px;
+  background: var(--c-page);
+}
+
+.lujo .search__input { position: relative; height: 76px; border-bottom: 1px solid var(--c-taupe); }
+
+.lujo .search__input > input {
+  width: 100%;
+  height: 76px;
+  padding: 16px 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--c-clay);
+  font-size: var(--t44-size);
+  line-height: var(--t44-lh);
+  letter-spacing: 0;
+}
+
+.lujo .search__input > input::placeholder { color: var(--c-taupe); opacity: 1; }
+
+.lujo .search__icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 30;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.lujo .search__icon svg { pointer-events: none; }
+
+.lujo .search__initial {
+  display: grid;
+  grid-template-columns: 0.976879fr 1fr;
+  gap: 8px;
+  padding-top: 32px;
+  padding-bottom: 12px;
+}
+
+.lujo .search__popular-title {
+  padding-bottom: 16px;
+  color: var(--c-clay);
+}
+
+.lujo .search__popular-list { display: flex; flex-direction: column; }
+
+.lujo .search__popular-list,
+.lujo .search__popular-list li,
+.lujo .search__popular-list a {
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 500;
+  letter-spacing: var(--ls-nav);
+}
+
+.lujo .search__popular-list a { position: relative; transition: all 0.5s ease; }
+
+.lujo .search__popular-list a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 1px;
+  margin-right: 5px;
+  background: #000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(calc(100% + 5px), -50%);
+  transition: transform 0.5s ease, opacity 0.15s ease;
+}
+
+@media (min-width: 992px) { .lujo .search__popular-list a:hover { padding-left: 8px; } }
+
+.lujo .search__popular-list a:focus { opacity: 1; padding-left: 19px; }
+.lujo .search__popular-list a:focus::before { opacity: 1; visibility: visible; transform: translateY(-50%); transition: transform 0.5s ease, opacity 0.5s ease 0.2s; }
+
+/* the two picture cards beside the "Explore collections" list */
+.lujo .search-recommendations {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+  justify-content: end;
+}
+
+@media (max-width: 1439.98px) { .lujo .search-recommendations { grid-template-columns: 1fr 1fr; } }
+
+.lujo .search-card { position: relative; width: 100%; overflow: hidden; }
+.lujo .search-card__link { position: absolute; inset: 0; z-index: 10; }
+.lujo .search-card__image { width: 100%; max-height: 434px; overflow: hidden; aspect-ratio: 342 / 434; }
+.lujo .search-card__image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+.lujo .search-card__label {
+  padding-top: 12px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  letter-spacing: var(--ls-nav);
+}
+
+/* ---- live results: products on the left, pages on the right ---- */
+.lujo .search__container { padding-top: 32px; padding-bottom: 2px; }
+
+.lujo .search__grid {
+  display: grid;
+  grid-template-columns: 1fr 448px;
+  gap: 63px;
+}
+
+.lujo .search__left { max-width: 865px; }
+
+.lujo .search-results__heading {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.lujo .search-results__heading > h4 { color: var(--c-clay); }
+
+.lujo .search-results__heading .button { gap: 4px; margin: 8px 0; }
+.lujo .search-results__heading .button__text { line-height: 100%; }
+.lujo .search-results__heading .button__icon { display: flex; align-items: center; justify-content: center; width: 12px; height: 12px; }
+.lujo .search-results__heading .button__icon svg { width: 12px; height: 12px; }
+
+.lujo .search-results__products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding-top: 4px; }
+.lujo .search-results__products .card-footer { padding: 16px 20px 24px; }
+.lujo .search-results__products .card-footer__bottom { display: none; }
+.lujo .search-results__products .card-header { padding: 14px 16px 0; }
+.lujo .search-results__products .product-card__image { aspect-ratio: 283 / 323; }
+.lujo .search-results__products .product-card:hover .product-card__wishlist { opacity: 1; visibility: visible; }
+
+.lujo .search-results__articles {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: start;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.lujo .search-article {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--c-line);
+}
+
+.lujo .search-article:last-child { border-color: transparent; }
+.lujo .search-article__link { position: absolute; inset: 0; z-index: 10; cursor: pointer; }
+.lujo .search-article__image { width: 92px; height: 115px; overflow: hidden; }
+.lujo .search-article__image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.lujo .search-article__category { padding-bottom: 8px; color: var(--c-clay); }
+.lujo .search-article__title { font-size: 14px; line-height: 130%; font-weight: 500; letter-spacing: var(--ls-nav); }
+.lujo .search-results__none { color: var(--c-clay); }
+
+@media (max-width: 1199.98px) { .lujo .search__grid { gap: 32px; } }
+
+@media (max-width: 991.98px) {
+  .lujo .search__initial { grid-template-columns: 1fr; gap: 32px; }
+  .lujo .search-recommendations { justify-content: stretch; }
+  .lujo .search__grid { grid-template-columns: 1fr; gap: 64px; }
+  .lujo .search__left { max-width: 100%; }
+}
+
+@media (max-width: 767.98px) {
+  .lujo .search { padding: 32px 16px 24px; min-height: 0; }
+  .lujo .search__input, .lujo .search__input > input { height: 64px; }
+  .lujo .search__popular-list { gap: 8px; padding-top: 8px; }
+  .lujo .search-card__image { aspect-ratio: 176 / 209; }
+  .lujo .search-results__products { grid-template-columns: 1fr 1fr; }
+  .lujo .search-results__products .product-card:nth-child(3) { display: none; }
+}
+
+/* ---------- mobile menu ---------- */
+.lujo .navbar__mobile-menu {
+  position: fixed;
+  top: var(--nav-height);
+  z-index: 99999;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+body.navbar--scrolled .lujo .navbar__mobile-menu { top: var(--nav-main-height); }
+body.navbar--show-mobile-menu .lujo .navbar__mobile-menu { opacity: 1; visibility: inherit; }
+
+.lujo .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: var(--height-fill);
+  padding: 80px 16px 32px;
+  overflow-y: auto;
+  border-top: 1px solid var(--c-line);
+  background: var(--c-page);
+}
+
+body.navbar--scrolled .lujo .mobile-menu { height: calc(100dvh - var(--nav-main-height)); }
+.lujo .mobile-menu--shop { position: relative; }
+.lujo .mobile-menu__links { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
+
+.lujo .mobile-menu__links > ul { display: flex; flex-direction: column; gap: 8px; }
+.lujo .mobile-menu__links > ul li { height: 18px; }
+
+.lujo .mobile-menu__links > ul a,
+.lujo .mobile-menu__links > ul button {
+  display: block;
+  font-size: var(--t16-size);
+  line-height: var(--t16-lh);
+  font-weight: 500;
+  letter-spacing: var(--t16-ls);
+}
+
+.lujo .mobile-menu__nav { display: flex; flex-direction: column; gap: 8px; }
+.lujo .mobile-menu__nav li { height: 18px; }
+
+.lujo .mobile-menu__nav a,
+.lujo .mobile-menu__nav button {
+  position: relative;
+  display: block;
+  padding-right: 8px;
+  white-space: nowrap;
+  font-size: var(--t16-size);
+  line-height: var(--t16-lh);
+  font-weight: 500;
+  letter-spacing: var(--t16-ls);
+}
+
+.lujo .mobile-menu__nav a::before,
+.lujo .mobile-menu__nav button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 1px;
+  background: #000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(calc(100% + 5px), -50%);
+  transition: transform 0.5s ease, opacity 0.15s ease;
+}
+
+.lujo .mobile-menu__nav.active li a,
+.lujo .mobile-menu__nav.active li button { opacity: 0.2; }
+
+.lujo .mobile-menu__nav a.active,
+.lujo .mobile-menu__nav button.active { opacity: 1 !important; padding-left: 19px; }
+
+.lujo .mobile-menu__nav a.active::before,
+.lujo .mobile-menu__nav button.active::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease, opacity 0.5s ease 0.2s;
+}
+
+.lujo .mobile-menu__submenu-container { display: grid; }
+
+.lujo .mobile-menu__submenu {
+  grid-row: 1;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: max-content;
+  padding-left: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.lujo .mobile-menu__submenu.active { opacity: 1; visibility: visible; }
+
+.lujo .mobile-menu__submenu a {
+  position: relative;
+  display: block;
+  font-size: var(--t16-size);
+  line-height: var(--t16-lh);
+  font-weight: 500;
+  letter-spacing: var(--t16-ls);
+}
+
+.lujo .mobile-menu__back {
+  position: absolute;
+  top: 38px;
+  left: 16px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: var(--t16-size);
+  line-height: var(--t16-lh);
+  font-weight: 500;
+  letter-spacing: var(--t16-ls);
+}
+
+.lujo .mobile-menu__currency { margin-top: 40px; }
+
+.lujo .mobile-menu__img-blocks { display: grid; width: 100%; margin-top: auto; }
+
+.lujo .mobile-menu__img-block-container {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.lujo .mobile-menu__img-block-container.active { opacity: 1; visibility: visible; }
+
+.lujo .mobile-menu__img-block { position: relative; }
+.lujo .mobile-menu__img-block--image { width: 100%; margin-bottom: 12px; overflow: hidden; aspect-ratio: 176 / 208; }
+.lujo .mobile-menu__img-block--image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.lujo .mobile-menu__img-block--text { font-size: 14px; line-height: 17px; font-weight: 500; letter-spacing: var(--ls-nav); }
+.lujo .mobile-menu__img-block--link { position: absolute; inset: 0; }
+
+
+/* ==========================================================================
+   Slideshow (generic) + homepage hero with the page-load "text loading" sequence
+   ========================================================================== */
+
+/* ---------- generic full-screen slideshow (also used by the "Free-standing hammocks" band) ---------- */
+.lujo .slideshow {
+  height: var(--height-full);
+  padding: 0;
+  background-color: var(--c-taupe);
+}
+
+.lujo .slideshow__container { width: 100%; height: 100%; }
+.lujo .slideshow .swiper { height: 100%; }
+
+.lujo .slideshow-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* soft dark gradient behind the copy */
+.lujo .slideshow-slide--show-gradient::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 359px;
+  opacity: 0.5;
+  background: linear-gradient(180deg, transparent, #000);
+}
+
+@media (max-width: 767.98px) {
+  .lujo .slideshow-slide--show-gradient::before { height: 415px; }
+}
+
+.lujo .slideshow-slide.content-padding { padding: 40px 46px; }
+.lujo .slideshow-slide.content-padding--large { padding: 112px 64px; }
+
+@media (max-width: 767.98px) {
+  .lujo .slideshow-slide.content-padding { padding: 40px 16px; }
+  .lujo .slideshow-slide.content-padding--large { padding: 96px 16px; }
+}
+
+/* text colour per slide: dark/cream on desktop, separately on mobile */
+@media (min-width: 992px) {
+  .lujo .slideshow-slide.desktop-colour-mode--dark { color: #000; }
+  .lujo .slideshow-slide.desktop-colour-mode--cream { color: var(--c-cream); }
+}
+
+@media (max-width: 991.98px) {
+  .lujo .slideshow-slide.mobile-colour-mode--dark { color: #000; }
+  .lujo .slideshow-slide.mobile-colour-mode--cream { color: var(--c-cream); }
+}
+
+.lujo .slideshow-slide__background { position: absolute; inset: 0; z-index: 1; }
+
+.lujo .slideshow-slide__container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.lujo .slideshow-slide__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 418px;
+}
+
+@media (min-width: 768px) {
+  .lujo .slideshow-slide__content.content-position-desktop--center-left { margin: auto auto auto 0; }
+  .lujo .slideshow-slide__content.content-position-desktop--center-right { margin: auto 0 auto auto; }
+  .lujo .slideshow-slide__content.content-position-desktop--bottom-left { margin: auto auto 0 0; }
+  .lujo .slideshow-slide__content.content-position-desktop--bottom-right { margin: auto 0 0 auto; }
+}
+
+@media (max-width: 767.98px) {
+  .lujo .slideshow-slide__content.content-position-mobile--center-left { margin: auto auto auto 0; }
+  .lujo .slideshow-slide__content.content-position-mobile--center-right { margin: auto 0 auto auto; }
+  .lujo .slideshow-slide__content.content-position-mobile--bottom-left { margin: auto auto 0 0; }
+  .lujo .slideshow-slide__content.content-position-mobile--bottom-right { margin: auto 0 0 auto; }
+}
+
+.lujo .slideshow-slide__text-content { display: flex; flex-direction: column; gap: 16px; }
+
+.lujo .slideshow-slide__title { max-width: 312px; }
+.lujo .slideshow-slide__title p { color: inherit; }
+.lujo .slideshow-slide__description { max-width: 368px; }
+.lujo .slideshow-slide__description p { color: inherit; }
+
+@media (max-width: 767.98px) {
+  .lujo .slideshow-slide__title { max-width: 263px; }
+  .lujo .slideshow-slide__description { max-width: 334px; }
+}
+
+/* the slideshow CTA swaps colour on small screens (dark text on photo -> cream) */
+.lujo .slideshow-slide__cta--mobile-cream { display: none; }
+@media (max-width: 767.98px) {
+  .lujo .slideshow-slide__cta--desktop { display: none; }
+  .lujo .slideshow-slide__cta--mobile-cream { display: inline-flex; }
+}
+
+/* ==========================================================================
+   Homepage hero (video) + load sequence
+   ========================================================================== */
+.lujo .slideshow.homepage-hero {
+  position: relative;
+  height: 110dvh;
+}
+
+.lujo .homepage-hero .slideshow__container { position: relative; }
+
+.lujo .homepage-hero .slideshow-slide {
+  padding-inline: 32px;
+  padding-top: var(--nav-height);
+}
+
+@media (max-width: 767.98px) {
+  .lujo .homepage-hero .slideshow-slide { padding-inline: 16px; }
+}
+
+.lujo .homepage-hero .slideshow-slide--show-gradient::before { height: 50%; opacity: 0.5; }
+
+.lujo .homepage-hero .slideshow-slide__container { z-index: 15; }
+.lujo .homepage-hero .slideshow-slide__content { gap: 64px; }
+
+@media (max-width: 767.98px) {
+  .lujo .homepage-hero .slideshow-slide__content { gap: 72px; }
+}
+
+/* 1. taupe veil covers the page, then fades out */
+.lujo .homepage-hero .home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--c-taupe);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+
+.lujo .homepage-hero .home-hero-overlay.initial-load { opacity: 1; visibility: visible; }
+
+/* 2. headline: first line rises into a 1-line window, the 2nd line + the block settle in afterwards */
+.lujo .homepage-hero .slideshow-slide__title {
+  position: relative;
+  z-index: 15;
+  max-width: 480px;
+  max-height: 320px;
+  overflow: visible;
+  transform: translateY(25%);
+  transition: all 0.6s ease-out;
+}
+
+.lujo .homepage-hero .slideshow-slide__title.initial-load { max-height: 54px; overflow: hidden; }
+.lujo .homepage-hero .slideshow-slide__title.final-position { transform: translateY(0); }
+.lujo .homepage-hero .slideshow-slide__title.text-white { color: var(--c-cream) !important; }
+
+.lujo .homepage-hero .slideshow-slide__title .primary-title {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: all 0.4s ease-out;
+}
+
+.lujo .homepage-hero .slideshow-slide__title .primary-title.initial-load {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+}
+
+.lujo .homepage-hero .slideshow-slide__title .secondary-title {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s ease-out;
+}
+
+.lujo .homepage-hero .slideshow-slide__title .secondary-title.initial-load { opacity: 0; visibility: hidden; }
+
+@media (max-width: 767.98px) {
+  .lujo .homepage-hero .slideshow-slide__title.initial-load { max-height: 40px; }
+}
+
+/* 3. sub-copy + button fade in last */
+.lujo .homepage-hero .slideshow-slide__description,
+.lujo .homepage-hero .slideshow-slide__cta-container { transition: all 0.45s ease-out; }
+
+.lujo .homepage-hero .slideshow-slide__description.initial-load,
+.lujo .homepage-hero .slideshow-slide__cta-container.initial-load {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Homepage sections (in page order)
+   1. tabs   2. benefits (pinned horizontal scroll)   3. product row   4. our story
+   5. testimonials   6. journals   7. socials
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Tabs - "Bean Bags / Hammocks / ..." with cross-fading gallery
+   ========================================================================== */
+.lujo .section-tabs {
+  position: relative;
+  z-index: 2;
+  height: 110dvh;
+  padding: 120px 0;
+  background-color: var(--c-page);
+}
+
+.lujo .section-tabs__container { height: 100%; }
+
+.lujo .section-tabs__grid {
+  display: grid;
+  grid-template-columns: 1fr 0.977fr;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+.lujo .section-tabs__gallery { grid-column: 1; grid-row: 1 / 3; padding-right: 56px; }
+
+.lujo .tab-gallery {
+  display: grid;
+  grid-template-columns: auto 40px;
+  gap: 4px;
+  justify-content: start;
+  height: 100%;
+}
+
+@media (min-width: 992px) { .lujo .tab-gallery { width: max-content; } }
+
+.lujo .tab-gallery__main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+  overflow: hidden;
+  aspect-ratio: 448 / 648;
+}
+
+.lujo .tab-media { grid-column: 1; grid-row: 1; width: 100%; height: 100%; }
+
+.lujo .tab-gallery__media {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.lujo .tab-media.active .tab-gallery__media { opacity: 1; visibility: visible; }
+
+.lujo .tab-gallery__thumbnails {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill, 1fr);
+  gap: 4px;
+  margin-top: auto;
+}
+
+.lujo .tab-gallery__thumbnail { width: 40px; height: 56px; opacity: 0.3; cursor: pointer; transition: all 0.5s ease; }
+.lujo .tab-thumbnail.active .tab-gallery__thumbnail { opacity: 1; }
+.lujo .tab-thumbnail { cursor: pointer; }
+
+/* big selectable list on the right */
+.lujo .section-tabs__bullet {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  padding-left: 0;
+  font-size: var(--t40-size);
+  line-height: var(--t40-lh);
+  letter-spacing: var(--t40-ls);
+  text-align: left;
+  color: #000;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* the 32px dash that slides in beside the active label */
+.lujo .section-tabs__bullet::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 32px;
+  height: 2.88px;
+  margin-right: 8px;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(calc(100% + 8px), -50%);
+  transition: transform 0.5s ease, opacity 0.15s ease;
+}
+
+@media (min-width: 992px) {
+  .lujo .section-tabs__bullet:hover { opacity: 1; padding-left: 8px; }
+}
+
+.lujo .section-tabs__bullet.active { opacity: 1; padding-left: 40px; }
+
+.lujo .section-tabs__bullet.active::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease, opacity 0.5s ease 0.2s;
+}
+
+.lujo .section-tabs__info {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-self: end;
+  width: 100%;
+  max-width: 448px;
+  height: 100%;
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+.lujo .tab-info-block {
+  position: sticky;
+  top: 104px;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 32px;
+  height: max-content;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.lujo .tab-info-block.active { opacity: 1; visibility: visible; }
+
+.lujo .tab-info-block__content {
+  max-width: 368px;
+  color: #000;
+  font-size: var(--t16-size);
+  line-height: var(--t16-lh);
+  letter-spacing: var(--t16-ls);
+}
+
+@media (max-width: 991.98px) {
+  .lujo .section-tabs { height: auto; }
+  .lujo .section-tabs__grid { grid-template-columns: 1fr; }
+  .lujo .section-tabs__gallery { grid-column: 1; grid-row: 1; margin-bottom: 64px; padding-right: 0; }
+  .lujo .tab-gallery { grid-template-columns: 1fr 40px; }
+  .lujo .section-tabs__info { padding-top: 32px; }
+  .lujo .tab-info-block__content { max-width: 341px; font-size: 14px; line-height: 18px; letter-spacing: var(--ls-14); }
+  .lujo .section-tabs__bullet { font-size: 30px; line-height: 32px; }
+  .lujo .section-tabs__bullet::before { width: 30px; height: 2.3px; }
+  .lujo .section-tabs__bullet.active { padding-left: 38px; }
+}
+
+@media (max-width: 767.98px) {
+  .lujo .section-tabs { padding: 64px 0; }
+}
+
+/* ==========================================================================
+   2. Benefits - headline + pinned, scroll-driven horizontal slider
+   ========================================================================== */
+.lujo .benefits {
+  padding-top: 32px;
+  color: #000;
+  background-color: var(--c-page);
+}
+
+.lujo .benefits__tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding-bottom: 32px;
+}
+
+.lujo .benefits__tagline { min-width: 221px; }
+
+.lujo .benefits__bottom { position: relative; min-height: 100dvh; }
+
+/* headline stays put (sticky) while the slider underneath scrolls sideways */
+.lujo .benefits__content {
+  position: sticky;
+  top: calc(100vh - 800px); /* recalculated in js/benefits.js */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+.lujo .benefits__title {
+  max-width: 1015px;
+  font-size: var(--t44-size);
+  line-height: var(--t44-lh);
+  letter-spacing: var(--t44-ls);
+}
+
+.lujo .benefits-grid {
+  position: relative;
+  width: calc(100% + 2 * var(--pad-x)); /* full bleed; 100dvw would add a sideways scrollbar next to a classic scrollbar */
+  margin-inline: calc(-1 * var(--pad-x));
+  padding-top: 120px;
+  padding-bottom: 200px;
+  overflow: hidden;
+  background-color: var(--c-page);
+}
+
+.lujo .benefits-grid__wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  transform: translate(0);
+  will-change: transform;
+}
+
+.lujo .benefits-slide { min-width: 380px; padding-right: 32px; }
+.lujo .benefits-slide:first-child { min-width: 412px; padding-left: 32px; }
+
+.lujo .benefits-slide__container { position: relative; display: grid; grid-template-rows: auto 1fr; gap: 12px; }
+
+.lujo .benefits-slide__image { position: relative; width: 100%; overflow: hidden; aspect-ratio: 348 / 340; }
+.lujo .benefits-slide:nth-child(2n) .benefits-slide__image { aspect-ratio: 348 / 437; }
+.lujo .benefits-slide__image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+/* text card that fades over the photo on hover */
+.lujo .benefits-slide__hover-content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  padding: 32px 20px;
+  background: var(--c-cream);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 992px) {
+  .lujo .benefits-slide__image:hover .benefits-slide__hover-content { opacity: 1; visibility: visible; }
+}
+
+.lujo .benefits-slide__text {
+  max-width: 229px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: var(--ls-14);
+}
+
+.lujo .benefits-slide__bottom-bar { display: flex; align-items: center; gap: 8px; }
+
+.lujo .benefits-slide__title {
+  font-size: var(--t18-size);
+  line-height: var(--t18-lh);
+  letter-spacing: var(--t18-ls);
+}
+
+/* + / - toggle (shown on touch screens) */
+.lujo .benefits-slide__button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  pointer-events: all;
+}
+
+.lujo .benefits-slide__button span { width: 20px; height: 20px; pointer-events: none; }
+.lujo .benefits-slide__button svg { width: 20px; height: 20px; pointer-events: none; }
+.lujo .benefits-slide__button .default { display: flex; align-items: center; justify-content: center; }
+.lujo .benefits-slide__button .active { display: none; align-items: center; justify-content: center; }
+
+@media (max-width: 991.98px) {
+  .lujo .benefits-slide__button { display: flex; }
+  .lujo .benefits-slide.active .benefits-slide__hover-content { opacity: 1; visibility: visible; }
+  .lujo .benefits-slide.active .benefits-slide__button .active { display: flex; }
+  .lujo .benefits-slide.active .benefits-slide__button .default { display: none; }
+}
+
+/* progress track: the thumb is moved by the scroll position */
+.lujo .benefits__scroller {
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.lujo .benefits__scroller .bar {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  margin-inline: auto;
+  background: var(--c-line);
+}
+
+.lujo .benefits__scroller .thumb {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  z-index: 1;
+  width: 100px;
+  height: 3px;
+  background: var(--c-clay);
+  transition: all 0.2s linear;
+}
+
+@media (max-width: 767.98px) {
+  .lujo .benefits { padding-bottom: 64px; }
+  .lujo .benefits__tags { flex-wrap: wrap; justify-content: space-between; width: 100%; }
+  .lujo .benefits__tagline { min-width: 0; }
+  .lujo .benefits-grid { padding-top: 64px; padding-bottom: 158px; }
+  .lujo .benefits__scroller { bottom: 64px; }
+  .lujo .benefits-slide { min-width: 315px; padding-right: 32px; }
+  .lujo .benefits-slide:first-child { min-width: 331px; padding-left: 16px; }
+  .lujo .benefits-slide:last-child { min-width: 299px; padding-right: 16px; }
+  .lujo .benefits-slide__image { aspect-ratio: 283 / 272; }
+  .lujo .benefits-slide:nth-child(2n) .benefits-slide__image { aspect-ratio: 283 / 348; }
+  .lujo .benefits-slide__text { font-size: 12px; line-height: 16px; letter-spacing: var(--ls-12); }
+}
+
+@media (min-width: 1680px) {
+  .lujo .benefits-slide { min-width: 26dvw; }
+  .lujo .benefits-slide:first-child { min-width: 28.6dvw; }
+}
+
+/* ==========================================================================
+   3. Product row - "Live Slow."
+   ========================================================================== */
+.lujo .product-row {
+  position: relative;
+  z-index: 2;
+  padding: 32px 0 120px;
+  background: var(--c-page);
+}
+
+.lujo .product-row__container { position: relative; display: flex; flex-direction: column; gap: 32px; }
+
+.lujo .product-row__grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: end;
+  max-width: 100vw;
+  padding: 0 32px;
+}
+
+.lujo .product-row__title {
+  color: var(--c-clay);
+  font-size: var(--t44-size);
+  line-height: var(--t44-lh);
+  letter-spacing: var(--t44-ls);
+}
+
+.lujo .product-row__tabs { display: flex; align-items: center; gap: 32px; }
+
+.lujo .product-row__tabs button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  white-space: nowrap;
+  opacity: 0.5;
+  transition: all 0.5s ease;
+}
+
+.lujo .product-row__tabs button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 19px;
+  height: 1px;
+  margin-right: 8px;
+  background: #000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(calc(100% + 8px), -50%);
+  transition: transform 0.5s ease, opacity 0.15s ease;
+}
+
+.lujo .product-row__tabs button.active { opacity: 1; padding-left: 27px; }
+
+.lujo .product-row__tabs button.active::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease, opacity 0.5s ease 0.1s;
+}
+
+@media (min-width: 992px) { .lujo .product-row__tabs button:hover { opacity: 1; } }
+
+.lujo .product-row__carousel { display: grid; grid-template-columns: 1fr; }
+
+.lujo .product-row__collection {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding-inline: 4px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+
+.lujo .product-row__collection.hidden { display: none; opacity: 0; visibility: hidden; pointer-events: none; }
+
+/* fade-in when switching tabs */
+.lujo .product-row__collection.is-entering { animation: rowIn 0.5s ease both; }
+@keyframes rowIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* ---- product card ---- */
+.lujo .product-card { position: relative; display: flex; width: 100%; overflow: hidden; }
+.lujo .product-card__link { position: absolute; inset: 0; z-index: 5; cursor: pointer; }
+.lujo .product-card__grid { display: flex; flex-direction: column; flex-grow: 1; }
+
+.lujo .product-card__header { position: absolute; top: 0; left: 0; right: 0; z-index: 6; width: 100%; pointer-events: none; }
+
+.lujo .card-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding-top: 26px;
+  padding-inline: 28px;
+  color: #000;
+}
+
+.lujo .card-header__tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.lujo .card-header__tag { color: inherit; transition: all 0.25s ease; }
+
+.lujo .product-card__wishlist {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: all;
+  transition: all 0.25s ease;
+}
+
+.lujo .product-card__wishlist .default-icon { display: block; }
+.lujo .product-card__wishlist .active-icon { display: none; }
+.lujo .product-card__wishlist.active .default-icon { display: none; }
+.lujo .product-card__wishlist.active .active-icon { display: block; }
+
+.lujo .product-card__image { width: 100%; overflow: hidden; aspect-ratio: 475 / 600; }
+
+.lujo .card-image { position: relative; width: 100%; height: 100%; margin: 0; background: var(--c-cream); }
+
+.lujo .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: darken;
+}
+
+/* lifestyle photo that replaces the cut-out on hover */
+.lujo .card-image__hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+.lujo .card-image__hover img { object-fit: cover; mix-blend-mode: normal; }
+.lujo .card-image__hover ~ img { transition: all 0.5s ease; transition-property: opacity, visibility; }
+
+.lujo .product-card__footer { flex-grow: 1; }
+
+.lujo .card-footer {
+  display: grid;
+  flex: 1;
+  height: 100%;
+  padding: 20px 28px 32px;
+  background: var(--c-cream);
+}
+
+.lujo .card-footer__top { display: grid; gap: 8px; padding-top: 4px; padding-bottom: 16px; }
+
+.lujo .product-card__title {
+  font-size: var(--t18-size);
+  line-height: var(--t18-lh);
+  letter-spacing: var(--t18-ls);
+}
+
+.lujo .card-footer__details { display: grid; gap: 8px; color: var(--c-clay); opacity: 0.7; }
+.lujo .card-footer__details--bottom { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; }
+.lujo .product-card__price { grid-column: 2; margin-left: auto; }
+.lujo .sa-price { display: flex; align-items: center; gap: 4px; }
+
+/* colour swatches: revealed on hover */
+.lujo .card-footer__bottom {
+  margin-top: auto;
+  padding-top: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.lujo .card-footer__colours { display: flex; gap: 8px; align-items: center; min-height: 14px; }
+
+.lujo .card-footer__swatch {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: #848484;
+}
+
+.lujo .card-footer__swatch img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+.lujo .card-footer__more {
+  color: #666;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  letter-spacing: var(--ls-12);
+}
+
+@media (min-width: 992px) {
+  .lujo .product-card:hover .card-header { color: #fff; }
+  .lujo .product-card:hover .card-footer__bottom { opacity: 1; visibility: visible; }
+  .lujo .product-card:hover .product-card__wishlist { opacity: 1; visibility: visible; }
+
+  .lujo .product-card:hover .card-image__hover {
+    opacity: 1;
+    visibility: inherit;
+    transition: all 0.5s ease;
+    transition-property: opacity, visibility;
+  }
+
+  .lujo .product-card:hover .card-image__hover ~ img {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    transition-property: opacity, visibility;
+  }
+}
+
+/* no hover on touch: always show wishlist + swatches */
+@media (max-width: 991.98px) {
+  .lujo .card-footer__bottom,
+  .lujo .product-card__wishlist { opacity: 1; visibility: visible; }
+}
+
+@media (max-width: 991.98px) {
+  .lujo .product-row__grid { grid-template-columns: 1fr; padding: 16px; gap: 32px; }
+}
+
+@media (max-width: 767.98px) {
+  .lujo .product-row { padding-top: 48px; padding-bottom: 64px; }
+  .lujo .product-row__container { gap: 48px; }
+
+  .lujo .product-row__grid { position: sticky; top: 0; z-index: 10; background: var(--c-page); }
+
+  .lujo .product-row__tabs {
+    max-width: 100dvw;
+    margin-inline: -16px;
+    padding-inline: 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .lujo .product-row__tabs::-webkit-scrollbar { display: none; }
+
+  .lujo .product-row__collection { display: flex !important; flex-direction: column; }
+  .lujo .product-row__collection.hidden { display: none !important; }
+
+  .lujo .card-header { padding-top: 16px; padding-inline: 17px; }
+  .lujo .card-footer { padding-inline: 16px; }
+  .lujo .product-card__image { aspect-ratio: 385 / 332; }
+  .lujo .card-image { padding-top: 33px; }
+  .lujo .card-image img { object-fit: cover; }
+}
+
+/* ==========================================================================
+   4. Our story - sticky menu + sticky media, copy scrolls between them
+   ========================================================================== */
+.lujo .our-story {
+  position: relative;
+  z-index: 2;
+  background-color: var(--c-cream);
+}
+
+.lujo .our-story__grid { display: grid; grid-template-columns: 1fr 1fr; }
+.lujo .our-story__grid--left { display: grid; grid-template-columns: 1fr 0.91489fr; }
+@media (max-width: 1199.98px) { .lujo .our-story__grid--left { grid-template-columns: auto 1fr; } }
+
+.lujo .our-story__grid--right { position: relative; padding-bottom: 160px; }
+
+.lujo .our-story__media {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 613px;
+  min-height: 100dvh;
+  margin-left: auto;
+}
+
+.lujo .our-story__media-slide {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  aspect-ratio: 613 / 800;
+  transition: all 0.5s ease;
+}
+
+.lujo .our-story__media-slide.active { opacity: 1; visibility: visible; }
+
+.lujo .our-story__menu {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  height: max-content;
+  padding: 136px 32px 128px;
+}
+
+.lujo .our-story__tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  color: #000;
+  opacity: 0.5;
+  transition: all 0.5s ease;
+}
+
+/* 19px dash that fades in before the active label */
+.lujo .our-story__tab-btn::before {
+  content: "";
+  width: 19px;
+  height: 1px;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.lujo .our-story__tab-btn.active { opacity: 1; }
+.lujo .our-story__tab-btn.active::before { opacity: 1; visibility: visible; }
+
+.lujo .our-story__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 112px;
+  padding: 0 32px;
+  border-left: 1px solid var(--c-line);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.lujo .our-story__content::-webkit-scrollbar { display: none; }
+
+.lujo .our-story .content-slide { padding-top: 128px; }
+
+.lujo .our-story .content-slide__title {
+  margin-bottom: 16px;
+  color: #000;
+  font-size: var(--t33-size);
+  line-height: var(--t33-lh);
+  letter-spacing: var(--t33-ls);
+}
+
+.lujo .our-story .content-slide__text {
+  color: #000;
+  font-size: var(--t14-size);
+  line-height: var(--t14-lh);
+  letter-spacing: var(--t14-ls);
+}
+
+.lujo .our-story .content-slide__cta { margin-top: 32px; }
+
+/* fade at the bottom of the copy column (position is calculated in js/our-story.js) */
+.lujo .our-story__gradient {
+  position: absolute;
+  bottom: -160px;
+  left: -108px;
+  z-index: 3;
+  width: 342px;
+  height: 482px;
+  opacity: 0.8;
+  background: linear-gradient(180deg, rgba(243, 240, 234, 0), var(--c-cream) 19.9%);
+  transform: translate(-100%);
+  pointer-events: none;
+}
+
+/* ---- tablet + mobile: tabs on top, stacked sticky slides ---- */
+@media (max-width: 991.98px) {
+  .lujo .our-story__container { position: relative; height: 2000px; }
+  .lujo .our-story__grid { position: sticky; top: 0; z-index: 12; grid-template-columns: 1fr; }
+
+  .lujo .our-story__grid--left {
+    z-index: 10;
+    grid-template-columns: 1fr;
+    max-width: 100vw;
+    padding: 24px 16px;
+    overflow-y: auto;
+    background-color: var(--c-cream);
+    scrollbar-width: none;
+  }
+
+  .lujo .our-story__grid--left::-webkit-scrollbar { width: 0; background: transparent; }
+
+  .lujo .our-story__grid--right { padding-bottom: 0; }
+
+  .lujo .our-story__menu { position: relative; z-index: 10; flex-direction: row; gap: 32px; padding: 0; }
+
+  .lujo .our-story__tab-btn { position: relative; gap: 0; white-space: nowrap; }
+  .lujo .our-story__tab-btn::before { position: absolute; top: 5px; left: 0; transform: translate(100%); }
+  .lujo .our-story__tab-btn.active { padding-left: 27px; }
+  .lujo .our-story__tab-btn.active::before { transform: translate(0); }
+
+  .lujo .our-story__media { position: relative; min-height: 0; max-width: 100%; }
+
+  .lujo .our-story__media-slide { grid-column: auto; grid-row: auto; width: 100%; height: auto; opacity: 1; visibility: visible; aspect-ratio: 393 / 513; }
+
+  .lujo .our-story__mobile-container { position: sticky; top: 140px; display: grid; }
+
+  .lujo .our-story__mobile-slide {
+    position: sticky;
+    top: 140px;
+    grid-column: 1;
+    grid-row: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .lujo .our-story__mobile-slide.active { opacity: 1; visibility: visible; }
+
+  .lujo .our-story .content-slide { padding-top: 32px; padding-inline: 16px; padding-bottom: 56px; min-height: 257px; }
+  .lujo .our-story .content-slide__text { max-width: 345px; }
+}
+
+/* ==========================================================================
+   5. Testimonials
+   ========================================================================== */
+.lujo .testimonials {
+  position: relative;
+  z-index: 2;
+  padding-top: 32px;
+  padding-bottom: 200px;
+  min-height: 540px;
+  color: var(--c-clay);
+  background-color: var(--c-page);
+}
+
+.lujo .testimonials__title {
+  margin-bottom: 64px;
+  color: inherit;
+  font-size: var(--t44-size);
+  line-height: var(--t44-lh);
+  letter-spacing: var(--t44-ls);
+}
+
+.lujo .testimonials__slider { position: relative; }
+
+.lujo .testimonials__slider-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lujo .testimonials__slider-nav .button {
+  padding: 4px 15px;
+  border: 1px solid var(--c-clay);
+  border-radius: 1000px;
+  color: var(--c-clay);
+}
+
+.lujo .testimonials__slider-nav .button svg { width: 18px; height: 18px; flex-shrink: 0; }
+.lujo .testimonials__slider-nav .swiper-nav-next svg { transform: rotate(180deg); }
+
+.lujo .testimonials-slide.large-quote { padding-right: 140px; }
+
+.lujo .testimonials-slide__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
+  max-width: 761px;
+}
+
+.lujo .testimonials-slide__title { color: inherit; }
+
+.lujo .testimonials-slide__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  color: inherit;
+}
+
+.lujo .testimonials-slide__text p {
+  color: inherit;
+  font-size: var(--t33-size);
+  line-height: var(--t33-lh);
+  letter-spacing: var(--t33-ls);
+}
+
+@media (max-width: 767.98px) {
+  .lujo .testimonials { padding-top: 16px; padding-bottom: 120px; }
+  .lujo .testimonials__title { display: flex; align-items: center; height: 48px; }
+  .lujo .testimonials__slider-nav { position: static; margin-top: 64px; }
+  .lujo .testimonials-slide.large-quote { padding-right: 0; }
+}
+
+/* ==========================================================================
+   6. Recent journals
+   ========================================================================== */
+.lujo .article-cards { padding: 160px 0; background: var(--c-page); }
+
+.lujo .article-cards__container {
+  display: grid;
+  grid-template-columns: 0.25438fr 1fr 0.25438fr;
+  align-items: center;
+}
+
+.lujo .article-cards__title { color: var(--c-clay); }
+.lujo .article-cards__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.lujo .article-cards__cta { justify-self: end; margin-left: auto; }
+
+.lujo .article-card { position: relative; padding: 120px 56px 56px; background: var(--c-cream); }
+.lujo .article-card__container { display: grid; grid-template-columns: 1fr; gap: 90px; }
+.lujo .article-card__link { position: absolute; left: 0; top: 0; z-index: 1; width: 100%; height: 100%; cursor: pointer; }
+
+.lujo .article-card__image {
+  width: 216px; /* explicit so the card height never depends on when the lazy image arrives */
+  max-width: 100%;
+  max-height: 271px;
+  margin-inline: auto;
+  overflow: hidden;
+  aspect-ratio: 216 / 271;
+  transition: all 0.5s ease;
+}
+
+.lujo .article-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.5s ease;
+}
+
+.lujo .article-card__title {
+  margin-bottom: 24px;
+  color: #000;
+  font-size: var(--t24-size);
+  line-height: var(--t24-lh);
+  letter-spacing: var(--t24-ls);
+}
+
+.lujo .article-card__cta {
+  position: relative;
+  z-index: 2;
+  color: #000;
+  font-size: var(--t14-size);
+  line-height: var(--t14-lh);
+  letter-spacing: var(--t14-ls);
+}
+
+@media (min-width: 992px) {
+  .lujo .article-card:hover .article-card__image img { transform: scale(1.03); }
+}
+
+@media (max-width: 991.98px) {
+  .lujo .article-cards__container { grid-template-columns: 1fr; gap: 32px; }
+  .lujo .article-cards__title { text-align: center; }
+  .lujo .article-cards__grid { grid-template-columns: 1fr; gap: 8px; padding-inline: 32px; }
+  .lujo .article-cards__cta { justify-self: center; margin-left: 0; }
+  .lujo .article-card { max-width: 440px; margin-inline: auto; width: 100%; }
+}
+
+@media (max-width: 767.98px) {
+  .lujo .article-cards { padding: 64px 0; }
+  .lujo .article-cards__grid { padding-inline: 0; }
+  .lujo .article-card { max-width: 361px; padding: 72px 40px 40px; }
+  .lujo .article-card__container { gap: 54px; }
+}
+
+/* ==========================================================================
+   7. Socials - "Stay inspired"
+   ========================================================================== */
+.lujo .socials {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--c-line);
+  background: var(--c-cream);
+}
+
+.lujo .socials__grid { display: grid; grid-template-columns: 216px 1fr; gap: 16px; align-items: start; }
+.lujo .socials__header { position: relative; width: max-content; max-width: 216px; }
+
+.lujo .socials__title,
+.lujo .socials__handle {
+  font-size: var(--t18-size);
+  line-height: var(--t18-lh);
+  letter-spacing: var(--t18-ls);
+}
+
+.lujo .socials__link { position: absolute; inset: 0; z-index: 1; cursor: pointer; }
+.lujo .socials__content { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
+.lujo .socials__image { position: relative; aspect-ratio: 187 / 232; overflow: hidden; }
+.lujo .socials__image img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s ease; }
+
+@media (min-width: 992px) {
+  .lujo .socials__image:hover img { transform: scale(1.03); }
+}
+
+@media (max-width: 991.98px) {
+  .lujo .socials__content { grid-template-columns: repeat(4, 1fr); }
+  .lujo .socials__image:nth-child(5),
+  .lujo .socials__image:nth-child(6) { display: none; }
+}
+
+@media (max-width: 767.98px) {
+  .lujo .socials { border: 0; }
+  .lujo .socials__grid { grid-template-columns: 1fr; gap: 16px; }
+  .lujo .socials__content { grid-template-columns: repeat(2, 1fr); }
+  .lujo .socials__image:nth-child(3),
+  .lujo .socials__image:nth-child(4) { display: none; }
+}
+
+/* ==========================================================================
+   Footer + newsletter popup
+   ========================================================================== */
+.lujo .footer {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  padding: 120px 0 32px;
+  background: var(--c-cream);
+}
+
+.lujo .footer ul { margin: 0; padding: 0; list-style: none; }
+
+.lujo .footer .container {
+  display: grid;
+  grid-template-columns: 216px 1fr;
+  column-gap: 16px;
+  row-gap: 120px;
+  padding: 0 32px;
+}
+
+.lujo .footer__container--top { border-bottom: 1px solid var(--c-line); }
+.lujo .footer__top { grid-column: 2; }
+@media (min-width: 768px) { .lujo .footer__top { padding-top: 24px; } }
+
+.lujo .footer__grid {
+  display: grid;
+  grid-template-columns: 0.6588fr 1fr;
+  gap: 16px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.lujo .footer__grid--main { padding-top: 120px; padding-bottom: 24px; }
+
+.lujo .footer__grid--copyright {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+/* ---- newsletter (2-step: email, then name) ---- */
+.lujo .footer__form-title { color: var(--c-clay); }
+
+.lujo .footer__form-wrapper { position: relative; }
+
+.lujo .footer .newsletter-form__field-wrapper .field {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.lujo .footer .input__field {
+  width: 100%;
+  max-width: 499px;
+  height: 52px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: var(--c-clay);
+  font-size: var(--t44-size);
+  line-height: var(--t44-lh);
+  letter-spacing: 0;
+}
+
+.lujo .footer .input__field::placeholder {
+  color: var(--c-clay);
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.lujo .footer .input__field:focus::placeholder { color: var(--c-line); }
+
+.lujo .footer .field__button {
+  gap: 8px;
+  height: 28px;
+  margin: 8px 0;
+  padding: 0 11px 0 15px;
+  border-color: var(--c-clay);
+  color: #000;
+}
+
+.lujo .footer .field__button .button__icon { display: flex; align-items: center; }
+.lujo .footer .field__button .button__icon--small { display: none; }
+
+.lujo .footer .error_message,
+.lujo .footer .validation_error {
+  padding-bottom: 16px;
+  color: var(--c-clay);
+}
+
+.lujo .footer .form-success { display: none; align-items: flex-end; opacity: 0; visibility: hidden; transition: all 0.5s ease; }
+
+.lujo .footer .form-success__message {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 52px;
+  color: var(--c-clay);
+  font-size: var(--t44-size);
+  line-height: var(--t44-lh);
+  letter-spacing: 0;
+}
+
+.lujo .footer__form-wrapper.is-success { height: 168px; }
+.lujo .footer__form-wrapper.is-success .footer__form-title,
+.lujo .footer__form-wrapper.is-success .newsletter-form__field-wrapper { display: none; }
+.lujo .footer__form-wrapper.is-success .form-success { display: flex; width: 100%; padding: 16px 0; opacity: 1; visibility: visible; }
+
+/* ---- contact blocks ---- */
+.lujo .footer__contact-wrapper { display: grid; grid-template-columns: 1fr; gap: 20px; }
+
+.lujo .footer .contact-group:not(:first-child) { padding-top: 20px; border-top: 1px solid var(--c-line); }
+
+.lujo .footer .contact-group__title {
+  padding-bottom: 8px;
+  font-size: var(--t18-size);
+  line-height: var(--t18-lh);
+  letter-spacing: var(--t18-ls);
+}
+
+.lujo .footer .contact-group__text,
+.lujo .footer .contact-group__text * {
+  color: var(--c-clay);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: var(--ls-14);
+}
+
+.lujo .footer .contact-group__link { display: block; }
+.lujo .footer .contact-group a { text-underline-offset: 2px; }
+
+/* ---- link columns ---- */
+.lujo .footer__links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+.lujo .footer .group-links__title { margin-bottom: 24px; color: var(--c-clay); }
+
+.lujo .footer .group-links ul { display: flex; flex-direction: column; gap: 4px; color: var(--c-clay); }
+
+.lujo .footer .group-links ul * {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: var(--ls-14);
+}
+
+.lujo .footer .group-links ul a,
+.lujo .footer .flex-links a { text-underline-offset: 2px; }
+
+.lujo .footer .group-links ul a:hover,
+.lujo .footer .flex-links a:hover,
+.lujo .footer .contact-group a:hover { text-decoration: underline; }
+
+.lujo .footer .flex-links { display: flex; align-items: center; gap: 20px; }
+
+.lujo .footer .flex-links * {
+  color: var(--c-clay);
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: var(--ls-14);
+}
+
+/* mobile footer accordions (hidden on desktop) */
+.lujo .footer .accordion { display: none; }
+
+/* ---- responsive ---- */
+@media (max-width: 991.98px) {
+  .lujo .footer__grid { grid-template-columns: 1fr; gap: 20px; grid-column: 2; }
+  .lujo .footer__grid--main { padding-top: 64px; padding-bottom: 0; gap: 64px; }
+  .lujo .footer__links-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767.98px) {
+  .lujo .footer { padding-top: 64px; padding-bottom: 20px; }
+  .lujo .footer .container { grid-template-columns: 1fr; column-gap: 0; row-gap: 64px; padding: 0 16px; }
+  .lujo .footer__top { grid-column: auto; }
+  .lujo .footer__grid { grid-column: auto; }
+  .lujo .footer__grid--copyright { grid-column: auto; grid-template-columns: 1fr; gap: 12px; }
+  .lujo .footer__grid--copyright .flex-links { flex-wrap: wrap; gap: 8px 20px; }
+  .lujo .footer__contact-wrapper { gap: 32px; }
+  .lujo .footer .contact-group:not(:first-child) { padding-top: 32px; }
+
+  .lujo .footer .input__field { height: 38px; }
+  .lujo .footer .field { align-items: center; }
+  .lujo .footer .field__button { padding-inline: 16px; }
+  .lujo .footer .field__button .button__text,
+  .lujo .footer .field__button .button__icon--small { display: none !important; }
+  .lujo .footer .field__button .button__icon--large { display: flex !important; }
+  .lujo .footer .form-success__message { height: 44px; align-items: center; }
+
+  .lujo .footer__links-grid--columns { display: none; }
+  .lujo .footer .accordion { display: grid; }
+  .lujo .footer .group-links ul * { font-size: 12px; line-height: 16px; letter-spacing: var(--ls-12); }
+}
+
+.lujo .footer .accordion-item__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0 16px;
+  border-top: 1px solid var(--c-line);
+  color: var(--c-clay);
+  cursor: pointer;
+}
+
+.lujo .footer .accordion-item__icon { display: flex; align-items: center; justify-content: center; width: 16px; height: 16px; margin-left: auto; }
+.lujo .footer .accordion-item__icon svg { display: block; width: 16px; height: 16px; }
+.lujo .footer .accordion-item__icon .active { display: none; }
+.lujo .footer .accordion-item.active .accordion-item__icon .default { display: none; }
+.lujo .footer .accordion-item.active .accordion-item__icon .active { display: inline-block; }
+.lujo .footer .accordion-item__collapse { display: none; }
+.lujo .footer .accordion-item.active .accordion-item__collapse { display: block; }
+.lujo .footer .accordion-item__content { padding-bottom: 24px; }
+
+/* ==========================================================================
+   Newsletter popup ("Compendium for Slow Living")
+   ========================================================================== */
+.lujo .contact-modal {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+  max-width: 666px;
+  height: 470px;
+  padding: 0;
+  overflow: hidden;
+  background: var(--c-taupe);
+  transform: translate(100%);
+  transition: all 0.5s ease;
+}
+
+.lujo .contact-modal.active { transform: translate(0); }
+
+.lujo .newsletter-popup__grid { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+.lujo .newsletter-popup__grid--left { overflow: hidden; }
+.lujo .newsletter-popup__grid--right { position: relative; padding: 32px 32px 48px; }
+.lujo .newsletter-popup__image { width: 100%; height: 100%; overflow: hidden; }
+.lujo .newsletter-popup__image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.lujo .newsletter-popup__form { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+
+.lujo .contact-modal__header { position: relative; margin-bottom: 16px; }
+
+.lujo .contact-modal__header h4 {
+  max-width: 225px;
+  margin-bottom: 12px;
+  color: #000;
+  font-size: var(--t33-size);
+  line-height: var(--t33-lh);
+  letter-spacing: var(--t33-ls);
+}
+
+.lujo .contact-modal__header p { max-width: 258px; color: #000; font-size: 12px; line-height: 16px; letter-spacing: var(--ls-12); }
+
+.lujo .contact-modal__close { position: absolute; top: 24px; right: 24px; z-index: 99; display: block; width: 16px; height: 16px; cursor: pointer; }
+.lujo .contact-modal__close svg { width: 16px; height: 16px; }
+
+.lujo .contact-modal form { display: flex; flex-direction: column; }
+.lujo .contact-modal form .form-row--inputs { margin-bottom: 16px; display: flex; flex-direction: column; }
+
+.lujo .contact-modal form input {
+  padding: 16px 0;
+  border: 0;
+  border-bottom: 1px solid var(--c-clay);
+  outline: none;
+  background: transparent;
+  color: var(--c-clay);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: var(--ls-14);
+}
+
+.lujo .contact-modal form input::placeholder { color: var(--c-clay); opacity: 1; }
+.lujo .contact-modal form .button { width: 100%; max-width: 100%; }
+
+.lujo .contact-modal .form-row__note { max-width: 215px; margin-top: 16px; font-size: 12px; line-height: 16px; letter-spacing: var(--ls-12); }
+.lujo .contact-modal .form-row__note a { text-decoration: underline; text-underline-offset: 1px; }
+
+.lujo .contact-modal .form-success {
+  position: absolute;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 32px 48px;
+  background: var(--c-taupe);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.lujo .contact-modal .form-success h4 { max-width: 225px; margin-bottom: 12px; font-size: var(--t33-size); line-height: var(--t33-lh); letter-spacing: var(--t33-ls); }
+.lujo .contact-modal .form-success__content { display: flex; flex: 1; flex-direction: column; width: 100%; padding-top: 12px; }
+.lujo .contact-modal .form-success__message { max-width: 258px; font-size: 12px; line-height: 16px; letter-spacing: var(--ls-12); }
+.lujo .contact-modal .form-success .contact-modal__close { position: relative; top: 0; right: 0; display: flex; width: 100%; height: 28px; margin-top: auto; }
+.lujo .contact-modal.newsletter-success .form-success { opacity: 1; visibility: visible; }
+
+.lujo .newsletter-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  width: 100%;
+  height: 100%;
+  background: var(--c-page);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+body.newsletter-popup--active .lujo .newsletter-overlay { opacity: 0.5; visibility: visible; }
+body.newsletter-popup--active { overflow: hidden; }
+
+@media (max-width: 767.98px) {
+  .lujo .contact-modal { inset: 0; max-width: 100%; height: 100%; }
+  .lujo .newsletter-popup__grid { grid-template-columns: 1fr; grid-template-rows: 1fr 440px; }
+  .lujo .newsletter-popup__grid--right { padding: 32px; }
+  .lujo .contact-modal__close { color: #fff; }
+  .lujo .contact-modal__header h4 { font-size: 24px; line-height: 29px; letter-spacing: var(--t33-ls); }
+}
+
+/* ==========================================================================
+   Cart drawer
+   ========================================================================== */
+.lujo .cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  width: 596px;
+  overflow: hidden;
+  color: #030303;
+  background: var(--c-drawer);
+  box-shadow: -4px 0 60px rgba(0, 0, 0, 0.03);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(100%);
+  transition: all 0.5s ease;
+}
+
+body.cart-drawer--show { overflow: hidden; }
+body.cart-drawer--show .lujo .cart-drawer { opacity: 1; visibility: inherit; transform: translate(0); }
+
+.lujo .cart-drawer__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99997;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(251, 247, 239, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+body.cart-drawer--show .lujo .cart-drawer__overlay { opacity: 1; visibility: inherit; }
+
+.lujo .cart-drawer__container { display: flex; flex-direction: column; height: 100%; }
+
+.lujo .cart-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  height: 56px;
+  min-height: 56px;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--c-line);
+}
+
+.lujo .cart-drawer__title {
+  font-size: var(--t18-size);
+  line-height: var(--t18-lh);
+  letter-spacing: var(--t18-ls);
+}
+
+.lujo .cart-drawer__header .view-cart { margin-right: 12px; margin-left: auto; }
+
+.lujo .cart-drawer__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.lujo .cart-drawer__main { display: flex; flex-direction: column; height: 100%; padding: 0; overflow-y: auto; }
+
+/* ---- items ---- */
+.lujo .cart-drawer__items { padding: 16px 32px; }
+
+.lujo .cart-item { padding: 16px 0; border-bottom: 1px solid var(--c-line); }
+.lujo .cart-item__grid { display: grid; grid-template-columns: 84px 1fr; column-gap: 20px; }
+
+.lujo .cart-item__image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 84px;
+  height: 110px;
+  padding: 7px 0;
+  background-color: var(--c-page);
+}
+
+.lujo .cart-item__image img { width: 100%; height: 100%; object-fit: contain; object-position: center; mix-blend-mode: multiply; }
+
+.lujo .cart-item__content { display: flex; flex-direction: column; padding: 0; }
+.lujo .cart-item__content--grid { display: flex; align-items: flex-start; justify-content: space-between; column-gap: 20px; }
+
+.lujo .cart-item__product-name {
+  font-size: var(--t18-size);
+  line-height: var(--t18-lh);
+  letter-spacing: var(--t18-ls);
+}
+
+.lujo .cart-item__price {
+  font-size: var(--t16-size);
+  line-height: var(--t16-lh);
+  letter-spacing: var(--t16-ls);
+  white-space: nowrap;
+}
+
+.lujo .cart-item__desc {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  color: var(--c-clay);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: var(--ls-12);
+}
+
+.lujo .cart-item__content--quantity { margin-top: auto; }
+
+.lujo .cart-item__quantity { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.lujo .cart-item__quantity-box { display: flex; align-items: center; }
+
+.lujo .cart-item__quantity-box .box-q {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: var(--c-clay);
+}
+
+.lujo .cart-item__quantity-box .box-q svg { width: 16px; height: 16px; }
+
+.lujo .cart-item__quantity-value {
+  min-width: 26px;
+  padding-bottom: 2px;
+  text-align: center;
+  font-size: var(--t14-size);
+  line-height: 19px;
+  letter-spacing: var(--t14-ls);
+}
+
+.lujo .cart-item__remove { color: var(--c-clay); }
+
+/* ---- empty ---- */
+.lujo .cart-drawer__empty { display: flex; flex-direction: column; height: 100%; padding: 22px 32px 32px; }
+.lujo .cart-drawer__empty-text { margin-bottom: 20px; color: var(--c-clay); }
+.lujo .cart-collection { margin-top: auto; margin-bottom: 0; position: relative; }
+.lujo .cart-collection__title { margin-bottom: 20px; color: var(--c-clay); }
+.lujo .cart-collection__items { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.lujo .cart-collection__item { position: relative; width: 100%; }
+.lujo .cart-collection__image { width: 100%; height: auto; overflow: hidden; aspect-ratio: 261 / 324; }
+.lujo .cart-collection__image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+.lujo .cart-collection__item-title {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  letter-spacing: var(--ls-nav);
+}
+
+.lujo .cart-collection__link { position: absolute; inset: 0; }
+
+/* ---- footer ---- */
+.lujo .cart-drawer__footer { position: relative; z-index: 5; margin-top: auto; padding: 0 0 32px; border-top: 1px solid var(--c-line); }
+.lujo .cart-drawer__footer--empty { padding: 32px; background: var(--c-drawer); }
+
+.lujo .cart-drawer .accordion { border-bottom: 1px solid var(--c-line); }
+
+.lujo .cart-drawer .accordion-item__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 32px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: var(--ls-nav);
+  cursor: pointer;
+}
+
+.lujo .cart-drawer .accordion__icon svg { width: 16px; height: 16px; }
+.lujo .cart-drawer .accordion__icon .active { display: none; }
+.lujo .cart-drawer .accordion-item.active .accordion__icon .default { display: none; }
+.lujo .cart-drawer .accordion-item.active .accordion__icon .active { display: flex; }
+.lujo .cart-drawer .accordion-item__collapse { display: none; }
+.lujo .cart-drawer .accordion-item.active .accordion-item__collapse { display: block; }
+
+.lujo .cart-drawer .accordion-item__content {
+  padding: 0 32px 16px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: var(--ls-14);
+}
+
+.lujo .cart-drawer__checkout { padding: 22px 32px 0; }
+.lujo .cart-drawer__checkout .button,
+.lujo .cart-drawer__empty-button { width: 100%; height: 48px; }
+
+.lujo .cart-drawer__subtotal { display: flex; justify-content: space-between; margin-bottom: 16px; }
+
+.lujo .cart-drawer__footer-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0;
+  padding-top: 14px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: var(--ls-12);
+}
+
+body.js-cart-empty .lujo .hide-cart-empty,
+body:not(.js-cart-empty) .lujo .show-cart-empty { display: none; }
+
+@media (max-width: 767.98px) {
+  .lujo .cart-drawer { width: 100%; }
+  .lujo .cart-drawer__header { padding: 0 16px; }
+  .lujo .cart-drawer__items { padding-inline: 16px; }
+  .lujo .cart-drawer__empty { padding: 16px; }
+  .lujo .cart-drawer__empty-text { display: none; }
+  .lujo .cart-drawer__footer--empty { padding: 16px; }
+  .lujo .cart-drawer__checkout { padding: 16px 16px 0; }
+  .lujo .cart-drawer .accordion-item__label { padding: 16px; }
+  .lujo .cart-drawer .accordion-item__content { padding: 0 16px 16px; }
+  .lujo .cart-collection__image { aspect-ratio: 176 / 209; }
+}
+
+/* page offset for non-home pages (the home hero sits under the bar) */
+.lujo .navbar__spacing { height: var(--nav-height); }
+body.template-index .lujo .navbar__spacing { display: none; }
+
+/* text wordmark (replaces the old logo svg); fixed 50px box keeps the nav grid unchanged */
+.lujo .navbar-main__wordmark {
+  display: block;
+  width: 50px;
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}

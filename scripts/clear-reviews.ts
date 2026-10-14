@@ -1,4 +1,3 @@
-import "dotenv/config";
 import { db } from "../lib/db";
 
 async function clearReviews() {

@@ -1,3 +1,4 @@
+import { env } from "@/lib/config";
 /**
  * SMS Alert India (smsalert.co.in) Integration Helper
  * Used for sending real OTPs and order tracking notifications to Indian phone numbers via SMS.
@@ -10,8 +11,8 @@ export interface SendSmsOptions {
 }
 
 export async function sendSmsViaSmsAlert(options: SendSmsOptions) {
-  const apiKey = process.env.SMSALERT_API_KEY;
-  const senderId = process.env.SMSALERT_SENDER_ID || "XELCTR";
+  const apiKey = env.SMSALERT_API_KEY;
+  const senderId = env.SMSALERT_SENDER_ID || "XELCTR";
 
   // Clean 10-digit phone number
   const cleanPhone = options.phone.replace(/[^0-9]/g, "").slice(-10);
@@ -35,10 +36,10 @@ export async function sendSmsViaSmsAlert(options: SendSmsOptions) {
     url.searchParams.set("mobileno", cleanPhone);
     url.searchParams.set("text", options.message);
 
-    if (options.templateId || process.env.SMSALERT_TEMPLATE_ID) {
+    if (options.templateId || env.SMSALERT_TEMPLATE_ID) {
       url.searchParams.set(
         "template",
-        options.templateId || process.env.SMSALERT_TEMPLATE_ID || ""
+        options.templateId || env.SMSALERT_TEMPLATE_ID || ""
       );
     }
 

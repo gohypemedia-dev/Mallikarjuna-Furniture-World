@@ -1,4 +1,5 @@
 import "server-only";
+import { env } from "@/lib/config";
 
 type DelhiveryScan = {
   status: string;
@@ -19,7 +20,7 @@ export type DelhiveryTrackingResult = {
 };
 
 export function getDelhiveryToken() {
-  const token = process.env.DELHIVERY_API_TOKEN?.trim();
+  const token = env.DELHIVERY_API_TOKEN?.trim();
   if (!token) {
     throw new Error("Delhivery is not configured. Add DELHIVERY_API_TOKEN to enable AWB generation.");
   }
@@ -27,7 +28,7 @@ export function getDelhiveryToken() {
 }
 
 export function getTrackingApiOrigin() {
-  return process.env.DELHIVERY_ENVIRONMENT?.toLowerCase() === "staging"
+  return env.DELHIVERY_ENVIRONMENT?.toLowerCase() === "staging"
     ? "https://staging-express.delhivery.com"
     : "https://track.delhivery.com";
 }
