@@ -3096,3 +3096,20 @@ html.lenis.lenis-smooth{scroll-behavior:auto!important}
   .lujo .tab-gallery__media img{width:100%;height:100%;object-fit:cover;object-position:center}
   .lujo .tab-gallery__thumbnail{width:56px;height:76px}
 }
+
+/* footer on phones: full-width accordions, tidy stacked bottom row */
+@media (max-width:767.98px){
+  .lujo .footer__right{width:100%}
+  .lujo .footer__links-grid--accordion{display:block;width:100%}
+  .lujo .footer__links-grid--accordion .accordion{width:100%}
+  .lujo .footer .accordion-item:last-child{border-bottom:1px solid var(--c-line)}
+  .lujo .footer .accordion-item__content ul{gap:10px}
+  .lujo .footer .contact-group__link{display:block;padding:2px 0}
+  /* bottom row: copyright, legal links, then the wordmark underneath (not behind the text) */
+  .lujo .footer__grid--copyright{flex-direction:column;justify-content:center;align-items:center;text-align:center;row-gap:14px;padding-top:28px;padding-bottom:20px;overflow:visible}
+  .lujo .footer__grid--copyright .footer__left,.lujo .footer__grid--copyright .footer__right{width:100%}
+  .lujo .footer__grid--copyright .flex-links{justify-content:center;flex-wrap:wrap;gap:8px 20px}
+  .lujo .footer__grid--copyright p{line-height:1.6}
+  .lujo .footer__wordmark{position:static;transform:none;order:3;width:100%;margin-top:10px;text-align:center;
+    font-size:clamp(28px,11vw,52px);letter-spacing:.16em;text-indent:.16em}
+}
