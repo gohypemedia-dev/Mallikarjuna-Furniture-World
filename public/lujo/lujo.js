@@ -117,6 +117,21 @@ window.LUJO_DATA = {
         "more": 0
       },
       {
+        "id": "sofa-set",
+        "variant": "sofa-set",
+        "title": "Sofa Set",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Sofa set",
+        "image": "/images/home-1.jpg",
+        "hover": "/images/about-1.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      },
+      {
         "id": "dining-table",
         "variant": "dining-table",
         "title": "Dining Table",
@@ -234,6 +249,21 @@ window.LUJO_DATA = {
         "alt": "Leather Sofa",
         "image": "/images/home-2.jpg",
         "hover": "/images/home-3.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      },
+      {
+        "id": "sofa-set",
+        "variant": "sofa-set",
+        "title": "Sofa Set",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Sofa set",
+        "image": "/images/home-1.jpg",
+        "hover": "/images/about-1.jpg",
         "cutout": false,
         "swatches": [],
         "more": 0
