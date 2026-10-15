@@ -415,7 +415,7 @@ window.LUJO_DATA = {
 
   Lujo.money = (usd) => {
     const value = Math.round(usd * (RATES[Lujo.currency.code] || 1));
-    return '$' + value.toLocaleString('en-US');
+    return '\u20B9' + value.toLocaleString('en-IN');
   };
 
   /* ---- misc ---- */
@@ -887,9 +887,10 @@ window.LUJO_DATA = {
   'use strict';
   const { $, $$, ready, storage, money } = window.Lujo;
 
-  const KEY = 'lujo.cart.v1';
+  const KEY = 'casablanca.cart.v1';
   const body = document.body;
-  let items = storage.get(KEY, []);
+  const catalogue = new Set(Object.values((window.LUJO_DATA || {}).products || {}).flat().map((p) => p.id));
+  let items = storage.get(KEY, []).filter((i) => catalogue.has(i.id));
   let lastFocus = null;
 
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -906,7 +907,7 @@ window.LUJO_DATA = {
           <div class="cart-item__content">
             <div class="cart-item__content--grid">
               <p class="cart-item__product-name">${esc(i.title)}</p>
-              <div class="cart-item__price">${money(i.price * i.qty)}</div>
+              <div class="cart-item__price">${i.price ? money(i.price * i.qty) : 'Price on request'}</div>
             </div>
             <div class="cart-item__desc">
               <span>${esc(i.collection)}</span>
@@ -931,7 +932,7 @@ window.LUJO_DATA = {
     const list = $('[data-cart-items]');
     const empty = items.length === 0;
     list.innerHTML = items.map(itemHtml).join('');
-    $('[data-cart-subtotal]').textContent = money(subtotal());
+    $('[data-cart-subtotal]').textContent = subtotal() > 0 ? money(subtotal()) : 'On enquiry';
     $('[data-cart-title]').textContent = empty ? 'Your cart is empty' : 'Your cart';
     body.classList.toggle('js-cart-empty', empty);
     $$('[data-cart-bubble]').forEach((b) => b.classList.toggle('is-empty', empty));
