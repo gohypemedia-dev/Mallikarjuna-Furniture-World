@@ -3113,3 +3113,15 @@ html.lenis.lenis-smooth{scroll-behavior:auto!important}
   .lujo .footer__wordmark{position:static;transform:none;order:3;width:100%;margin-top:10px;text-align:center;
     font-size:clamp(28px,11vw,52px);letter-spacing:.16em;text-indent:.16em}
 }
+
+/* footer bottom (tablet + desktop): divider line, then copyright left / legal links right,
+   then the big faint wordmark on its own line underneath, so it never runs through the text */
+@media (min-width:768px){
+  .lujo .footer__grid--copyright{flex-wrap:wrap;overflow:visible;row-gap:6px;padding-top:28px;padding-bottom:12px}
+  .lujo .footer__wordmark{position:static;transform:none;order:3;flex:0 0 100%;width:100%;margin-top:14px;text-align:center;
+    font-size:clamp(44px,8vw,120px);line-height:1;letter-spacing:.28em;text-indent:.28em}
+}
+
+/* footer: the template's ".container" collides with Tailwind's .container utility (max-width per breakpoint,
+   not centred), which cut the footer short on wide screens. Let it span the full width again. */
+.lujo .footer .container{width:100%;max-width:none;margin-inline:0}
