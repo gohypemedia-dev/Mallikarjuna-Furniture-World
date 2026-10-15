@@ -402,9 +402,9 @@ window.LUJO_DATA = {
 
   /* ---- money ---- */
   // Static demo rates relative to USD. Replace with real prices per market from your backend.
-  const RATES = { USD: 1, AUD: 1.52, NZD: 1.68 };
+  const RATES = { INR: 1, USD: 1, AUD: 1.52, NZD: 1.68 };
   Lujo.currency = {
-    code: Lujo.storage.get('lujo.currency', 'USD'),
+    code: 'INR',
     set(code) {
       if (!RATES[code] || code === this.code) return;
       this.code = code;

@@ -69,13 +69,13 @@
 
 :root {
   /* colour */
-  --c-page: #fffef9; /* page background */
-  --c-cream: #fff6c9; /* cards, footer, "our story", light text on dark */
-  --c-taupe: #fff6c9; /* announcement bar + hero loader */
-  --c-clay: #4a4da8; /* muted text / secondary buttons */
-  --c-line: #e3e1f2; /* hairlines */
-  --c-ink: #2e3192;
-  --c-drawer: #f4f3fb; /* cart drawer */
+  --c-page: #fbf7ef; /* page background */
+  --c-cream: #f3f0ea; /* cards, footer, "our story", light text on dark */
+  --c-taupe: #b2aea7; /* announcement bar + hero loader */
+  --c-clay: #5c5951; /* muted text / secondary buttons */
+  --c-line: #d7d4cf; /* hairlines */
+  --c-ink: #000;
+  --c-drawer: #efebe5; /* cart drawer */
 
   /* type */
   --lujo-font: "Marcellus", "Cinzel", Georgia, serif; --lujo-font-unused: "PP Neue Montreal", "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2013,7 +2013,7 @@ body.navbar--scrolled .lujo .mobile-menu { height: calc(100dvh - var(--nav-main-
   width: 342px;
   height: 482px;
   opacity: 0.8;
-  background: linear-gradient(180deg, rgba(255, 246, 201, 0), var(--c-cream) 19.9%);
+  background: linear-gradient(180deg, rgba(243, 240, 234, 0), var(--c-cream) 19.9%);
   transform: translate(-100%);
   pointer-events: none;
 }
@@ -2844,8 +2844,6 @@ body.template-index .lujo .navbar__spacing { display: none; }
 .lujo .homepage-hero .slideshow-slide--show-gradient::before{background:linear-gradient(180deg,transparent,#000)}
 .lujo .slideshow-slide--show-gradient::before{background:none}
 .lujo .homepage-hero .slideshow-slide--show-gradient::before{background:linear-gradient(180deg,transparent,#000)}
-body.template-index .lujo .navbar,
-body.template-index.navbar--scrolled.hero--in-view .lujo .navbar{--fore-color:var(--c-ink)}
 
 /* tighter benefits band for the wider serif font */
 .lujo .benefits__title{max-width:900px;font-size:34px;line-height:40px}
@@ -2855,13 +2853,13 @@ body.template-index.navbar--scrolled.hero--in-view .lujo .navbar{--fore-color:va
 @media (max-width:767px){.lujo .benefits__title{font-size:24px;line-height:29px}}
 
 /* premium full-page loader (logo) - covers every section until the page is ready */
-#site-loader{position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;width:100%;height:100vh;height:100dvh;background:#fff6c9;transition:opacity .7s ease,visibility .7s ease;animation:siteLoaderFallback .1s linear 8s forwards}
+#site-loader{position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;width:100%;height:100vh;height:100dvh;background:#f3f0ea;transition:opacity .7s ease,visibility .7s ease;animation:siteLoaderFallback .1s linear 8s forwards}
 #site-loader.is-done{opacity:0;visibility:hidden;pointer-events:none}
 @keyframes siteLoaderFallback{to{opacity:0;visibility:hidden;pointer-events:none}}
 #site-loader .hero-loader{display:flex;flex-direction:column;align-items:center;gap:clamp(18px,3.2vh,30px);width:100%;padding:0 24px;box-sizing:border-box}
 #site-loader .hero-loader img{width:clamp(180px,26vw,300px);max-height:34vh;height:auto;object-fit:contain;animation:heroLogoIn 1.1s cubic-bezier(.22,.61,.36,1) both,heroLogoPulse 2.4s ease-in-out 1.1s infinite}
-#site-loader .hero-loader__bar{position:relative;display:block;width:clamp(96px,14vw,150px);height:2px;overflow:hidden;background:rgba(46,49,146,.15)}
-#site-loader .hero-loader__bar::after{content:"";position:absolute;inset:0;width:45%;background:#2e3192;animation:heroBar 1.3s ease-in-out infinite}
+#site-loader .hero-loader__bar{position:relative;display:block;width:clamp(96px,14vw,150px);height:2px;overflow:hidden;background:rgba(0,0,0,.15)}
+#site-loader .hero-loader__bar::after{content:"";position:absolute;inset:0;width:45%;background:#000;animation:heroBar 1.3s ease-in-out infinite}
 @keyframes heroLogoIn{from{opacity:0;transform:translateY(12px) scale(.94)}to{opacity:1;transform:none}}
 @keyframes heroLogoPulse{50%{opacity:.85;transform:scale(1.02)}}
 @keyframes heroBar{from{transform:translateX(-100%)}to{transform:translateX(230%)}}
@@ -2873,8 +2871,8 @@ body.template-index.navbar--scrolled.hero--in-view .lujo .navbar{--fore-color:va
 .lujo .homepage-hero .home-hero-overlay{background:transparent!important}
 
 /* banner text legibility: soft scrim behind the copy, photo stays vivid */
-.lujo [data-slideshow] .slideshow-slide.desktop-colour-mode--dark.slideshow-slide--show-gradient::before{background:linear-gradient(180deg,rgba(255,254,249,0) 0%,rgba(255,254,249,.82) 55%,rgba(255,254,249,.94) 100%);opacity:1;height:68%}
-.lujo [data-slideshow] .slideshow-slide.desktop-colour-mode--cream.slideshow-slide--show-gradient::before{background:linear-gradient(180deg,rgba(18,20,58,0) 0%,rgba(18,20,58,.62) 55%,rgba(18,20,58,.82) 100%);opacity:1;height:68%}
+.lujo [data-slideshow] .slideshow-slide.desktop-colour-mode--dark.slideshow-slide--show-gradient::before{background:linear-gradient(180deg,rgba(251,247,239,0) 0%,rgba(251,247,239,.82) 55%,rgba(251,247,239,.94) 100%);opacity:1;height:68%}
+.lujo [data-slideshow] .slideshow-slide.desktop-colour-mode--cream.slideshow-slide--show-gradient::before{background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.62) 55%,rgba(0,0,0,.82) 100%);opacity:1;height:68%}
 .lujo [data-slideshow] .slideshow-slide__description{font-size:15px;line-height:21px}
 .lujo [data-slideshow] .desktop-colour-mode--cream .slideshow-slide__text-content{text-shadow:0 1px 14px rgba(0,0,0,.35)}
 
@@ -2901,18 +2899,18 @@ body.template-index.navbar--scrolled.hero--in-view .lujo .navbar{--fore-color:va
 .lujo .cat-carousel__track:active{cursor:grabbing}
 .lujo .cat-carousel__rail{display:flex;gap:var(--cat-gap);transform:translate3d(0,0,0);transition:transform 1s cubic-bezier(.65,0,.35,1);will-change:transform;backface-visibility:hidden}
 .lujo .cat-card img{-webkit-user-drag:none;pointer-events:none}
-.lujo .cat-card{position:relative;flex:0 0 calc((100% - 2 * var(--cat-gap)) / 3);display:block;overflow:hidden;background:var(--c-cream);color:#fff6c9}
+.lujo .cat-card{position:relative;flex:0 0 calc((100% - 2 * var(--cat-gap)) / 3);display:block;overflow:hidden;background:var(--c-cream);color:#f3f0ea}
 .lujo .cat-card__media{display:block;aspect-ratio:3/4;overflow:hidden}
 .lujo .cat-card__media img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.001);transition:transform 1.2s cubic-bezier(.22,.61,.36,1)}
 .lujo .cat-card:hover .cat-card__media img{transform:scale(1.05)}
-.lujo .cat-card::after{content:"";position:absolute;inset:auto 0 0 0;height:42%;background:linear-gradient(180deg,rgba(18,20,58,0),rgba(18,20,58,.72));pointer-events:none}
+.lujo .cat-card::after{content:"";position:absolute;inset:auto 0 0 0;height:42%;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.72));pointer-events:none}
 .lujo .cat-card__label{position:absolute;left:28px;right:28px;bottom:56px;z-index:1;font-size:15px;line-height:20px;letter-spacing:.14em;text-transform:uppercase}
 .lujo .cat-card:focus-visible{outline:2px solid var(--c-ink);outline-offset:3px}
 /* indicator over the cards: small dots, the active one is a thin line that fills with gold like a loading bar */
 .lujo .cat-carousel__track{position:relative}
 .lujo .cat-carousel__dots{position:absolute;left:0;right:0;bottom:20px;z-index:3;display:flex;justify-content:center;align-items:center;gap:10px;pointer-events:none}
-.lujo .cat-dot{position:relative;width:6px;height:6px;padding:0;border:0;border-radius:6px;overflow:hidden;background:rgba(255,246,201,.75);cursor:pointer;pointer-events:auto;box-shadow:0 0 6px rgba(18,20,58,.25);transition:width .45s ease,height .45s ease,background-color .45s ease}
-.lujo .cat-dot.is-active{width:44px;height:3px;background:rgba(255,246,201,.85)}
+.lujo .cat-dot{position:relative;width:6px;height:6px;padding:0;border:0;border-radius:6px;overflow:hidden;background:rgba(243,240,234,.75);cursor:pointer;pointer-events:auto;box-shadow:0 0 6px rgba(0,0,0,.25);transition:width .45s ease,height .45s ease,background-color .45s ease}
+.lujo .cat-dot.is-active{width:44px;height:3px;background:rgba(243,240,234,.85)}
 .lujo .cat-dot.is-active::after{content:"";position:absolute;inset:0;width:0;border-radius:inherit;background:var(--c-ink)}
 .lujo .cat-carousel.is-playing .cat-dot.is-active::after{animation:catFill var(--cat-interval) linear forwards}
 .lujo .cat-carousel:not(.is-playing) .cat-dot.is-active::after{width:100%}
@@ -2945,11 +2943,11 @@ body.template-index.navbar--scrolled.hero--in-view .lujo .navbar{--fore-color:va
 @media (max-width:767.98px){.lujo .testimonials{padding-bottom:24px}}
 
 /* page scrollbar in the Casa Blanca theme: navy thumb on a pale-yellow track */
-html{scrollbar-color:#2e3192 #fff6c9;scrollbar-width:thin}
+html{scrollbar-color:#5c5951 #fbf7ef;scrollbar-width:thin}
 html::-webkit-scrollbar{width:10px;height:10px}
-html::-webkit-scrollbar-track{background:#fff6c9}
-html::-webkit-scrollbar-thumb{background:#2e3192;border-radius:10px;border:2px solid #fff6c9}
-html::-webkit-scrollbar-thumb:hover{background:#1f2270}
+html::-webkit-scrollbar-track{background:#fbf7ef}
+html::-webkit-scrollbar-thumb{background:#5c5951;border-radius:10px;border:2px solid #fbf7ef}
+html::-webkit-scrollbar-thumb:hover{background:#000}
 html::-webkit-scrollbar-button{display:none;height:0;width:0}
 
 /* ==========================================================================
@@ -2990,7 +2988,7 @@ html.lenis.lenis-smooth{scroll-behavior:auto!important}
 /* footer: divider line on top, then copyright left + legal links right with the large faint brand wordmark behind them */
 .lujo .footer__grid--copyright{position:relative;overflow:hidden;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;column-gap:24px;row-gap:12px;border-top:1px solid var(--c-line);padding-top:36px;padding-bottom:36px}
 .lujo .footer__wordmark{position:absolute;left:50%;top:50%;z-index:0;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;user-select:none;
-  font-family:var(--lujo-font);font-size:clamp(40px,7.2vw,104px);line-height:1;letter-spacing:.28em;text-indent:.28em;color:rgba(46,49,146,.08)}
+  font-family:var(--lujo-font);font-size:clamp(40px,7.2vw,104px);line-height:1;letter-spacing:.28em;text-indent:.28em;color:rgba(0,0,0,.08)}
 .lujo .footer__grid--copyright > :not(.footer__wordmark){position:relative;z-index:1}
 .lujo .footer__grid--copyright .flex-links,.lujo .footer__grid--copyright .flex-links a,.lujo .footer__grid--copyright p{font-size:12px;letter-spacing:.12em;text-transform:uppercase}
 @media (max-width:767.98px){
@@ -3017,4 +3015,84 @@ html.lenis.lenis-smooth{scroll-behavior:auto!important}
   .lujo .footer .container{row-gap:36px}
   .lujo .footer__contact-wrapper{gap:20px}
   .lujo .footer .contact-group:not(:first-child){padding-top:20px}
+}
+
+/* Tabs layout: photo left + list right on desktop AND tablets; the list never gets squeezed or wraps */
+@media (min-width:600px){
+  .lujo .section-tabs__grid{grid-template-columns:minmax(0,1.08fr) minmax(280px,1fr);column-gap:0}
+  .lujo .section-tabs__gallery{grid-column:1;grid-row:1 / 3;margin-bottom:0;padding-right:clamp(20px,4vw,56px);min-width:0}
+  .lujo .tab-gallery{grid-template-columns:minmax(0,1fr) 40px;width:100%;max-width:max-content}
+  .lujo .tab-gallery__main{max-width:100%}
+  .lujo .section-tabs__bullet{white-space:nowrap;font-size:clamp(26px,3.1vw,var(--t40-size));line-height:1.12}
+  .lujo .section-tabs__bullet.active{padding-left:clamp(34px,3.2vw,40px)}
+  .lujo .section-tabs__bullet::before{width:clamp(24px,2.4vw,32px)}
+  .lujo .section-tabs__info{max-width:420px}
+}
+@media (min-width:600px) and (max-width:991.98px){
+  .lujo .section-tabs{height:auto;padding:72px 0}
+  .lujo .tab-gallery__main{height:auto;width:100%;aspect-ratio:448 / 648}
+  .lujo .section-tabs__info{padding-top:28px}
+  .lujo .tab-info-block{position:relative;top:auto;gap:24px}
+  .lujo .tab-info-block__content{font-size:14px;line-height:19px}
+}
+
+/* header logo in the site palette: warm-sand circle + lettering that follows the header text colour
+   (light over the hero video, dark once the bar turns solid) */
+.lujo .brand-logo{position:relative;display:block;height:46px;aspect-ratio:5674 / 2820}
+.lujo .brand-logo__ring,.lujo .brand-logo__ink{position:absolute;inset:0;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain;-webkit-mask-position:center;mask-position:center}
+.lujo .brand-logo__ring{background-color:#c8b89a;-webkit-mask-image:url("/images/logo-mask-ring.png");mask-image:url("/images/logo-mask-ring.png")}
+.lujo .brand-logo__ink{background-color:var(--fore-color,#1c1b19);-webkit-mask-image:url("/images/logo-mask-ink.png");mask-image:url("/images/logo-mask-ink.png");transition:background-color .3s ease}
+
+/* Tabs: photo column fills its half (50/50 with the list) instead of a narrow fixed-ratio frame */
+@media (min-width:600px){
+  .lujo .section-tabs__grid{grid-template-columns:minmax(0,1fr) minmax(280px,1fr)}
+  .lujo .tab-gallery{width:100%;max-width:none;grid-template-columns:minmax(0,1fr) 52px;gap:6px}
+  .lujo .tab-gallery__thumbnail{width:52px;height:70px}
+}
+@media (min-width:992px){
+  .lujo .tab-gallery__main{width:100%;height:100%;aspect-ratio:auto}
+  .lujo .section-tabs__gallery{padding-right:clamp(32px,4vw,72px)}
+}
+
+/* Tabs: frame has the same 6:5 shape as the (2000x1667) tab photos, so nothing is cropped */
+@media (min-width:600px){
+  .lujo .section-tabs{height:auto}
+  .lujo .tab-gallery__main{width:100%;height:auto;aspect-ratio:6 / 5}
+  .lujo .tab-gallery__thumbnails{margin-top:0;align-self:end}
+}
+@media (max-width:599.98px){
+  /* phones: the template's tall portrait frame with thumbnails beside it (portrait photos via <picture>) */
+  .lujo .tab-gallery{grid-template-columns:minmax(0,1fr) 44px;gap:4px;width:100%}
+  .lujo .tab-gallery__main{width:100%;height:auto;aspect-ratio:448 / 648}
+  .lujo .tab-gallery__media picture,.lujo .tab-gallery__media img{display:block;width:100%;height:100%;object-fit:cover}
+  .lujo .tab-gallery__thumbnail{width:44px;height:60px}
+  .lujo .section-tabs__gallery{margin-bottom:40px}
+}
+
+/* Tabs on tablets, laptops, desktops: tall portrait frame (template look) sized by the screen height,
+   thumbnails beside it; photos are 1200x1736 portrait so the frame shows them whole */
+@media (min-width:600px){
+  .lujo .tab-gallery{width:max-content;max-width:100%;grid-template-columns:auto 52px;justify-content:start}
+  .lujo .tab-gallery__main{width:auto;max-width:calc(100% - 0px);height:min(calc(100dvh - 180px),860px);aspect-ratio:448 / 648}
+  .lujo .tab-gallery__media img{width:100%;height:100%;object-fit:cover}
+}
+@media (min-width:600px) and (max-width:991.98px){
+  .lujo .tab-gallery__main{height:min(calc(100dvh - 200px),720px)}
+}
+@media (min-width:992px){
+  /* photo column only as wide as the tall frame; the list starts right after it (no empty gap) */
+  .lujo .section-tabs__grid{grid-template-columns:max-content minmax(320px,1fr)}
+  .lujo .section-tabs__gallery{padding-right:clamp(48px,6vw,120px)}
+}
+
+/* Tabs on laptops/desktops: photo fills its whole half (50/50 with the list), as tall as the screen;
+   uses the near-square 2000x1800 photos so very little is cropped */
+@media (min-width:992px){
+  .lujo .section-tabs__grid{grid-template-columns:minmax(0,1fr) minmax(320px,1fr)}
+  .lujo .section-tabs__gallery{padding-right:clamp(40px,4.5vw,88px)}
+  .lujo .tab-gallery{width:100%;max-width:none;grid-template-columns:minmax(0,1fr) 56px;gap:6px}
+  .lujo .tab-gallery__main{width:100%;max-width:none;height:min(calc(100dvh - 150px),900px);aspect-ratio:auto}
+  .lujo .tab-gallery__media picture{display:block;width:100%;height:100%}
+  .lujo .tab-gallery__media img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .lujo .tab-gallery__thumbnail{width:56px;height:76px}
 }

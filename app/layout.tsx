@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   icons: {
     // Casa Blanca "CB" emblem (generated from public/images/logo.png)
     icon: [
-      { url: "/favicon.ico?v=3", type: "image/x-icon", sizes: "any" },
-      { url: "/icon-32.png?v=3", type: "image/png", sizes: "32x32" },
-      { url: "/icon-192.png?v=3", type: "image/png", sizes: "192x192" },
-      { url: "/icon-512.png?v=3", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=4", type: "image/x-icon", sizes: "any" },
+      { url: "/icon-32.png?v=4", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png?v=4", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png?v=4", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/favicon.ico?v=3",
-    apple: { url: "/apple-touch-icon.png?v=3", sizes: "180x180" },
+    shortcut: "/favicon.ico?v=4",
+    apple: { url: "/apple-touch-icon.png?v=4", sizes: "180x180" },
   },
 };
 
