@@ -16,15 +16,15 @@ export const metadata: Metadata = {
   title: "Casablanca",
   description: "Discover premium XElectron products, smart tech, and official support for home entertainment, lifestyle, and everyday innovation.",
   icons: {
+    // Casa Blanca "CB" emblem (generated from public/images/logo.png)
     icon: [
-      {
-        url: "/favicon.ico?v=2",
-        type: "image/x-icon",
-        sizes: "any",
-      },
+      { url: "/favicon.ico?v=3", type: "image/x-icon", sizes: "any" },
+      { url: "/icon-32.png?v=3", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png?v=3", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png?v=3", type: "image/png", sizes: "512x512" },
     ],
-    shortcut: "/favicon.ico?v=2",
-    apple: "/favicon.ico?v=2",
+    shortcut: "/favicon.ico?v=3",
+    apple: { url: "/apple-touch-icon.png?v=3", sizes: "180x180" },
   },
 };
 
