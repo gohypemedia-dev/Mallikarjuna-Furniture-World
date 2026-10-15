@@ -3125,3 +3125,104 @@ html.lenis.lenis-smooth{scroll-behavior:auto!important}
 /* footer: the template's ".container" collides with Tailwind's .container utility (max-width per breakpoint,
    not centred), which cut the footer short on wide screens. Let it span the full width again. */
 .lujo .footer .container{width:100%;max-width:none;margin-inline:0}
+
+/* Tabs: preview thumbnails in a row under the main photo (all screen sizes) so the block looks filled */
+.lujo .tab-gallery{display:grid;grid-template-columns:minmax(0,1fr) !important;grid-template-rows:auto auto;gap:8px;width:100%;max-width:none}
+.lujo .tab-gallery__main{width:100%;max-width:none}
+.lujo .tab-gallery__thumbnails{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:none;gap:8px;margin-top:0;align-self:start}
+.lujo .tab-gallery__thumbnail,.lujo .tab-gallery__thumbnail.media-snippet{width:100% !important;height:auto !important;aspect-ratio:1 / 1;overflow:hidden}
+.lujo .tab-gallery__thumbnail img{width:100%;height:100%;object-fit:cover;display:block}
+.lujo .tab-thumbnail:not(.active) .tab-gallery__thumbnail{opacity:.45}
+.lujo .tab-thumbnail.active .tab-gallery__thumbnail{opacity:1;transform:none;box-shadow:inset 0 0 0 2px var(--c-ink)}
+.lujo .tab-thumbnail.active .tab-gallery__thumbnail img{outline:2px solid var(--c-ink);outline-offset:-2px}
+@media (min-width:992px){
+  /* leave room for the thumbnail row so photo + row fit on screen */
+  .lujo .tab-gallery__main{height:clamp(380px,calc(100dvh - 300px),780px)}
+}
+@media (min-width:600px) and (max-width:991.98px){
+  .lujo .tab-gallery__main{height:auto;aspect-ratio:448 / 648}
+}
+@media (max-width:599.98px){
+  .lujo .tab-gallery__thumbnails{gap:6px}
+  .lujo .tab-gallery{gap:6px}
+}
+
+/* Tabs, stacked layout (phones): photo, then the list + text + button, then the thumbnail row at the very bottom */
+@media (max-width:599.98px){
+  .lujo .section-tabs__grid{display:flex;flex-direction:column}
+  .lujo .section-tabs__gallery,.lujo .tab-gallery{display:contents}
+  .lujo .tab-gallery__main{order:1;margin-bottom:32px}
+  .lujo .section-tabs__bullets{order:2}
+  .lujo .section-tabs__info{order:3}
+  .lujo .tab-gallery__thumbnails{order:4;margin-top:32px;width:100%}
+}
+
+/* Tabs on tablets + desktops: photo on the left (full height); on the right the list, the text + button,
+   and the preview thumbnail row at the bottom of that column, lined up with the photo's bottom edge */
+@media (min-width:600px){
+  .lujo .section-tabs__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,1fr);grid-template-rows:auto auto 1fr}
+  .lujo .section-tabs__gallery,.lujo .tab-gallery{display:contents}
+  .lujo .tab-gallery__main{grid-column:1;grid-row:1 / 4;margin-right:clamp(32px,4.5vw,88px)}
+  .lujo .section-tabs__bullets{grid-column:2;grid-row:1}
+  .lujo .section-tabs__info{grid-column:2;grid-row:2;height:auto;align-self:start;margin-top:0}
+  .lujo .tab-gallery__thumbnails{grid-column:2;grid-row:3;align-self:end;width:100%;max-width:448px;margin-top:32px}
+}
+@media (min-width:992px){
+  .lujo .tab-gallery__main{height:clamp(420px,calc(100dvh - 150px),880px)}
+}
+
+/* Tabs (tablet + desktop): tall portrait photo frame, real gap between photo and the right column */
+@media (min-width:600px){
+  .lujo .section-tabs__grid{grid-template-columns:max-content minmax(280px,1fr);column-gap:clamp(40px,6vw,120px)}
+  .lujo .tab-gallery__main{margin-right:0;width:auto;max-width:none;aspect-ratio:448 / 648}
+  .lujo .tab-gallery__media picture,.lujo .tab-gallery__media img{display:block;width:100%;height:100%;object-fit:cover}
+}
+@media (min-width:992px){
+  .lujo .tab-gallery__main{height:clamp(480px,calc(100dvh - 140px),860px)}
+}
+@media (min-width:600px) and (max-width:991.98px){
+  .lujo .tab-gallery__main{height:clamp(420px,calc(100dvh - 180px),680px)}
+}
+
+/* Tabs (desktop): centre the photo + text block so the section looks balanced, wider right column */
+@media (min-width:992px){
+  .lujo .section-tabs__grid{grid-template-columns:max-content minmax(360px,600px);justify-content:center;column-gap:clamp(64px,8vw,160px)}
+  .lujo .section-tabs__info{max-width:560px}
+  .lujo .tab-info-block__content{max-width:520px}
+  .lujo .tab-gallery__thumbnails{max-width:600px;gap:10px}
+}
+
+/* Tabs: preview thumbnails in the same tall portrait shape as the main photo */
+.lujo .tab-gallery__thumbnail,.lujo .tab-gallery__thumbnail.media-snippet{aspect-ratio:448 / 648 !important}
+
+/* Tabs: compact portrait thumbnails so the right column never runs past the photo */
+@media (min-width:600px){
+  .lujo .tab-gallery__thumbnails{grid-template-columns:repeat(5,minmax(0,84px));justify-content:start;gap:10px;max-width:none;width:auto;margin-top:28px}
+}
+@media (min-width:600px) and (max-width:1199.98px){
+  .lujo .tab-gallery__thumbnails{grid-template-columns:repeat(5,minmax(0,64px));gap:8px}
+}
+@media (max-width:599.98px){
+  .lujo .tab-gallery__thumbnails{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+}
+
+/* Tabs on phones: thumbnail row directly under the photo, before the list */
+@media (max-width:599.98px){
+  .lujo .tab-gallery__main{order:1;margin-bottom:8px}
+  .lujo .tab-gallery__thumbnails{order:2;margin-top:0;margin-bottom:32px}
+  .lujo .section-tabs__bullets{order:3}
+  .lujo .section-tabs__info{order:4}
+}
+
+/* Tabs on phones: back to the template look - tall photo with the thumbnails stacked in a slim column
+   beside it (bottom-aligned), then the list, then text + button */
+@media (max-width:599.98px){
+  .lujo .section-tabs__grid{display:flex;flex-direction:column}
+  .lujo .section-tabs .section-tabs__gallery{display:block;order:1;margin-bottom:48px}
+  .lujo .section-tabs .tab-gallery{display:grid;grid-template-columns:minmax(0,1fr) 48px !important;grid-template-rows:auto;gap:6px;width:100%}
+  .lujo .section-tabs .tab-gallery__main{order:0;margin:0;width:100%;height:auto;aspect-ratio:448 / 648}
+  .lujo .section-tabs .tab-gallery__thumbnails{order:0;display:grid;grid-template-columns:1fr;grid-auto-rows:auto;gap:6px;margin:0;align-self:end;width:48px}
+  .lujo .section-tabs .tab-gallery__thumbnail{width:48px !important}
+  .lujo .section-tabs .section-tabs__bullets{order:2}
+  .lujo .section-tabs .section-tabs__info{order:3}
+}
