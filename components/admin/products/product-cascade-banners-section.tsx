@@ -128,7 +128,7 @@ export function ProductCascadeBannersSection({
   }
 
   return (
-    <div className="rounded-2xl border border-black/10 bg-white p-5 shadow-xs space-y-4">
+    <div className="rounded-2xl border border-black/10 bg-[#fbf7ef] p-5 shadow-xs space-y-4">
       {/* Hidden file input supporting images and videos */}
       <input
         ref={fileInputRef}
@@ -164,7 +164,7 @@ export function ProductCascadeBannersSection({
                     : position
                 }
                 onChange={(e) => onPositionChange(e.target.value)}
-                className="h-7.5 rounded-lg border border-black/20 bg-white px-2.5 font-semibold text-xs text-black outline-none cursor-pointer focus:border-black"
+                className="h-7.5 rounded-lg border border-black/20 bg-[#fbf7ef] px-2.5 font-semibold text-xs text-black outline-none cursor-pointer focus:border-black"
               >
                 {Array.from({ length: showcaseCount + 1 }).map((_, idx) => (
                   <option key={`pos-num-${idx + 1}`} value={String(idx + 1)}>
@@ -331,7 +331,7 @@ export function ProductCascadeBannersSection({
                       value={banner.title || ""}
                       onChange={(e) => updateBanner(index, "title", e.target.value)}
                       placeholder="Optional slide title / caption..."
-                      className="h-8 w-full rounded-md border border-black/15 bg-white px-2.5 text-xs text-black outline-none focus:border-black"
+                      className="h-8 w-full rounded-md border border-black/15 bg-[#fbf7ef] px-2.5 text-xs text-black outline-none focus:border-black"
                     />
                   </div>
 
@@ -397,7 +397,7 @@ export function ProductCascadeBannersSection({
                         value={banner.imageUrl || ""}
                         onChange={(e) => updateBanner(index, "imageUrl", e.target.value)}
                         placeholder="https://www.youtube.com/watch?v=... or .mp4 link"
-                        className="h-7 w-full rounded border border-black/15 bg-white px-2 text-xs text-black outline-none focus:border-emerald-600"
+                        className="h-7 w-full rounded border border-black/15 bg-[#fbf7ef] px-2 text-xs text-black outline-none focus:border-emerald-600"
                       />
                     </div>
                     <div>
@@ -409,7 +409,7 @@ export function ProductCascadeBannersSection({
                         value={banner.mobileImageUrl || ""}
                         onChange={(e) => updateBanner(index, "mobileImageUrl", e.target.value)}
                         placeholder="Optional phone video/YouTube or image URL"
-                        className="h-7 w-full rounded border border-black/15 bg-white px-2 text-xs text-black outline-none focus:border-emerald-600"
+                        className="h-7 w-full rounded border border-black/15 bg-[#fbf7ef] px-2 text-xs text-black outline-none focus:border-emerald-600"
                       />
                     </div>
                   </div>

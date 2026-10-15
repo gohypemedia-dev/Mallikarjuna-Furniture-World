@@ -58,7 +58,7 @@ export function NavUser() {
             className="flex flex-1 items-center gap-2.5 min-w-0 group"
             title="Edit Profile"
           >
-            <div className="flex size-8.5 shrink-0 items-center justify-center rounded-lg bg-[#1a1a1a] text-white text-xs font-semibold shadow-2xs group-hover:ring-2 group-hover:ring-[#0a7ae6] transition-all">
+            <div className="flex size-8.5 shrink-0 items-center justify-center rounded-lg bg-[#000000] text-white text-xs font-semibold shadow-2xs group-hover:ring-2 group-hover:ring-[#000000] transition-all">
               {user.avatar ? (
                 <img src={user.avatar} alt={user.name} className="size-full rounded-lg object-cover" />
               ) : (
@@ -66,7 +66,7 @@ export function NavUser() {
               )}
             </div>
             <div className="flex min-w-0 flex-1 flex-col text-left leading-tight group-data-[collapsible=icon]:hidden">
-              <span className="truncate text-[13px] font-semibold text-[#1a1a1a] group-hover:text-[#0a7ae6] transition-colors">
+              <span className="truncate text-[13px] font-semibold text-[#000000] group-hover:text-[#000000] transition-colors">
                 {user.name}
               </span>
               <span className="mt-0.5 truncate text-[11px] font-normal text-[#707070]">{user.email}</span>
@@ -76,7 +76,7 @@ export function NavUser() {
           <Link prefetch={false}
             href="/dashboard/profile"
             title="Edit Profile"
-            className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-white text-black/60 shadow-2xs hover:bg-slate-100 hover:text-black transition-all cursor-pointer group-data-[collapsible=icon]:hidden"
+            className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-[#fbf7ef] text-black/60 shadow-2xs hover:bg-slate-100 hover:text-black transition-all cursor-pointer group-data-[collapsible=icon]:hidden"
           >
             <UserIcon className="size-3.5" />
           </Link>
@@ -86,7 +86,7 @@ export function NavUser() {
               disabled={isSigningOut}
               title="Log out"
               aria-label="Log out"
-              className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-white text-black/60 shadow-2xs hover:bg-red-50 hover:border-red-200 hover:text-red-600 transition-all cursor-pointer group-data-[collapsible=icon]:hidden"
+              className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-[#fbf7ef] text-black/60 shadow-2xs hover:bg-red-50 hover:border-red-200 hover:text-red-600 transition-all cursor-pointer group-data-[collapsible=icon]:hidden"
             >
               <LogOutIcon className="size-3.5" />
             </AlertDialogTrigger>

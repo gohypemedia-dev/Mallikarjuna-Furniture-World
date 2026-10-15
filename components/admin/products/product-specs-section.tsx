@@ -107,17 +107,17 @@ export function ProductSpecsSection({ specs, onChange, designHeading, connectivi
     <div className="mt-4 space-y-4">
       <p className="text-xs text-slate-500">Section headings are shared across all products. Save this product to apply heading changes everywhere.</p>
       {/* SECTION 1: Design, Display & Performance */}
-      <section className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+      <section className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
         <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3.5 border-b border-black/10 bg-slate-50/70">
           <div>
             <h2 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <Layers className="size-4 text-[#0a7ae6]" />
+              <Layers className="size-4 text-[#000000]" />
               <Input
                 aria-label="First specification section heading"
                 value={designHeading}
                 onChange={(event) => onDesignHeadingChange(event.target.value)}
                 placeholder="Design, Display & Performance"
-                className="h-9 w-full min-w-0 border-black/15 bg-white text-sm font-bold sm:w-[360px]"
+                className="h-9 w-full min-w-0 border-black/15 bg-[#fbf7ef] text-sm font-bold sm:w-[360px]"
               />
             </h2>
             <p className="mt-0.5 text-xs text-slate-500">
@@ -130,7 +130,7 @@ export function ProductSpecsSection({ specs, onChange, designHeading, connectivi
               variant="outline"
               size="sm"
               onClick={() => addDesignField()}
-              className="cursor-pointer border-black/15 bg-white text-xs text-black/75 shadow-none hover:bg-black/[0.04]"
+              className="cursor-pointer border-black/15 bg-[#fbf7ef] text-xs text-black/75 shadow-none hover:bg-black/[0.04]"
             >
               <Plus className="size-3.5 mr-1" /> Add Field
             </Button>
@@ -148,7 +148,7 @@ export function ProductSpecsSection({ specs, onChange, designHeading, connectivi
                       value={item.label}
                       onChange={(e) => updateDesignField(index, "label", e.target.value)}
                       placeholder="e.g. Display Type"
-                      className="border-black/20 bg-white text-xs font-semibold shadow-none focus-visible:border-black/45 focus-visible:ring-black/10"
+                      className="border-black/20 bg-[#fbf7ef] text-xs font-semibold shadow-none focus-visible:border-black/45 focus-visible:ring-black/10"
                     />
                   </div>
                   <div className="flex-1 w-full flex items-start gap-2">
@@ -158,7 +158,7 @@ export function ProductSpecsSection({ specs, onChange, designHeading, connectivi
                         value={item.value}
                         onChange={(e) => updateDesignField(index, "value", e.target.value)}
                         placeholder="Enter value (multi-line supported)..."
-                        className="border-black/20 bg-white text-xs shadow-none focus-visible:border-black/45 focus-visible:ring-black/10 flex-1"
+                        className="border-black/20 bg-[#fbf7ef] text-xs shadow-none focus-visible:border-black/45 focus-visible:ring-black/10 flex-1"
                       />
                     <Button
                       type="button"
@@ -183,17 +183,17 @@ export function ProductSpecsSection({ specs, onChange, designHeading, connectivi
       </section>
 
       {/* SECTION 2: Connectivity, Battery & Smart Features */}
-      <section className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+      <section className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
         <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3.5 border-b border-black/10 bg-slate-50/70">
           <div>
             <h2 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <Cpu className="size-4 text-[#0a7ae6]" />
+              <Cpu className="size-4 text-[#000000]" />
               <Input
                 aria-label="Second specification section heading"
                 value={connectivityHeading}
                 onChange={(event) => onConnectivityHeadingChange(event.target.value)}
                 placeholder="Connectivity, Battery & Smart Features"
-                className="h-9 w-full min-w-0 border-black/15 bg-white text-sm font-bold sm:w-[360px]"
+                className="h-9 w-full min-w-0 border-black/15 bg-[#fbf7ef] text-sm font-bold sm:w-[360px]"
               />
             </h2>
             <p className="mt-0.5 text-xs text-slate-500">
@@ -206,7 +206,7 @@ export function ProductSpecsSection({ specs, onChange, designHeading, connectivi
               variant="outline"
               size="sm"
               onClick={() => addConnectivityField()}
-              className="cursor-pointer border-black/15 bg-white text-xs text-black/75 shadow-none hover:bg-black/[0.04]"
+              className="cursor-pointer border-black/15 bg-[#fbf7ef] text-xs text-black/75 shadow-none hover:bg-black/[0.04]"
             >
               <Plus className="size-3.5 mr-1" /> Add Field
             </Button>
@@ -224,7 +224,7 @@ export function ProductSpecsSection({ specs, onChange, designHeading, connectivi
                       value={item.label}
                       onChange={(e) => updateConnectivityField(index, "label", e.target.value)}
                       placeholder="e.g. Smart Features"
-                      className="border-black/20 bg-white text-xs font-semibold shadow-none focus-visible:border-black/45 focus-visible:ring-black/10"
+                      className="border-black/20 bg-[#fbf7ef] text-xs font-semibold shadow-none focus-visible:border-black/45 focus-visible:ring-black/10"
                     />
                   </div>
                   <div className="flex-1 w-full flex items-start gap-2">
@@ -234,7 +234,7 @@ export function ProductSpecsSection({ specs, onChange, designHeading, connectivi
                         value={item.value}
                         onChange={(e) => updateConnectivityField(index, "value", e.target.value)}
                         placeholder="Enter features (multi-line supported)..."
-                        className="border-black/20 bg-white text-xs shadow-none focus-visible:border-black/45 focus-visible:ring-black/10 flex-1"
+                        className="border-black/20 bg-[#fbf7ef] text-xs shadow-none focus-visible:border-black/45 focus-visible:ring-black/10 flex-1"
                       />
                     <Button
                       type="button"

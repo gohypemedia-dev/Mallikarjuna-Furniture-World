@@ -168,7 +168,7 @@ export default function ProductReviewsSection({
             <button
               type="button"
               onClick={() => setFilterMode("all")}
-              className="inline-flex items-center gap-1 text-sm sm:text-base font-bold text-slate-900 hover:text-[#0a7ae6] transition cursor-pointer"
+              className="inline-flex items-center gap-1 text-sm sm:text-base font-bold text-slate-900 hover:text-[#000000] transition cursor-pointer"
             >
               <span>{reviews.length} Reviews</span>
               <ChevronDown className="size-4 text-slate-500" />
@@ -185,7 +185,7 @@ export default function ProductReviewsSection({
                 setHoverRating(null);
                 setIsWriteOpen(true);
               }}
-              className="rounded-lg border border-slate-300 bg-white px-4 sm:px-5 py-2 text-xs sm:text-sm font-semibold text-slate-800 shadow-2xs hover:bg-slate-50 hover:border-slate-400 transition cursor-pointer active:scale-95"
+              className="rounded-lg border border-slate-300 bg-[#fbf7ef] px-4 sm:px-5 py-2 text-xs sm:text-sm font-semibold text-slate-800 shadow-2xs hover:bg-slate-50 hover:border-slate-400 transition cursor-pointer active:scale-95"
             >
               Write a review
             </button>
@@ -199,7 +199,7 @@ export default function ProductReviewsSection({
                 className={`flex size-9 sm:size-10 items-center justify-center rounded-lg border transition cursor-pointer ${
                   isFilterMenuOpen || filterMode !== "all"
                     ? "border-slate-900 bg-slate-900 text-white"
-                    : "border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
+                    : "border-slate-300 bg-[#fbf7ef] text-slate-700 hover:bg-slate-50"
                 }`}
               >
                 <SlidersHorizontal className="size-4" />
@@ -207,7 +207,7 @@ export default function ProductReviewsSection({
 
               {/* Filter Dropdown Menu */}
               {isFilterMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 rounded-xl border border-slate-200 bg-white p-1.5 shadow-xl z-20 animate-in fade-in zoom-in-95 duration-150">
+                <div className="absolute right-0 mt-2 w-48 rounded-xl border border-slate-200 bg-[#fbf7ef] p-1.5 shadow-xl z-20 animate-in fade-in zoom-in-95 duration-150">
                   <button
                     type="button"
                     onClick={() => { setFilterMode("all"); setIsFilterMenuOpen(false); }}
@@ -262,7 +262,7 @@ export default function ProductReviewsSection({
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-[500px] bg-white rounded-[28px] shadow-2xl p-6 sm:p-9 flex flex-col justify-between h-[450px] sm:h-[470px] overflow-hidden animate-in zoom-in-95 duration-200"
+              className="relative w-full max-w-[500px] bg-[#fbf7ef] rounded-[28px] shadow-2xl p-6 sm:p-9 flex flex-col justify-between h-[450px] sm:h-[470px] overflow-hidden animate-in zoom-in-95 duration-200"
             >
               {/* Close Button Top-Left */}
               <button
@@ -559,7 +559,7 @@ export default function ProductReviewsSection({
                 setHoverRating(null);
                 setIsWriteOpen(true);
               }}
-              className="mt-5 inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-2.5 text-xs sm:text-sm font-bold text-white shadow-xs hover:bg-[#0a7ae6] transition active:scale-95 cursor-pointer"
+              className="mt-5 inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-2.5 text-xs sm:text-sm font-bold text-white shadow-xs hover:bg-[#000000] transition active:scale-95 cursor-pointer"
             >
               Write the first review
             </button>
@@ -569,7 +569,7 @@ export default function ProductReviewsSection({
             {filteredReviews.map((rev) => (
               <div
                 key={rev.id}
-                className="break-inside-avoid rounded-2xl border border-slate-200/90 bg-white overflow-hidden shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col mb-4"
+                className="break-inside-avoid rounded-2xl border border-slate-200/90 bg-[#fbf7ef] overflow-hidden shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col mb-4"
               >
               {/* Optional Photo with +1 badge */}
               {rev.image && (

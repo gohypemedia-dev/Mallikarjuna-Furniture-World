@@ -55,7 +55,7 @@ export type BlogPostItem = {
 };
 
 const inputClass =
-  "h-10 w-full rounded-xl border border-slate-200 bg-white px-3.5 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 focus:border-[#0a7ae6] focus:ring-3 focus:ring-[#0a7ae6]/10";
+  "h-10 w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-3.5 text-sm text-slate-800 outline-none transition-all placeholder:text-slate-400 focus:border-[#000000] focus:ring-3 focus:ring-[#000000]/10";
 
 const QUICK_CATEGORIES = [
   "Technology",
@@ -155,7 +155,7 @@ function InlineContent({ text }: { text: string }) {
           href={match[2]}
           target="_blank"
           rel="noreferrer"
-          className="font-medium text-[#0a7ae6] underline decoration-[#0a7ae6]/35 underline-offset-4 hover:text-[#075faf]"
+          className="font-medium text-[#000000] underline decoration-[#000000]/35 underline-offset-4 hover:text-[#075faf]"
         >
           {match[1]}
         </a>
@@ -285,10 +285,10 @@ function ArticleBody({ content }: { content: string }) {
         }
         if (block.type === "list") {
           return (
-            <ul key={index} className="space-y-2 border-l-2 border-[#0a7ae6]/30 pl-4 sm:pl-5 my-3">
+            <ul key={index} className="space-y-2 border-l-2 border-[#000000]/30 pl-4 sm:pl-5 my-3">
               {(block.text as string[]).map((item, itemIndex) => (
                 <li key={itemIndex} className="text-slate-700">
-                  <span className="text-[#0a7ae6] mr-2">•</span>
+                  <span className="text-[#000000] mr-2">•</span>
                   <InlineContent text={item} />
                 </li>
               ))}
@@ -297,7 +297,7 @@ function ArticleBody({ content }: { content: string }) {
         }
         if (block.type === "ordered-list") {
           return (
-            <ol key={index} className="space-y-2 pl-6 list-decimal marker:font-semibold marker:text-[#0a7ae6] my-3">
+            <ol key={index} className="space-y-2 pl-6 list-decimal marker:font-semibold marker:text-[#000000] my-3">
               {(block.text as string[]).map((item, itemIndex) => (
                 <li key={itemIndex} className="text-slate-700 pl-1">
                   <InlineContent text={item} />
@@ -310,7 +310,7 @@ function ArticleBody({ content }: { content: string }) {
           return (
             <blockquote
               key={index}
-              className="border-l-4 border-[#0a7ae6] bg-blue-50/40 rounded-r-xl py-3 px-5 font-serif text-lg italic leading-relaxed text-slate-800 my-4"
+              className="border-l-4 border-[#000000] bg-blue-50/40 rounded-r-xl py-3 px-5 font-serif text-lg italic leading-relaxed text-slate-800 my-4"
             >
               <InlineContent text={block.text as string} />
             </blockquote>
@@ -422,7 +422,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 pb-16">
+    <div className="min-h-screen bg-[#fbf7ef] text-slate-800 pb-16">
       <form onSubmit={savePost} className="relative">
         {/* Sticky Top Header Bar */}
         <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/95 px-4 py-3 sm:px-8 backdrop-blur-md shadow-xs">
@@ -432,14 +432,14 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
               <Link
                 prefetch={false}
                 href="/dashboard/blog"
-                className="inline-flex size-9 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-xs hover:border-slate-300 hover:bg-slate-50 transition-colors shrink-0"
+                className="inline-flex size-9 items-center justify-center rounded-xl border border-slate-200 bg-[#fbf7ef] text-slate-600 shadow-xs hover:border-slate-300 hover:bg-slate-50 transition-colors shrink-0"
                 aria-label="Back to all stories"
               >
                 <ArrowLeft className="size-4" />
               </Link>
               <div className="min-w-0">
                 <div className="flex items-center gap-2 text-[11px] font-medium text-slate-500">
-                  <Link href="/dashboard/blog" className="hover:text-[#0a7ae6] transition-colors">
+                  <Link href="/dashboard/blog" className="hover:text-[#000000] transition-colors">
                     From Our Blog
                   </Link>
                   <span>/</span>
@@ -474,7 +474,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                   href={`/blog/${post.slug || post.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hidden md:inline-flex h-9 items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 text-xs font-medium text-slate-700 shadow-xs hover:bg-slate-50 hover:text-[#0a7ae6] transition-colors"
+                  className="hidden md:inline-flex h-9 items-center gap-1.5 rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 text-xs font-medium text-slate-700 shadow-xs hover:bg-slate-50 hover:text-[#000000] transition-colors"
                 >
                   <ExternalLink className="size-3.5" />
                   <span>View live post</span>
@@ -484,7 +484,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
               <button
                 type="button"
                 onClick={() => setPreviewOpen(true)}
-                className="inline-flex h-9 items-center gap-1.5 rounded-xl border border-[#0a7ae6]/25 bg-blue-50/50 px-3.5 text-xs font-medium text-[#0a7ae6] shadow-xs hover:bg-[#0a7ae6]/10 transition-colors"
+                className="inline-flex h-9 items-center gap-1.5 rounded-xl border border-[#000000]/25 bg-blue-50/50 px-3.5 text-xs font-medium text-[#000000] shadow-xs hover:bg-[#000000]/10 transition-colors"
               >
                 <Eye className="size-3.5" />
                 <span>Preview</span>
@@ -501,7 +501,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
               <button
                 type="submit"
                 disabled={isSaving || isUploading}
-                className="inline-flex h-9 items-center gap-1.5 rounded-xl bg-[#0a7ae6] px-4.5 text-xs font-medium text-white shadow-sm hover:bg-[#0869c4] transition-colors disabled:cursor-wait disabled:bg-[#0a7ae6]/40 active:scale-98"
+                className="inline-flex h-9 items-center gap-1.5 rounded-xl bg-[#000000] px-4.5 text-xs font-medium text-white shadow-sm hover:bg-[#0869c4] transition-colors disabled:cursor-wait disabled:bg-[#000000]/40 active:scale-98"
               >
                 {isSaving ? (
                   <LoaderCircle className="size-3.5 animate-spin" />
@@ -536,9 +536,9 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
             {/* Left Column: Story Essentials & Article Editor */}
             <div className="space-y-6 min-w-0">
               {/* Card 1: Story Details */}
-              <section className="overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-xs">
+              <section className="overflow-hidden rounded-2xl border border-slate-200/90 bg-[#fbf7ef] shadow-xs">
                 <div className="flex items-center gap-2.5 border-b border-slate-100 px-6 py-4 bg-slate-50/50">
-                  <span className="flex size-7 items-center justify-center rounded-lg bg-blue-50 text-[#0a7ae6]">
+                  <span className="flex size-7 items-center justify-center rounded-lg bg-blue-50 text-[#000000]">
                     <FileText className="size-4" />
                   </span>
                   <div>
@@ -572,7 +572,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                         }
                       }}
                       placeholder="e.g. Behind the Sound: How We Engineer Deep Bass in Compact Bodies"
-                      className="h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-base sm:text-lg font-medium text-slate-900 outline-none transition-all placeholder:text-slate-300 focus:border-[#0a7ae6] focus:ring-4 focus:ring-[#0a7ae6]/10"
+                      className="h-12 w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-4 text-base sm:text-lg font-medium text-slate-900 outline-none transition-all placeholder:text-slate-300 focus:border-[#000000] focus:ring-4 focus:ring-[#000000]/10"
                       required
                     />
                   </div>
@@ -590,7 +590,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       onChange={(event) => setExcerpt(event.target.value)}
                       rows={3}
                       placeholder="A short, compelling summary of the article that hooks readers."
-                      className="w-full resize-y rounded-xl border border-slate-200 bg-white p-3.5 text-sm leading-relaxed text-slate-700 outline-none transition-all placeholder:text-slate-300 focus:border-[#0a7ae6] focus:ring-4 focus:ring-[#0a7ae6]/10"
+                      className="w-full resize-y rounded-xl border border-slate-200 bg-[#fbf7ef] p-3.5 text-sm leading-relaxed text-slate-700 outline-none transition-all placeholder:text-slate-300 focus:border-[#000000] focus:ring-4 focus:ring-[#000000]/10"
                     />
                   </div>
 
@@ -602,18 +602,18 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       value={slug}
                       onChange={(e) => setSlug(e.target.value)}
                       placeholder="custom-slug"
-                      className="bg-transparent font-mono text-slate-800 outline-none border-b border-dashed border-slate-300 focus:border-[#0a7ae6] px-1 py-0.5"
+                      className="bg-transparent font-mono text-slate-800 outline-none border-b border-dashed border-slate-300 focus:border-[#000000] px-1 py-0.5"
                     />
                   </div>
                 </div>
               </section>
 
               {/* Card 2: Article Editor */}
-              <section className="overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-xs">
+              <section className="overflow-hidden rounded-2xl border border-slate-200/90 bg-[#fbf7ef] shadow-xs">
                 {/* Header with Title & View Mode Switcher */}
                 <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 px-6 py-4 bg-slate-50/50">
                   <div className="flex items-center gap-2.5">
-                    <span className="flex size-7 items-center justify-center rounded-lg bg-blue-50 text-[#0a7ae6]">
+                    <span className="flex size-7 items-center justify-center rounded-lg bg-blue-50 text-[#000000]">
                       <BookOpen className="size-4" />
                     </span>
                     <div>
@@ -631,7 +631,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       onClick={() => setViewMode("split")}
                       className={`flex items-center gap-1.5 rounded-lg px-2.5 py-1 font-medium transition-all ${
                         viewMode === "split"
-                          ? "bg-white text-slate-900 shadow-xs"
+                          ? "bg-[#fbf7ef] text-slate-900 shadow-xs"
                           : "text-slate-600 hover:text-slate-900"
                       }`}
                     >
@@ -643,7 +643,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       onClick={() => setViewMode("write")}
                       className={`flex items-center gap-1.5 rounded-lg px-2.5 py-1 font-medium transition-all ${
                         viewMode === "write"
-                          ? "bg-white text-slate-900 shadow-xs"
+                          ? "bg-[#fbf7ef] text-slate-900 shadow-xs"
                           : "text-slate-600 hover:text-slate-900"
                       }`}
                     >
@@ -655,7 +655,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       onClick={() => setViewMode("preview")}
                       className={`flex items-center gap-1.5 rounded-lg px-2.5 py-1 font-medium transition-all ${
                         viewMode === "preview"
-                          ? "bg-white text-slate-900 shadow-xs"
+                          ? "bg-[#fbf7ef] text-slate-900 shadow-xs"
                           : "text-slate-600 hover:text-slate-900"
                       }`}
                     >
@@ -666,34 +666,34 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                 </div>
 
                 {/* Rich Formatting Toolbar */}
-                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 bg-white px-6 py-2.5">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 bg-[#fbf7ef] px-6 py-2.5">
                   <div className="flex flex-wrap items-center gap-1">
                     {/* Headings */}
                     <button
                       type="button"
                       title="Heading 1"
                       onClick={() => insertAtCursor(contentRef.current, content, setContent, "# ")}
-                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2.5 text-xs font-semibold text-slate-700 hover:border-[#0a7ae6]/40 hover:bg-blue-50/50 transition-colors"
+                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2.5 text-xs font-semibold text-slate-700 hover:border-[#000000]/40 hover:bg-blue-50/50 transition-colors"
                     >
-                      <Heading1 className="size-3.5 text-[#0a7ae6]" />
+                      <Heading1 className="size-3.5 text-[#000000]" />
                       <span>H1</span>
                     </button>
                     <button
                       type="button"
                       title="Heading 2"
                       onClick={() => insertAtCursor(contentRef.current, content, setContent, "## ")}
-                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2.5 text-xs font-semibold text-slate-700 hover:border-[#0a7ae6]/40 hover:bg-blue-50/50 transition-colors"
+                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2.5 text-xs font-semibold text-slate-700 hover:border-[#000000]/40 hover:bg-blue-50/50 transition-colors"
                     >
-                      <Heading2 className="size-3.5 text-[#0a7ae6]" />
+                      <Heading2 className="size-3.5 text-[#000000]" />
                       <span>H2</span>
                     </button>
                     <button
                       type="button"
                       title="Heading 3"
                       onClick={() => insertAtCursor(contentRef.current, content, setContent, "### ")}
-                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2.5 text-xs font-semibold text-slate-700 hover:border-[#0a7ae6]/40 hover:bg-blue-50/50 transition-colors"
+                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2.5 text-xs font-semibold text-slate-700 hover:border-[#000000]/40 hover:bg-blue-50/50 transition-colors"
                     >
-                      <Heading3 className="size-3.5 text-[#0a7ae6]" />
+                      <Heading3 className="size-3.5 text-[#000000]" />
                       <span>H3</span>
                     </button>
 
@@ -704,7 +704,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       type="button"
                       title="Bold text"
                       onClick={() => wrapSelection(contentRef.current, content, setContent, "**")}
-                      className="inline-flex size-8 items-center justify-center rounded-lg border border-slate-200 text-slate-700 hover:border-[#0a7ae6]/40 hover:bg-blue-50/50 transition-colors"
+                      className="inline-flex size-8 items-center justify-center rounded-lg border border-slate-200 text-slate-700 hover:border-[#000000]/40 hover:bg-blue-50/50 transition-colors"
                     >
                       <Bold className="size-3.5" />
                     </button>
@@ -712,7 +712,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       type="button"
                       title="Italic text"
                       onClick={() => wrapSelection(contentRef.current, content, setContent, "*")}
-                      className="inline-flex size-8 items-center justify-center rounded-lg border border-slate-200 text-slate-700 hover:border-[#0a7ae6]/40 hover:bg-blue-50/50 transition-colors"
+                      className="inline-flex size-8 items-center justify-center rounded-lg border border-slate-200 text-slate-700 hover:border-[#000000]/40 hover:bg-blue-50/50 transition-colors"
                     >
                       <Italic className="size-3.5" />
                     </button>
@@ -724,7 +724,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       type="button"
                       title="Bullet list"
                       onClick={() => insertAtCursor(contentRef.current, content, setContent, "- ")}
-                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2 text-xs font-medium text-slate-700 hover:border-[#0a7ae6]/40 hover:bg-blue-50/50 transition-colors"
+                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2 text-xs font-medium text-slate-700 hover:border-[#000000]/40 hover:bg-blue-50/50 transition-colors"
                     >
                       <List className="size-3.5" />
                       <span className="hidden sm:inline">Bullets</span>
@@ -733,7 +733,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       type="button"
                       title="Numbered list"
                       onClick={() => insertAtCursor(contentRef.current, content, setContent, "1. ")}
-                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2 text-xs font-medium text-slate-700 hover:border-[#0a7ae6]/40 hover:bg-blue-50/50 transition-colors"
+                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2 text-xs font-medium text-slate-700 hover:border-[#000000]/40 hover:bg-blue-50/50 transition-colors"
                     >
                       <ListOrdered className="size-3.5" />
                       <span className="hidden sm:inline">Numbers</span>
@@ -742,7 +742,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       type="button"
                       title="Quote callout"
                       onClick={() => insertAtCursor(contentRef.current, content, setContent, "> ")}
-                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2 text-xs font-medium text-slate-700 hover:border-[#0a7ae6]/40 hover:bg-blue-50/50 transition-colors"
+                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2 text-xs font-medium text-slate-700 hover:border-[#000000]/40 hover:bg-blue-50/50 transition-colors"
                     >
                       <Quote className="size-3.5" />
                       <span className="hidden sm:inline">Quote</span>
@@ -751,7 +751,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       type="button"
                       title="Divider line"
                       onClick={() => insertAtCursor(contentRef.current, content, setContent, "---\n")}
-                      className="inline-flex size-8 items-center justify-center rounded-lg border border-slate-200 text-slate-700 hover:border-[#0a7ae6]/40 hover:bg-blue-50/50 transition-colors"
+                      className="inline-flex size-8 items-center justify-center rounded-lg border border-slate-200 text-slate-700 hover:border-[#000000]/40 hover:bg-blue-50/50 transition-colors"
                     >
                       <Minus className="size-3.5" />
                     </button>
@@ -759,9 +759,9 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       type="button"
                       title="Insert web link"
                       onClick={() => insertLinkAtCursor(contentRef.current, content, setContent)}
-                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2.5 text-xs font-medium text-slate-700 hover:border-[#0a7ae6]/40 hover:bg-blue-50/50 transition-colors"
+                      className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2.5 text-xs font-medium text-slate-700 hover:border-[#000000]/40 hover:bg-blue-50/50 transition-colors"
                     >
-                      <Link2 className="size-3.5 text-[#0a7ae6]" />
+                      <Link2 className="size-3.5 text-[#000000]" />
                       <span>Link</span>
                     </button>
                   </div>
@@ -798,7 +798,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                           placeholder={
                             "Start with an introduction paragraph.\n\n## Section Headline\nExplain the design rationale, technology, and benefits.\n\n- Key feature point\n- Acoustic performance detail\n\n> Quote or engineering insight\n\n---"
                           }
-                          className="min-h-[500px] w-full resize-y rounded-xl border border-slate-200 bg-slate-50/50 p-4 font-mono text-sm leading-relaxed text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-[#0a7ae6] focus:bg-white focus:ring-4 focus:ring-[#0a7ae6]/10"
+                          className="min-h-[500px] w-full resize-y rounded-xl border border-slate-200 bg-slate-50/50 p-4 font-mono text-sm leading-relaxed text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-4 focus:ring-[#000000]/10"
                         />
                       </div>
                     )}
@@ -807,12 +807,12 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                     {viewMode !== "write" && (
                       <div className="flex flex-col">
                         <div className="mb-2 flex items-center justify-between text-xs font-medium text-slate-400">
-                          <span className="uppercase tracking-wider text-[#0a7ae6]">
+                          <span className="uppercase tracking-wider text-[#000000]">
                             Live Reading Preview
                           </span>
                           <span>Syncs instantly</span>
                         </div>
-                        <div className="min-h-[500px] flex-1 overflow-y-auto rounded-xl border border-blue-100 bg-white p-6 shadow-xs">
+                        <div className="min-h-[500px] flex-1 overflow-y-auto rounded-xl border border-blue-100 bg-[#fbf7ef] p-6 shadow-xs">
                           <ArticleBody content={content} />
                         </div>
                       </div>
@@ -852,9 +852,9 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
             {/* Right Column: Sticky Settings & Cover Rail */}
             <aside className="space-y-6 sticky top-20">
               {/* Cover Image Card */}
-              <section className="overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-xs">
+              <section className="overflow-hidden rounded-2xl border border-slate-200/90 bg-[#fbf7ef] shadow-xs">
                 <div className="flex items-center gap-2.5 border-b border-slate-100 px-5 py-3.5 bg-slate-50/50">
-                  <span className="flex size-7 items-center justify-center rounded-lg bg-blue-50 text-[#0a7ae6]">
+                  <span className="flex size-7 items-center justify-center rounded-lg bg-blue-50 text-[#000000]">
                     <ImagePlus className="size-4" />
                   </span>
                   <div>
@@ -887,7 +887,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                           type="button"
                           onClick={() => imageInputRef.current?.click()}
                           disabled={isUploading}
-                          className="inline-flex items-center gap-1 rounded-lg bg-white px-3 py-1.5 text-xs font-medium text-slate-800 shadow-sm hover:bg-slate-50 transition"
+                          className="inline-flex items-center gap-1 rounded-lg bg-[#fbf7ef] px-3 py-1.5 text-xs font-medium text-slate-800 shadow-sm hover:bg-slate-50 transition"
                         >
                           <Upload className="size-3.5" />
                           <span>Replace</span>
@@ -907,9 +907,9 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       type="button"
                       onClick={() => imageInputRef.current?.click()}
                       disabled={isUploading}
-                      className="relative flex aspect-[16/10] w-full flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-slate-200 bg-slate-50/60 p-4 text-center text-slate-500 transition hover:border-[#0a7ae6]/50 hover:bg-blue-50/20 disabled:cursor-wait"
+                      className="relative flex aspect-[16/10] w-full flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-slate-200 bg-slate-50/60 p-4 text-center text-slate-500 transition hover:border-[#000000]/50 hover:bg-blue-50/20 disabled:cursor-wait"
                     >
-                      <div className="flex size-10 items-center justify-center rounded-full bg-blue-50 text-[#0a7ae6]">
+                      <div className="flex size-10 items-center justify-center rounded-full bg-blue-50 text-[#000000]">
                         {isUploading ? (
                           <LoaderCircle className="size-5 animate-spin" />
                         ) : (
@@ -931,7 +931,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                       <button
                         type="button"
                         onClick={() => setShowUrlInput(true)}
-                        className="text-[11px] font-medium text-[#0a7ae6] hover:underline"
+                        className="text-[11px] font-medium text-[#000000] hover:underline"
                       >
                         Or paste image URL →
                       </button>
@@ -964,9 +964,9 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
               </section>
 
               {/* Story Settings Card */}
-              <section className="overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-xs">
+              <section className="overflow-hidden rounded-2xl border border-slate-200/90 bg-[#fbf7ef] shadow-xs">
                 <div className="flex items-center gap-2.5 border-b border-slate-100 px-5 py-3.5 bg-slate-50/50">
-                  <span className="flex size-7 items-center justify-center rounded-lg bg-blue-50 text-[#0a7ae6]">
+                  <span className="flex size-7 items-center justify-center rounded-lg bg-blue-50 text-[#000000]">
                     <Tag className="size-4" />
                   </span>
                   <div>
@@ -998,7 +998,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                           onClick={() => setCategory(cat)}
                           className={`rounded-full px-2.5 py-0.5 text-[11px] font-medium transition-colors ${
                             category.toLowerCase() === cat.toLowerCase()
-                              ? "bg-[#0a7ae6] text-white"
+                              ? "bg-[#000000] text-white"
                               : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                           }`}
                         >
@@ -1026,7 +1026,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                     <div className="flex justify-between items-center">
                       <span className="text-slate-400">Reading time:</span>
                       <span className="font-semibold text-slate-800 flex items-center gap-1">
-                        <Clock3 className="size-3 text-[#0a7ae6]" />
+                        <Clock3 className="size-3 text-[#000000]" />
                         {calculatedReadTime}
                       </span>
                     </div>
@@ -1043,7 +1043,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
               </section>
 
               {/* Full Article Preview Card - Brand Blue Gradient (No Black Box) */}
-              <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-[#0a7ae6] via-[#0268ce] to-[#014d99] p-5 text-white shadow-lg shadow-blue-500/15">
+              <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-[#000000] via-[#0268ce] to-[#014d99] p-5 text-white shadow-lg shadow-blue-500/15">
                 <div className="flex items-start gap-3">
                   <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-white/20 backdrop-blur-xs text-white">
                     <Eye className="size-4" />
@@ -1061,7 +1061,7 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
                 <button
                   type="button"
                   onClick={() => setPreviewOpen(true)}
-                  className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-white py-2.5 text-xs font-medium text-[#0a7ae6] shadow-sm hover:bg-blue-50 transition active:scale-98"
+                  className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-[#fbf7ef] py-2.5 text-xs font-medium text-[#000000] shadow-sm hover:bg-blue-50 transition active:scale-98"
                 >
                   <span>Open Full Screen Preview</span>
                   <ChevronRight className="size-3.5" />
@@ -1078,18 +1078,18 @@ export function BlogPostEditor({ post }: { post?: BlogPostItem }) {
           className="flex h-[calc(100dvh-2rem)] max-w-6xl flex-col gap-0 overflow-hidden rounded-2xl border-0 p-0 sm:!w-[min(1120px,calc(100vw-2rem))] sm:!max-w-[min(1120px,calc(100vw-2rem))]"
           overlayClassName="bg-slate-950/60 supports-backdrop-filter:backdrop-blur-sm"
         >
-          <DialogHeader className="flex-row items-center justify-between border-b border-slate-100 bg-white px-6 py-4">
+          <DialogHeader className="flex-row items-center justify-between border-b border-slate-100 bg-[#fbf7ef] px-6 py-4">
             <DialogTitle className="flex items-center gap-2 text-sm font-semibold text-slate-800">
-              <Eye className="size-4 text-[#0a7ae6]" />
+              <Eye className="size-4 text-[#000000]" />
               <span>Live Article Reader Preview</span>
             </DialogTitle>
             <span className="text-xs text-slate-400">Includes current unsaved changes</span>
           </DialogHeader>
 
-          <div className="min-h-0 overflow-y-auto bg-white">
+          <div className="min-h-0 overflow-y-auto bg-[#fbf7ef]">
             <article className="pb-24">
               <div className="mx-auto max-w-3xl px-6 pt-10 sm:pt-14">
-                <span className="inline-flex rounded-full bg-[#0a7ae6]/10 px-3 py-1 text-xs font-semibold text-[#0a7ae6]">
+                <span className="inline-flex rounded-full bg-[#000000]/10 px-3 py-1 text-xs font-semibold text-[#000000]">
                   {category.trim() || "Technology"}
                 </span>
 

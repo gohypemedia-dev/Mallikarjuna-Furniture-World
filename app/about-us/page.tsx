@@ -218,24 +218,24 @@ export default async function AboutPage() {
   });
 
   return (
-    <main className="min-h-screen bg-white text-slate-900 selection:bg-[#0a7ae6] selection:text-white">
+    <main className="min-h-screen bg-[#fbf7ef] text-slate-900 selection:bg-[#000000] selection:text-white">
       <Navbar />
 
       {/* HERO SECTION WITH TECHNICAL GRID */}
-      <section className="relative overflow-hidden bg-white border-b border-slate-200/80 pt-16 pb-16 sm:pt-24 sm:pb-24">
+      <section className="relative overflow-hidden bg-[#fbf7ef] border-b border-slate-200/80 pt-16 pb-16 sm:pt-24 sm:pb-24">
         {/* Technical Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_20%,#000_60%,transparent_100%)] pointer-events-none opacity-80" />
         
         {/* Ambient Radial Glow */}
-        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-[radial-gradient(circle_at_center,rgba(10,122,230,0.08),transparent_70%)] pointer-events-none" />
+        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-[radial-gradient(circle_at_center,rgba(0, 0, 0,0.08),transparent_70%)] pointer-events-none" />
 
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-4 py-1.5 text-xs font-semibold text-slate-700 shadow-2xs backdrop-blur-sm">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#0a7ae6] opacity-75" />
-                <span className="relative inline-flex size-2 rounded-full bg-[#0a7ae6]" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#000000] opacity-75" />
+                <span className="relative inline-flex size-2 rounded-full bg-[#000000]" />
               </span>
               <span>Founded in 2011 • 14+ Years of Tech Excellence</span>
             </div>
@@ -243,7 +243,7 @@ export default async function AboutPage() {
             {/* Headline */}
             <h1 className="mt-6 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900 leading-[1.15]">
               Making Global Innovation <br className="hidden sm:inline" />
-              <span className="text-[#0a7ae6]">Accessible & Relevant</span> for India
+              <span className="text-[#000000]">Accessible & Relevant</span> for India
             </h1>
 
             {/* Subtext */}
@@ -255,13 +255,13 @@ export default async function AboutPage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
               <Link prefetch={false}
                 href="/shop"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-slate-900 px-7 text-xs font-semibold text-white transition hover:bg-[#0a7ae6] shadow-xs active:scale-95"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-slate-900 px-7 text-xs font-semibold text-white transition hover:bg-[#000000] shadow-xs active:scale-95"
               >
                 Explore Product Ecosystem <ArrowRight className="size-3.5" />
               </Link>
               <Link prefetch={false}
                 href="/contact"
-                className="inline-flex h-11 items-center justify-center rounded-xl border border-slate-200 bg-white px-6 text-xs font-semibold text-slate-800 transition hover:bg-slate-50 shadow-2xs"
+                className="inline-flex h-11 items-center justify-center rounded-xl border border-slate-200 bg-[#fbf7ef] px-6 text-xs font-semibold text-slate-800 transition hover:bg-slate-50 shadow-2xs"
               >
                 Connect With Us
               </Link>
@@ -275,8 +275,8 @@ export default async function AboutPage() {
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:gap-8 text-center">
             {STATS.map((stat) => (
-              <div key={stat.label} className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
-                <p className="text-2xl sm:text-3xl font-bold text-[#0a7ae6] tracking-tight">{stat.value}</p>
+              <div key={stat.label} className="p-5 rounded-2xl bg-[#fbf7ef] border border-slate-200/80 shadow-xs">
+                <p className="text-2xl sm:text-3xl font-bold text-[#000000] tracking-tight">{stat.value}</p>
                 <p className="mt-1 text-xs sm:text-sm font-semibold text-slate-900">{stat.label}</p>
                 <p className="mt-0.5 text-[11px] text-slate-500 font-medium">{stat.description}</p>
               </div>
@@ -286,12 +286,12 @@ export default async function AboutPage() {
       </section>
 
       {/* OUR STORY & JOURNEY */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-[#fbf7ef]">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
             {/* Story Text */}
             <div className="lg:col-span-7 space-y-5">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#000000]">
                 <Compass className="size-3.5" /> Our Journey
               </span>
               <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-slate-900 leading-tight">
@@ -313,7 +313,7 @@ export default async function AboutPage() {
               {/* Local Understanding Highlights */}
               <div className="pt-3 grid grid-cols-1 sm:grid-cols-2 gap-3.5 border-t border-slate-100">
                 <div className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/60 p-3.5">
-                  <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-[#0a7ae6]">
+                  <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-[#000000]">
                     <ShieldCheck className="size-4.5" />
                   </div>
                   <div>
@@ -338,9 +338,9 @@ export default async function AboutPage() {
             <div className="lg:col-span-5">
               <div className="relative rounded-3xl border border-slate-200/90 bg-gradient-to-b from-slate-900 to-slate-950 p-6 sm:p-8 text-white shadow-xl overflow-hidden">
                 {/* Subtle light effect */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-[radial-gradient(circle_at_center,rgba(10,122,230,0.2),transparent_70%)] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[radial-gradient(circle_at_center,rgba(0, 0, 0,0.2),transparent_70%)] pointer-events-none" />
 
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-[#0a7ae6]/20 border border-[#0a7ae6]/40 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-sky-300">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-[#000000]/20 border border-[#000000]/40 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-sky-300">
                   <Sparkles className="size-3" /> Defining Milestone
                 </span>
 
@@ -354,15 +354,15 @@ export default async function AboutPage() {
 
                 <div className="mt-6 space-y-2.5 text-xs text-slate-200">
                   <div className="flex items-center gap-2.5">
-                    <CheckCircle2 className="size-4 text-[#0a7ae6] shrink-0" />
+                    <CheckCircle2 className="size-4 text-[#000000] shrink-0" />
                     <span>Instant Cloud Sharing & Family Memory Preservation</span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <CheckCircle2 className="size-4 text-[#0a7ae6] shrink-0" />
+                    <CheckCircle2 className="size-4 text-[#000000] shrink-0" />
                     <span>Intelligent Motion Sensor Energy Saving</span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <CheckCircle2 className="size-4 text-[#0a7ae6] shrink-0" />
+                    <CheckCircle2 className="size-4 text-[#000000] shrink-0" />
                     <span>Intuitive Multi-Touch Interface with IPS Clarity</span>
                   </div>
                 </div>
@@ -380,12 +380,12 @@ export default async function AboutPage() {
       {/* BRAND MANIFESTO CALLOUT (PURPOSE-DRIVEN EMBEDDED STATEMENT) */}
       <section className="py-12 sm:py-16 bg-slate-50/70 border-y border-slate-200/80">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl border border-slate-200/90 bg-white p-8 sm:p-12 lg:p-14 shadow-xs overflow-hidden">
+          <div className="relative rounded-3xl border border-slate-200/90 bg-[#fbf7ef] p-8 sm:p-12 lg:p-14 shadow-xs overflow-hidden">
             {/* Subtle decorative quote background */}
             <Quote className="absolute -bottom-6 -right-6 size-48 text-slate-100/70 pointer-events-none rotate-12" />
             
             <div className="relative z-10 max-w-4xl">
-              <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#0a7ae6] mb-5">
+              <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#000000] mb-5">
                 <Sparkles className="size-3.5" /> Our Mission & Purpose
               </div>
               
@@ -402,10 +402,10 @@ export default async function AboutPage() {
       </section>
 
       {/* DESIGNED FOR INDIA SECTION */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-[#fbf7ef]">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#000000]">
               <Globe2 className="size-3.5" /> Tailored For Indian Needs
             </span>
             <h2 className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900">
@@ -422,10 +422,10 @@ export default async function AboutPage() {
               return (
                 <div
                   key={pillar.title}
-                  className="rounded-2xl border border-slate-200/90 bg-slate-50/50 p-6 shadow-2xs hover:shadow-md hover:bg-white hover:border-slate-300 transition-all flex flex-col justify-between"
+                  className="rounded-2xl border border-slate-200/90 bg-slate-50/50 p-6 shadow-2xs hover:shadow-md hover:bg-[#fbf7ef] hover:border-slate-300 transition-all flex flex-col justify-between"
                 >
                   <div>
-                    <div className="flex size-10 items-center justify-center rounded-xl bg-blue-50 text-[#0a7ae6] shadow-2xs mb-4">
+                    <div className="flex size-10 items-center justify-center rounded-xl bg-blue-50 text-[#000000] shadow-2xs mb-4">
                       <Icon className="size-5" />
                     </div>
                     <h3 className="text-sm sm:text-base font-bold text-slate-900">{pillar.title}</h3>
@@ -442,7 +442,7 @@ export default async function AboutPage() {
       <section className="py-16 sm:py-20 bg-slate-50/60 border-y border-slate-200/80">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#000000]">
               <Layers className="size-3.5" /> Product Portfolio
             </span>
             <h2 className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900">
@@ -458,7 +458,7 @@ export default async function AboutPage() {
             {productCategories.map((cat) => (
               <div
                 key={cat.title}
-                className="group flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs hover:shadow-lg hover:border-slate-300 transition-all duration-300"
+                className="group flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-[#fbf7ef] p-6 shadow-xs hover:shadow-lg hover:border-slate-300 transition-all duration-300"
               >
                 <div>
                   {/* Category Image */}
@@ -474,10 +474,10 @@ export default async function AboutPage() {
                     {cat.tag}
                   </span>
 
-                  <h3 className="mt-2 text-base font-bold text-slate-900 group-hover:text-[#0a7ae6] transition-colors">
+                  <h3 className="mt-2 text-base font-bold text-slate-900 group-hover:text-[#000000] transition-colors">
                     {cat.title}
                   </h3>
-                  <p className="text-[11px] font-semibold text-[#0a7ae6] mt-0.5">{cat.subtitle}</p>
+                  <p className="text-[11px] font-semibold text-[#000000] mt-0.5">{cat.subtitle}</p>
 
                   <p className="mt-2 text-xs text-slate-500 leading-relaxed">
                     {cat.description}
@@ -487,7 +487,7 @@ export default async function AboutPage() {
                 <div className="mt-5 pt-3 border-t border-slate-100">
                   <Link prefetch={false}
                     href={`/shop?filter=${encodeURIComponent(cat.slug)}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-800 hover:text-[#0a7ae6] transition group/link"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-800 hover:text-[#000000] transition group/link"
                   >
                     <span>Explore Models</span>
                     <ArrowRight className="size-3.5 transition-transform group-hover/link:translate-x-1" />
@@ -500,10 +500,10 @@ export default async function AboutPage() {
       </section>
 
       {/* PRODUCT DEVELOPMENT PHILOSOPHY */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-[#fbf7ef]">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#000000]">
               <Cpu className="size-3.5" /> Development Philosophy
             </span>
             <h2 className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900">
@@ -518,9 +518,9 @@ export default async function AboutPage() {
             {PHILOSOPHY_POINTS.map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-2xs hover:shadow-md hover:border-slate-300 transition-all"
+                className="rounded-2xl border border-slate-200/90 bg-[#fbf7ef] p-6 shadow-2xs hover:shadow-md hover:border-slate-300 transition-all"
               >
-                <div className="flex size-9 items-center justify-center rounded-xl bg-blue-50 text-[#0a7ae6] shadow-2xs">
+                <div className="flex size-9 items-center justify-center rounded-xl bg-blue-50 text-[#000000] shadow-2xs">
                   <CheckCircle2 className="size-4.5" />
                 </div>
                 <h3 className="mt-4 text-sm sm:text-base font-bold text-slate-900">{item.title}</h3>
@@ -536,9 +536,9 @@ export default async function AboutPage() {
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Quality Box */}
-            <div className="rounded-3xl border border-slate-200/90 bg-white p-8 sm:p-10 flex flex-col justify-between shadow-2xs">
+            <div className="rounded-3xl border border-slate-200/90 bg-[#fbf7ef] p-8 sm:p-10 flex flex-col justify-between shadow-2xs">
               <div>
-                <div className="flex size-11 items-center justify-center rounded-2xl bg-blue-50 text-[#0a7ae6] shadow-2xs mb-5">
+                <div className="flex size-11 items-center justify-center rounded-2xl bg-blue-50 text-[#000000] shadow-2xs mb-5">
                   <ShieldCheck className="size-6" />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
@@ -551,13 +551,13 @@ export default async function AboutPage() {
                   Every product launch represents months of product refinement, rigorous testing, and quality validation before reaching consumers.
                 </p>
               </div>
-              <div className="mt-6 pt-5 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#0a7ae6]">
+              <div className="mt-6 pt-5 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#000000]">
                 <CheckCircle2 className="size-4" /> Dependable Long-Term Performance
               </div>
             </div>
 
             {/* Customer First Box */}
-            <div className="rounded-3xl border border-slate-200/90 bg-white p-8 sm:p-10 flex flex-col justify-between shadow-2xs">
+            <div className="rounded-3xl border border-slate-200/90 bg-[#fbf7ef] p-8 sm:p-10 flex flex-col justify-between shadow-2xs">
               <div>
                 <div className="flex size-11 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 shadow-2xs mb-5">
                   <HeartHandshake className="size-6" />
@@ -581,10 +581,10 @@ export default async function AboutPage() {
       </section>
 
       {/* EMPOWERING HOMES, BUSINESSES & INSTITUTIONS */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-[#fbf7ef]">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#000000]">
               <Users className="size-3.5" /> Pan-India Impact
             </span>
             <h2 className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900">
@@ -601,10 +601,10 @@ export default async function AboutPage() {
               return (
                 <div
                   key={sector.title}
-                  className="flex flex-col items-center text-center rounded-2xl border border-slate-200/90 bg-slate-50/40 p-7 shadow-2xs hover:shadow-md hover:bg-white hover:border-slate-300 transition-all"
+                  className="flex flex-col items-center text-center rounded-2xl border border-slate-200/90 bg-slate-50/40 p-7 shadow-2xs hover:shadow-md hover:bg-[#fbf7ef] hover:border-slate-300 transition-all"
                 >
                   <div className="flex size-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 shadow-2xs">
-                    <Icon className="size-6 text-[#0a7ae6]" />
+                    <Icon className="size-6 text-[#000000]" />
                   </div>
                   <h3 className="mt-4 text-base font-bold text-slate-900">{sector.title}</h3>
                   <p className="mt-2 text-xs text-slate-500 leading-relaxed">{sector.description}</p>
@@ -618,7 +618,7 @@ export default async function AboutPage() {
       {/* SUSTAINABILITY & RESPONSIBLE INNOVATION */}
       <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl border border-blue-400/20 bg-gradient-to-br from-[#0a7ae6] via-[#075eb2] to-[#043d78] p-8 sm:p-12 text-white shadow-xl shadow-blue-500/15 relative overflow-hidden">
+          <div className="rounded-3xl border border-blue-400/20 bg-gradient-to-br from-[#000000] via-[#075eb2] to-[#043d78] p-8 sm:p-12 text-white shadow-xl shadow-blue-500/15 relative overflow-hidden">
             {/* Background lighting accents */}
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/15 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-sky-300/15 rounded-full blur-3xl pointer-events-none" />
@@ -653,11 +653,11 @@ export default async function AboutPage() {
       </section>
 
       {/* OUR VISION FOR THE FUTURE */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-[#fbf7ef]">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5 space-y-4">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#000000]">
                 <TrendingUp className="size-3.5" /> Looking Ahead
               </span>
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900">
@@ -673,7 +673,7 @@ export default async function AboutPage() {
 
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="rounded-2xl border border-slate-200/90 bg-slate-50/50 p-5 shadow-2xs">
-                <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#0a7ae6] mb-3">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#000000] mb-3">
                   <Cpu className="size-4" />
                 </div>
                 <h4 className="text-sm font-bold text-slate-900">AI & Smart Ecosystems</h4>
@@ -681,7 +681,7 @@ export default async function AboutPage() {
               </div>
 
               <div className="rounded-2xl border border-slate-200/90 bg-slate-50/50 p-5 shadow-2xs">
-                <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#0a7ae6] mb-3">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#000000] mb-3">
                   <Sparkles className="size-4" />
                 </div>
                 <h4 className="text-sm font-bold text-slate-900">Immersive Next-Gen Displays</h4>
@@ -689,7 +689,7 @@ export default async function AboutPage() {
               </div>
 
               <div className="rounded-2xl border border-slate-200/90 bg-slate-50/50 p-5 shadow-2xs">
-                <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#0a7ae6] mb-3">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#000000] mb-3">
                   <Globe2 className="size-4" />
                 </div>
                 <h4 className="text-sm font-bold text-slate-900">Democratizing Global Tech</h4>
@@ -697,7 +697,7 @@ export default async function AboutPage() {
               </div>
 
               <div className="rounded-2xl border border-slate-200/90 bg-slate-50/50 p-5 shadow-2xs">
-                <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#0a7ae6] mb-3">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-blue-50 text-[#000000] mb-3">
                   <Award className="size-4" />
                 </div>
                 <h4 className="text-sm font-bold text-slate-900">Trusted Indian Brand</h4>
@@ -712,7 +712,7 @@ export default async function AboutPage() {
       <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-200/80">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#000000]">
               <Award className="size-3.5" /> Our Guiding Principles
             </span>
             <h2 className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900">
@@ -727,10 +727,10 @@ export default async function AboutPage() {
             {BRAND_PROMISES.map((promise) => (
               <div
                 key={promise.label}
-                className="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between"
+                className="rounded-2xl border border-slate-200/90 bg-[#fbf7ef] p-5 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between"
               >
-                <h3 className="text-xs sm:text-sm font-bold text-slate-900 text-[#0a7ae6] flex items-center gap-2">
-                  <span className="size-2 rounded-full bg-[#0a7ae6] shrink-0" />
+                <h3 className="text-xs sm:text-sm font-bold text-slate-900 text-[#000000] flex items-center gap-2">
+                  <span className="size-2 rounded-full bg-[#000000] shrink-0" />
                   {promise.label}
                 </h3>
                 <p className="mt-2 text-xs text-slate-500 leading-relaxed">{promise.desc}</p>
@@ -741,15 +741,15 @@ export default async function AboutPage() {
       </section>
 
       {/* CLEAN & ELEGANT BOTTOM CTA CONTAINER */}
-      <section className="py-16 sm:py-24 bg-white border-t border-slate-200/80">
+      <section className="py-16 sm:py-24 bg-[#fbf7ef] border-t border-slate-200/80">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-3xl border border-slate-200 bg-gradient-to-b from-slate-50 to-slate-100/60 p-8 sm:p-14 text-center shadow-xs overflow-hidden">
             {/* Ambient subtle glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(10,122,230,0.06),transparent_70%)] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(0, 0, 0,0.06),transparent_70%)] pointer-events-none" />
             
             <div className="max-w-2xl mx-auto space-y-4 relative z-10">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-white border border-slate-200 px-3.5 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
-                <Sparkles className="size-3.5 text-[#0a7ae6]" /> Explore the Ecosystem
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-[#fbf7ef] border border-slate-200 px-3.5 py-1 text-xs font-semibold text-slate-700 shadow-2xs">
+                <Sparkles className="size-3.5 text-[#000000]" /> Explore the Ecosystem
               </span>
               <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-slate-900">
                 Experience Smarter Technology for Modern Living
@@ -760,13 +760,13 @@ export default async function AboutPage() {
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3.5">
                 <Link prefetch={false}
                   href="/shop"
-                  className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-slate-900 px-7 text-xs font-bold text-white transition hover:bg-[#0a7ae6] shadow-xs active:scale-95"
+                  className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-slate-900 px-7 text-xs font-bold text-white transition hover:bg-[#000000] shadow-xs active:scale-95"
                 >
                   Browse All Products <ArrowRight className="size-3.5" />
                 </Link>
                 <Link prefetch={false}
                   href="/contact"
-                  className="inline-flex h-11 items-center justify-center rounded-xl border border-slate-200 bg-white px-6 text-xs font-bold text-slate-800 transition hover:bg-slate-50 shadow-2xs"
+                  className="inline-flex h-11 items-center justify-center rounded-xl border border-slate-200 bg-[#fbf7ef] px-6 text-xs font-bold text-slate-800 transition hover:bg-slate-50 shadow-2xs"
                 >
                   Visit Experience Centers
                 </Link>

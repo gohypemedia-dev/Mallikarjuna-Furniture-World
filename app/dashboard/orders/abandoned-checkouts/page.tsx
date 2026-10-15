@@ -24,7 +24,7 @@ export default async function AbandonedCheckoutsPage() {
       <SidebarProvider className="min-h-svh">
         <AppSidebar />
         <SidebarInset>
-          <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-5">
+          <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-5">
             <div className="flex flex-wrap items-end justify-between gap-2">
               <div>
                 <h1 className="flex items-center gap-2 text-lg font-semibold"><ShoppingCart className="size-4" /> Abandoned checkouts</h1>
@@ -33,7 +33,7 @@ export default async function AbandonedCheckoutsPage() {
               <span className="text-xs text-black/55">{checkouts.length} open</span>
             </div>
 
-            <section className="mt-3 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+            <section className="mt-3 overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
               {checkouts.length === 0 ? (
                 <div className="px-4 py-12 text-center">
                   <ShoppingCart className="mx-auto size-6 text-black/35" />
@@ -65,7 +65,7 @@ export default async function AbandonedCheckoutsPage() {
                             </td>
                             <td className="border-b border-black/10 px-4 py-3 font-medium">{money.format(checkout.total)}</td>
                             <td className="border-b border-black/10 px-4 py-3 text-black/65"><span className="inline-flex items-center gap-1"><Clock3 className="size-3" />{timestamp.format(checkout.lastActivityAt)}</span></td>
-                            <td className="border-b border-black/10 px-4 py-3 text-right"><Link prefetch={false} href={`/dashboard/orders/abandoned-checkouts/${checkout.id}`} className="font-medium text-[#005BD3] hover:underline">View</Link></td>
+                            <td className="border-b border-black/10 px-4 py-3 text-right"><Link prefetch={false} href={`/dashboard/orders/abandoned-checkouts/${checkout.id}`} className="font-medium text-[#000000] hover:underline">View</Link></td>
                           </tr>
                         );
                       })}

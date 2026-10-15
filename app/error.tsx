@@ -39,7 +39,7 @@ export default function ErrorBoundary({
       <div className="mt-6 flex gap-3">
         <button
           onClick={() => window.location.reload()}
-          className="rounded-lg bg-[#0a7ae6] px-4 py-2 text-sm font-medium text-white transition hover:bg-[#0866c2]"
+          className="rounded-lg bg-[#000000] px-4 py-2 text-sm font-medium text-white transition hover:bg-[#1f1e1b]"
         >
           Reload Page
         </button>

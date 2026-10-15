@@ -35,7 +35,7 @@ export default async function BlogAdminPage() {
       <SidebarProvider className="min-h-svh">
         <AppSidebar />
         <SidebarInset>
-          <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-6">
+          <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-6">
             <BlogManager initialPosts={formattedPosts} />
           </main>
         </SidebarInset>

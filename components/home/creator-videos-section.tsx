@@ -133,7 +133,7 @@ export default function CreatorVideosSection() {
   };
 
   return (
-    <section className="bg-white pt-2 sm:pt-4 pb-12 md:pb-16 text-slate-900 overflow-hidden">
+    <section className="bg-[#fbf7ef] pt-2 sm:pt-4 pb-12 md:pb-16 text-slate-900 overflow-hidden">
       <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         {/* HEADER WITH TITLE AND SCROLL CONTROLS */}
         <div className="mb-4 sm:mb-6 flex items-center justify-between gap-4">
@@ -149,7 +149,7 @@ export default function CreatorVideosSection() {
               type="button"
               onClick={() => scroll("left")}
               aria-label="Previous videos"
-              className="flex size-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs transition-all hover:bg-slate-50 hover:border-[#0a7ae6] hover:text-[#0a7ae6] active:scale-95 cursor-pointer"
+              className="flex size-10 items-center justify-center rounded-full border border-slate-200 bg-[#fbf7ef] text-slate-700 shadow-xs transition-all hover:bg-slate-50 hover:border-[#000000] hover:text-[#000000] active:scale-95 cursor-pointer"
             >
               <ChevronLeft className="size-5" />
             </button>
@@ -157,7 +157,7 @@ export default function CreatorVideosSection() {
               type="button"
               onClick={() => scroll("right")}
               aria-label="Next videos"
-              className="flex size-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-xs transition-all hover:bg-slate-50 hover:border-[#0a7ae6] hover:text-[#0a7ae6] active:scale-95 cursor-pointer"
+              className="flex size-10 items-center justify-center rounded-full border border-slate-200 bg-[#fbf7ef] text-slate-700 shadow-xs transition-all hover:bg-slate-50 hover:border-[#000000] hover:text-[#000000] active:scale-95 cursor-pointer"
             >
               <ChevronRight className="size-5" />
             </button>
@@ -208,7 +208,7 @@ export default function CreatorVideosSection() {
                         allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                         allowFullScreen
                         loading="lazy"
-                        className="absolute inset-x-0 top-0 h-[calc(100%-48px)] w-full border-0 bg-white"
+                        className="absolute inset-x-0 top-0 h-[calc(100%-48px)] w-full border-0 bg-[#fbf7ef]"
                       />
                     ) : ytId && isPlaying ? (
                       <div className="absolute inset-0 flex items-center justify-center bg-black overflow-hidden pointer-events-none select-none">
@@ -336,7 +336,7 @@ export default function CreatorVideosSection() {
                       WebkitBackfaceVisibility: "hidden",
                       transform: "rotateY(180deg)",
                     }}
-                    className={`absolute inset-0 w-full h-full rounded-2xl overflow-hidden bg-white text-slate-900 border border-slate-200 p-3.5 sm:p-4 flex flex-col cursor-pointer shadow-xs transition-opacity duration-300 ${
+                    className={`absolute inset-0 w-full h-full rounded-2xl overflow-hidden bg-[#fbf7ef] text-slate-900 border border-slate-200 p-3.5 sm:p-4 flex flex-col cursor-pointer shadow-xs transition-opacity duration-300 ${
                       isFlipped ? "pointer-events-auto opacity-100 z-10" : "pointer-events-none opacity-0 z-0"
                     }`}
                     onClick={(e) => toggleFlip(vid.id, e)}
@@ -345,7 +345,7 @@ export default function CreatorVideosSection() {
                     <button
                       type="button"
                       onClick={(e) => toggleFlip(vid.id, e)}
-                      className="absolute right-2.5 top-2.5 z-20 flex size-8 items-center justify-center rounded-full bg-white text-slate-600 hover:text-slate-900 border border-slate-200 shadow-xs hover:bg-slate-100 transition-colors cursor-pointer"
+                      className="absolute right-2.5 top-2.5 z-20 flex size-8 items-center justify-center rounded-full bg-[#fbf7ef] text-slate-600 hover:text-slate-900 border border-slate-200 shadow-xs hover:bg-slate-100 transition-colors cursor-pointer"
                       title="Flip back to video"
                     >
                       <RotateCcw className="size-4" />
@@ -419,7 +419,7 @@ export default function CreatorVideosSection() {
                                 }
                                 router.push(`/product/${vid.product?.slug}`);
                               }}
-                              className="inline-flex h-9 sm:h-10 w-full cursor-pointer items-center justify-center rounded-xl bg-[#0a7ae6] text-xs sm:text-sm font-bold text-white transition-colors hover:bg-[#0866c2] shadow-xs active:scale-[0.98]"
+                              className="inline-flex h-9 sm:h-10 w-full cursor-pointer items-center justify-center rounded-xl bg-[#000000] text-xs sm:text-sm font-bold text-white transition-colors hover:bg-[#1f1e1b] shadow-xs active:scale-[0.98]"
                             >
                               Buy Now
                             </button>
@@ -430,10 +430,10 @@ export default function CreatorVideosSection() {
                       /* ── CASE 2: NO PRODUCT ATTACHED (CLEAN SHOP REDIRECT CARD) ── */
                       <div className="flex flex-1 flex-col items-center justify-between text-center p-3 pt-6">
                         <div className="flex-1 flex flex-col items-center justify-center">
-                          <div className="flex size-14 items-center justify-center rounded-2xl bg-blue-50 text-[#0a7ae6] mb-3 border border-blue-100">
+                          <div className="flex size-14 items-center justify-center rounded-2xl bg-blue-50 text-[#000000] mb-3 border border-blue-100">
                             <ShoppingBag className="size-7" />
                           </div>
-                          <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#0a7ae6]">
+                          <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#000000]">
                             XELECTRON STORE
                           </p>
                           <h3 className="text-base sm:text-lg font-bold text-slate-900 mt-1">
@@ -447,7 +447,7 @@ export default function CreatorVideosSection() {
                         <Link prefetch={false}
                           href="/shop"
                           onClick={(e) => e.stopPropagation()}
-                          className="inline-flex h-10 w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl bg-[#0a7ae6] text-xs sm:text-sm font-bold text-white transition-colors hover:bg-[#0866c2] shadow-xs active:scale-[0.98]"
+                          className="inline-flex h-10 w-full cursor-pointer items-center justify-center gap-1.5 rounded-xl bg-[#000000] text-xs sm:text-sm font-bold text-white transition-colors hover:bg-[#1f1e1b] shadow-xs active:scale-[0.98]"
                         >
                           <span>Visit Shop</span>
                           <ArrowRight className="size-4" />

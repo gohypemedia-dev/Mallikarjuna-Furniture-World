@@ -69,7 +69,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <span className="text-[11px] font-bold tracking-wider text-white">XE</span>
           </div>
           <div className="flex min-w-0 flex-1 flex-col text-left leading-none group-data-[collapsible=icon]:hidden">
-            <span className="truncate text-[13.5px] font-semibold text-[#1a1a1a] tracking-tight">XElectron</span>
+            <span className="truncate text-[13.5px] font-semibold text-[#000000] tracking-tight">XElectron</span>
             <span className="mt-1 truncate text-[11px] font-medium text-[#707070]">
               Admin Dashboard
             </span>

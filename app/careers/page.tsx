@@ -63,7 +63,7 @@ export default function CareersPage() {
       {/* HERO HEADER */}
       <section className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-16 sm:py-24 text-white">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] text-[#38bdf8] backdrop-blur-md">
+          <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] text-[#b2aea7] backdrop-blur-md">
             <Briefcase className="h-3.5 w-3.5" /> Join Our Team
           </span>
           <h1 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-5xl text-white">
@@ -82,15 +82,15 @@ export default function CareersPage() {
             {/* OPEN POSITIONS */}
             <div className="lg:col-span-6 space-y-6">
               <div>
-                <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#0a7ae6]">Current Openings</span>
+                <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[#000000]">Current Openings</span>
                 <h2 className="mt-1 text-2xl font-bold text-slate-900">Work With Us</h2>
               </div>
 
               <div className="space-y-4">
                 {OPENINGS.map((job) => (
-                  <div key={job.title} className="rounded-3xl border border-slate-200/90 bg-white p-6 shadow-xs hover:border-[#0a7ae6]/40 transition">
+                  <div key={job.title} className="rounded-3xl border border-slate-200/90 bg-[#fbf7ef] p-6 shadow-xs hover:border-[#000000]/40 transition">
                     <div className="flex items-center justify-between">
-                      <span className="bg-blue-50 text-[#0a7ae6] text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full">
+                      <span className="bg-blue-50 text-[#000000] text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full">
                         {job.department}
                       </span>
                       <span className="text-xs font-semibold text-slate-400">{job.type}</span>
@@ -98,7 +98,7 @@ export default function CareersPage() {
                     <h3 className="mt-2 text-base font-bold text-slate-900">{job.title}</h3>
                     <p className="mt-1 text-xs text-slate-600 leading-relaxed">{job.description}</p>
                     <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-semibold">
-                      <span className="flex items-center gap-1.5"><MapPin className="size-3.5 text-[#0a7ae6]" /> {job.location}</span>
+                      <span className="flex items-center gap-1.5"><MapPin className="size-3.5 text-[#000000]" /> {job.location}</span>
                       <span>Exp: {job.experience}</span>
                     </div>
                   </div>
@@ -107,7 +107,7 @@ export default function CareersPage() {
             </div>
 
             {/* APPLICATION FORM */}
-            <div className="lg:col-span-6 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/90 shadow-md">
+            <div className="lg:col-span-6 bg-[#fbf7ef] p-8 sm:p-10 rounded-3xl border border-slate-200/90 shadow-md">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900">Submit Your Application</h2>
               <p className="mt-1 text-xs text-slate-500">Apply for any open position or send your CV for future roles.</p>
 
@@ -133,7 +133,7 @@ export default function CareersPage() {
                       placeholder="e.g. Ramesh Kumar"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-xs outline-none focus:border-[#0a7ae6] focus:bg-white transition"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-xs outline-none focus:border-[#000000] focus:bg-[#fbf7ef] transition"
                     />
                   </div>
 
@@ -146,7 +146,7 @@ export default function CareersPage() {
                         placeholder="ramesh@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-xs outline-none focus:border-[#0a7ae6] focus:bg-white transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-xs outline-none focus:border-[#000000] focus:bg-[#fbf7ef] transition"
                       />
                     </div>
 
@@ -158,7 +158,7 @@ export default function CareersPage() {
                         placeholder="+91 98765 43210"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-xs outline-none focus:border-[#0a7ae6] focus:bg-white transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-xs outline-none focus:border-[#000000] focus:bg-[#fbf7ef] transition"
                       />
                     </div>
                   </div>
@@ -168,7 +168,7 @@ export default function CareersPage() {
                     <select
                       value={formData.position}
                       onChange={(e) => setFormData({ ...formData, position: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-xs outline-none focus:border-[#0a7ae6] focus:bg-white transition"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-xs outline-none focus:border-[#000000] focus:bg-[#fbf7ef] transition"
                     >
                       {OPENINGS.map((o) => (
                         <option key={o.title} value={o.title}>{o.title}</option>
@@ -184,14 +184,14 @@ export default function CareersPage() {
                       placeholder="https://linkedin.com/in/yourprofile or Google Drive link"
                       value={formData.portfolioUrl}
                       onChange={(e) => setFormData({ ...formData, portfolioUrl: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-xs outline-none focus:border-[#0a7ae6] focus:bg-white transition"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-xs outline-none focus:border-[#000000] focus:bg-[#fbf7ef] transition"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0a7ae6] px-8 text-xs font-bold uppercase tracking-wider text-white hover:bg-blue-600 transition shadow-md shadow-blue-500/20 active:scale-95 disabled:opacity-50 cursor-pointer"
+                    className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#000000] px-8 text-xs font-bold uppercase tracking-wider text-white hover:bg-blue-600 transition shadow-md shadow-blue-500/20 active:scale-95 disabled:opacity-50 cursor-pointer"
                   >
                     <Send className="size-4" />
                     {isSubmitting ? "Submitting..." : "Apply Now"}

@@ -120,7 +120,7 @@ export function AdminProfileClient({ initialProfile }: AdminProfileProps) {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Avatar & Profile Card */}
-        <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-2xs space-y-6">
+        <div className="rounded-2xl border border-black/5 bg-[#fbf7ef] p-6 shadow-2xs space-y-6">
           <div className="flex items-center gap-4 pb-4 border-b border-slate-100">
             <div className="flex size-16 items-center justify-center rounded-2xl bg-slate-900 text-white text-xl font-bold shadow-md">
               {initials || "AD"}
@@ -144,7 +144,7 @@ export function AdminProfileClient({ initialProfile }: AdminProfileProps) {
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full rounded-xl border border-slate-200 bg-white py-2.5 px-3.5 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] py-2.5 px-3.5 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                 placeholder="Administrator Name"
               />
             </div>
@@ -158,7 +158,7 @@ export function AdminProfileClient({ initialProfile }: AdminProfileProps) {
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full rounded-xl border border-slate-200 bg-white py-2.5 px-3.5 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] py-2.5 px-3.5 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                 placeholder="admin@xelectron.com"
               />
             </div>
@@ -171,7 +171,7 @@ export function AdminProfileClient({ initialProfile }: AdminProfileProps) {
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full rounded-xl border border-slate-200 bg-white py-2.5 px-3.5 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] py-2.5 px-3.5 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                 placeholder="+91 9876543210"
               />
             </div>
@@ -179,7 +179,7 @@ export function AdminProfileClient({ initialProfile }: AdminProfileProps) {
         </div>
 
         {/* Security / Password Change Card */}
-        <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-2xs space-y-5">
+        <div className="rounded-2xl border border-black/5 bg-[#fbf7ef] p-6 shadow-2xs space-y-5">
           <div className="flex items-center gap-2 pb-3 border-b border-slate-100">
             <KeyRound className="size-4 text-slate-700" />
             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-900">
@@ -198,7 +198,7 @@ export function AdminProfileClient({ initialProfile }: AdminProfileProps) {
                   type={showCurrentPassword ? "text" : "password"}
                   value={formData.currentPassword}
                   onChange={(e) => setFormData({ ...formData, currentPassword: e.target.value })}
-                  className="w-full rounded-xl border border-slate-200 bg-white py-2.5 pl-3.5 pr-10 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                  className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] py-2.5 pl-3.5 pr-10 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                   placeholder="Enter current password to authorize change"
                 />
                 <button
@@ -219,7 +219,7 @@ export function AdminProfileClient({ initialProfile }: AdminProfileProps) {
                     type={showNewPassword ? "text" : "password"}
                     value={formData.newPassword}
                     onChange={(e) => setFormData({ ...formData, newPassword: e.target.value })}
-                    className="w-full rounded-xl border border-slate-200 bg-white py-2.5 pl-3.5 pr-10 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                    className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] py-2.5 pl-3.5 pr-10 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                     placeholder="New password (min 6 characters)"
                   />
                   <button
@@ -239,7 +239,7 @@ export function AdminProfileClient({ initialProfile }: AdminProfileProps) {
                     type={showConfirmPassword ? "text" : "password"}
                     value={formData.confirmPassword}
                     onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
-                    className="w-full rounded-xl border border-slate-200 bg-white py-2.5 pl-3.5 pr-10 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                    className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] py-2.5 pl-3.5 pr-10 text-xs text-slate-900 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                     placeholder="Repeat new password"
                   />
                   <button

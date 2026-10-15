@@ -32,13 +32,13 @@ export function ProductAdditionalDetailsSection() {
   }
 
   return (
-    <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+    <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
       <div className="flex items-start justify-between gap-4 px-4 py-4">
         <div>
           <h2 className="text-sm font-semibold text-black/75">Additional details</h2>
           <p className="mt-1 text-xs leading-5 text-black/50">Add any product-specific information, such as material, fit, care, or origin.</p>
         </div>
-        <Button type="button" variant="outline" size="sm" onClick={addDetail} className="shrink-0 cursor-pointer border-black/15 bg-white text-black/70 shadow-none hover:bg-black/[0.03]">
+        <Button type="button" variant="outline" size="sm" onClick={addDetail} className="shrink-0 cursor-pointer border-black/15 bg-[#fbf7ef] text-black/70 shadow-none hover:bg-black/[0.03]">
           <Plus className="size-3.5" /> Add detail
         </Button>
       </div>
@@ -57,14 +57,14 @@ export function ProductAdditionalDetailsSection() {
                   value={detail.name}
                   onChange={(event) => updateDetail(detail.id, "name", event.target.value)}
                   placeholder="e.g. Material"
-                  className="border-black/20 bg-white shadow-none focus-visible:border-black/45 focus-visible:ring-black/10"
+                  className="border-black/20 bg-[#fbf7ef] shadow-none focus-visible:border-black/45 focus-visible:ring-black/10"
                 />
                 <Textarea
                   aria-label={detail.name || "Detail information"}
                   value={detail.value}
                   onChange={(event) => updateDetail(detail.id, "value", event.target.value)}
                   placeholder="Add the product information"
-                  className="min-h-9 resize-y border-black/20 bg-white py-2 shadow-none focus-visible:border-black/45 focus-visible:ring-black/10"
+                  className="min-h-9 resize-y border-black/20 bg-[#fbf7ef] py-2 shadow-none focus-visible:border-black/45 focus-visible:ring-black/10"
                 />
                 <Button type="button" variant="ghost" size="icon-sm" aria-label="Remove detail" onClick={() => removeDetail(detail.id)} className="cursor-pointer text-black/40 hover:bg-red-50 hover:text-red-700">
                   <Trash2 className="size-4" />

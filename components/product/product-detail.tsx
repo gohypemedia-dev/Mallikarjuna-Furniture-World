@@ -330,7 +330,7 @@ export default function ProductDetail({
   const [recentDisplayedIds, setRecentDisplayedIds] = useState<string[]>([]);
 
   return (
-    <div className="w-full bg-white pt-2 sm:pt-4 pb-0 text-slate-900 overflow-x-clip">
+    <div className="w-full bg-[#fbf7ef] pt-2 sm:pt-4 pb-0 text-slate-900 overflow-x-clip">
       <div className="mx-auto max-w-[1440px] px-3 sm:px-6 lg:px-8 mb-8 sm:mb-12">
         {/* TOP PRODUCT SECTION */}
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-14">
@@ -356,12 +356,12 @@ export default function ProductDetail({
                     OUT OF STOCK
                   </span>
                 ) : (
-                  <span className="rounded bg-[#0a7ae6] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-2xs">
+                  <span className="rounded bg-[#000000] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-2xs">
                     NEW ARRIVALS
                   </span>
                 )}
                 {product.sku && (
-                  <span className="rounded bg-white border border-slate-200 px-2 py-0.5 font-mono text-[10px] font-medium text-slate-600">
+                  <span className="rounded bg-[#fbf7ef] border border-slate-200 px-2 py-0.5 font-mono text-[10px] font-medium text-slate-600">
                     SKU: {product.sku}
                   </span>
                 )}
@@ -393,7 +393,7 @@ export default function ProductDetail({
               </p>
 
               {/* Snapmint / Pay Later Card */}
-              <div className="mt-4 rounded-lg bg-white p-3.5 border border-slate-200/90 shadow-2xs">
+              <div className="mt-4 rounded-lg bg-[#fbf7ef] p-3.5 border border-slate-200/90 shadow-2xs">
                 <div className="flex items-center justify-between gap-2">
                   <span className="inline-flex items-center rounded bg-emerald-600 px-2 py-0.5 text-[10px] font-bold text-white uppercase tracking-wider">
                     Flat 10% cashback up to ₹500
@@ -418,7 +418,7 @@ export default function ProductDetail({
                     <Link prefetch={false}
                       href={`/checkout?product=${encodeURIComponent(product.slug || product.id)}&payment=velocity&emiTenure=3`}
                       onClick={addProductToCart}
-                      className="rounded-lg bg-[#0a7ae6] px-3 py-1.5 text-xs font-bold text-white shadow-xs hover:bg-[#086ac9] transition active:scale-95"
+                      className="rounded-lg bg-[#000000] px-3 py-1.5 text-xs font-bold text-white shadow-xs hover:bg-[#1f1e1b] transition active:scale-95"
                     >
                       Buy on EMI
                     </Link>
@@ -484,7 +484,7 @@ export default function ProductDetail({
                           className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition border cursor-pointer ${
                             isSelected
                               ? "bg-slate-950 text-white border-slate-950 shadow-sm"
-                              : "bg-white text-slate-700 border-slate-300 hover:border-slate-400 hover:bg-slate-50"
+                              : "bg-[#fbf7ef] text-slate-700 border-slate-300 hover:border-slate-400 hover:bg-slate-50"
                           }`}
                         >
                           <span>{v.name}</span>
@@ -510,7 +510,7 @@ export default function ProductDetail({
                     type="button"
                     onClick={() => setQuantity((prev) => Math.max(1, prev - 1))}
                     aria-label="Decrease quantity"
-                    className="flex size-9 items-center justify-center rounded-lg border border-slate-300 bg-white text-base font-bold text-slate-700 shadow-2xs hover:bg-slate-50 transition active:scale-95 disabled:opacity-40 cursor-pointer"
+                    className="flex size-9 items-center justify-center rounded-lg border border-slate-300 bg-[#fbf7ef] text-base font-bold text-slate-700 shadow-2xs hover:bg-slate-50 transition active:scale-95 disabled:opacity-40 cursor-pointer"
                     disabled={isOutOfStock || quantity <= 1}
                   >
                     -
@@ -522,7 +522,7 @@ export default function ProductDetail({
                     type="button"
                     onClick={() => setQuantity((prev) => Math.min(maximumPurchaseQuantity, prev + 1))}
                     aria-label="Increase quantity"
-                    className="flex size-9 items-center justify-center rounded-lg border border-slate-300 bg-white text-base font-bold text-slate-700 shadow-2xs hover:bg-slate-50 transition active:scale-95 disabled:opacity-40 cursor-pointer"
+                    className="flex size-9 items-center justify-center rounded-lg border border-slate-300 bg-[#fbf7ef] text-base font-bold text-slate-700 shadow-2xs hover:bg-slate-50 transition active:scale-95 disabled:opacity-40 cursor-pointer"
                     disabled={isOutOfStock || quantity >= maximumPurchaseQuantity}
                   >
                     +
@@ -541,7 +541,7 @@ export default function ProductDetail({
                 <h3 className="text-sm sm:text-base font-bold text-slate-950 mb-2.5">
                   Services and benefits
                 </h3>
-                <div className="rounded-lg sm:rounded-xl bg-white p-4 sm:p-5 border border-slate-200/80 shadow-2xs">
+                <div className="rounded-lg sm:rounded-xl bg-[#fbf7ef] p-4 sm:p-5 border border-slate-200/80 shadow-2xs">
                   <div className="grid grid-cols-2 gap-y-4 gap-x-4">
                     <div className="flex items-start gap-2.5">
                       <Truck className="size-5 text-slate-950 shrink-0 mt-0.5" />
@@ -598,12 +598,12 @@ export default function ProductDetail({
                       <Link prefetch={false}
                         href={`/checkout?product=${encodeURIComponent(product.slug || product.id)}`}
                         onClick={addProductToCart}
-                        className="h-12 w-full rounded-lg bg-[#0a7ae6] text-white font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md shadow-blue-500/25 hover:bg-[#086ac9] active:scale-[0.98] transition flex items-center justify-center gap-2"
+                        className="h-12 w-full rounded-lg bg-[#000000] text-white font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md shadow-blue-500/25 hover:bg-[#1f1e1b] active:scale-[0.98] transition flex items-center justify-center gap-2"
                       >
                         <span>BUY NOW</span>
-                        <div className="flex items-center -space-x-1.5 bg-white rounded-full p-0.5 shadow-xs shrink-0">
+                        <div className="flex items-center -space-x-1.5 bg-[#fbf7ef] rounded-full p-0.5 shadow-xs shrink-0">
                           {/* Google G Logo Badge */}
-                          <div className="size-5 rounded-full bg-white flex items-center justify-center shadow-2xs overflow-hidden">
+                          <div className="size-5 rounded-full bg-[#fbf7ef] flex items-center justify-center shadow-2xs overflow-hidden">
                             <svg viewBox="0 0 24 24" className="size-3.5">
                               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
                               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
@@ -631,7 +631,7 @@ export default function ProductDetail({
                 <button
                   type="button"
                   onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}
-                  className="flex w-full items-center justify-between rounded-lg bg-white p-4 border border-slate-200 font-bold text-sm text-slate-900 shadow-2xs hover:bg-slate-50 transition cursor-pointer"
+                  className="flex w-full items-center justify-between rounded-lg bg-[#fbf7ef] p-4 border border-slate-200 font-bold text-sm text-slate-900 shadow-2xs hover:bg-slate-50 transition cursor-pointer"
                 >
                   <span>Description</span>
                   <span className="flex size-7 items-center justify-center rounded-lg bg-black text-white font-bold">
@@ -640,7 +640,7 @@ export default function ProductDetail({
                 </button>
 
                 {isDescriptionOpen && (
-                  <div className="mt-2 rounded-lg bg-white border border-slate-200 p-4 text-xs sm:text-sm text-slate-700 leading-relaxed shadow-2xs">
+                  <div className="mt-2 rounded-lg bg-[#fbf7ef] border border-slate-200 p-4 text-xs sm:text-sm text-slate-700 leading-relaxed shadow-2xs">
                     <ProductDescriptionContent description={product.description} specs={product.specs} />
                   </div>
                 )}
@@ -652,7 +652,7 @@ export default function ProductDetail({
                   href="https://www.facebook.com/XElectron"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex size-11 items-center justify-center rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-blue-600 hover:border-slate-300 shadow-2xs transition cursor-pointer"
+                  className="flex size-11 items-center justify-center rounded-lg bg-[#fbf7ef] border border-slate-200 text-slate-700 hover:text-blue-600 hover:border-slate-300 shadow-2xs transition cursor-pointer"
                   title="XElectron on Facebook"
                   aria-label="XElectron on Facebook"
                 >
@@ -662,7 +662,7 @@ export default function ProductDetail({
                   href="https://www.instagram.com/xelectron_india/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex size-11 items-center justify-center rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-slate-950 hover:border-slate-300 shadow-2xs transition cursor-pointer"
+                  className="flex size-11 items-center justify-center rounded-lg bg-[#fbf7ef] border border-slate-200 text-slate-700 hover:text-slate-950 hover:border-slate-300 shadow-2xs transition cursor-pointer"
                   title="XElectron on Instagram"
                   aria-label="XElectron on Instagram"
                 >
@@ -671,7 +671,7 @@ export default function ProductDetail({
                 <button
                   type="button"
                   onClick={() => handleShare("whatsapp")}
-                  className="flex size-11 items-center justify-center rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-emerald-600 hover:border-slate-300 shadow-2xs transition cursor-pointer"
+                  className="flex size-11 items-center justify-center rounded-lg bg-[#fbf7ef] border border-slate-200 text-slate-700 hover:text-emerald-600 hover:border-slate-300 shadow-2xs transition cursor-pointer"
                   title="Share on WhatsApp"
                   aria-label="Share on WhatsApp"
                 >
@@ -680,7 +680,7 @@ export default function ProductDetail({
                 <button
                   type="button"
                   onClick={() => handleShare("email")}
-                  className="flex size-11 items-center justify-center rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-slate-950 hover:border-slate-300 shadow-2xs transition cursor-pointer"
+                  className="flex size-11 items-center justify-center rounded-lg bg-[#fbf7ef] border border-slate-200 text-slate-700 hover:text-slate-950 hover:border-slate-300 shadow-2xs transition cursor-pointer"
                   title="Share via Email"
                   aria-label="Share via Email"
                 >
@@ -689,7 +689,7 @@ export default function ProductDetail({
                 <button
                   type="button"
                   onClick={handleCopyLink}
-                  className="flex size-11 items-center justify-center rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-slate-950 hover:border-slate-300 shadow-2xs transition cursor-pointer relative"
+                  className="flex size-11 items-center justify-center rounded-lg bg-[#fbf7ef] border border-slate-200 text-slate-700 hover:text-slate-950 hover:border-slate-300 shadow-2xs transition cursor-pointer relative"
                   title="Copy Link"
                 >
                   <Copy className="size-4" />
@@ -954,7 +954,7 @@ export default function ProductDetail({
                           aria-label={`Slide ${idx + 1}`}
                           className={`rounded-full transition-all duration-300 cursor-pointer ${
                             currentIdx === idx
-                              ? "w-6 sm:w-7 h-1.5 sm:h-2 bg-white shadow-xs"
+                              ? "w-6 sm:w-7 h-1.5 sm:h-2 bg-[#fbf7ef] shadow-xs"
                               : "w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white/35 hover:bg-white/70"
                           }`}
                         />
@@ -1364,7 +1364,7 @@ export default function ProductDetail({
                   <button
                     type="button"
                     onClick={() => setQuantity((prev) => Math.max(1, prev - 1))}
-                    className="size-7 flex items-center justify-center text-slate-600 hover:bg-white rounded-md transition shadow-2xs"
+                    className="size-7 flex items-center justify-center text-slate-600 hover:bg-[#fbf7ef] rounded-md transition shadow-2xs"
                     disabled={isOutOfStock || quantity <= 1}
                   >
                     <Minus className="size-3" />
@@ -1376,7 +1376,7 @@ export default function ProductDetail({
                     type="button"
                     onClick={() => setQuantity((prev) => Math.min(maximumPurchaseQuantity, prev + 1))}
                     disabled={isOutOfStock || quantity >= maximumPurchaseQuantity}
-                    className="size-7 flex items-center justify-center rounded-md text-slate-600 shadow-2xs transition hover:bg-white disabled:opacity-40"
+                    className="size-7 flex items-center justify-center rounded-md text-slate-600 shadow-2xs transition hover:bg-[#fbf7ef] disabled:opacity-40"
                   >
                     <Plus className="size-3" />
                   </button>
@@ -1390,7 +1390,7 @@ export default function ProductDetail({
                   <Link prefetch={false}
                     href={`/checkout?product=${encodeURIComponent(product.slug || product.id)}`}
                     onClick={addProductToCart}
-                    className="rounded-lg bg-[#0a7ae6] px-3.5 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-[#086ac9] active:scale-95 sm:px-6 sm:py-2.5 sm:text-sm whitespace-nowrap"
+                    className="rounded-lg bg-[#000000] px-3.5 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-[#1f1e1b] active:scale-95 sm:px-6 sm:py-2.5 sm:text-sm whitespace-nowrap"
                   >
                     Buy Now
                   </Link>
@@ -1445,7 +1445,7 @@ export default function ProductDetail({
             <button
               type="button"
               onClick={() => setActiveVideoModal(null)}
-              className="absolute top-4 right-4 z-20 size-9 rounded-full bg-black/70 text-white hover:bg-white hover:text-black flex items-center justify-center transition cursor-pointer"
+              className="absolute top-4 right-4 z-20 size-9 rounded-full bg-black/70 text-white hover:bg-[#fbf7ef] hover:text-black flex items-center justify-center transition cursor-pointer"
             >
               <CloseIcon className="size-5" />
             </button>

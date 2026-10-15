@@ -68,20 +68,20 @@ export default function RepairReplacementPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="border-b border-slate-200/80 bg-white">
+      <section className="border-b border-slate-200/80 bg-[#fbf7ef]">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-12 sm:px-8 sm:py-16 lg:grid-cols-[1fr_360px]">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#edf7ff] px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#0a7ae6]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#f3f0ea] px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#000000]">
               <RotateCcw className="size-3.5" /> Service & replacement
             </span>
-            <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-[#071a38] sm:text-4xl">
+            <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-[#000000] sm:text-4xl">
               Repair or replace your XElectron product.
             </h1>
             <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600">
               Tell us what happened and we will arrange doorstep pickup when eligible, or guide you to our authorised service centre.
             </p>
           </div>
-          <div className="rounded-2xl bg-[#071a38] p-5 text-white shadow-sm">
+          <div className="rounded-2xl bg-[#000000] p-5 text-white shadow-sm">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-sky-300">How we can help</p>
             <div className="mt-4 space-y-3 text-sm text-slate-200">
               <p className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-sky-300" />Free 7-day replacement for eligible issues</p>
@@ -95,27 +95,27 @@ export default function RepairReplacementPage() {
       {/* 3 BENEFIT CARDS */}
       <section className="bg-[#f7fbff] py-7 sm:py-9 border-b border-slate-100">
         <div className="mx-auto grid max-w-6xl gap-4 px-5 sm:grid-cols-3 sm:px-8">
-          <div className="flex gap-3.5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-            <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#0a7ae6]"><Truck className="size-5" /></div>
+          <div className="flex gap-3.5 rounded-2xl border border-slate-200 bg-[#fbf7ef] p-5 shadow-sm">
+            <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#000000]"><Truck className="size-5" /></div>
             <div>
-              <h2 className="text-sm font-semibold text-[#071a38]">Free Pickup & Drop</h2>
+              <h2 className="text-sm font-semibold text-[#000000]">Free Pickup & Drop</h2>
               <p className="mt-1 text-xs leading-5 text-slate-600">Doorstep reverse pickup arranged across all serviceable PIN codes.</p>
-              <Link href="/pickup-drop-service" className="mt-2 inline-flex items-center gap-1 text-[11px] font-semibold text-[#0a7ae6] hover:underline">
+              <Link href="/pickup-drop-service" className="mt-2 inline-flex items-center gap-1 text-[11px] font-semibold text-[#000000] hover:underline">
                 View Guidelines <ArrowRight className="size-3" />
               </Link>
             </div>
           </div>
-          <div className="flex gap-3.5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-            <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#edf7ff] text-[#0a7ae6]"><RotateCcw className="size-5" /></div>
+          <div className="flex gap-3.5 rounded-2xl border border-slate-200 bg-[#fbf7ef] p-5 shadow-sm">
+            <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#f3f0ea] text-[#000000]"><RotateCcw className="size-5" /></div>
             <div>
-              <h2 className="text-sm font-semibold text-[#071a38]">7-day replacement</h2>
+              <h2 className="text-sm font-semibold text-[#000000]">7-day replacement</h2>
               <p className="mt-1 text-xs leading-5 text-slate-600">For delivery damage or verified hardware defects reported within seven days.</p>
             </div>
           </div>
-          <div className="flex gap-3.5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="flex gap-3.5 rounded-2xl border border-slate-200 bg-[#fbf7ef] p-5 shadow-sm">
             <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600"><ShieldCheck className="size-5" /></div>
             <div>
-              <h2 className="text-sm font-semibold text-[#071a38]">Official warranty repairs</h2>
+              <h2 className="text-sm font-semibold text-[#000000]">Official warranty repairs</h2>
               <p className="mt-1 text-xs leading-5 text-slate-600">Repairs and eligible parts are handled during the one-year warranty period.</p>
             </div>
           </div>
@@ -123,12 +123,12 @@ export default function RepairReplacementPage() {
       </section>
 
       {/* FORM & SERVICE CENTER DETAILS */}
-      <section className="bg-white py-12 sm:py-16">
+      <section className="bg-[#fbf7ef] py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="grid items-start gap-8 lg:grid-cols-12">
             {/* SERVICE REQUEST FORM */}
             <div className="rounded-2xl border border-slate-200 bg-slate-50/60 p-6 shadow-sm sm:p-8 lg:col-span-7">
-              <h2 className="text-xl font-bold tracking-tight text-[#071a38] sm:text-2xl">
+              <h2 className="text-xl font-bold tracking-tight text-[#000000] sm:text-2xl">
                 Submit a service request
               </h2>
               <p className="mt-1 text-xs text-slate-500">
@@ -173,7 +173,7 @@ export default function RepairReplacementPage() {
                       placeholder="you@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-xs outline-none focus:border-[#0a7ae6] transition"
+                      className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-4 py-3 text-xs outline-none focus:border-[#000000] transition"
                     />
                     <p className="mt-1 text-xs text-slate-500">We will send your request confirmation to this address.</p>
                   </div>
@@ -186,7 +186,7 @@ export default function RepairReplacementPage() {
                         placeholder="e.g. Ankit Sharma"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-xs outline-none focus:border-[#0a7ae6] transition"
+                        className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-4 py-3 text-xs outline-none focus:border-[#000000] transition"
                       />
                     </div>
                     <div>
@@ -197,7 +197,7 @@ export default function RepairReplacementPage() {
                         placeholder="+91 98765 43210"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-xs outline-none focus:border-[#0a7ae6] transition"
+                        className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-4 py-3 text-xs outline-none focus:border-[#000000] transition"
                       />
                     </div>
                   </div>
@@ -211,7 +211,7 @@ export default function RepairReplacementPage() {
                         placeholder="XE-9812301"
                         value={formData.serialNumber}
                         onChange={(e) => setFormData({ ...formData, serialNumber: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-xs outline-none focus:border-[#0a7ae6] transition uppercase font-mono"
+                        className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-4 py-3 text-xs outline-none focus:border-[#000000] transition uppercase font-mono"
                       />
                     </div>
                     <div>
@@ -219,7 +219,7 @@ export default function RepairReplacementPage() {
                       <select
                         value={formData.requestType}
                         onChange={(e) => setFormData({ ...formData, requestType: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-xs outline-none focus:border-[#0a7ae6] transition"
+                        className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-4 py-3 text-xs outline-none focus:border-[#000000] transition"
                       >
                         <option value="Replacement (Within 7 Days)">7-Day Replacement</option>
                         <option value="Warranty Repair">Warranty Repair</option>
@@ -235,7 +235,7 @@ export default function RepairReplacementPage() {
                       placeholder="Complete street address with pincode for doorstep pickup..."
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-xs outline-none focus:border-[#0a7ae6] transition"
+                      className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-4 py-3 text-xs outline-none focus:border-[#000000] transition"
                     />
                   </div>
 
@@ -247,14 +247,14 @@ export default function RepairReplacementPage() {
                       placeholder="Describe the issue with display, audio, HDMI, or power..."
                       value={formData.issueDetails}
                       onChange={(e) => setFormData({ ...formData, issueDetails: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-white p-4 text-xs outline-none focus:border-[#0a7ae6] transition resize-none"
+                      className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] p-4 text-xs outline-none focus:border-[#000000] transition resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-[#0a7ae6] px-8 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-blue-600 shadow-md shadow-blue-500/20 active:scale-95 disabled:opacity-50 cursor-pointer"
+                    className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-[#000000] px-8 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-blue-600 shadow-md shadow-blue-500/20 active:scale-95 disabled:opacity-50 cursor-pointer"
                   >
                     <Wrench className="size-4" />
                     {isSubmitting ? "Submitting..." : "Submit Repair Request"}
@@ -266,45 +266,45 @@ export default function RepairReplacementPage() {
             {/* AUTHORIZED SERVICE CENTER SIDEBAR */}
             <div className="space-y-6 lg:col-span-5">
               <aside aria-labelledby="service-center-title" className="overflow-hidden rounded-2xl border border-[#dbe4f0] bg-[#ffffff] shadow-[0_8px_28px_-16px_rgba(7,26,56,0.15)]">
-                <div className="border-t-4 border-[#0a7ae6] p-6 sm:p-7">
+                <div className="border-t-4 border-[#000000] p-6 sm:p-7">
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#0a7ae6]">Main service hub</span>
-                    <span className="rounded-full border border-[#dbeafe] bg-[#edf7ff] px-2.5 py-1 text-[10px] font-semibold text-[#0a7ae6]">Vaishali</span>
+                    <span className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#000000]">Main service hub</span>
+                    <span className="rounded-full border border-[#dbeafe] bg-[#f3f0ea] px-2.5 py-1 text-[10px] font-semibold text-[#000000]">Vaishali</span>
                   </div>
-                  <h3 id="service-center-title" className="mt-3 text-xl font-bold tracking-tight text-[#071a38] sm:text-2xl">XElectron Service Center</h3>
+                  <h3 id="service-center-title" className="mt-3 text-xl font-bold tracking-tight text-[#000000] sm:text-2xl">XElectron Service Center</h3>
 
                   <div className="mt-6 flex items-start gap-3">
-                    <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#edf7ff] text-[#0a7ae6]"><MapPin aria-hidden="true" className="size-4" /></div>
+                    <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#f3f0ea] text-[#000000]"><MapPin aria-hidden="true" className="size-4" /></div>
                     <div className="space-y-2">
-                      <p className="text-sm leading-6 text-[#475569]">Plot No.626, Ground Floor, Sector - 5,<br />Vaishali, Ghaziabad, UP. PIN - 201010</p>
-                      <p className="text-xs leading-5 text-[#64748b]">In front of Ram Prashtha Green Colony, near Mohan Dhaba.</p>
+                      <p className="text-sm leading-6 text-[#5c5951]">Plot No.626, Ground Floor, Sector - 5,<br />Vaishali, Ghaziabad, UP. PIN - 201010</p>
+                      <p className="text-xs leading-5 text-[#5c5951]">In front of Ram Prashtha Green Colony, near Mohan Dhaba.</p>
                     </div>
                   </div>
 
                   <div className="mt-6 flex items-start gap-3 border-t border-[#dbe4f0] pt-5">
-                    <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#edf7ff] text-[#0a7ae6]"><Phone aria-hidden="true" className="size-4" /></div>
+                    <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#f3f0ea] text-[#000000]"><Phone aria-hidden="true" className="size-4" /></div>
                     <div>
-                      <p className="mb-1 text-[10px] font-bold uppercase tracking-wider text-[#64748b]">Call our service team</p>
-                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-bold text-[#071a38]">
-                        <a href="tel:01204213337" className="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0a7ae6]">0120-4213337</a>
-                        <span aria-hidden="true" className="text-[#94a3b8]">/</span>
-                        <a href="tel:+919311136520" className="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0a7ae6]">9311136520</a>
+                      <p className="mb-1 text-[10px] font-bold uppercase tracking-wider text-[#5c5951]">Call our service team</p>
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-bold text-[#000000]">
+                        <a href="tel:01204213337" className="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#000000]">0120-4213337</a>
+                        <span aria-hidden="true" className="text-[#8e8a82]">/</span>
+                        <a href="tel:+919311136520" className="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#000000]">9311136520</a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 border-t border-[#dbe4f0] bg-[#f0f7ff] px-6 py-4 text-xs text-[#475569] sm:px-7">
-                  <Clock aria-hidden="true" className="size-4 shrink-0 text-[#0a7ae6]" />
-                  <p><span className="font-semibold">Mon–Sat</span><span className="mx-2 text-[#94a3b8]">·</span>10:00 AM – 6:00 PM</p>
+                <div className="flex items-center gap-3 border-t border-[#dbe4f0] bg-[#f0f7ff] px-6 py-4 text-xs text-[#5c5951] sm:px-7">
+                  <Clock aria-hidden="true" className="size-4 shrink-0 text-[#000000]" />
+                  <p><span className="font-semibold">Mon–Sat</span><span className="mx-2 text-[#8e8a82]">·</span>10:00 AM – 6:00 PM</p>
                 </div>
               </aside>
 
               {/* FREE PICKUP & DROP SERVICE CALLOUT */}
               <div className="rounded-2xl border border-blue-200/80 bg-[#f4f9ff] p-6 text-slate-800 shadow-sm">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#0a7ae6]">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#000000]">
                   <Truck className="size-4" /> Free Pickup & Drop Service
                 </div>
-                <h4 className="mt-2 text-base font-semibold text-[#071a38]">
+                <h4 className="mt-2 text-base font-semibold text-[#000000]">
                   Doorstep Pickup Available
                 </h4>
                 <p className="mt-1.5 text-xs leading-relaxed text-slate-600">
@@ -312,7 +312,7 @@ export default function RepairReplacementPage() {
                 </p>
                 <Link
                   href="/pickup-drop-service"
-                  className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-[#0a7ae6] hover:underline"
+                  className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-[#000000] hover:underline"
                 >
                   View Free Pickup & Drop Process <ArrowRight className="size-3.5" />
                 </Link>

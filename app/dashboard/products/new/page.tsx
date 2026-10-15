@@ -20,7 +20,7 @@ export default async function AddProductPage() {
       <SidebarProvider className="min-h-svh">
         <AppSidebar />
         <SidebarInset>
-          <main className="min-h-full bg-[#f5f5f5] p-4 text-black sm:p-5">
+          <main className="min-h-full bg-[#f3f0ea] p-4 text-black sm:p-5">
             <AddProductForm specHeadings={specHeadings} categories={categories.map((c: any) => ({ id: c.id, title: c.title }))} />
           </main>
         </SidebarInset>

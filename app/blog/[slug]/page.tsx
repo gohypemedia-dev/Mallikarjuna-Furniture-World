@@ -58,7 +58,7 @@ export default async function DynamicBlogPostPage({ params }: DynamicBlogPagePro
     category: post.category || "Insights",
     image: post.image || "/blog-1.png",
     readTime: post.readTime || "4 min read",
-    accentColor: post.accentColor || "#0a7ae6",
+    accentColor: post.accentColor || "#000000",
     publishedAt: post.publishedAt ? new Date(post.publishedAt).toISOString() : null,
   };
 
@@ -74,7 +74,7 @@ export default async function DynamicBlogPostPage({ params }: DynamicBlogPagePro
       category: p.category || "Insights",
       image: p.image || "/blog-1.png",
       readTime: p.readTime || "4 min read",
-      accentColor: p.accentColor || "#0a7ae6",
+      accentColor: p.accentColor || "#000000",
       publishedAt: p.publishedAt ? new Date(p.publishedAt).toISOString() : null,
     }));
 
@@ -115,7 +115,7 @@ export default async function DynamicBlogPostPage({ params }: DynamicBlogPagePro
   const featuredProduct = bestSellerProducts[0] || null;
 
   return (
-    <div className="min-h-screen w-full bg-white text-[#1d1d1f]">
+    <div className="min-h-screen w-full bg-[#fbf7ef] text-[#1d1d1f]">
       <Navbar />
       <main className="w-full">
         <BlogArticleRenderer

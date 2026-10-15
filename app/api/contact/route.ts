@@ -52,34 +52,34 @@ export async function POST(request: NextRequest) {
     const adminNotificationHtml = `
       <!DOCTYPE html>
       <html>
-        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 24px; color: #1e293b; line-height: 1.6; background-color: #f8fafc;">
-          <div style="max-width: 580px; margin: 0 auto; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden;">
-            <div style="background: #0f172a; color: white; padding: 20px 24px;">
-              <h2 style="margin: 0; font-size: 18px; color: #38bdf8;">[New Website Inquiry]</h2>
-              <p style="margin: 4px 0 0 0; color: #94a3b8; font-size: 12px;">Routed to: ${targetEmail}</p>
+        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 24px; color: #1f1e1b; line-height: 1.6; background-color: #fbf7ef;">
+          <div style="max-width: 580px; margin: 0 auto; background: #ffffff; border: 1px solid #d7d4cf; border-radius: 12px; overflow: hidden;">
+            <div style="background: #000000; color: white; padding: 20px 24px;">
+              <h2 style="margin: 0; font-size: 18px; color: #b2aea7;">[New Website Inquiry]</h2>
+              <p style="margin: 4px 0 0 0; color: #8e8a82; font-size: 12px;">Routed to: ${targetEmail}</p>
             </div>
             <div style="padding: 24px;">
               <table style="width: 100%; border-collapse: collapse; margin-bottom: 16px;">
-                <tr style="border-bottom: 1px solid #f1f5f9;">
-                  <td style="padding: 6px 0; color: #64748b; font-size: 13px; font-weight: bold; width: 120px;">Department:</td>
-                  <td style="padding: 6px 0; color: #0a7ae6; font-size: 13px; font-weight: bold;">${escapeHtml(department || "General Inquiry")}</td>
+                <tr style="border-bottom: 1px solid #f3f0ea;">
+                  <td style="padding: 6px 0; color: #5c5951; font-size: 13px; font-weight: bold; width: 120px;">Department:</td>
+                  <td style="padding: 6px 0; color: #000000; font-size: 13px; font-weight: bold;">${escapeHtml(department || "General Inquiry")}</td>
                 </tr>
-                <tr style="border-bottom: 1px solid #f1f5f9;">
-                  <td style="padding: 6px 0; color: #64748b; font-size: 13px; font-weight: bold;">Customer Name:</td>
-                  <td style="padding: 6px 0; color: #0f172a; font-size: 13px; font-weight: bold;">${escapeHtml(name)}</td>
+                <tr style="border-bottom: 1px solid #f3f0ea;">
+                  <td style="padding: 6px 0; color: #5c5951; font-size: 13px; font-weight: bold;">Customer Name:</td>
+                  <td style="padding: 6px 0; color: #000000; font-size: 13px; font-weight: bold;">${escapeHtml(name)}</td>
                 </tr>
-                <tr style="border-bottom: 1px solid #f1f5f9;">
-                  <td style="padding: 6px 0; color: #64748b; font-size: 13px; font-weight: bold;">Email:</td>
-                  <td style="padding: 6px 0; color: #0f172a; font-size: 13px;"><a href="mailto:${email}" style="color: #0a7ae6;">${email}</a></td>
+                <tr style="border-bottom: 1px solid #f3f0ea;">
+                  <td style="padding: 6px 0; color: #5c5951; font-size: 13px; font-weight: bold;">Email:</td>
+                  <td style="padding: 6px 0; color: #000000; font-size: 13px;"><a href="mailto:${email}" style="color: #000000;">${email}</a></td>
                 </tr>
                 <tr>
-                  <td style="padding: 6px 0; color: #64748b; font-size: 13px; font-weight: bold;">Phone:</td>
-                  <td style="padding: 6px 0; color: #0f172a; font-size: 13px;">${phone || "Not provided"}</td>
+                  <td style="padding: 6px 0; color: #5c5951; font-size: 13px; font-weight: bold;">Phone:</td>
+                  <td style="padding: 6px 0; color: #000000; font-size: 13px;">${phone || "Not provided"}</td>
                 </tr>
               </table>
-              <div style="background: #f8fafc; border-left: 3px solid #0a7ae6; padding: 14px 16px; border-radius: 6px;">
-                <p style="margin: 0 0 6px 0; font-weight: bold; font-size: 12px; color: #475569; text-transform: uppercase;">Message:</p>
-                <p style="margin: 0; white-space: pre-wrap; font-size: 13px; color: #1e293b;">${escapeHtml(message)}</p>
+              <div style="background: #fbf7ef; border-left: 3px solid #000000; padding: 14px 16px; border-radius: 6px;">
+                <p style="margin: 0 0 6px 0; font-weight: bold; font-size: 12px; color: #5c5951; text-transform: uppercase;">Message:</p>
+                <p style="margin: 0; white-space: pre-wrap; font-size: 13px; color: #1f1e1b;">${escapeHtml(message)}</p>
               </div>
             </div>
           </div>

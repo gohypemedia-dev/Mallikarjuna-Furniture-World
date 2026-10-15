@@ -390,7 +390,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
     }
     if (status === "SHIPPED") {
       return (
-        <span className="inline-flex items-center gap-1 rounded-md bg-blue-100 px-2 py-1 text-xs font-semibold text-[#0a7ae6]">
+        <span className="inline-flex items-center gap-1 rounded-md bg-blue-100 px-2 py-1 text-xs font-semibold text-[#000000]">
           <Truck className="size-3.5" /> IN TRANSIT
         </span>
       );
@@ -414,7 +414,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
       <SidebarProvider className="min-h-svh">
         <AppSidebar />
         <SidebarInset>
-          <div className="flex min-h-[70vh] items-center justify-center bg-[#f5f5f5]">
+          <div className="flex min-h-[70vh] items-center justify-center bg-[#f3f0ea]">
             <div className="size-8 animate-spin rounded-full border-4 border-black border-t-transparent" />
           </div>
         </SidebarInset>
@@ -427,7 +427,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
       <SidebarProvider className="min-h-svh">
         <AppSidebar />
         <SidebarInset>
-          <div className="flex min-h-[70vh] flex-col items-center justify-center bg-[#f5f5f5] p-6 text-center">
+          <div className="flex min-h-[70vh] flex-col items-center justify-center bg-[#f3f0ea] p-6 text-center">
             <Package className="mb-3 size-12 text-black/30" />
             <h2 className="text-xl font-bold text-black">Order Not Found</h2>
             <p className="mt-1 text-sm text-black/60">{error || "The requested order could not be located."}</p>
@@ -496,13 +496,13 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
       <SidebarProvider className="min-h-svh">
         <AppSidebar />
         <SidebarInset>
-          <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-6 lg:p-8">
+          <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-6 lg:p-8">
             {/* Top Navigation & Actions Bar */}
             <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-black/10 pb-4">
               <div className="flex items-center gap-3">
                 <Link prefetch={false}
                   href="/dashboard/orders"
-                  className="inline-flex size-8 items-center justify-center rounded-lg border border-black/15 bg-white text-black/70 hover:bg-black/5 hover:text-black"
+                  className="inline-flex size-8 items-center justify-center rounded-lg border border-black/15 bg-[#fbf7ef] text-black/70 hover:bg-black/5 hover:text-black"
                 >
                   <ArrowLeft className="size-4" />
                 </Link>
@@ -520,7 +520,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
 
               {/* Status Selector & Notification Actions */}
               <div className="flex flex-wrap items-center gap-3">
-                <div className="flex items-center gap-2 bg-white border border-black/15 px-3 py-1.5 rounded-lg">
+                <div className="flex items-center gap-2 bg-[#fbf7ef] border border-black/15 px-3 py-1.5 rounded-lg">
                   <input
                     type="checkbox"
                     id="notifyToggle"
@@ -538,7 +538,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                     value={order.status}
                     disabled={isUpdating}
                     onChange={(e) => saveOrderUpdates({ status: e.target.value as OrderDetailData["status"] })}
-                    className="h-9 rounded-lg border border-black/15 bg-white px-3 pr-8 text-xs font-semibold text-black/80 hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-black/10 disabled:opacity-50"
+                    className="h-9 rounded-lg border border-black/15 bg-[#fbf7ef] px-3 pr-8 text-xs font-semibold text-black/80 hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-black/10 disabled:opacity-50"
                   >
                     <option value="PENDING">Status: Pending</option>
                     <option value="CONFIRMED">Status: Confirmed</option>
@@ -589,7 +589,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                         type="button"
                         disabled={isUpdating}
                         onClick={handleDeleteOrder}
-                        className="inline-flex items-center gap-1.5 rounded-lg border border-red-300 bg-white px-3 py-1.5 font-semibold text-red-600 hover:bg-red-50 disabled:opacity-50 cursor-pointer shadow-xs"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-red-300 bg-[#fbf7ef] px-3 py-1.5 font-semibold text-red-600 hover:bg-red-50 disabled:opacity-50 cursor-pointer shadow-xs"
                       >
                         <Trash2 className="size-3.5" /> Delete Attempt
                       </button>
@@ -604,7 +604,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
               {/* LEFT COLUMN: Items & Shipping Management (70%) */}
               <div className="space-y-6 lg:col-span-8">
                 {/* Items Card */}
-                <div className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+                <div className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
                   <div className="flex items-center justify-between border-b border-black/10 bg-black/[0.02] px-5 py-3.5">
                     <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black/75">
                       <Package className="size-4 text-black/60" />
@@ -624,7 +624,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                       return (
                         <div key={item.id} className="flex items-center justify-between gap-4 p-4 sm:p-5">
                           <div className="flex items-center gap-4">
-                            <div className="relative size-16 shrink-0 overflow-hidden rounded-lg border border-black/10 bg-white p-1">
+                            <div className="relative size-16 shrink-0 overflow-hidden rounded-lg border border-black/10 bg-[#fbf7ef] p-1">
                               <Image
                                 src={image}
                                 alt={name}
@@ -638,7 +638,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                                 <Link prefetch={false}
                                   href={`/product/${slug}`}
                                   target="_blank"
-                                  className="group inline-flex items-center gap-1 text-sm font-semibold text-black hover:text-[#0a7ae6]"
+                                  className="group inline-flex items-center gap-1 text-sm font-semibold text-black hover:text-[#000000]"
                                 >
                                   <span>{name}</span>
                                   <ExternalLink className="size-3.5 opacity-0 transition-opacity group-hover:opacity-100" />
@@ -662,14 +662,14 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                 </div>
 
                 {/* Delivery details load only when this panel is opened. */}
-                <section className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+                <section className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
                   <div className="flex flex-wrap items-center justify-between gap-3 p-5">
                     <button type="button" onClick={toggleDeliveryDetails} className="flex min-w-0 flex-1 items-center gap-3 text-left">
                       <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600"><Truck className="size-5" /></span>
                       <span className="min-w-0"><span className="flex items-center gap-2 text-sm font-semibold text-slate-900">Delivery & fulfillment <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700">DELHIVERY</span></span><span className="mt-1 block truncate text-xs text-slate-500">{replacingDelivery ? "Preparing replacement shipment" : order.trackingNumber ? (hasLiveDelivery ? `AWB ${order.trackingNumber} — live courier updates available` : "Saved AWB needs verification — click to view delivery details") : "No shipment created yet — click to set up delivery"}</span></span>
                     </button>
                     <div className="flex items-center gap-2">
-                      {!order.trackingNumber ? <button type="button" onClick={() => setDeliveryOpen(true)} disabled={isUpdating} className="inline-flex h-8 items-center gap-1.5 rounded-lg bg-[#0a7ae6] px-3 text-xs font-bold text-white hover:bg-[#086ac9] disabled:opacity-50"><Zap className="size-3.5 fill-current" />{isUpdating ? "Creating…" : "Create delivery"}</button> : null}
+                      {!order.trackingNumber ? <button type="button" onClick={() => setDeliveryOpen(true)} disabled={isUpdating} className="inline-flex h-8 items-center gap-1.5 rounded-lg bg-[#000000] px-3 text-xs font-bold text-white hover:bg-[#1f1e1b] disabled:opacity-50"><Zap className="size-3.5 fill-current" />{isUpdating ? "Creating…" : "Create delivery"}</button> : null}
                       <button type="button" onClick={toggleDeliveryDetails} className="inline-flex size-8 items-center justify-center rounded-lg border border-black/10 text-slate-500 hover:bg-slate-50" aria-label={deliveryOpen ? "Hide delivery details" : "Show delivery details"}>{deliveryOpen ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}</button>
                     </div>
                   </div>
@@ -697,7 +697,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                 </section>
 
                 {/* Internal Team Notes Card */}
-                <section className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+                <section className="overflow-hidden rounded-xl border border-slate-200 bg-[#fbf7ef] shadow-sm">
                   <div className="flex items-center justify-between gap-3 border-b border-slate-100 px-5 py-4">
                     <div className="flex items-center gap-3">
                       <span className="flex size-9 items-center justify-center rounded-lg bg-slate-100 text-slate-500"><FileText className="size-4" /></span>
@@ -707,7 +707,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                   </div>
                   <div className="p-5">
                     <label htmlFor="order-team-notes" className="sr-only">Order notes</label>
-                    <textarea id="order-team-notes" rows={4} spellCheck={false} disabled={savingNote} value={internalNotes ?? ""} onChange={(event) => { setInternalNotes(event.target.value); setNoteMessage(""); }} placeholder="Add packing instructions, customer requests or a follow-up for your team..." className="min-h-28 w-full resize-y rounded-lg border border-slate-200 bg-slate-50/50 p-3 text-sm leading-6 text-slate-700 outline-none placeholder:text-slate-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-100 disabled:opacity-60" />
+                    <textarea id="order-team-notes" rows={4} spellCheck={false} disabled={savingNote} value={internalNotes ?? ""} onChange={(event) => { setInternalNotes(event.target.value); setNoteMessage(""); }} placeholder="Add packing instructions, customer requests or a follow-up for your team..." className="min-h-28 w-full resize-y rounded-lg border border-slate-200 bg-slate-50/50 p-3 text-sm leading-6 text-slate-700 outline-none placeholder:text-slate-400 focus:border-blue-400 focus:bg-[#fbf7ef] focus:ring-2 focus:ring-blue-100 disabled:opacity-60" />
                     <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
                       <p role="status" className="text-xs text-slate-500">{noteMessage || (internalNotes.trim() !== (order.internalNotes || "").trim() ? "Unsaved changes" : "No unsaved changes")}</p>
                       <button type="button" onClick={() => void saveNote()} disabled={savingNote || isUpdating || internalNotes.trim() === (order.internalNotes || "").trim()} className="inline-flex h-9 items-center gap-2 rounded-lg bg-slate-900 px-4 text-xs font-semibold text-white hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:cursor-not-allowed disabled:opacity-40"><Save className="size-3.5" />{savingNote ? "Saving..." : "Save note"}</button>
@@ -716,7 +716,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                 </section>
 
                 {/* Payment Breakdown Card */}
-                <div className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm p-5 space-y-4">
+                <div className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm p-5 space-y-4">
                   <div className="flex items-center justify-between border-b border-black/10 pb-3">
                     <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-black/75">
                       <CreditCard className="size-4 text-black/60" />
@@ -731,7 +731,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                     <div className="flex justify-between py-0.5">
                       <span className="text-black/60">Payment Method:</span>
                       <span className="font-semibold text-slate-900 flex items-center gap-1.5">
-                        <CreditCard className="size-3.5 text-[#0a7ae6]" />
+                        <CreditCard className="size-3.5 text-[#000000]" />
                         {getPaymentLabel(displayPaymentMethod)}
                       </span>
                     </div>
@@ -745,7 +745,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                     </div>
                     <div className="flex justify-between pt-2.5 border-t border-black/10 text-sm font-bold text-black">
                       <span>{order.paymentVerified === true ? "Total Paid" : "Order Total"}</span>
-                      <span className="text-[#0a7ae6] text-base">{formatINR(order.total)}</span>
+                      <span className="text-[#000000] text-base">{formatINR(order.total)}</span>
                     </div>
                   </div>
                 </div>
@@ -754,7 +754,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
               {/* RIGHT COLUMN: Customer & Shipping (30%) */}
               <div className="space-y-6 lg:col-span-4">
                 {/* Customer Details Card */}
-                <div className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm p-5 space-y-3">
+                <div className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm p-5 space-y-3">
                   <h3 className="text-xs font-bold uppercase tracking-wider text-black/75 flex items-center gap-2">
                     <User className="size-4 text-black/60" />
                     <span>Customer Details</span>
@@ -766,7 +766,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                     <p className="text-xs font-semibold text-black/75">Contact Information</p>
                     <a
                       href={`mailto:${customerEmail}`}
-                      className="flex items-center gap-1.5 text-xs text-[#0a7ae6] hover:underline"
+                      className="flex items-center gap-1.5 text-xs text-[#000000] hover:underline"
                     >
                       <Mail className="size-3.5 shrink-0" />
                       <span className="truncate">{customerEmail}</span>
@@ -774,7 +774,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                     {customerPhone ? (
                       <a
                         href={`tel:${customerPhone}`}
-                        className="flex items-center gap-1.5 text-xs text-black/80 hover:text-[#0a7ae6]"
+                        className="flex items-center gap-1.5 text-xs text-black/80 hover:text-[#000000]"
                       >
                         <Phone className="size-3.5 shrink-0 text-black/60" />
                         <span>{customerPhone}</span>
@@ -789,7 +789,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                 </div>
 
                 {/* Shipping Address Card */}
-                <div className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm p-5 space-y-3">
+                <div className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm p-5 space-y-3">
                   <h3 className="text-xs font-bold uppercase tracking-wider text-black/75 flex items-center gap-2">
                     <MapPin className="size-4 text-black/60" />
                     <span>Shipping Address</span>
@@ -806,7 +806,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                 </div>
 
                 {/* Billing Address Card */}
-                <div className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm p-5 space-y-2">
+                <div className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm p-5 space-y-2">
                   <h3 className="text-xs font-bold uppercase tracking-wider text-black/75">Billing Address</h3>
                   <p className="text-xs text-black/60">Same as shipping address</p>
                 </div>

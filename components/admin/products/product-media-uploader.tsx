@@ -175,7 +175,7 @@ export function ProductMediaUploader({ onFilesChange }: { onFilesChange?: (files
           {media.map((item) => (
             <div key={item.id} className="group relative overflow-hidden rounded-lg border border-black/10 bg-black/[0.02]">
               <img src={item.url} alt={item.name} className="aspect-square w-full object-cover" />
-              <div className="flex items-center gap-1.5 border-t border-black/10 bg-white px-2 py-1.5">
+              <div className="flex items-center gap-1.5 border-t border-black/10 bg-[#fbf7ef] px-2 py-1.5">
                 <ImagePlus className="size-3.5 shrink-0 text-black/50" />
                 <span className="min-w-0 flex-1 truncate text-xs text-black/65">{item.name}</span>
                 <button type="button" aria-label={`Remove ${item.name}`} onClick={() => removeMedia(item)} className="rounded p-1 text-black/50 hover:bg-red-50 hover:text-red-700"><Trash2 className="size-3.5" /></button>

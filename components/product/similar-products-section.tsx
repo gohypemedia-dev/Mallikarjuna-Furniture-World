@@ -24,7 +24,7 @@ export default function SimilarProductsSection({ products, excludeIds = [] }: Si
   if (displayProducts.length === 0) return null;
 
   return (
-    <section className="mt-10 border-t border-slate-100 bg-white pt-8 sm:mt-12 sm:pt-10 lg:mt-16 lg:pt-12">
+    <section className="mt-10 border-t border-slate-100 bg-[#fbf7ef] pt-8 sm:mt-12 sm:pt-10 lg:mt-16 lg:pt-12">
       <div className="mx-auto max-w-[1440px]">
         <div className="px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-normal uppercase tracking-wider text-slate-900 sm:text-3xl lg:text-[34px]">
@@ -41,14 +41,14 @@ export default function SimilarProductsSection({ products, excludeIds = [] }: Si
               <TrackedProduct key={product.id} product={{ ...product, quantity: 1 }} index={index} listId="related_products" listName="Related Products"><Link prefetch={false}
                 key={product.id}
                 href={`/product/${product.slug}`}
-                className="group flex min-h-[320px] flex-col rounded-[12px] border border-slate-100 bg-white p-3 shadow-[0_1px_2px_rgba(15,23,42,0.05)] transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(15,23,42,0.08)] sm:min-h-[360px]"
+                className="group flex min-h-[320px] flex-col rounded-[12px] border border-slate-100 bg-[#fbf7ef] p-3 shadow-[0_1px_2px_rgba(15,23,42,0.05)] transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(15,23,42,0.08)] sm:min-h-[360px]"
               >
                 <p className="text-[11px] leading-none text-slate-400">{product.category}</p>
                 <h3 className="mt-1 truncate w-full text-[14px] font-medium tracking-tight text-slate-900 sm:text-[16px]" title={product.name}>
                   {product.name}
                 </h3>
 
-                <div className="relative mt-3 flex flex-1 items-center justify-center overflow-hidden rounded-[10px] bg-white py-3 sm:py-4 min-h-[180px] sm:min-h-[240px]">
+                <div className="relative mt-3 flex flex-1 items-center justify-center overflow-hidden rounded-[10px] bg-[#fbf7ef] py-3 sm:py-4 min-h-[180px] sm:min-h-[240px]">
                   {isOutOfStock && (
                     <span className="absolute left-2 top-2 z-10 rounded-[3px] bg-slate-900/85 px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-wider text-white shadow-xs">
                       Out of Stock
@@ -111,7 +111,7 @@ export default function SimilarProductsSection({ products, excludeIds = [] }: Si
                       addItem({ id: product.id, slug: product.slug, name: product.name, price: priceToNumber(product.price), image: product.image, category: product.category });
                       router.push(`/checkout?product=${encodeURIComponent(product.slug || product.id)}`);
                     }}
-                    className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[11px] font-medium text-slate-900 transition-colors hover:border-[#0a7ae6] hover:bg-[#0a7ae6] hover:text-white sm:px-4 sm:py-2 sm:text-[12px] shrink-0"
+                    className="rounded-full border border-slate-200 bg-[#fbf7ef] px-3 py-1.5 text-[11px] font-medium text-slate-900 transition-colors hover:border-[#000000] hover:bg-[#000000] hover:text-white sm:px-4 sm:py-2 sm:text-[12px] shrink-0"
                   >
                     Buy
                   </button>

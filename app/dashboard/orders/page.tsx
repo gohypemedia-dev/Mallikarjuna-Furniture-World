@@ -74,14 +74,14 @@ export default async function OrdersPage() {
       <SidebarProvider className="min-h-svh">
         <AppSidebar />
         <SidebarInset>
-          <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-5">
+          <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <h1 className="flex items-center gap-2 text-lg font-semibold"><Package className="size-4" /> Orders</h1>
                 <p className="mt-1 text-xs text-black/55">Confirmed orders (Paid &amp; Cash on Delivery). Unpaid checkouts are tracked under Abandoned checkouts.</p>
               </div>
               <div className="flex items-center gap-2">
-                <Link prefetch={false} href="/dashboard/orders/abandoned-checkouts" className="inline-flex h-8 items-center rounded-lg border border-black/15 bg-white px-3 text-xs font-medium text-black hover:bg-black/5">
+                <Link prefetch={false} href="/dashboard/orders/abandoned-checkouts" className="inline-flex h-8 items-center rounded-lg border border-black/15 bg-[#fbf7ef] px-3 text-xs font-medium text-black hover:bg-black/5">
                   Abandoned checkouts
                 </Link>
                 <Link prefetch={false} href="/dashboard/orders/create-order" className="inline-flex h-8 items-center rounded-lg bg-black px-3 text-xs font-medium text-white hover:bg-black/80">
@@ -90,7 +90,7 @@ export default async function OrdersPage() {
               </div>
             </div>
 
-            <section className="mt-3 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+            <section className="mt-3 overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
               <div className="grid grid-cols-2 divide-x divide-y divide-black/10 sm:grid-cols-3 lg:grid-cols-6 lg:divide-y-0">
                 <div className="flex items-center gap-2 px-4 py-4 text-xs font-medium"><CalendarDays className="size-4" /> All time</div>
                 {summary.map((metric) => (
@@ -102,7 +102,7 @@ export default async function OrdersPage() {
               </div>
             </section>
 
-            <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+            <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
               <div className="flex items-center justify-between border-b border-black/10 px-4 py-3">
                 <div className="flex items-center gap-2">
                   <h2 className="text-sm font-semibold">Orders</h2>

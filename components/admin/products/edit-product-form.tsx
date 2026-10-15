@@ -56,7 +56,7 @@ type ExistingMediaItem = {
   url: string;
 };
 
-const inputClass = "h-10 w-full rounded-lg border border-black/25 bg-white px-3 text-sm outline-none focus:border-black/50";
+const inputClass = "h-10 w-full rounded-lg border border-black/25 bg-[#fbf7ef] px-3 text-sm outline-none focus:border-black/50";
 
 function inputValueForPrice(value: string | null) {
   return value?.replace(/[^0-9.]/g, "") ?? "";
@@ -129,7 +129,7 @@ function confirmDiscardChanges() {
 
 function Card({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+    <section className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
       <h2 className="px-4 py-4 text-sm font-semibold text-black/75">{title}</h2>
       <div className="px-4 pb-4">{children}</div>
     </section>

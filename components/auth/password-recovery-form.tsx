@@ -21,7 +21,7 @@ export function PasswordRecoveryForm({ mode }: { mode: "request" | "reset" }) {
   const [resent, setResent] = useState(false);
   const isReset = mode === "reset";
   const invalidLink = isReset && !/^[a-f0-9]{64}$/.test(token);
-  const field = "w-full rounded-none border border-slate-900 bg-white py-2.5 px-3.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all disabled:bg-slate-50 disabled:text-slate-500";
+  const field = "w-full rounded-none border border-slate-900 bg-[#fbf7ef] py-2.5 px-3.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all disabled:bg-slate-50 disabled:text-slate-500";
   const primary = "group relative flex w-full items-center justify-center gap-3 rounded-none bg-black py-3.5 px-6 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black disabled:opacity-50 disabled:cursor-not-allowed";
 
   useEffect(() => {
@@ -73,12 +73,12 @@ export function PasswordRecoveryForm({ mode }: { mode: "request" | "reset" }) {
   }
 
   return (
-    <div className="w-full flex-1 flex bg-white">
+    <div className="w-full flex-1 flex bg-[#fbf7ef]">
       <div className="grid w-full min-h-[calc(100vh-70px)] lg:grid-cols-12">
         <aside className="relative hidden lg:block lg:col-span-6 bg-slate-100 min-h-[650px] lg:min-h-full overflow-hidden">
           <Image src="/auth-editorial.png" alt="XElectron Editorial Lifestyle" fill priority unoptimized sizes="50vw" className="object-cover object-center" />
         </aside>
-        <section aria-labelledby="recovery-title" className="lg:col-span-6 min-h-[650px] lg:min-h-full flex flex-col items-center justify-center px-6 py-10 sm:px-12 lg:px-16 xl:px-20 bg-white">
+        <section aria-labelledby="recovery-title" className="lg:col-span-6 min-h-[650px] lg:min-h-full flex flex-col items-center justify-center px-6 py-10 sm:px-12 lg:px-16 xl:px-20 bg-[#fbf7ef]">
           <div className="w-full max-w-[480px] my-auto py-4">
           <Link href="/login" className="mb-7 inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider text-slate-500 hover:text-slate-900"><ArrowLeft className="size-3.5" /> Back to sign in</Link>
           <h1 id="recovery-title" className="text-xl sm:text-2xl font-medium uppercase tracking-wider text-slate-900">

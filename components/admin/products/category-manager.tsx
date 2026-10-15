@@ -306,7 +306,7 @@ export function CategoryManager({ initialCategories = [] }: { initialCategories?
   }
 
   return (
-    <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-5">
+    <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-5">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="flex items-center gap-2 text-lg font-semibold">
           <FolderTree className="size-4" />
@@ -321,7 +321,7 @@ export function CategoryManager({ initialCategories = [] }: { initialCategories?
         </Link>
       </div>
 
-      <section className="mt-3 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+      <section className="mt-3 overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
         <div className="flex flex-wrap items-center gap-3 border-b border-black/10 px-4 py-3">
           <button type="button" className="inline-flex items-center gap-1 text-xs font-medium text-black/70">
             All
@@ -486,7 +486,7 @@ export function CategoryManager({ initialCategories = [] }: { initialCategories?
                           disabled={isReordering || isSearching}
                           title={isSearching ? "Clear search to change position" : "Type a position number (Press Enter)"}
                           aria-label={`Position of ${category.title}`}
-                          className="h-7 w-11 rounded border border-black/20 bg-white text-center text-xs font-semibold text-black/80 transition focus:border-black/60 focus:outline-none focus:ring-1 focus:ring-black/20 disabled:cursor-not-allowed disabled:bg-black/[0.03] disabled:opacity-60 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                          className="h-7 w-11 rounded border border-black/20 bg-[#fbf7ef] text-center text-xs font-semibold text-black/80 transition focus:border-black/60 focus:outline-none focus:ring-1 focus:ring-black/20 disabled:cursor-not-allowed disabled:bg-black/[0.03] disabled:opacity-60 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                         />
 
                         {/* Move Up / Move Down arrow buttons */}

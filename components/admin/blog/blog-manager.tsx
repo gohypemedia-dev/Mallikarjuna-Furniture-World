@@ -42,7 +42,7 @@ export function BlogManager({ initialPosts }: { initialPosts: BlogPostItem[] }) 
       <header className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200/80 pb-5">
         <div>
           <div className="flex items-center gap-2">
-            <span className="flex size-8 items-center justify-center rounded-xl bg-blue-50 text-[#0a7ae6]">
+            <span className="flex size-8 items-center justify-center rounded-xl bg-blue-50 text-[#000000]">
               <BookOpen className="size-4" />
             </span>
             <h1 className="text-xl sm:text-2xl font-semibold tracking-tight text-slate-900">
@@ -59,7 +59,7 @@ export function BlogManager({ initialPosts }: { initialPosts: BlogPostItem[] }) 
         <Link
           prefetch={false}
           href="/dashboard/blog/new"
-          className="inline-flex h-10 items-center gap-2 rounded-xl bg-[#0a7ae6] px-4 text-xs font-medium text-white shadow-sm transition hover:bg-[#0869c4] active:scale-98"
+          className="inline-flex h-10 items-center gap-2 rounded-xl bg-[#000000] px-4 text-xs font-medium text-white shadow-sm transition hover:bg-[#0869c4] active:scale-98"
         >
           <Plus className="size-4" />
           <span>Add New Story</span>
@@ -70,7 +70,7 @@ export function BlogManager({ initialPosts }: { initialPosts: BlogPostItem[] }) 
         {posts.map((post) => (
           <article
             key={post.id}
-            className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+            className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-[#fbf7ef] shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
           >
             <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
               <Image
@@ -80,7 +80,7 @@ export function BlogManager({ initialPosts }: { initialPosts: BlogPostItem[] }) 
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <span className="absolute left-3 top-3 rounded-full bg-[#0a7ae6] px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white shadow-xs">
+              <span className="absolute left-3 top-3 rounded-full bg-[#000000] px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white shadow-xs">
                 {post.category}
               </span>
               <span
@@ -96,7 +96,7 @@ export function BlogManager({ initialPosts }: { initialPosts: BlogPostItem[] }) 
 
             <div className="flex flex-1 flex-col justify-between p-5">
               <div>
-                <h2 className="line-clamp-2 text-sm sm:text-base font-semibold leading-snug text-slate-900 group-hover:text-[#0a7ae6] transition-colors">
+                <h2 className="line-clamp-2 text-sm sm:text-base font-semibold leading-snug text-slate-900 group-hover:text-[#000000] transition-colors">
                   {post.title}
                 </h2>
                 <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-slate-500 font-normal">
@@ -115,7 +115,7 @@ export function BlogManager({ initialPosts }: { initialPosts: BlogPostItem[] }) 
                     href={`/blog/${post.slug || post.id}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex size-8 items-center justify-center rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50 hover:text-[#0a7ae6] transition-colors"
+                    className="inline-flex size-8 items-center justify-center rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50 hover:text-[#000000] transition-colors"
                     title="View live post"
                   >
                     <ExternalLink className="size-3.5" />
@@ -124,7 +124,7 @@ export function BlogManager({ initialPosts }: { initialPosts: BlogPostItem[] }) 
                   <Link
                     prefetch={false}
                     href={`/dashboard/blog/${post.id}`}
-                    className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2.5 text-xs font-medium text-slate-700 hover:bg-slate-50 hover:text-[#0a7ae6] transition-colors"
+                    className="inline-flex h-8 items-center gap-1 rounded-lg border border-slate-200 px-2.5 text-xs font-medium text-slate-700 hover:bg-slate-50 hover:text-[#000000] transition-colors"
                   >
                     <Pencil className="size-3" />
                     <span>Edit</span>
@@ -147,7 +147,7 @@ export function BlogManager({ initialPosts }: { initialPosts: BlogPostItem[] }) 
         ))}
 
         {posts.length === 0 ? (
-          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 bg-white p-12 text-center">
+          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 bg-[#fbf7ef] p-12 text-center">
             <BookOpen className="mx-auto size-9 text-slate-300" />
             <p className="mt-3 text-sm font-semibold text-slate-700">No blog stories yet</p>
             <p className="mt-1 text-xs text-slate-400">
@@ -156,7 +156,7 @@ export function BlogManager({ initialPosts }: { initialPosts: BlogPostItem[] }) 
             <Link
               prefetch={false}
               href="/dashboard/blog/new"
-              className="mt-5 inline-flex h-9 items-center gap-2 rounded-xl bg-[#0a7ae6] px-4 text-xs font-medium text-white hover:bg-[#0869c4] transition-colors"
+              className="mt-5 inline-flex h-9 items-center gap-2 rounded-xl bg-[#000000] px-4 text-xs font-medium text-white hover:bg-[#0869c4] transition-colors"
             >
               <Plus className="size-3.5" />
               <span>Add Your First Story</span>

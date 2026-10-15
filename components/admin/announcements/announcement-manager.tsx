@@ -262,7 +262,7 @@ export function AnnouncementManager({
       <div className="mx-auto max-w-6xl space-y-6">
         <header className="flex flex-col gap-4 border-b border-black/10 pb-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <div className="flex items-center gap-2 text-[#0a7ae6]">
+            <div className="flex items-center gap-2 text-[#000000]">
               <Megaphone className="size-4" />
               <span className="text-[11px] font-bold uppercase tracking-[0.16em]">Storefront messages</span>
             </div>
@@ -272,7 +272,7 @@ export function AnnouncementManager({
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <div className="rounded-lg border border-blue-100 bg-blue-50 px-3 py-2 text-xs font-medium text-[#0a7ae6]">
+            <div className="rounded-lg border border-blue-100 bg-blue-50 px-3 py-2 text-xs font-medium text-[#000000]">
               {activeAnnouncements.length} visible on the store
             </div>
             <button
@@ -281,18 +281,18 @@ export function AnnouncementManager({
               aria-checked={tickerEnabled}
               onClick={toggleTicker}
               disabled={isSavingTicker}
-              className={`inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-bold transition disabled:cursor-not-allowed disabled:opacity-60 ${tickerEnabled ? "border-blue-200 bg-blue-50 text-[#0a7ae6]" : "border-slate-200 bg-white text-slate-600"}`}
+              className={`inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-bold transition disabled:cursor-not-allowed disabled:opacity-60 ${tickerEnabled ? "border-blue-200 bg-blue-50 text-[#000000]" : "border-slate-200 bg-[#fbf7ef] text-slate-600"}`}
             >
               {isSavingTicker ? <Loader2 className="size-3.5 animate-spin" /> : tickerEnabled ? <Play className="size-3.5 fill-current" /> : <Pause className="size-3.5" />}
               Ticker: {tickerEnabled ? "On" : "Off"}
-              <span className={`relative h-4 w-7 rounded-full transition ${tickerEnabled ? "bg-[#0a7ae6]" : "bg-slate-300"}`}>
-                <span className={`absolute top-0.5 size-3 rounded-full bg-white shadow-sm transition-transform ${tickerEnabled ? "translate-x-3.5" : "translate-x-0.5"}`} />
+              <span className={`relative h-4 w-7 rounded-full transition ${tickerEnabled ? "bg-[#000000]" : "bg-slate-300"}`}>
+                <span className={`absolute top-0.5 size-3 rounded-full bg-[#fbf7ef] shadow-sm transition-transform ${tickerEnabled ? "translate-x-3.5" : "translate-x-0.5"}`} />
               </span>
             </button>
           </div>
         </header>
 
-        <section className="overflow-hidden rounded-2xl border border-[#0872d2] bg-[#0a7ae6] shadow-sm">
+        <section className="overflow-hidden rounded-2xl border border-[#0872d2] bg-[#000000] shadow-sm">
           {activeAnnouncements.length > 0 && tickerEnabled ? (
             <div className="announcement-ticker">
               <div className="announcement-ticker-track py-2 text-center text-xs text-white sm:text-sm">
@@ -332,38 +332,38 @@ export function AnnouncementManager({
           )}
         </section>
 
-        <section className="rounded-2xl border border-black/10 bg-white p-4 shadow-sm sm:p-5">
+        <section className="rounded-2xl border border-black/10 bg-[#fbf7ef] p-4 shadow-sm sm:p-5">
           <div className="flex items-center gap-2 border-b border-black/10 pb-3">
-            <Plus className="size-4 text-[#0a7ae6]" />
+            <Plus className="size-4 text-[#000000]" />
             <h2 className="text-sm font-bold text-slate-900">Add a message</h2>
           </div>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-[minmax(0,0.75fr)_minmax(0,1.15fr)_minmax(0,0.85fr)_minmax(0,1fr)_auto]">
             <label className="space-y-1.5">
               <span className="text-xs font-semibold text-slate-700">Lead text <span className="font-normal text-slate-400">(optional)</span></span>
-              <input value={newAnnouncement.prefix} onChange={(event) => setNewAnnouncement((current) => ({ ...current, prefix: event.target.value }))} placeholder="e.g. Weekend offer:" className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#0a7ae6] focus:ring-2 focus:ring-blue-100" />
+              <input value={newAnnouncement.prefix} onChange={(event) => setNewAnnouncement((current) => ({ ...current, prefix: event.target.value }))} placeholder="e.g. Weekend offer:" className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#000000] focus:ring-2 focus:ring-blue-100" />
             </label>
             <label className="space-y-1.5">
               <span className="text-xs font-semibold text-slate-700">Offer or action text</span>
-              <input value={newAnnouncement.action} onChange={(event) => setNewAnnouncement((current) => ({ ...current, action: event.target.value }))} placeholder="e.g. Save ₹500 on smart projectors →" className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#0a7ae6] focus:ring-2 focus:ring-blue-100" />
+              <input value={newAnnouncement.action} onChange={(event) => setNewAnnouncement((current) => ({ ...current, action: event.target.value }))} placeholder="e.g. Save ₹500 on smart projectors →" className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#000000] focus:ring-2 focus:ring-blue-100" />
             </label>
             <label className="space-y-1.5">
               <span className="text-xs font-semibold text-slate-700">Discount code <span className="font-normal text-slate-400">(optional)</span></span>
-              <select value={newAnnouncement.discountCode} onChange={(event) => setNewAnnouncement((current) => ({ ...current, discountCode: event.target.value }))} className="h-10 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm outline-none transition focus:border-[#0a7ae6] focus:ring-2 focus:ring-blue-100">
+              <select value={newAnnouncement.discountCode} onChange={(event) => setNewAnnouncement((current) => ({ ...current, discountCode: event.target.value }))} className="h-10 w-full rounded-lg border border-slate-200 bg-[#fbf7ef] px-3 text-sm outline-none transition focus:border-[#000000] focus:ring-2 focus:ring-blue-100">
                 <option value="">No code</option>
                 {discountCodes.map((code) => <option key={code} value={code}>{code}</option>)}
               </select>
             </label>
             <label className="space-y-1.5">
               <span className="text-xs font-semibold text-slate-700">Destination link</span>
-              <input value={newAnnouncement.href} onChange={(event) => setNewAnnouncement((current) => ({ ...current, href: event.target.value }))} placeholder="/shop?offer=weekend" className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#0a7ae6] focus:ring-2 focus:ring-blue-100" />
+              <input value={newAnnouncement.href} onChange={(event) => setNewAnnouncement((current) => ({ ...current, href: event.target.value }))} placeholder="/shop?offer=weekend" className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#000000] focus:ring-2 focus:ring-blue-100" />
             </label>
-            <button type="button" onClick={addAnnouncement} disabled={isAdding} className="mt-auto inline-flex h-10 items-center justify-center gap-1.5 rounded-lg bg-[#0a7ae6] px-4 text-xs font-bold text-white transition hover:bg-[#086ac9] disabled:cursor-not-allowed disabled:opacity-60">
+            <button type="button" onClick={addAnnouncement} disabled={isAdding} className="mt-auto inline-flex h-10 items-center justify-center gap-1.5 rounded-lg bg-[#000000] px-4 text-xs font-bold text-white transition hover:bg-[#1f1e1b] disabled:cursor-not-allowed disabled:opacity-60">
               {isAdding ? <Loader2 className="size-3.5 animate-spin" /> : <Plus className="size-3.5" />} Publish
             </button>
           </div>
         </section>
 
-        <section className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+        <section className="overflow-hidden rounded-2xl border border-black/10 bg-[#fbf7ef] shadow-sm">
           <div className="flex items-center justify-between border-b border-black/10 px-4 py-4 sm:px-5">
             <div>
               <h2 className="text-sm font-bold text-slate-900">Published messages</h2>
@@ -384,15 +384,15 @@ export function AnnouncementManager({
                   </div>
                   <label className="min-w-0 flex-1 space-y-1.5">
                     <span className="text-xs font-semibold text-slate-700">Lead text</span>
-                    <input value={announcement.prefix || ""} onChange={(event) => updateAnnouncement(announcement.id, { prefix: event.target.value })} placeholder="Optional lead text" className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#0a7ae6] focus:ring-2 focus:ring-blue-100" />
+                    <input value={announcement.prefix || ""} onChange={(event) => updateAnnouncement(announcement.id, { prefix: event.target.value })} placeholder="Optional lead text" className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#000000] focus:ring-2 focus:ring-blue-100" />
                   </label>
                   <label className="min-w-0 flex-[1.35] space-y-1.5">
                     <span className="text-xs font-semibold text-slate-700">Offer or action text</span>
-                    <input value={announcement.action} onChange={(event) => updateAnnouncement(announcement.id, { action: event.target.value })} className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#0a7ae6] focus:ring-2 focus:ring-blue-100" />
+                    <input value={announcement.action} onChange={(event) => updateAnnouncement(announcement.id, { action: event.target.value })} className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#000000] focus:ring-2 focus:ring-blue-100" />
                   </label>
                   <label className="min-w-0 flex-[0.8] space-y-1.5">
                     <span className="text-xs font-semibold text-slate-700">Discount code</span>
-                    <select value={announcement.discountCode || ""} onChange={(event) => updateAnnouncement(announcement.id, { discountCode: event.target.value || null })} className="h-10 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm outline-none transition focus:border-[#0a7ae6] focus:ring-2 focus:ring-blue-100">
+                    <select value={announcement.discountCode || ""} onChange={(event) => updateAnnouncement(announcement.id, { discountCode: event.target.value || null })} className="h-10 w-full rounded-lg border border-slate-200 bg-[#fbf7ef] px-3 text-sm outline-none transition focus:border-[#000000] focus:ring-2 focus:ring-blue-100">
                       <option value="">No code</option>
                       {announcement.discountCode && !discountCodes.includes(announcement.discountCode) && <option value={announcement.discountCode}>{announcement.discountCode}</option>}
                       {discountCodes.map((code) => <option key={code} value={code}>{code}</option>)}
@@ -400,14 +400,14 @@ export function AnnouncementManager({
                   </label>
                   <label className="min-w-0 flex-[1.2] space-y-1.5">
                     <span className="flex items-center gap-1 text-xs font-semibold text-slate-700"><Link2 className="size-3" /> Destination link</span>
-                    <input value={announcement.href} onChange={(event) => updateAnnouncement(announcement.id, { href: event.target.value })} className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#0a7ae6] focus:ring-2 focus:ring-blue-100" />
+                    <input value={announcement.href} onChange={(event) => updateAnnouncement(announcement.id, { href: event.target.value })} className="h-10 w-full rounded-lg border border-slate-200 px-3 text-sm outline-none transition focus:border-[#000000] focus:ring-2 focus:ring-blue-100" />
                   </label>
                   <div className="flex items-center gap-2 lg:mb-0.5">
                     <span className="mr-0.5 text-[11px] font-bold uppercase tracking-wide text-slate-500">Move</span>
                     <button type="button" onClick={() => moveAnnouncement(announcement.id, -1)} disabled={index === 0} title="Move up" aria-label="Move message up" className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-35"><ArrowUp className="size-4" /></button>
                     <button type="button" onClick={() => moveAnnouncement(announcement.id, 1)} disabled={index === announcements.length - 1} title="Move down" aria-label="Move message down" className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-35"><ArrowDown className="size-4" /></button>
                     <button type="button" onClick={() => toggleAnnouncement(announcement)} disabled={savingId === announcement.id} title={announcement.isActive ? "Hide message" : "Show message"} className="inline-flex size-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-35">{announcement.isActive ? <Eye className="size-4" /> : <EyeOff className="size-4" />}</button>
-                    <button type="button" onClick={() => saveAnnouncement(announcement)} disabled={savingId === announcement.id} title="Save announcement" className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-[#0a7ae6] px-3 text-xs font-bold text-white transition hover:bg-[#086ac9] disabled:cursor-not-allowed disabled:opacity-60">{savingId === announcement.id ? <Loader2 className="size-3.5 animate-spin" /> : <Save className="size-3.5" />} Save</button>
+                    <button type="button" onClick={() => saveAnnouncement(announcement)} disabled={savingId === announcement.id} title="Save announcement" className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-[#000000] px-3 text-xs font-bold text-white transition hover:bg-[#1f1e1b] disabled:cursor-not-allowed disabled:opacity-60">{savingId === announcement.id ? <Loader2 className="size-3.5 animate-spin" /> : <Save className="size-3.5" />} Save</button>
                     <button type="button" onClick={() => removeAnnouncement(announcement)} disabled={savingId === announcement.id} title="Delete announcement" className="inline-flex size-9 items-center justify-center rounded-lg border border-red-100 text-red-600 transition hover:bg-red-50 disabled:cursor-not-allowed disabled:opacity-35"><Trash2 className="size-4" /></button>
                   </div>
                 </div>

@@ -38,7 +38,7 @@ const STATS = [
     title: "1-Year Standard Warranty",
     desc: "Comprehensive manufacturer warranty covering internal hardware and defective parts across all devices.",
     badge: "100% Genuine",
-    bg: "bg-blue-50/80 text-[#0a7ae6] border-blue-100",
+    bg: "bg-blue-50/80 text-[#000000] border-blue-100",
   },
   {
     icon: RotateCcw,
@@ -127,11 +127,11 @@ export default function WarrantyTermsPage() {
 
       <main className="w-full">
         {/* HERO SECTION */}
-        <section className="relative overflow-hidden border-b border-slate-200/80 bg-white py-12 sm:py-16">
+        <section className="relative overflow-hidden border-b border-slate-200/80 bg-[#fbf7ef] py-12 sm:py-16">
           <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-              <Link href="/" className="hover:text-[#0a7ae6] transition-colors">
+              <Link href="/" className="hover:text-[#000000] transition-colors">
                 Home
               </Link>
               <span aria-hidden="true" className="text-slate-300">/</span>
@@ -142,7 +142,7 @@ export default function WarrantyTermsPage() {
 
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-3xl">
-                <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/70 bg-[#edf7ff] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#0a7ae6]">
+                <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/70 bg-[#f3f0ea] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#000000]">
                   <ShieldCheck className="size-3.5" /> Official Warranty Policy
                 </span>
 
@@ -163,14 +163,14 @@ export default function WarrantyTermsPage() {
               <div className="flex flex-wrap items-center gap-3">
                 <Link
                   href="/warranty-registration"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#0a7ae6] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white shadow-sm transition hover:bg-[#0868c4] active:scale-95"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#000000] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white shadow-sm transition hover:bg-[#0868c4] active:scale-95"
                 >
                   Register Warranty <ArrowRight className="size-3.5" />
                 </Link>
 
                 <Link
                   href="/pickup-drop-service"
-                  className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-xs font-semibold uppercase tracking-wider text-slate-800 shadow-2xs transition hover:border-[#0a7ae6] hover:text-[#0a7ae6]"
+                  className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-[#fbf7ef] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-slate-800 shadow-2xs transition hover:border-[#000000] hover:text-[#000000]"
                 >
                   Free Pickup & Drop Service
                 </Link>
@@ -184,7 +184,7 @@ export default function WarrantyTermsPage() {
                 return (
                   <div
                     key={stat.title}
-                    className="relative flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-5 shadow-2xs transition hover:border-slate-300 hover:shadow-sm"
+                    className="relative flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-5 shadow-2xs transition hover:border-slate-300 hover:shadow-sm"
                   >
                     <div>
                       <div className="flex items-center justify-between gap-2">
@@ -215,9 +215,9 @@ export default function WarrantyTermsPage() {
             <div className="grid gap-10 lg:grid-cols-[260px_minmax(0,1fr)]">
               {/* STICKY SIDEBAR TABLE OF CONTENTS */}
               <aside className="hidden lg:block">
-                <div className="sticky top-28 space-y-5 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-2xs">
+                <div className="sticky top-28 space-y-5 rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-5 shadow-2xs">
                   <div>
-                    <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+                    <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#000000]">
                       Table of Contents
                     </h3>
                     <p className="mt-1 text-[11px] text-slate-400">
@@ -239,7 +239,7 @@ export default function WarrantyTermsPage() {
                       <a
                         key={link.href}
                         href={link.href}
-                        className="group flex items-center justify-between rounded-lg px-3 py-2 text-xs font-medium text-slate-600 transition hover:bg-[#edf7ff] hover:text-[#0a7ae6]"
+                        className="group flex items-center justify-between rounded-lg px-3 py-2 text-xs font-medium text-slate-600 transition hover:bg-[#f3f0ea] hover:text-[#000000]"
                       >
                         <span>{link.title}</span>
                         <ChevronRight className="size-3 text-slate-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
@@ -255,7 +255,7 @@ export default function WarrantyTermsPage() {
                     </p>
                     <a
                       href="tel:01204550655"
-                      className="mt-3 block font-semibold text-[#0a7ae6] hover:underline"
+                      className="mt-3 block font-semibold text-[#000000] hover:underline"
                     >
                       Helpline: 0120-4550655
                     </a>
@@ -274,8 +274,8 @@ export default function WarrantyTermsPage() {
               {/* MAIN CONTENT PILLARS */}
               <div className="space-y-12 min-w-0">
                 {/* SECTION 1: STANDARD COVERAGE */}
-                <article id="standard-coverage" className="scroll-mt-28 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-2xs sm:p-8">
-                  <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-[#0a7ae6]">
+                <article id="standard-coverage" className="scroll-mt-28 rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-6 shadow-2xs sm:p-8">
+                  <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-[#000000]">
                     <ShieldCheck className="size-4" /> Section 01
                   </div>
                   <h2 className="mt-2 text-xl font-semibold text-slate-900 sm:text-2xl">
@@ -302,8 +302,8 @@ export default function WarrantyTermsPage() {
                 </article>
 
                 {/* SECTION 2: CATEGORY MATRIX TABLE */}
-                <article id="category-matrix" className="scroll-mt-28 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-2xs sm:p-8">
-                  <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-[#0a7ae6]">
+                <article id="category-matrix" className="scroll-mt-28 rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-6 shadow-2xs sm:p-8">
+                  <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-[#000000]">
                     <FileText className="size-4" /> Section 02
                   </div>
                   <h2 className="mt-2 text-xl font-semibold text-slate-900 sm:text-2xl">
@@ -323,21 +323,21 @@ export default function WarrantyTermsPage() {
                           <th className="px-4 py-3.5 sm:px-6">DOA Terms</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-slate-100 bg-white">
+                      <tbody className="divide-y divide-slate-100 bg-[#fbf7ef]">
                         {CATEGORY_MATRIX.map((row) => {
                           const IconComp = row.icon;
                           return (
                             <tr key={row.category} className="transition hover:bg-slate-50/50">
                               <td className="px-4 py-4 sm:px-6 font-semibold text-slate-900 whitespace-nowrap">
                                 <div className="flex items-center gap-2.5">
-                                  <span className="flex size-7 items-center justify-center rounded-lg bg-[#edf7ff] text-[#0a7ae6]">
+                                  <span className="flex size-7 items-center justify-center rounded-lg bg-[#f3f0ea] text-[#000000]">
                                     <IconComp className="size-3.5" />
                                   </span>
                                   {row.category}
                                 </div>
                               </td>
                               <td className="px-4 py-4 sm:px-6 whitespace-nowrap">
-                                <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 text-[11px] font-semibold text-[#0a7ae6]">
+                                <span className="inline-flex rounded-md bg-blue-50 px-2 py-1 text-[11px] font-semibold text-[#000000]">
                                   {row.period}
                                 </span>
                               </td>
@@ -409,8 +409,8 @@ export default function WarrantyTermsPage() {
                 </article>
 
                 {/* SECTION 4: 7-DAY REPLACEMENT */}
-                <article id="replacement-policy" className="scroll-mt-28 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-2xs sm:p-8">
-                  <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-[#0a7ae6]">
+                <article id="replacement-policy" className="scroll-mt-28 rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-6 shadow-2xs sm:p-8">
+                  <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-[#000000]">
                     <RotateCcw className="size-4" /> Section 04
                   </div>
                   <h2 className="mt-2 text-xl font-semibold text-slate-900 sm:text-2xl">
@@ -422,19 +422,19 @@ export default function WarrantyTermsPage() {
 
                   <div className="mt-6 space-y-3">
                     <div className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
-                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#0a7ae6]" />
+                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#000000]" />
                       <div className="text-xs text-slate-700 leading-relaxed">
                         <strong className="font-semibold text-slate-900">7-Day Window:</strong> Notice must be submitted within 7 calendar days of courier delivery confirmation.
                       </div>
                     </div>
                     <div className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
-                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#0a7ae6]" />
+                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#000000]" />
                       <div className="text-xs text-slate-700 leading-relaxed">
                         <strong className="font-semibold text-slate-900">Unboxing Video Recommended:</strong> For transit damage or physical defects, a brief unboxing video or photographs help expedite immediate replacement approval.
                       </div>
                     </div>
                     <div className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
-                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#0a7ae6]" />
+                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#000000]" />
                       <div className="text-xs text-slate-700 leading-relaxed">
                         <strong className="font-semibold text-slate-900">Original Packaging:</strong> The unit must be returned with its original box, invoice, and all included accessories intact.
                       </div>
@@ -444,7 +444,7 @@ export default function WarrantyTermsPage() {
                   <div className="mt-6 flex flex-wrap items-center gap-3">
                     <Link
                       href="/repair-replacement"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0a7ae6] hover:underline"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#000000] hover:underline"
                     >
                       Submit a Replacement Request <ArrowRight className="size-3.5" />
                     </Link>
@@ -454,10 +454,10 @@ export default function WarrantyTermsPage() {
                 {/* SECTION 5: FREE PICKUP & DROP SERVICE */}
                 <article id="pickup-drop" className="scroll-mt-28 rounded-2xl border border-blue-200/80 bg-gradient-to-br from-[#f4f9ff] to-white p-6 shadow-2xs sm:p-8">
                   <div className="flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#0a7ae6]">
+                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#000000]">
                       <Truck className="size-4" /> Section 05
                     </div>
-                    <span className="rounded-full bg-[#0a7ae6] px-2.5 py-0.5 text-[10px] font-semibold text-white">
+                    <span className="rounded-full bg-[#000000] px-2.5 py-0.5 text-[10px] font-semibold text-white">
                       Doorstep Service
                     </span>
                   </div>
@@ -475,17 +475,17 @@ export default function WarrantyTermsPage() {
                   </p>
 
                   <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                    <div className="rounded-xl border border-blue-100 bg-white p-4">
+                    <div className="rounded-xl border border-blue-100 bg-[#fbf7ef] p-4">
                       <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Coverage</p>
                       <p className="mt-1 text-xs font-semibold text-slate-900">All India PIN Codes</p>
                       <p className="mt-0.5 text-[11px] text-slate-500">Subject to courier serviceability</p>
                     </div>
-                    <div className="rounded-xl border border-blue-100 bg-white p-4">
+                    <div className="rounded-xl border border-blue-100 bg-[#fbf7ef] p-4">
                       <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Turnaround</p>
                       <p className="mt-1 text-xs font-semibold text-slate-900">7–14 Working Days</p>
                       <p className="mt-0.5 text-[11px] text-slate-500">Pickup to doorstep return</p>
                     </div>
-                    <div className="rounded-xl border border-blue-100 bg-white p-4">
+                    <div className="rounded-xl border border-blue-100 bg-[#fbf7ef] p-4">
                       <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Cost</p>
                       <p className="mt-1 text-xs font-semibold text-emerald-600">100% Free Service</p>
                       <p className="mt-0.5 text-[11px] text-slate-500">Under valid warranty conditions</p>
@@ -498,7 +498,7 @@ export default function WarrantyTermsPage() {
                     </span>
                     <Link
                       href="/pickup-drop-service"
-                      className="inline-flex items-center gap-1.5 rounded-lg bg-[#0a7ae6] px-4 py-2 text-xs font-semibold text-white hover:bg-[#0868c4] transition"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-[#000000] px-4 py-2 text-xs font-semibold text-white hover:bg-[#0868c4] transition"
                     >
                       Read Full Pickup & Drop Guide <ArrowRight className="size-3.5" />
                     </Link>
@@ -506,8 +506,8 @@ export default function WarrantyTermsPage() {
                 </article>
 
                 {/* SECTION 6: CUSTOMER RESPONSIBILITIES */}
-                <article id="responsibilities" className="scroll-mt-28 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-2xs sm:p-8">
-                  <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-[#0a7ae6]">
+                <article id="responsibilities" className="scroll-mt-28 rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-6 shadow-2xs sm:p-8">
+                  <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-[#000000]">
                     <Clock className="size-4" /> Section 06
                   </div>
                   <h2 className="mt-2 text-xl font-semibold text-slate-900 sm:text-2xl">
@@ -519,19 +519,19 @@ export default function WarrantyTermsPage() {
 
                   <div className="mt-5 space-y-3">
                     <div className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
-                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#0a7ae6]" />
+                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#000000]" />
                       <p className="text-xs text-slate-700 leading-relaxed">
                         <strong className="font-semibold text-slate-900">Proper Packaging:</strong> Products must be securely packed in the original box (or hard cardboard) cushioned with at least 2 layers of bubble wrap. Any transit damage due to improper customer packaging is not covered.
                       </p>
                     </div>
                     <div className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
-                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#0a7ae6]" />
+                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#000000]" />
                       <p className="text-xs text-slate-700 leading-relaxed">
                         <strong className="font-semibold text-slate-900">Exclude Accessories:</strong> Do not send unnecessary accessories (remotes, adapters, cables) unless specifically requested by customer care.
                       </p>
                     </div>
                     <div className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
-                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#0a7ae6]" />
+                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#000000]" />
                       <p className="text-xs text-slate-700 leading-relaxed">
                         <strong className="font-semibold text-slate-900">Data Backup:</strong> Back up all personal files, credentials, or custom app configurations before sending smart projectors or Android devices.
                       </p>
@@ -540,8 +540,8 @@ export default function WarrantyTermsPage() {
                 </article>
 
                 {/* SECTION 7: HOW TO FILE A CLAIM */}
-                <article id="file-a-claim" className="scroll-mt-28 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-2xs sm:p-8">
-                  <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-[#0a7ae6]">
+                <article id="file-a-claim" className="scroll-mt-28 rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-6 shadow-2xs sm:p-8">
+                  <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-wider text-[#000000]">
                     <PhoneCall className="size-4" /> Section 07
                   </div>
                   <h2 className="mt-2 text-xl font-semibold text-slate-900 sm:text-2xl">
@@ -553,7 +553,7 @@ export default function WarrantyTermsPage() {
 
                   <div className="mt-6 grid gap-4 sm:grid-cols-3">
                     <div className="rounded-xl border border-slate-100 bg-slate-50/60 p-5">
-                      <div className="font-mono text-xl font-semibold text-[#0a7ae6]">01</div>
+                      <div className="font-mono text-xl font-semibold text-[#000000]">01</div>
                       <h4 className="mt-2 text-sm font-semibold text-slate-900">Prepare Details</h4>
                       <p className="mt-1 text-xs text-slate-500 leading-relaxed">
                         Locate your purchase tax invoice and device serial number (S/N label on back).
@@ -561,7 +561,7 @@ export default function WarrantyTermsPage() {
                     </div>
 
                     <div className="rounded-xl border border-slate-100 bg-slate-50/60 p-5">
-                      <div className="font-mono text-xl font-semibold text-[#0a7ae6]">02</div>
+                      <div className="font-mono text-xl font-semibold text-[#000000]">02</div>
                       <h4 className="mt-2 text-sm font-semibold text-slate-900">Submit Request</h4>
                       <p className="mt-1 text-xs text-slate-500 leading-relaxed">
                         Fill out our online service request form or message Customer Support via WhatsApp.
@@ -569,7 +569,7 @@ export default function WarrantyTermsPage() {
                     </div>
 
                     <div className="rounded-xl border border-slate-100 bg-slate-50/60 p-5">
-                      <div className="font-mono text-xl font-semibold text-[#0a7ae6]">03</div>
+                      <div className="font-mono text-xl font-semibold text-[#000000]">03</div>
                       <h4 className="mt-2 text-sm font-semibold text-slate-900">Doorstep Pickup</h4>
                       <p className="mt-1 text-xs text-slate-500 leading-relaxed">
                         Hand over the securely packed parcel to our logistics partner when they arrive.
@@ -579,7 +579,7 @@ export default function WarrantyTermsPage() {
                 </article>
 
                 {/* BOTTOM CONTACT CALLOUT BANNER */}
-                <div className="rounded-2xl bg-[#071a38] p-8 text-white sm:p-10 shadow-lg">
+                <div className="rounded-2xl bg-[#000000] p-8 text-white sm:p-10 shadow-lg">
                   <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                     <div className="max-w-xl">
                       <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-sky-300">
@@ -596,7 +596,7 @@ export default function WarrantyTermsPage() {
                     <div className="flex flex-wrap items-center gap-3">
                       <Link
                         href="/repair-replacement"
-                        className="inline-flex items-center gap-2 rounded-xl bg-[#0a7ae6] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-blue-600 active:scale-95"
+                        className="inline-flex items-center gap-2 rounded-xl bg-[#000000] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-blue-600 active:scale-95"
                       >
                         Submit Service Request <ChevronRight className="size-3.5" />
                       </Link>

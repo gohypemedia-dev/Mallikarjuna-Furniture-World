@@ -167,7 +167,7 @@ export function ProductDescriptionContent({ description = "", specs, title }: Pr
           <ul className="space-y-2 text-xs sm:text-sm text-slate-600">
             {bulletFeatures.map((feat, idx) => (
               <li key={idx} className="flex items-start gap-2.5">
-                <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-[#0a7ae6]" />
+                <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-[#000000]" />
                 <span>{feat}</span>
               </li>
             ))}

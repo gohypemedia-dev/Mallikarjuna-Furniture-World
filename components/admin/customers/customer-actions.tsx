@@ -18,7 +18,7 @@ import { Switch } from "@/components/ui/switch"
 type ModalName = "customer" | "address" | "marketing" | null
 
 const inputClass =
-  "h-8 w-full rounded-lg border border-black/30 bg-white px-3 text-sm outline-none transition focus:border-black/60 focus:ring-2 focus:ring-black/5"
+  "h-8 w-full rounded-lg border border-black/30 bg-[#fbf7ef] px-3 text-sm outline-none transition focus:border-black/60 focus:ring-2 focus:ring-black/5"
 
 const COUNTRY_OPTIONS = [
   { code: "IN", name: "India" },
@@ -48,7 +48,7 @@ function CountrySelect({
       <SelectTrigger
         size="sm"
         aria-label={compact ? "Phone country" : "Country or region"}
-        className={compact ? "h-8 w-[88px] border border-black/30 bg-white px-2 shadow-none" : `${inputClass} shadow-none`}
+        className={compact ? "h-8 w-[88px] border border-black/30 bg-[#fbf7ef] px-2 shadow-none" : `${inputClass} shadow-none`}
       >
         <SelectValue />
       </SelectTrigger>
@@ -240,7 +240,7 @@ function AddAddressDialog({
                 State
                 {states.length ? (
                   <Select value={stateName} onValueChange={(nextValue) => { if (nextValue) setStateName(nextValue) }}>
-                    <SelectTrigger size="sm" aria-label="State" className="!h-8 w-full rounded-lg border-black/30 !bg-white px-3 shadow-none">
+                    <SelectTrigger size="sm" aria-label="State" className="!h-8 w-full rounded-lg border-black/30 !bg-[#fbf7ef] px-3 shadow-none">
                       <SelectValue placeholder="Select a state" />
                     </SelectTrigger>
                     <SelectContent className="max-h-64">

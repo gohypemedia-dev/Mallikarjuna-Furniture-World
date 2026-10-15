@@ -71,8 +71,8 @@ function NavMainItem({
               data-active={routeActive}
               className={`flex flex-row items-center gap-2.5 w-full h-8 px-2.5 text-[13px] rounded-lg transition-all ${
                 routeActive
-                  ? "bg-white text-[#1a1a1a] font-semibold shadow-xs"
-                  : "text-[#303030] hover:bg-black/5 hover:text-[#1a1a1a] font-medium"
+                  ? "bg-[#fbf7ef] text-[#000000] font-semibold shadow-xs"
+                  : "text-[#303030] hover:bg-black/5 hover:text-[#000000] font-medium"
               }`}
             >
               {item.icon}
@@ -90,8 +90,8 @@ function NavMainItem({
                         href={subItem.url}
                         className={`group/sub flex items-center gap-2 h-8 px-2 text-[13px] rounded-lg transition-all ${
                           isSubActive
-                            ? "bg-black/[0.05] font-medium text-[#1a1a1a]"
-                            : "text-[#555555] hover:text-[#1a1a1a] hover:bg-black/[0.04] font-normal"
+                            ? "bg-black/[0.05] font-medium text-[#000000]"
+                            : "text-[#555555] hover:text-[#000000] hover:bg-black/[0.04] font-normal"
                         }`}
                       >
                         <CornerDownRight className={`size-3.5 text-black/40 shrink-0 transition-opacity ${
@@ -118,8 +118,8 @@ function NavMainItem({
           data-active={routeActive}
           className={`flex flex-row items-center gap-2.5 w-full h-8 px-2.5 text-[13px] rounded-lg transition-all ${
             routeActive
-              ? "bg-white text-[#1a1a1a] font-semibold shadow-xs"
-              : "text-[#303030] hover:bg-black/5 hover:text-[#1a1a1a] font-medium"
+              ? "bg-[#fbf7ef] text-[#000000] font-semibold shadow-xs"
+              : "text-[#303030] hover:bg-black/5 hover:text-[#000000] font-medium"
           }`}
         >
           {item.icon}

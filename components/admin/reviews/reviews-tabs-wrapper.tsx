@@ -53,7 +53,7 @@ export function ReviewsTabsWrapper({
         <Link prefetch={false}
           href="/"
           target="_blank"
-          className="inline-flex items-center gap-1.5 text-xs font-medium text-[#0a7ae6] hover:underline"
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-[#000000] hover:underline"
         >
           <span>View Homepage Showcase</span>
           <ExternalLink className="size-3" />

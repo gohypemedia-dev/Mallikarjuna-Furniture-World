@@ -139,7 +139,7 @@ export function ProductBannersSection({
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 pb-3">
         <div>
           <h3 className="text-sm font-semibold text-black/80 flex items-center gap-1.5">
-            <ImageIcon className="size-4 text-[#0a7ae6]" />
+            <ImageIcon className="size-4 text-[#000000]" />
             Product Showcase & Marketing Banners ({banners.length})
           </h3>
           <p className="text-xs text-black/50">
@@ -164,7 +164,7 @@ export function ProductBannersSection({
           <button
             type="button"
             onClick={() => addBanner()}
-            className="flex items-center gap-1 rounded-lg border border-black/20 bg-white px-2.5 py-1.5 text-xs font-medium text-black/70 hover:bg-black/5 transition cursor-pointer"
+            className="flex items-center gap-1 rounded-lg border border-black/20 bg-[#fbf7ef] px-2.5 py-1.5 text-xs font-medium text-black/70 hover:bg-black/5 transition cursor-pointer"
           >
             <Plus className="size-3.5" />
             Add Slide
@@ -177,7 +177,7 @@ export function ProductBannersSection({
           onClick={() => triggerUpload(null, "desktop")}
           className="rounded-xl border-2 border-dashed border-black/15 bg-black/[0.01] p-8 text-center hover:bg-black/[0.03] transition cursor-pointer space-y-2"
         >
-          <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#0a7ae6]/10 text-[#0a7ae6]">
+          <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#000000]/10 text-[#000000]">
             {isUploading ? (
               <Loader2 className="size-6 animate-spin" />
             ) : (
@@ -202,7 +202,7 @@ export function ProductBannersSection({
             return (
               <div
                 key={`banner-row-${index}`}
-                className="rounded-xl border border-black/15 bg-white p-4 shadow-xs space-y-4"
+                className="rounded-xl border border-black/15 bg-[#fbf7ef] p-4 shadow-xs space-y-4"
               >
                 <div className="flex items-center justify-between gap-2 border-b border-black/5 pb-2.5">
                   <div className="flex items-center gap-2">
@@ -264,7 +264,7 @@ export function ProductBannersSection({
                     value={banner.title || ""}
                     onChange={(e) => updateBanner(index, "title", e.target.value)}
                     placeholder="e.g. Cinema-Grade Contrast. Any Screen Size."
-                    className="h-8 w-full rounded-md border border-black/20 bg-white px-2.5 text-xs text-black/90 outline-none focus:border-black/50"
+                    className="h-8 w-full rounded-md border border-black/20 bg-[#fbf7ef] px-2.5 text-xs text-black/90 outline-none focus:border-black/50"
                   />
                 </div>
 
@@ -274,7 +274,7 @@ export function ProductBannersSection({
                   <div className="rounded-lg border border-black/10 bg-slate-50/50 p-3 space-y-2.5">
                     <div className="flex items-center justify-between">
                       <span className="flex items-center gap-1.5 text-xs font-semibold text-black/80">
-                        <Monitor className="size-3.5 text-[#0a7ae6]" />
+                        <Monitor className="size-3.5 text-[#000000]" />
                         Desktop Banner (16:9 / 21:9)
                       </span>
                       <div className="flex items-center gap-1.5">
@@ -349,7 +349,7 @@ export function ProductBannersSection({
                         <div className="text-center p-3 text-white/50 group-hover:text-white/80 transition">
                           <div className="flex items-center justify-center gap-1.5 mb-1 opacity-60">
                             <ImageIcon className="size-5" />
-                            <Video className="size-5 text-[#0a7ae6]" />
+                            <Video className="size-5 text-[#000000]" />
                           </div>
                           <span className="text-[11px] font-medium block">Click to upload image or video</span>
                           <span className="text-[10px] opacity-60 block">or paste link below</span>
@@ -368,7 +368,7 @@ export function ProductBannersSection({
                         value={banner.imageUrl || ""}
                         onChange={(e) => updateBanner(index, "imageUrl", e.target.value)}
                         placeholder="https://www.youtube.com/watch?v=... or .mp4 link"
-                        className="h-8 w-full rounded-md border border-black/15 bg-white px-2.5 text-xs text-black placeholder:text-black/35 outline-none focus:border-black"
+                        className="h-8 w-full rounded-md border border-black/15 bg-[#fbf7ef] px-2.5 text-xs text-black placeholder:text-black/35 outline-none focus:border-black"
                       />
                     </div>
                   </div>
@@ -471,7 +471,7 @@ export function ProductBannersSection({
                         value={banner.mobileImageUrl || ""}
                         onChange={(e) => updateBanner(index, "mobileImageUrl", e.target.value)}
                         placeholder="Optional mobile media URL (YouTube, MP4, or Image)"
-                        className="h-8 w-full rounded-md border border-black/15 bg-white px-2.5 text-xs text-black placeholder:text-black/35 outline-none focus:border-black"
+                        className="h-8 w-full rounded-md border border-black/15 bg-[#fbf7ef] px-2.5 text-xs text-black placeholder:text-black/35 outline-none focus:border-black"
                       />
                     </div>
                   </div>

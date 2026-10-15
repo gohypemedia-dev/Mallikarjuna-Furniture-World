@@ -201,18 +201,18 @@ export default function CategorySection({ categories }: { categories?: Storefron
       : 0;
 
   return (
-    <section ref={sectionRef} className="bg-white px-4 pt-8 pb-5 sm:px-6 sm:py-14 lg:px-8">
+    <section ref={sectionRef} className="bg-[#fbf7ef] px-4 pt-8 pb-5 sm:px-6 sm:py-14 lg:px-8">
       <div className="mx-auto max-w-[1400px]">
         {/* SECTION HEADER */}
         <div className="mb-8 flex flex-col items-center text-center sm:mb-10">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#0a7ae6]">
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#000000]">
             Categories
           </p>
           <div className="inline-block relative">
             <h2 className="mt-1.5 text-2xl font-normal tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">
               Shop by Category
             </h2>
-            <div className="mt-2 h-0.5 w-12 rounded-full bg-[#0a7ae6] ml-auto" />
+            <div className="mt-2 h-0.5 w-12 rounded-full bg-[#000000] ml-auto" />
           </div>
         </div>
 
@@ -241,12 +241,12 @@ export default function CategorySection({ categories }: { categories?: Storefron
                     href={`/shop?filter=${encodeURIComponent(category.slug)}`}
                     onClick={() => trackPromotion(String(category.id), category.title, "home_categories")}
                     prefetch={false}
-                    className="group/card flex h-[190px] flex-col items-center justify-between rounded-2xl border border-slate-200 bg-white p-3 text-center transition-all duration-200 hover:border-[#0a7ae6] hover:shadow-sm sm:h-[230px] sm:p-5"
+                    className="group/card flex h-[190px] flex-col items-center justify-between rounded-2xl border border-slate-200 bg-[#fbf7ef] p-3 text-center transition-all duration-200 hover:border-[#000000] hover:shadow-sm sm:h-[230px] sm:p-5"
                   >
-                    <div className="relative h-[120px] w-full bg-white sm:h-[155px]">
+                    <div className="relative h-[120px] w-full bg-[#fbf7ef] sm:h-[155px]">
                       <CategoryCardImage category={category} />
                     </div>
-                    <h3 className="mt-2 text-xs font-semibold leading-snug text-slate-800 group-hover/card:text-[#0a7ae6] sm:text-sm">
+                    <h3 className="mt-2 text-xs font-semibold leading-snug text-slate-800 group-hover/card:text-[#000000] sm:text-sm">
                       {category.title}
                     </h3>
                   </Link>
@@ -257,8 +257,8 @@ export default function CategorySection({ categories }: { categories?: Storefron
             {/* Desktop Prev / Next Navigation Arrows (Always visible on desktop, end-to-end) */}
             {displayCategories.length > 1 && (
               <>
-                <CarouselPrevious className="hidden md:inline-flex left-0 h-10 w-10 border-slate-200 bg-white shadow-md hover:bg-slate-50 hover:border-[#0a7ae6] text-slate-700 hover:text-[#0a7ae6] transition-all z-10 cursor-pointer" />
-                <CarouselNext className="hidden md:inline-flex right-0 h-10 w-10 border-slate-200 bg-white shadow-md hover:bg-slate-50 hover:border-[#0a7ae6] text-slate-700 hover:text-[#0a7ae6] transition-all z-10 cursor-pointer" />
+                <CarouselPrevious className="hidden md:inline-flex left-0 h-10 w-10 border-slate-200 bg-[#fbf7ef] shadow-md hover:bg-slate-50 hover:border-[#000000] text-slate-700 hover:text-[#000000] transition-all z-10 cursor-pointer" />
+                <CarouselNext className="hidden md:inline-flex right-0 h-10 w-10 border-slate-200 bg-[#fbf7ef] shadow-md hover:bg-slate-50 hover:border-[#000000] text-slate-700 hover:text-[#000000] transition-all z-10 cursor-pointer" />
               </>
             )}
 
@@ -286,7 +286,7 @@ export default function CategorySection({ categories }: { categories?: Storefron
                       className={cn(
                         "h-1.5 rounded-full transition-all duration-300 cursor-pointer",
                         activeDotIndex === idx
-                          ? "w-5 bg-[#0a7ae6]"
+                          ? "w-5 bg-[#000000]"
                           : "w-1.5 bg-slate-200 hover:bg-slate-300"
                       )}
                     />

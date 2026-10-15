@@ -100,7 +100,7 @@ export function ProductCreatorVideosSection({
           {videos.map((vid, idx) => (
             <div
               key={vid.id || `creator-vid-${idx}`}
-              className="group flex items-center gap-2.5 rounded-lg border border-black/10 bg-white p-2 shadow-2xs hover:border-black/25 transition"
+              className="group flex items-center gap-2.5 rounded-lg border border-black/10 bg-[#fbf7ef] p-2 shadow-2xs hover:border-black/25 transition"
             >
               {/* Video Badge */}
               <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-black/[0.04] text-[11px] font-semibold text-black/70 shrink-0 select-none">
@@ -115,7 +115,7 @@ export function ProductCreatorVideosSection({
                   value={vid.videoUrl || ""}
                   onChange={(e) => updateVideoUrl(idx, e.target.value)}
                   placeholder="Paste Video URL (e.g. https://www.youtube.com/watch?v=... or .mp4 link)"
-                  className="w-full h-8 rounded border border-black/20 bg-white px-2.5 text-xs text-black placeholder:text-black/40 focus:border-black focus:outline-none"
+                  className="w-full h-8 rounded border border-black/20 bg-[#fbf7ef] px-2.5 text-xs text-black placeholder:text-black/40 focus:border-black focus:outline-none"
                 />
               </div>
 

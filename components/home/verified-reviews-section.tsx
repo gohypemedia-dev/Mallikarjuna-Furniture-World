@@ -114,7 +114,7 @@ function AnimatedReviewText({ text }: { text: string }) {
       <span aria-hidden="true" className="motion-reduce:hidden">
         &ldquo;{text.slice(0, visibleCharacters)}
         {visibleCharacters < text.length ? (
-          <span className="ml-0.5 inline-block h-4 w-0.5 animate-pulse bg-[#0a7ae6] align-middle" />
+          <span className="ml-0.5 inline-block h-4 w-0.5 animate-pulse bg-[#000000] align-middle" />
         ) : "\u201d"}
       </span>
     </>
@@ -209,7 +209,7 @@ export default function VerifiedReviewsSection({
   return (
     <section
       ref={sectionRef}
-      className="relative w-full bg-[#f6faf7] md:bg-white px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24 overflow-hidden"
+      className="relative w-full bg-[#f6faf7] md:bg-[#fbf7ef] px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24 overflow-hidden"
     >
       <div className="mx-auto max-w-[1400px]">
         {/* HEADER TITLE & NAVIGATION BUTTONS */}
@@ -223,14 +223,14 @@ export default function VerifiedReviewsSection({
             <button
               onClick={handlePrev}
               aria-label="Previous review"
-              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#0a7ae6] text-white shadow-md shadow-blue-500/25 transition-all hover:bg-[#0869c7] hover:scale-105 active:scale-95 cursor-pointer"
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#000000] text-white shadow-md shadow-blue-500/25 transition-all hover:bg-[#0869c7] hover:scale-105 active:scale-95 cursor-pointer"
             >
               <ChevronLeft className="h-4.5 w-4.5 sm:h-5 sm:w-5 stroke-[2.5]" />
             </button>
             <button
               onClick={handleNext}
               aria-label="Next review"
-              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#0a7ae6] text-white shadow-md shadow-blue-500/25 transition-all hover:bg-[#0869c7] hover:scale-105 active:scale-95 cursor-pointer"
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#000000] text-white shadow-md shadow-blue-500/25 transition-all hover:bg-[#0869c7] hover:scale-105 active:scale-95 cursor-pointer"
             >
               <ChevronRight className="h-4.5 w-4.5 sm:h-5 sm:w-5 stroke-[2.5]" />
             </button>
@@ -242,7 +242,7 @@ export default function VerifiedReviewsSection({
           {reviews.map((rev) => (
             <div
               key={rev.id}
-              className="rounded-[20px] bg-white border border-slate-200/80 p-5 shadow-xs"
+              className="rounded-[20px] bg-[#fbf7ef] border border-slate-200/80 p-5 shadow-xs"
             >
               {/* TOP ROW: NAME & PRODUCT BADGE */}
               <div className="flex items-center justify-between gap-2">
@@ -332,9 +332,9 @@ export default function VerifiedReviewsSection({
                     setActiveIndex(isActive ? null : idx);
                   }}
                   onMouseEnter={() => setActiveIndex(idx)}
-                  className={`relative overflow-hidden rounded-full border-2 bg-slate-100 shadow-lg transition-all duration-300 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0a7ae6] cursor-pointer ${circleSize} ${
+                  className={`relative overflow-hidden rounded-full border-2 bg-slate-100 shadow-lg transition-all duration-300 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#000000] cursor-pointer ${circleSize} ${
                     isActive
-                      ? "border-[#0a7ae6] ring-4 ring-blue-500/30 scale-110 shadow-blue-500/20 shadow-xl"
+                      ? "border-[#000000] ring-4 ring-blue-500/30 scale-110 shadow-blue-500/20 shadow-xl"
                       : "border-white opacity-85 hover:opacity-100 hover:scale-110"
                   }`}
                 >
@@ -359,7 +359,7 @@ export default function VerifiedReviewsSection({
                         : "left-full ml-4"
                     }`}
                   >
-                    <div className="rounded-2xl border border-slate-200/90 bg-white p-4 shadow-[0_15px_40px_rgba(15,23,42,0.12)]">
+                    <div className="rounded-2xl border border-slate-200/90 bg-[#fbf7ef] p-4 shadow-[0_15px_40px_rgba(15,23,42,0.12)]">
                       <p className="text-[11px] font-bold uppercase tracking-wider text-slate-900 wrap-break-word">
                         {rev.name}
                       </p>
@@ -376,7 +376,7 @@ export default function VerifiedReviewsSection({
                       <div
                         role="region"
                         aria-label={`Reviewed product: ${rev.product}`}
-                        className={`mt-3 w-28 rounded-2xl border border-slate-200/90 bg-white p-2 shadow-[0_15px_40px_rgba(15,23,42,0.12)] animate-in fade-in zoom-in-95 duration-300 motion-reduce:animate-none ${cardSide === "left" ? "ml-auto" : "mr-auto"}`}
+                        className={`mt-3 w-28 rounded-2xl border border-slate-200/90 bg-[#fbf7ef] p-2 shadow-[0_15px_40px_rgba(15,23,42,0.12)] animate-in fade-in zoom-in-95 duration-300 motion-reduce:animate-none ${cardSide === "left" ? "ml-auto" : "mr-auto"}`}
                       >
                         <img src={rev.productImage} alt={rev.product} className="h-20 w-full object-contain" />
                       </div>

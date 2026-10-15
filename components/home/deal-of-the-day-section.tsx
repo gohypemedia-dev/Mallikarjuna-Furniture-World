@@ -131,7 +131,7 @@ export default function DealOfTheDaySection({ deal }: { deal: StorefrontDealOfTh
           ? "border-rose-200 bg-rose-50/90 text-rose-950 ring-2 ring-rose-500/20"
           : isWhite
           ? "border-blue-100/80 bg-gradient-to-r from-blue-50/70 via-indigo-50/40 to-blue-50/70 text-slate-900"
-          : "border-slate-800 bg-[#0f172a]/90 text-white"
+          : "border-slate-800 bg-[#000000]/90 text-white"
       }`}
     >
       <div className="flex items-center gap-3 sm:gap-3.5">
@@ -139,10 +139,10 @@ export default function DealOfTheDaySection({ deal }: { deal: StorefrontDealOfTh
           className={`flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl transition-colors duration-700 ${
             isUrgent
               ? "bg-rose-100 border border-rose-300 text-rose-600"
-              : "bg-[#0a7ae6]/10 border border-[#0a7ae6]/20 text-[#0a7ae6]"
+              : "bg-[#000000]/10 border border-[#000000]/20 text-[#000000]"
           }`}
         >
-          <Flame className={`h-5 w-5 sm:h-5.5 sm:w-5.5 ${isUrgent ? "fill-rose-600 text-rose-600 animate-bounce" : "fill-[#0a7ae6] text-[#0a7ae6] animate-pulse"}`} />
+          <Flame className={`h-5 w-5 sm:h-5.5 sm:w-5.5 ${isUrgent ? "fill-rose-600 text-rose-600 animate-bounce" : "fill-[#000000] text-[#000000] animate-pulse"}`} />
         </div>
         <div>
           <p
@@ -171,7 +171,7 @@ export default function DealOfTheDaySection({ deal }: { deal: StorefrontDealOfTh
             <p className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-slate-400">
               {timerInfo.labelText}
             </p>
-            <div className="mt-0.5 text-base sm:text-2xl font-bold tracking-tight text-[#0a7ae6]" suppressHydrationWarning>
+            <div className="mt-0.5 text-base sm:text-2xl font-bold tracking-tight text-[#000000]" suppressHydrationWarning>
               {timerInfo.dateDisplay}
             </div>
           </div>
@@ -179,7 +179,7 @@ export default function DealOfTheDaySection({ deal }: { deal: StorefrontDealOfTh
           <div className="font-mono text-xl sm:text-3xl font-extrabold tracking-tight text-slate-950" suppressHydrationWarning>
             <span suppressHydrationWarning>{formatTime(timerInfo.totalHours)}</span>:
             <span suppressHydrationWarning>{formatTime(timerInfo.minutes)}</span>:
-            <span suppressHydrationWarning className={isUrgent ? "text-rose-600" : "text-[#0a7ae6]"}>
+            <span suppressHydrationWarning className={isUrgent ? "text-rose-600" : "text-[#000000]"}>
               {formatTime(timerInfo.seconds)}
             </span>
           </div>
@@ -239,7 +239,7 @@ export default function DealOfTheDaySection({ deal }: { deal: StorefrontDealOfTh
             <div
               className={`flex-1 flex flex-col justify-between rounded-2xl sm:rounded-[28px] border p-6 sm:p-7 lg:p-8 shadow-xs transition-all duration-700 ${
                 isWhite
-                  ? "border-slate-200/80 bg-white text-slate-900"
+                  ? "border-slate-200/80 bg-[#fbf7ef] text-slate-900"
                   : "border-slate-800 bg-[#0e1626] text-white shadow-2xl"
               }`}
             >
@@ -267,8 +267,8 @@ export default function DealOfTheDaySection({ deal }: { deal: StorefrontDealOfTh
                       key={spec}
                       className={`rounded-full border px-3 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider transition-all duration-700 ${
                         isWhite
-                          ? "border-[#0a7ae6]/30 bg-blue-50/70 text-[#0a7ae6] hover:bg-blue-100"
-                          : "border-[#0a7ae6]/40 bg-[#0a7ae6]/15 text-[#38bdf8] hover:bg-[#0a7ae6]/25"
+                          ? "border-[#000000]/30 bg-blue-50/70 text-[#000000] hover:bg-blue-100"
+                          : "border-[#000000]/40 bg-[#000000]/15 text-[#b2aea7] hover:bg-[#000000]/25"
                       }`}
                     >
                       {spec}
@@ -317,7 +317,7 @@ export default function DealOfTheDaySection({ deal }: { deal: StorefrontDealOfTh
                       </span>
                     ) : null}
                   </div>
-                  <p className="mt-0.5 text-[11px] font-medium uppercase tracking-wider text-[#0a7ae6]">
+                  <p className="mt-0.5 text-[11px] font-medium uppercase tracking-wider text-[#000000]">
                     Limited-time offer
                   </p>
                 </div>
@@ -325,7 +325,7 @@ export default function DealOfTheDaySection({ deal }: { deal: StorefrontDealOfTh
                 {/* STOCK CLAIM PROGRESS BAR */}
                 <div className="mt-4">
                   <div className="flex justify-between text-[11px] sm:text-xs font-semibold uppercase tracking-wider">
-                    <span className="text-[#0a7ae6]">Selling Fast</span>
+                    <span className="text-[#000000]">Selling Fast</span>
                     <span className="text-slate-400">{claimedPercent}% Claimed</span>
                   </div>
                   <div
@@ -335,7 +335,7 @@ export default function DealOfTheDaySection({ deal }: { deal: StorefrontDealOfTh
                   >
                     <div
                       style={{ width: `${claimedPercent}%` }}
-                      className="h-full rounded-full bg-gradient-to-r from-[#0a7ae6] to-[#025bb5] shadow-sm transition-all duration-500"
+                      className="h-full rounded-full bg-gradient-to-r from-[#000000] to-[#000000] shadow-sm transition-all duration-500"
                     />
                   </div>
                 </div>
@@ -344,7 +344,7 @@ export default function DealOfTheDaySection({ deal }: { deal: StorefrontDealOfTh
                 <Link prefetch={false}
                   href={`/product/${deal.product.slug}`}
                   onClick={() => trackPromotion("deal_of_the_day", deal.title, "home_deal_of_the_day", deal.badge || undefined)}
-                  className="group relative mt-5 inline-flex h-12 sm:h-14 w-full items-center justify-center overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#0a7ae6] to-[#025bb5] text-sm sm:text-lg font-semibold tracking-wide text-white shadow-md shadow-blue-500/25 transition-all duration-300 hover:from-[#0869c7] hover:to-[#014993] hover:shadow-blue-500/40 active:scale-[0.99]"
+                  className="group relative mt-5 inline-flex h-12 sm:h-14 w-full items-center justify-center overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#000000] to-[#000000] text-sm sm:text-lg font-semibold tracking-wide text-white shadow-md shadow-blue-500/25 transition-all duration-300 hover:from-[#0869c7] hover:to-[#014993] hover:shadow-blue-500/40 active:scale-[0.99]"
                 >
                   <span>
                     GRAB IT NOW — {displayPrice(deal.product.price)}

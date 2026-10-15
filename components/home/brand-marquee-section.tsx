@@ -22,7 +22,7 @@ export default function BrandMarqueeSection({
   const marqueeList = [...displayItems, ...displayItems, ...displayItems];
 
   return (
-    <section className="relative w-full overflow-hidden bg-white py-8 sm:py-12 lg:py-14">
+    <section className="relative w-full overflow-hidden bg-[#fbf7ef] py-8 sm:py-12 lg:py-14">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8 mb-6 text-center">
         <p className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-slate-400">
           Available on all major platforms
@@ -63,7 +63,7 @@ export default function BrandMarqueeSection({
                   href={b.linkUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0a7ae6] rounded-md"
+                  className="shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#000000] rounded-md"
                 >
                   {content}
                 </a>

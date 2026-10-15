@@ -10,6 +10,7 @@ import CartProvider from "@/components/providers/cart-provider";
 import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider";
 import ChunkErrorHandler from "@/components/common/chunk-error-handler";
 import ForceReload from "@/components/lujo/force-reload";
+import DevHotReload from "@/components/lujo/dev-hot-reload";
 
 export const metadata: Metadata = {
   title: "Casablanca",
@@ -77,6 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         ) : null}
         <ChunkErrorHandler />
         <ForceReload />
+        <DevHotReload />
         <Suspense fallback={null}><PageTracking /></Suspense>
         <CartProvider>
           <SmoothScrollProvider>{children}</SmoothScrollProvider>

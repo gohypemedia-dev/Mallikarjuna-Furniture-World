@@ -82,7 +82,7 @@ export function NavbarProductsManager({ initialProducts }: { initialProducts: Na
   }
 
   return (
-    <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-5">
+    <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-5">
       <div className="mx-auto max-w-[1320px]">
         <header className="flex flex-wrap items-start justify-between gap-3">
           <div>
@@ -101,10 +101,10 @@ export function NavbarProductsManager({ initialProducts }: { initialProducts: Na
           </div>
         </header>
 
-        <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+        <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 px-4 py-3">
             <p className="text-sm font-medium">Manage menu products</p>
-            <label className="flex h-9 w-full max-w-sm items-center gap-2 rounded-lg border border-black/15 bg-white px-3 text-sm text-black/55 focus-within:border-black/50">
+            <label className="flex h-9 w-full max-w-sm items-center gap-2 rounded-lg border border-black/15 bg-[#fbf7ef] px-3 text-sm text-black/55 focus-within:border-black/50">
               <Search className="size-4" />
               <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search products" className="min-w-0 flex-1 bg-transparent outline-none placeholder:text-black/40" />
             </label>
@@ -126,7 +126,7 @@ export function NavbarProductsManager({ initialProducts }: { initialProducts: Na
                         <div className="relative flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-slate-50 text-xs font-bold text-slate-400">
                           {product.mainImage ? <Image src={product.mainImage} alt="" fill sizes="48px" className="object-contain p-1" /> : product.name.slice(0, 1)}
                         </div>
-                        <Link prefetch={false} href={`/dashboard/products/${product.id}`} className="max-w-[430px] truncate text-sm font-semibold text-slate-900 transition-colors hover:text-[#005BD3] hover:underline">{product.name}</Link>
+                        <Link prefetch={false} href={`/dashboard/products/${product.id}`} className="max-w-[430px] truncate text-sm font-semibold text-slate-900 transition-colors hover:text-[#000000] hover:underline">{product.name}</Link>
                       </div>
                     </td>
                     <td className="border-b border-slate-100 px-4 py-3">{menuControl(product, "showInNavbar")}</td>

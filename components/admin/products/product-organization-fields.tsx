@@ -40,11 +40,11 @@ export function ProductOrganizationFields() {
         <Select value={category} onValueChange={(nextValue) => { if (nextValue) setCategory(nextValue) }}>
           <SelectTrigger
             aria-label="Product category"
-            className="w-full rounded-lg border-black/25 !bg-white text-black shadow-none hover:!bg-white"
+            className="w-full rounded-lg border-black/25 !bg-[#fbf7ef] text-black shadow-none hover:!bg-[#fbf7ef]"
           >
             <SelectValue placeholder="Add to a category" />
           </SelectTrigger>
-          <SelectContent className="bg-white text-black">
+          <SelectContent className="bg-[#fbf7ef] text-black">
             {defaultProductCategories.map((option) => (
               <SelectItem key={option.id} value={option.id}>
                 {option.title}

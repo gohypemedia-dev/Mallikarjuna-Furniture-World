@@ -534,7 +534,7 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
                 <CarouselContent className="-ml-0">
                   {productImages.map((image, idx) => (
                     <CarouselItem key={`${image}-${idx}`} className="pl-0 basis-full">
-                      <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-white flex items-center justify-center select-none shadow-xs border border-slate-100">
+                      <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-[#fbf7ef] flex items-center justify-center select-none shadow-xs border border-slate-100">
                         <button
                           type="button"
                           aria-label={`Enlarge ${name} image ${idx + 1}`}
@@ -569,7 +569,7 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
                       resumeTimeoutRef.current = setTimeout(() => setIsPaused(false), 2500);
                     }}
                     aria-label="Previous image"
-                    className="p-2 text-slate-700 hover:text-[#0a7ae6] transition-colors cursor-pointer active:scale-90"
+                    className="p-2 text-slate-700 hover:text-[#000000] transition-colors cursor-pointer active:scale-90"
                   >
                     <ArrowLeft className="size-5 stroke-[2]" />
                   </button>
@@ -589,7 +589,7 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
                         aria-label={`Go to slide ${idx + 1}`}
                         className={`transition-all duration-300 rounded-full cursor-pointer ${
                           activeImageIndex === idx
-                            ? "w-8 h-2 bg-[#0a7ae6]"
+                            ? "w-8 h-2 bg-[#000000]"
                             : "size-2 bg-slate-300 hover:bg-slate-400"
                         }`}
                       />
@@ -606,7 +606,7 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
                       resumeTimeoutRef.current = setTimeout(() => setIsPaused(false), 2500);
                     }}
                     aria-label="Next image"
-                    className="p-2 text-slate-700 hover:text-[#0a7ae6] transition-colors cursor-pointer active:scale-90"
+                    className="p-2 text-slate-700 hover:text-[#000000] transition-colors cursor-pointer active:scale-90"
                   >
                     <ArrowRight className="size-5 stroke-[2]" />
                   </button>

@@ -66,19 +66,19 @@ export async function POST(request: NextRequest) {
     const html = `
       <div style="font-family:Arial,sans-serif;color:#172033;line-height:1.5;max-width:620px">
         <div style="background:#0f1b31;color:#ffffff;padding:20px 24px;border-radius:12px 12px 0 0">
-          <p style="margin:0;color:#38bdf8;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase">New service request</p>
+          <p style="margin:0;color:#b2aea7;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase">New service request</p>
           <h1 style="margin:6px 0 0;font-size:22px">Repair / replacement request</h1>
         </div>
         <div style="border:1px solid #dbe4f0;border-top:0;padding:24px;border-radius:0 0 12px 12px">
           <table style="width:100%;border-collapse:collapse">
-            <tr><td style="padding:9px 0;color:#64748b;font-weight:700;width:150px">Customer</td><td style="padding:9px 0">${escapeHtml(name)}</td></tr>
-            <tr><td style="padding:9px 0;color:#64748b;font-weight:700;border-top:1px solid #edf2f7">Phone</td><td style="padding:9px 0;border-top:1px solid #edf2f7"><a href="tel:${escapeHtml(phone)}">${escapeHtml(phone)}</a></td></tr>
-            <tr><td style="padding:9px 0;color:#64748b;font-weight:700;border-top:1px solid #edf2f7">Serial number</td><td style="padding:9px 0;border-top:1px solid #edf2f7;font-family:monospace;font-weight:700">${escapeHtml(serialNumber)}</td></tr>
-            <tr><td style="padding:9px 0;color:#64748b;font-weight:700;border-top:1px solid #edf2f7">Request type</td><td style="padding:9px 0;border-top:1px solid #edf2f7">${escapeHtml(requestType)}</td></tr>
-            <tr><td style="padding:9px 0;color:#64748b;font-weight:700;border-top:1px solid #edf2f7;vertical-align:top">Pickup address</td><td style="padding:9px 0;border-top:1px solid #edf2f7">${address ? escapeHtml(address) : "Not provided"}</td></tr>
+            <tr><td style="padding:9px 0;color:#5c5951;font-weight:700;width:150px">Customer</td><td style="padding:9px 0">${escapeHtml(name)}</td></tr>
+            <tr><td style="padding:9px 0;color:#5c5951;font-weight:700;border-top:1px solid #f3f0ea">Phone</td><td style="padding:9px 0;border-top:1px solid #f3f0ea"><a href="tel:${escapeHtml(phone)}">${escapeHtml(phone)}</a></td></tr>
+            <tr><td style="padding:9px 0;color:#5c5951;font-weight:700;border-top:1px solid #f3f0ea">Serial number</td><td style="padding:9px 0;border-top:1px solid #f3f0ea;font-family:monospace;font-weight:700">${escapeHtml(serialNumber)}</td></tr>
+            <tr><td style="padding:9px 0;color:#5c5951;font-weight:700;border-top:1px solid #f3f0ea">Request type</td><td style="padding:9px 0;border-top:1px solid #f3f0ea">${escapeHtml(requestType)}</td></tr>
+            <tr><td style="padding:9px 0;color:#5c5951;font-weight:700;border-top:1px solid #f3f0ea;vertical-align:top">Pickup address</td><td style="padding:9px 0;border-top:1px solid #f3f0ea">${address ? escapeHtml(address) : "Not provided"}</td></tr>
           </table>
-          <div style="margin-top:18px;padding:16px;background:#f8fafc;border-left:3px solid #0a7ae6;border-radius:6px">
-            <p style="margin:0 0 6px;color:#64748b;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase">Issue description</p>
+          <div style="margin-top:18px;padding:16px;background:#fbf7ef;border-left:3px solid #000000;border-radius:6px">
+            <p style="margin:0 0 6px;color:#5c5951;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase">Issue description</p>
             <p style="margin:0;white-space:pre-wrap">${escapeHtml(issueDetails)}</p>
           </div>
         </div>

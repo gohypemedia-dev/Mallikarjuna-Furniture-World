@@ -100,7 +100,7 @@ export function AnalyticsView({
       <header className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="flex items-center gap-2.5 text-xl font-bold text-slate-900">
-            <BarChart3 className="size-5 text-[#0a7ae6]" />
+            <BarChart3 className="size-5 text-[#000000]" />
             Analytics & Sales Reports
           </h1>
           <p className="mt-1 text-xs text-black/55">
@@ -113,7 +113,7 @@ export function AnalyticsView({
             type="button"
             onClick={handleDownloadReport}
             disabled={isExporting}
-            className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3 text-xs font-semibold text-slate-800 shadow-2xs hover:bg-slate-50 transition cursor-pointer disabled:opacity-50"
+            className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-slate-300 bg-[#fbf7ef] px-3 text-xs font-semibold text-slate-800 shadow-2xs hover:bg-slate-50 transition cursor-pointer disabled:opacity-50"
           >
             <FileSpreadsheet className="size-4 text-emerald-600" />
             {isExporting ? "Generating CSV..." : "Download Report (CSV)"}
@@ -130,7 +130,7 @@ export function AnalyticsView({
       </header>
 
       {/* Date Range Selection Bar */}
-      <section className="rounded-xl border border-black/10 bg-white p-3.5 shadow-xs">
+      <section className="rounded-xl border border-black/10 bg-[#fbf7ef] p-3.5 shadow-xs">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-1.5 flex-wrap">
             <span className="text-xs font-semibold text-slate-500 mr-1 flex items-center gap-1">
@@ -164,7 +164,7 @@ export function AnalyticsView({
               className={`h-8 rounded-lg border px-3 text-xs font-medium transition cursor-pointer flex items-center gap-1.5 ${
                 showCustomRange
                   ? "border-black bg-black text-white"
-                  : "border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
+                  : "border-slate-300 bg-[#fbf7ef] text-slate-700 hover:bg-slate-50"
               }`}
             >
               <Filter className="size-3.5" />
@@ -186,7 +186,7 @@ export function AnalyticsView({
                 type="date"
                 value={customFrom}
                 onChange={(e) => setCustomFrom(e.target.value)}
-                className="h-8 rounded-md border border-slate-300 bg-white px-2 text-xs outline-none focus:border-black"
+                className="h-8 rounded-md border border-slate-300 bg-[#fbf7ef] px-2 text-xs outline-none focus:border-black"
               />
             </label>
 
@@ -196,14 +196,14 @@ export function AnalyticsView({
                 type="date"
                 value={customTo}
                 onChange={(e) => setCustomTo(e.target.value)}
-                className="h-8 rounded-md border border-slate-300 bg-white px-2 text-xs outline-none focus:border-black"
+                className="h-8 rounded-md border border-slate-300 bg-[#fbf7ef] px-2 text-xs outline-none focus:border-black"
               />
             </label>
 
             <button
               type="button"
               onClick={handleApplyCustom}
-              className="h-8 rounded-md bg-[#0a7ae6] px-3 text-xs font-semibold text-white hover:bg-blue-600 transition cursor-pointer"
+              className="h-8 rounded-md bg-[#000000] px-3 text-xs font-semibold text-white hover:bg-blue-600 transition cursor-pointer"
             >
               Apply Filter
             </button>
@@ -213,7 +213,7 @@ export function AnalyticsView({
 
       {/* Metric Cards Grid */}
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <section className="rounded-xl border border-black/10 bg-white p-4 shadow-xs">
+        <section className="rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-xs">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">Gross Sales</span>
             <TrendingUp className="size-4 text-emerald-600" />
@@ -225,7 +225,7 @@ export function AnalyticsView({
           </div>
         </section>
 
-        <section className="rounded-xl border border-black/10 bg-white p-4 shadow-xs">
+        <section className="rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-xs">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">Total Orders</span>
             <Package className="size-4 text-blue-600" />
@@ -236,7 +236,7 @@ export function AnalyticsView({
           </div>
         </section>
 
-        <section className="rounded-xl border border-black/10 bg-white p-4 shadow-xs">
+        <section className="rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-xs">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">Average Order Value</span>
             <BarChart3 className="size-4 text-purple-600" />
@@ -247,7 +247,7 @@ export function AnalyticsView({
           </div>
         </section>
 
-        <section className="rounded-xl border border-black/10 bg-white p-4 shadow-xs">
+        <section className="rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-xs">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">Returning Customers</span>
             <Users className="size-4 text-amber-600" />
@@ -262,7 +262,7 @@ export function AnalyticsView({
       {/* Main Charts & Product Sales Table */}
       <div className="grid gap-4 xl:grid-cols-[minmax(0,1.7fr)_minmax(320px,1fr)]">
         {/* Left Column: Top Selling Products */}
-        <section className="rounded-xl border border-black/10 bg-white shadow-xs overflow-hidden">
+        <section className="rounded-xl border border-black/10 bg-[#fbf7ef] shadow-xs overflow-hidden">
           <div className="flex items-center justify-between border-b border-black/10 px-5 py-3.5 bg-slate-50/50">
             <div>
               <h2 className="text-sm font-bold text-slate-900">Top Selling Products</h2>
@@ -296,7 +296,7 @@ export function AnalyticsView({
                     <td className="px-4 py-3 text-center font-bold text-slate-700">
                       {prod.quantity}
                     </td>
-                    <td className="px-5 py-3 text-right font-bold text-[#0a7ae6]">
+                    <td className="px-5 py-3 text-right font-bold text-[#000000]">
                       {formatINR(prod.totalSales)}
                     </td>
                   </tr>
@@ -314,7 +314,7 @@ export function AnalyticsView({
         </section>
 
         {/* Right Column: Financial & Fulfillment Summary */}
-        <section className="rounded-xl border border-black/10 bg-white p-5 shadow-xs space-y-4">
+        <section className="rounded-xl border border-black/10 bg-[#fbf7ef] p-5 shadow-xs space-y-4">
           <h2 className="text-sm font-bold text-slate-900 pb-2 border-b border-slate-100">
             Financial & Operations Summary
           </h2>
@@ -342,7 +342,7 @@ export function AnalyticsView({
             </div>
             <div className="flex items-center justify-between py-2 pt-3 font-bold text-sm">
               <span className="text-slate-900">Net Realized Revenue</span>
-              <span className="text-[#0a7ae6]">{formatINR(analytics.grossSales)}</span>
+              <span className="text-[#000000]">{formatINR(analytics.grossSales)}</span>
             </div>
           </div>
 
@@ -352,7 +352,7 @@ export function AnalyticsView({
               <button
                 type="button"
                 onClick={handleDownloadReport}
-                className="text-xs font-bold text-[#0a7ae6] hover:underline cursor-pointer flex items-center gap-1"
+                className="text-xs font-bold text-[#000000] hover:underline cursor-pointer flex items-center gap-1"
               >
                 Download CSV <Download className="size-3" />
               </button>

@@ -11,8 +11,8 @@ export const LOCATIONS = [
     timing: "Mon – Sat: 10:00 AM – 6:00 PM",
     email: "info@xelectron.com",
     mapUrl: "https://www.google.com/maps/place/XElectron+Technologies+Pvt+Ltd/@28.6270372,77.3689222,17z/data=!3m2!4b1!5s0x390ce55763f582bf:0x16d32f448de111e8!4m6!3m5!1s0x390cfad7e2c0b2b7:0xa963d077ab3281b6!8m2!3d28.6270373!4d77.3737931!16s%2Fg%2F11bxg5y7ws?entry=ttu&g_ep=EgoyMDI2MDgxMS4wIKXMDSoASAFQAw%3D%3D",
-    badgeStyle: "bg-blue-50 text-[#0a7ae6] border-blue-200/80",
-    iconBg: "bg-blue-50 text-[#0a7ae6]",
+    badgeStyle: "bg-blue-50 text-[#000000] border-blue-200/80",
+    iconBg: "bg-blue-50 text-[#000000]",
   },
   {
     icon: Store,

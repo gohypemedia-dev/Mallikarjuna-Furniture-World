@@ -61,7 +61,7 @@ export default function ReportsPage() {
       <SidebarProvider className="min-h-svh">
         <AppSidebar />
         <SidebarInset>
-          <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-6">
+          <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-6">
             <div className="mx-auto max-w-5xl space-y-6">
               <header className="flex flex-wrap items-center justify-between gap-3">
                 <div>
@@ -89,7 +89,7 @@ export default function ReportsPage() {
                   return (
                     <div
                       key={report.id}
-                      className="rounded-xl border border-black/10 bg-white p-5 shadow-xs flex flex-col justify-between"
+                      className="rounded-xl border border-black/10 bg-[#fbf7ef] p-5 shadow-xs flex flex-col justify-between"
                     >
                       <div>
                         <div className="flex items-center justify-between">

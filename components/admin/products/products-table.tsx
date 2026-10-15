@@ -352,7 +352,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
   }
 
   return (
-    <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+    <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
       {/* TABS & SEARCH BAR HEADER */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 px-4 py-2.5">
         {/* VIEW TABS */}
@@ -468,7 +468,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
                 type="button"
                 onClick={() => bulkSetBestSeller(false)}
                 disabled={isBulkUpdating}
-                className="inline-flex h-7 items-center gap-1 rounded-md border border-black/15 bg-white px-2 text-xs font-medium text-black/75 transition hover:bg-black/5 disabled:opacity-50 cursor-pointer"
+                className="inline-flex h-7 items-center gap-1 rounded-md border border-black/15 bg-[#fbf7ef] px-2 text-xs font-medium text-black/75 transition hover:bg-black/5 disabled:opacity-50 cursor-pointer"
                 title="Remove all selected products from Best Sellers"
               >
                 <span>- Remove</span>
@@ -509,7 +509,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
                   className="fixed inset-0 z-20"
                   onClick={() => setIsFilterOpen(false)}
                 />
-                <div className="absolute right-0 top-full z-30 mt-2 w-72 rounded-2xl border border-black/10 bg-white p-4 shadow-xl shadow-black/10 ring-1 ring-black/5 space-y-3.5 animate-in fade-in-0 zoom-in-95 duration-100">
+                <div className="absolute right-0 top-full z-30 mt-2 w-72 rounded-2xl border border-black/10 bg-[#fbf7ef] p-4 shadow-xl shadow-black/10 ring-1 ring-black/5 space-y-3.5 animate-in fade-in-0 zoom-in-95 duration-100">
                   <div className="flex items-center justify-between border-b border-black/10 pb-2">
                     <span className="text-xs font-semibold text-black">Filter Products</span>
                     <button
@@ -527,7 +527,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
                       <select
                         value={categoryFilter}
                         onChange={(event) => setCategoryFilter(event.target.value)}
-                        className="w-full appearance-none rounded-lg border border-black/15 bg-white py-1.5 pl-3 pr-8 text-xs font-medium text-black shadow-2xs outline-none transition focus:border-black/50 cursor-pointer"
+                        className="w-full appearance-none rounded-lg border border-black/15 bg-[#fbf7ef] py-1.5 pl-3 pr-8 text-xs font-medium text-black shadow-2xs outline-none transition focus:border-black/50 cursor-pointer"
                       >
                         <option value="all">All categories</option>
                         {categories.map((category) => (
@@ -546,7 +546,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
                       <select
                         value={bestSellerDropdown}
                         onChange={(event) => setBestSellerDropdown(event.target.value as any)}
-                        className="w-full appearance-none rounded-lg border border-black/15 bg-white py-1.5 pl-3 pr-8 text-xs font-medium text-black shadow-2xs outline-none transition focus:border-black/50 cursor-pointer"
+                        className="w-full appearance-none rounded-lg border border-black/15 bg-[#fbf7ef] py-1.5 pl-3 pr-8 text-xs font-medium text-black shadow-2xs outline-none transition focus:border-black/50 cursor-pointer"
                       >
                         <option value="all">All products</option>
                         <option value="best-sellers">Best sellers only</option>
@@ -601,7 +601,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
                   className="fixed inset-0 z-20"
                   onClick={() => setIsMoreOpen(false)}
                 />
-                <div className="absolute right-0 top-full z-30 mt-2 w-52 rounded-xl border border-black/10 bg-white p-1.5 shadow-xl shadow-black/10 ring-1 ring-black/5 animate-in fade-in-0 zoom-in-95 duration-100">
+                <div className="absolute right-0 top-full z-30 mt-2 w-52 rounded-xl border border-black/10 bg-[#fbf7ef] p-1.5 shadow-xl shadow-black/10 ring-1 ring-black/5 animate-in fade-in-0 zoom-in-95 duration-100">
                   <div className="px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-black/40">
                     Bulk Selection
                   </div>
@@ -655,14 +655,14 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
 
       {/* SELECTION SCOPE BANNER */}
       {isAllPageSelected && filteredProducts.length > paginatedProducts.length ? (
-        <div className="border-b border-black/10 bg-[#0a7ae6]/[0.06] px-4 py-2 text-center text-xs text-black/75">
+        <div className="border-b border-black/10 bg-[#000000]/[0.06] px-4 py-2 text-center text-xs text-black/75">
           {selectedIds.size >= filteredProducts.length ? (
             <span>
               All <strong className="font-semibold text-black">{filteredProducts.length}</strong> products matching current filter are selected.{" "}
               <button
                 type="button"
                 onClick={() => setSelectedIds(new Set())}
-                className="font-medium text-[#0a7ae6] underline hover:text-[#0861b5] cursor-pointer"
+                className="font-medium text-[#000000] underline hover:text-[#0861b5] cursor-pointer"
               >
                 Clear selection
               </button>
@@ -673,7 +673,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
               <button
                 type="button"
                 onClick={selectAllFilteredProducts}
-                className="font-medium text-[#0a7ae6] underline hover:text-[#0861b5] cursor-pointer"
+                className="font-medium text-[#000000] underline hover:text-[#0861b5] cursor-pointer"
               >
                 Select all {filteredProducts.length} products
               </button>
@@ -717,7 +717,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
                 <tr
                   key={product.id}
                   className={`transition-colors hover:bg-black/[0.02] ${
-                    isSelected ? "bg-[#0a7ae6]/[0.04]" : ""
+                    isSelected ? "bg-[#000000]/[0.04]" : ""
                   }`}
                 >
                   <td className="border-b border-black/10 px-3 py-2">
@@ -733,7 +733,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
                     <Link
                       prefetch={false}
                       href={`/dashboard/products/${itemSlugOrId}`}
-                      className="flex items-center gap-3 font-medium text-black hover:text-[#0a7ae6] hover:underline"
+                      className="flex items-center gap-3 font-medium text-black hover:text-[#000000] hover:underline"
                     >
                       <div className="relative size-10 shrink-0 overflow-hidden rounded-md border border-black/10 bg-[#fafafa]">
                         <ProductThumbnailImage
@@ -813,7 +813,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
                       prefetch={false}
                       href={`/product/${itemSlugOrId}`}
                       target="_blank"
-                      className="rounded border border-black/10 bg-white px-2 py-1 text-[11px] font-medium text-black/70 hover:bg-black/5"
+                      className="rounded border border-black/10 bg-[#fbf7ef] px-2 py-1 text-[11px] font-medium text-black/70 hover:bg-black/5"
                     >
                       Store
                     </Link>
@@ -860,7 +860,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
                 onClick={() => setIsPageSizeOpen((open) => !open)}
                 aria-haspopup="listbox"
                 aria-expanded={isPageSizeOpen}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-black/15 bg-white px-2.5 py-1 text-xs font-medium text-black shadow-2xs transition hover:border-black/30 hover:bg-black/[0.02] cursor-pointer focus:outline-none"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-black/15 bg-[#fbf7ef] px-2.5 py-1 text-xs font-medium text-black shadow-2xs transition hover:border-black/30 hover:bg-black/[0.02] cursor-pointer focus:outline-none"
               >
                 <span>{pageSize} per page</span>
                 <ChevronDown
@@ -876,7 +876,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
                     className="fixed inset-0 z-30"
                     onClick={() => setIsPageSizeOpen(false)}
                   />
-                  <div className="absolute bottom-full left-0 z-40 mb-2 w-36 rounded-xl border border-black/10 bg-white p-1.5 shadow-xl shadow-black/10 ring-1 ring-black/5 animate-in fade-in-0 zoom-in-95 duration-100">
+                  <div className="absolute bottom-full left-0 z-40 mb-2 w-36 rounded-xl border border-black/10 bg-[#fbf7ef] p-1.5 shadow-xl shadow-black/10 ring-1 ring-black/5 animate-in fade-in-0 zoom-in-95 duration-100">
                     <div className="px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-black/40">
                       Rows Per Page
                     </div>
@@ -919,7 +919,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
             onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
             disabled={currentPage <= 1}
             aria-label="Previous page"
-            className="inline-flex size-7 items-center justify-center rounded border border-black/15 bg-white text-black/70 transition hover:bg-black/5 disabled:pointer-events-none disabled:opacity-30 cursor-pointer"
+            className="inline-flex size-7 items-center justify-center rounded border border-black/15 bg-[#fbf7ef] text-black/70 transition hover:bg-black/5 disabled:pointer-events-none disabled:opacity-30 cursor-pointer"
             title="Previous page"
           >
             <ChevronLeft className="size-4" />
@@ -960,7 +960,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
                   className={`min-w-[28px] h-7 rounded px-2 text-xs font-medium transition cursor-pointer ${
                     isActive
                       ? "bg-black text-white"
-                      : "border border-black/15 bg-white text-black/70 hover:bg-black/5"
+                      : "border border-black/15 bg-[#fbf7ef] text-black/70 hover:bg-black/5"
                   }`}
                 >
                   {pageNum}
@@ -974,7 +974,7 @@ export function ProductsTable({ products }: { products: ProductTableItem[] }) {
             onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
             disabled={currentPage >= totalPages}
             aria-label="Next page"
-            className="inline-flex size-7 items-center justify-center rounded border border-black/15 bg-white text-black/70 transition hover:bg-black/5 disabled:pointer-events-none disabled:opacity-30 cursor-pointer"
+            className="inline-flex size-7 items-center justify-center rounded border border-black/15 bg-[#fbf7ef] text-black/70 transition hover:bg-black/5 disabled:pointer-events-none disabled:opacity-30 cursor-pointer"
             title="Next page"
           >
             <ChevronRight className="size-4" />

@@ -28,7 +28,7 @@ const faqs = [
 
 export default function FaqSection() {
   return (
-    <section className="bg-white py-10 sm:py-12 lg:py-14">
+    <section className="bg-[#fbf7ef] py-10 sm:py-12 lg:py-14">
       <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,0.5fr)_minmax(0,0.5fr)] lg:gap-12">
           <div className="max-w-sm">

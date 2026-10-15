@@ -212,7 +212,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
             <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
               Product Reviews
             </h1>
-            <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-[#0a7ae6] border border-blue-200/60">
+            <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-[#000000] border border-blue-200/60">
               {totalReviews} Total
             </span>
           </div>
@@ -224,7 +224,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
         <button
           type="button"
           onClick={() => setIsAddModalOpen(true)}
-          className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-xs sm:text-sm font-bold text-white shadow-xs hover:bg-[#0a7ae6] transition cursor-pointer active:scale-95 shrink-0"
+          className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-xs sm:text-sm font-bold text-white shadow-xs hover:bg-[#000000] transition cursor-pointer active:scale-95 shrink-0"
         >
           <Plus className="size-4" />
           <span>Add New Review</span>
@@ -233,7 +233,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
 
       {/* METRIC STAT CARDS */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-        <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-2xs">
+        <div className="rounded-2xl border border-slate-200 bg-[#fbf7ef] p-4 sm:p-5 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 text-xs font-semibold">
             <span>Average Rating</span>
             <Star className="size-4 text-amber-500 fill-amber-500" />
@@ -244,7 +244,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
           </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-2xs">
+        <div className="rounded-2xl border border-slate-200 bg-[#fbf7ef] p-4 sm:p-5 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 text-xs font-semibold">
             <span>Total Reviews</span>
             <MessageSquare className="size-4 text-blue-500" />
@@ -255,7 +255,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
           </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-2xs">
+        <div className="rounded-2xl border border-slate-200 bg-[#fbf7ef] p-4 sm:p-5 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 text-xs font-semibold">
             <span>With Customer Photos</span>
             <ImageIcon className="size-4 text-purple-500" />
@@ -268,7 +268,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
           </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-2xs">
+        <div className="rounded-2xl border border-slate-200 bg-[#fbf7ef] p-4 sm:p-5 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 text-xs font-semibold">
             <span>Verified Buyers</span>
             <CheckCircle2 className="size-4 text-emerald-500" />
@@ -283,7 +283,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
       </div>
 
       {/* FILTER & SEARCH BAR */}
-      <div className="rounded-2xl border border-slate-200 bg-white p-3.5 sm:p-4 shadow-2xs flex flex-wrap items-center justify-between gap-3">
+      <div className="rounded-2xl border border-slate-200 bg-[#fbf7ef] p-3.5 sm:p-4 shadow-2xs flex flex-wrap items-center justify-between gap-3">
         {/* Search */}
         <div className="relative flex-1 min-w-[220px]">
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
@@ -292,7 +292,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
             placeholder="Search by reviewer, review content, or product..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-10 pr-4 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#0a7ae6] focus:bg-white focus:outline-none"
+            className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-10 pr-4 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#000000] focus:bg-[#fbf7ef] focus:outline-none"
           />
         </div>
 
@@ -301,7 +301,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
           <select
             value={selectedProduct}
             onChange={(e) => setSelectedProduct(e.target.value)}
-            className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 focus:border-[#0a7ae6] focus:outline-none"
+            className="rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 focus:border-[#000000] focus:outline-none"
           >
             <option value="all">All Products</option>
             {products.map((p) => (
@@ -315,7 +315,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
           <select
             value={selectedRating}
             onChange={(e) => setSelectedRating(e.target.value)}
-            className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 focus:border-[#0a7ae6] focus:outline-none"
+            className="rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 focus:border-[#000000] focus:outline-none"
           >
             <option value="all">All Star Ratings</option>
             <option value="5">5 Stars</option>
@@ -329,7 +329,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
           <select
             value={photoFilter}
             onChange={(e) => setPhotoFilter(e.target.value)}
-            className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 focus:border-[#0a7ae6] focus:outline-none"
+            className="rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 focus:border-[#000000] focus:outline-none"
           >
             <option value="all">All Types</option>
             <option value="with-photo">With Photos Only</option>
@@ -351,13 +351,13 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
           {filteredReviews.map((rev) => (
             <div
               key={rev.id}
-              className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-2xs hover:shadow-md transition-all flex flex-col justify-between"
+              className="rounded-2xl border border-slate-200 bg-[#fbf7ef] overflow-hidden shadow-2xs hover:shadow-md transition-all flex flex-col justify-between"
             >
               <div>
                 {/* Product Header */}
                 <div className="p-3.5 bg-slate-50/80 border-b border-slate-100 flex items-center justify-between gap-2">
                   <div className="flex items-center gap-2.5 min-w-0">
-                    <div className="relative size-9 rounded-lg overflow-hidden bg-white border border-slate-200 shrink-0">
+                    <div className="relative size-9 rounded-lg overflow-hidden bg-[#fbf7ef] border border-slate-200 shrink-0">
                       <Image
                         src={rev.product?.mainImage || "/category-projector.png"}
                         alt={rev.product?.name || "Product"}
@@ -372,7 +372,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
                       <Link prefetch={false}
                         href={`/product/${rev.product?.slug || rev.product?.id || rev.productId}`}
                         target="_blank"
-                        className="text-[11px] text-[#0a7ae6] hover:underline inline-flex items-center gap-1 font-medium"
+                        className="text-[11px] text-[#000000] hover:underline inline-flex items-center gap-1 font-medium"
                       >
                         <span>View on Store</span>
                         <ExternalLink className="size-2.5" />
@@ -469,7 +469,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-2xl max-h-[85vh] bg-white rounded-2xl overflow-hidden shadow-2xl p-2"
+            className="relative max-w-2xl max-h-[85vh] bg-[#fbf7ef] rounded-2xl overflow-hidden shadow-2xl p-2"
           >
             <button
               type="button"
@@ -490,7 +490,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
       {/* ADD REVIEW MODAL */}
       {isAddModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-xs animate-in fade-in duration-200">
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-2xl max-w-lg w-full p-6 space-y-4 max-h-[90vh] overflow-y-auto">
+          <div className="bg-[#fbf7ef] rounded-2xl border border-slate-200 shadow-2xl max-w-lg w-full p-6 space-y-4 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div className="flex items-center gap-2">
                 <Star className="size-4 text-amber-500 fill-amber-500" />
@@ -513,7 +513,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
                   required
                   value={formProductId}
                   onChange={(e) => setFormProductId(e.target.value)}
-                  className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-xs sm:text-sm text-slate-900 focus:border-[#0a7ae6] focus:outline-none"
+                  className="w-full rounded-xl border border-slate-300 bg-[#fbf7ef] px-3 py-2.5 text-xs sm:text-sm text-slate-900 focus:border-[#000000] focus:outline-none"
                 >
                   {products.map((p) => (
                     <option key={p.id} value={p.id}>
@@ -532,7 +532,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
                   placeholder="e.g. Vicky V."
                   value={formAuthor}
                   onChange={(e) => setFormAuthor(e.target.value)}
-                  className="w-full rounded-xl border border-slate-300 px-3.5 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#0a7ae6] focus:outline-none"
+                  className="w-full rounded-xl border border-slate-300 px-3.5 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#000000] focus:outline-none"
                 />
               </div>
 
@@ -568,7 +568,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
                   placeholder="e.g. Cinema hall experience right at home"
                   value={formTitle}
                   onChange={(e) => setFormTitle(e.target.value)}
-                  className="w-full rounded-xl border border-slate-300 px-3.5 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#0a7ae6] focus:outline-none"
+                  className="w-full rounded-xl border border-slate-300 px-3.5 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#000000] focus:outline-none"
                 />
               </div>
 
@@ -581,7 +581,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
                   placeholder="Detailed customer experience feedback..."
                   value={formContent}
                   onChange={(e) => setFormContent(e.target.value)}
-                  className="w-full rounded-xl border border-slate-300 px-3.5 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#0a7ae6] focus:outline-none"
+                  className="w-full rounded-xl border border-slate-300 px-3.5 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#000000] focus:outline-none"
                 />
               </div>
 
@@ -593,7 +593,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
                   placeholder="https://example.com/projector-photo.jpg"
                   value={formImage}
                   onChange={(e) => setFormImage(e.target.value)}
-                  className="w-full rounded-xl border border-slate-300 px-3.5 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#0a7ae6] focus:outline-none"
+                  className="w-full rounded-xl border border-slate-300 px-3.5 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#000000] focus:outline-none"
                 />
               </div>
 
@@ -604,7 +604,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
                   id="verified-checkbox"
                   checked={formVerified}
                   onChange={(e) => setFormVerified(e.target.checked)}
-                  className="size-4 rounded text-[#0a7ae6] focus:ring-[#0a7ae6]"
+                  className="size-4 rounded text-[#000000] focus:ring-[#000000]"
                 />
                 <label htmlFor="verified-checkbox" className="text-xs font-bold text-slate-700 cursor-pointer">
                   Mark as Verified Buyer Badge
@@ -622,7 +622,7 @@ export function ReviewsManager({ initialReviews, products }: ReviewsManagerProps
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-5 py-2.5 rounded-xl bg-slate-900 text-xs font-bold text-white hover:bg-[#0a7ae6] transition shadow-xs disabled:opacity-50"
+                  className="px-5 py-2.5 rounded-xl bg-slate-900 text-xs font-bold text-white hover:bg-[#000000] transition shadow-xs disabled:opacity-50"
                 >
                   {isSubmitting ? "Creating..." : "Save Review"}
                 </button>

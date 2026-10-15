@@ -125,7 +125,7 @@ function VelocityCallbackContent() {
   if (loading) {
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center px-4">
-        <div className="size-12 animate-spin rounded-full border-4 border-[#0a7ae6] border-t-transparent mb-4" />
+        <div className="size-12 animate-spin rounded-full border-4 border-[#000000] border-t-transparent mb-4" />
         <h2 className="text-base font-bold text-slate-800">
           {pendingMessage || "Confirming Velocity EMI Approval…"}
         </h2>
@@ -139,7 +139,7 @@ function VelocityCallbackContent() {
   if (error) {
     return (
       <div className="min-h-[70vh] flex items-center justify-center px-4 py-12">
-        <div className="w-full max-w-md rounded-3xl border border-red-100 bg-white p-8 text-center shadow-xl">
+        <div className="w-full max-w-md rounded-3xl border border-red-100 bg-[#fbf7ef] p-8 text-center shadow-xl">
           <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-2xl bg-red-50 text-red-600">
             <Package className="size-7" />
           </div>
@@ -148,7 +148,7 @@ function VelocityCallbackContent() {
           <div className="mt-6 flex flex-col gap-2.5">
             <Link prefetch={false}
               href="/checkout"
-              className="w-full rounded-xl bg-[#0a7ae6] py-3 text-xs font-bold uppercase tracking-wider text-white shadow-md hover:bg-[#086ac9] transition"
+              className="w-full rounded-xl bg-[#000000] py-3 text-xs font-bold uppercase tracking-wider text-white shadow-md hover:bg-[#1f1e1b] transition"
             >
               Return to Checkout
             </Link>
@@ -166,12 +166,12 @@ function VelocityCallbackContent() {
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-4 py-12">
-      <div className="w-full max-w-lg rounded-3xl border border-slate-100 bg-white p-8 text-center shadow-xl sm:p-10">
+      <div className="w-full max-w-lg rounded-3xl border border-slate-100 bg-[#fbf7ef] p-8 text-center shadow-xl sm:p-10">
         <div className="mx-auto mb-6 flex size-16 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 ring-8 ring-emerald-50/50">
           <CheckCircle2 className="size-8" />
         </div>
 
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 border border-blue-200 px-3 py-1 text-[11px] font-bold text-[#0a7ae6] mb-3">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 border border-blue-200 px-3 py-1 text-[11px] font-bold text-[#000000] mb-3">
           <ShieldCheck className="size-3.5" /> Velocity No-Cost EMI Approved
         </span>
 
@@ -191,7 +191,7 @@ function VelocityCallbackContent() {
 
             <div className="flex items-center justify-between pb-2 border-b border-slate-200/60">
               <span className="font-semibold text-slate-500">Total Financed</span>
-              <span className="font-bold text-[#0a7ae6]">
+              <span className="font-bold text-[#000000]">
                 ₹{Number(orderData.total || 0).toLocaleString("en-IN")}
               </span>
             </div>
@@ -210,7 +210,7 @@ function VelocityCallbackContent() {
                   href={orderData.trackingUrl || `https://track.delhivery.com/p/${orderData.trackingNumber}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-mono font-bold text-[#0a7ae6] hover:underline flex items-center gap-1"
+                  className="font-mono font-bold text-[#000000] hover:underline flex items-center gap-1"
                 >
                   {orderData.trackingNumber} <ExternalLink className="size-3" />
                 </a>
@@ -222,7 +222,7 @@ function VelocityCallbackContent() {
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Link prefetch={false}
             href="/orders"
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#0a7ae6] py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-[#0a7ae6]/25 transition hover:bg-[#086ac9]"
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#000000] py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-[#000000]/25 transition hover:bg-[#1f1e1b]"
           >
             <span>View Order Status</span>
             <ArrowRight className="size-4" />
@@ -246,7 +246,7 @@ export default function VelocityCallbackPage() {
       <Suspense
         fallback={
           <div className="min-h-[70vh] flex items-center justify-center">
-            <div className="size-10 animate-spin rounded-full border-4 border-[#0a7ae6] border-t-transparent" />
+            <div className="size-10 animate-spin rounded-full border-4 border-[#000000] border-t-transparent" />
           </div>
         }
       >

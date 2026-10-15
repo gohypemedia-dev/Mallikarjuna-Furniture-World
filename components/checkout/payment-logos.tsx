@@ -112,7 +112,7 @@ export function VelocityLogo({ className = "h-4" }: { className?: string }) {
         <rect width="24" height="24" rx="6" fill="#0A0E1A" />
         <path
           d="M6 7L12 17L18 7H14.5L12 12.5L9.5 7H6Z"
-          fill="#38BDF8"
+          fill="#b2aea7"
         />
       </svg>
       <span className="font-extrabold tracking-tight text-[#0A0E1A] text-[13px] sm:text-[14px] leading-none">

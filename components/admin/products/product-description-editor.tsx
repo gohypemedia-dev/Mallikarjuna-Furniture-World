@@ -8,7 +8,7 @@ type ProductDescriptionEditorProps = {
 export function ProductDescriptionEditor({ value, onChange }: ProductDescriptionEditorProps) {
 
   return (
-    <div data-lenis-prevent className="overflow-hidden overscroll-contain rounded-lg border border-black/30 bg-white">
+    <div data-lenis-prevent className="overflow-hidden overscroll-contain rounded-lg border border-black/30 bg-[#fbf7ef]">
       <textarea
         aria-label="Product description"
         value={value}

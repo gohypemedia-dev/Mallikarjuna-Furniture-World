@@ -20,7 +20,7 @@ export default function TroubleshootingContentView({ content }: { content: Troub
   const activeTopic = topics.find(topic => topic.id === selectedCat)?.name ?? "All topics";
 
   return (
-    <main className="min-h-screen w-full overflow-x-hidden bg-white text-slate-900 pt-[96px] sm:pt-[120px]">
+    <main className="min-h-screen w-full overflow-x-hidden bg-[#fbf7ef] text-slate-900 pt-[96px] sm:pt-[120px]">
       <Navbar />
       
       {/* HERO & SEARCH SECTION */}
@@ -36,7 +36,7 @@ export default function TroubleshootingContentView({ content }: { content: Troub
 
           <div className="grid items-end gap-6 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
             <div>
-              <div className="mb-2.5 sm:mb-3 inline-flex items-center gap-1.5 rounded-full bg-blue-100/70 border border-blue-200/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#0876d5]">
+              <div className="mb-2.5 sm:mb-3 inline-flex items-center gap-1.5 rounded-full bg-blue-100/70 border border-blue-200/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#1f1e1b]">
                 <Wrench className="size-3.5" aria-hidden="true" />
                 {content.badge}
               </div>
@@ -53,14 +53,14 @@ export default function TroubleshootingContentView({ content }: { content: Troub
                 What can we help you with?
               </label>
               <div className="relative w-full">
-                <Search aria-hidden="true" className="pointer-events-none absolute left-3.5 sm:left-4 top-1/2 size-4 sm:size-5 -translate-y-1/2 text-[#0a7ae6]" />
+                <Search aria-hidden="true" className="pointer-events-none absolute left-3.5 sm:left-4 top-1/2 size-4 sm:size-5 -translate-y-1/2 text-[#000000]" />
                 <input
                   id="guide-search"
                   type="search"
                   placeholder={content.searchPlaceholder}
                   value={search}
                   onChange={e => setSearch(e.target.value)}
-                  className="h-11 sm:h-14 w-full rounded-xl border border-slate-200 bg-white pl-10 sm:pl-12 pr-10 text-xs sm:text-sm text-slate-900 shadow-xs outline-none placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 [&::-webkit-search-cancel-button]:appearance-none"
+                  className="h-11 sm:h-14 w-full rounded-xl border border-slate-200 bg-[#fbf7ef] pl-10 sm:pl-12 pr-10 text-xs sm:text-sm text-slate-900 shadow-xs outline-none placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 [&::-webkit-search-cancel-button]:appearance-none"
                 />
                 {search && (
                   <button
@@ -106,7 +106,7 @@ export default function TroubleshootingContentView({ content }: { content: Troub
                     onClick={() => setSelectedCat(topic.id)}
                     className={`flex shrink-0 items-center gap-2 rounded-full lg:rounded-xl px-3.5 py-2 lg:px-3.5 lg:py-3 text-left text-xs sm:text-sm font-medium transition-all focus-visible:outline-2 focus-visible:outline-blue-500 ${
                       isSelected
-                        ? "bg-[#0a7ae6] text-white shadow-xs"
+                        ? "bg-[#000000] text-white shadow-xs"
                         : "bg-slate-100/90 lg:bg-transparent text-slate-700 hover:bg-slate-200/70"
                     }`}
                   >
@@ -148,8 +148,8 @@ export default function TroubleshootingContentView({ content }: { content: Troub
                     key={guide.id}
                     className={`overflow-hidden rounded-xl border transition-all ${
                       isOpen
-                        ? "border-blue-200 bg-white shadow-sm"
-                        : "border-slate-200/90 bg-white hover:border-slate-300"
+                        ? "border-blue-200 bg-[#fbf7ef] shadow-sm"
+                        : "border-slate-200/90 bg-[#fbf7ef] hover:border-slate-300"
                     }`}
                   >
                     <h3>
@@ -163,11 +163,11 @@ export default function TroubleshootingContentView({ content }: { content: Troub
                       >
                         <span className="min-w-0 flex-1">
                           {categoryName && (
-                            <span className="mb-1 block text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#0876d5]">
+                            <span className="mb-1 block text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#1f1e1b]">
                               {categoryName}
                             </span>
                           )}
-                          <span className={`block text-xs sm:text-[15px] font-semibold leading-snug ${isOpen ? "text-[#0876d5]" : "text-slate-800"}`}>
+                          <span className={`block text-xs sm:text-[15px] font-semibold leading-snug ${isOpen ? "text-[#1f1e1b]" : "text-slate-800"}`}>
                             {guide.title}
                           </span>
                         </span>
@@ -218,7 +218,7 @@ export default function TroubleshootingContentView({ content }: { content: Troub
         {/* HELP & REPAIR CARD */}
         <div className="mt-10 sm:mt-14 flex flex-col gap-4 sm:gap-6 rounded-2xl border border-blue-100 bg-[#f0f6fd] p-5 sm:p-8 lg:flex-row lg:items-center">
           <div className="flex items-center gap-3.5">
-            <span aria-hidden="true" className="flex size-11 sm:size-12 shrink-0 items-center justify-center rounded-xl bg-white text-[#0a7ae6] shadow-2xs">
+            <span aria-hidden="true" className="flex size-11 sm:size-12 shrink-0 items-center justify-center rounded-xl bg-[#fbf7ef] text-[#000000] shadow-2xs">
               <Headphones className="size-5 sm:size-6" />
             </span>
             <div className="lg:hidden">
@@ -236,7 +236,7 @@ export default function TroubleshootingContentView({ content }: { content: Troub
           <Link
             prefetch={false}
             href={content.helpHref}
-            className="inline-flex min-h-11 sm:min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-[#0a7ae6] px-5 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all hover:bg-[#0868c4] shadow-xs active:scale-95"
+            className="inline-flex min-h-11 sm:min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-[#000000] px-5 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all hover:bg-[#0868c4] shadow-xs active:scale-95"
           >
             {content.helpButton}
             <ArrowRight aria-hidden="true" className="size-4 shrink-0" />

@@ -69,7 +69,7 @@ export function DiscountsTable({ discounts }: { discounts: DiscountTableItem[] }
   }
 
   return (
-    <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+    <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
       {error ? <p role="alert" className="border-b border-red-200 bg-red-50 px-4 py-2 text-xs text-red-800">{error}</p> : null}
       <div className="overflow-x-auto">
         <table className="w-full min-w-[760px] border-collapse text-left text-sm">

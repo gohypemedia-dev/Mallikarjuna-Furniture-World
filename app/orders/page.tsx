@@ -116,7 +116,7 @@ function OrdersContent() {
         );
       case "SHIPPED":
         return (
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-[#0a7ae6] border border-blue-200/60">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-[#000000] border border-blue-200/60">
             <Truck className="size-3.5" /> Shipped & In Transit
           </span>
         );
@@ -144,7 +144,7 @@ function OrdersContent() {
   if (loading) {
     return (
       <div className="min-h-[60vh] flex items-center justify-center">
-        <div className="size-8 animate-spin rounded-full border-4 border-[#0a7ae6] border-t-transparent" />
+        <div className="size-8 animate-spin rounded-full border-4 border-[#000000] border-t-transparent" />
       </div>
     );
   }
@@ -152,12 +152,12 @@ function OrdersContent() {
   if (isUnauthorized) {
     return (
       <div className="min-h-[70vh] flex items-center justify-center px-4 py-12">
-        <div className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-xl sm:p-10">
-          <div className="mx-auto mb-5 flex size-20 items-center justify-center rounded-full bg-blue-50 text-[#0a7ae6] ring-8 ring-blue-50/50">
+        <div className="w-full max-w-md rounded-3xl border border-slate-200 bg-[#fbf7ef] p-8 text-center shadow-xl sm:p-10">
+          <div className="mx-auto mb-5 flex size-20 items-center justify-center rounded-full bg-blue-50 text-[#000000] ring-8 ring-blue-50/50">
             <User className="size-9 stroke-[2]" />
           </div>
 
-          <span className="inline-block rounded-full bg-blue-100/70 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-[#0a7ae6]">
+          <span className="inline-block rounded-full bg-blue-100/70 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-[#000000]">
             Sign In Required
           </span>
 
@@ -182,14 +182,14 @@ function OrdersContent() {
           <div className="mt-6 space-y-3">
             <Link prefetch={false}
               href={guestEmail ? `/login?email=${encodeURIComponent(guestEmail)}&redirectTo=/orders` : `/login?redirectTo=/orders`}
-              className="block w-full rounded-xl bg-[#0a7ae6] py-3.5 text-center text-sm font-semibold text-white shadow-md shadow-[#0a7ae6]/20 transition-all hover:bg-[#086ac9]"
+              className="block w-full rounded-xl bg-[#000000] py-3.5 text-center text-sm font-semibold text-white shadow-md shadow-[#000000]/20 transition-all hover:bg-[#1f1e1b]"
             >
               Sign In to Your Account
             </Link>
 
             <Link prefetch={false}
               href={guestEmail ? `/login?mode=signup&email=${encodeURIComponent(guestEmail)}&redirectTo=/orders` : `/login?mode=signup&redirectTo=/orders`}
-              className="block w-full rounded-xl border border-slate-200 bg-white py-3.5 text-center text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-all"
+              className="block w-full rounded-xl border border-slate-200 bg-[#fbf7ef] py-3.5 text-center text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-all"
             >
               Create an Account
             </Link>
@@ -212,7 +212,7 @@ function OrdersContent() {
           </div>
           <Link prefetch={false}
             href="/shop"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0a7ae6] hover:underline"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#000000] hover:underline"
           >
             <ArrowLeft className="size-3.5" /> Continue Shopping
           </Link>
@@ -220,7 +220,7 @@ function OrdersContent() {
 
         {/* Orders List or Empty State */}
         {orders.length === 0 ? (
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm sm:p-12">
+          <div className="rounded-3xl border border-slate-200 bg-[#fbf7ef] p-8 text-center shadow-sm sm:p-12">
             <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-slate-100 text-slate-400">
               <ShoppingBag className="size-8 stroke-[1.5]" />
             </div>
@@ -231,7 +231,7 @@ function OrdersContent() {
             <div className="mt-6 flex justify-center">
               <Link prefetch={false}
                 href="/shop"
-                className="rounded-xl bg-[#0a7ae6] px-6 py-2.5 text-xs font-semibold text-white transition-all hover:bg-[#086ac9]"
+                className="rounded-xl bg-[#000000] px-6 py-2.5 text-xs font-semibold text-white transition-all hover:bg-[#1f1e1b]"
               >
                 Explore Catalog
               </Link>
@@ -254,7 +254,7 @@ function OrdersContent() {
               return (
                 <div
                   key={order.id}
-                  className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:shadow-md"
+                  className="overflow-hidden rounded-2xl border border-slate-200 bg-[#fbf7ef] shadow-sm transition-all hover:shadow-md"
                 >
                   {/* 1. ORDER HEADER */}
                   <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 bg-slate-50/70 px-5 py-4 sm:px-6">
@@ -281,14 +281,14 @@ function OrdersContent() {
                         {hasTracking ? (
                           <>
                             <div className="flex items-center gap-2">
-                              <Truck className="size-4 text-[#0a7ae6]" />
+                              <Truck className="size-4 text-[#000000]" />
                               <span className="text-xs font-bold uppercase tracking-wider text-slate-900">
                                 Fulfillment Courier: {carrier}
                               </span>
                             </div>
                             <div className="flex items-center gap-2 text-xs text-slate-600">
                               <span>AWB / Tracking No:</span>
-                              <span className="font-mono font-bold text-slate-900 bg-white px-2 py-0.5 rounded border border-slate-200">
+                              <span className="font-mono font-bold text-slate-900 bg-[#fbf7ef] px-2 py-0.5 rounded border border-slate-200">
                                 {awb}
                               </span>
                               <button
@@ -331,7 +331,7 @@ function OrdersContent() {
                       {hasTracking && (
                         <Link prefetch={false}
                           href={deliveryStatusUrl}
-                          className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#0a7ae6] px-4 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-[#086ac9] transition-all"
+                          className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#000000] px-4 py-2.5 text-xs font-bold text-white shadow-xs hover:bg-[#1f1e1b] transition-all"
                         >
                           <Search className="size-3.5" /> View Delivery Status
                         </Link>
@@ -345,7 +345,7 @@ function OrdersContent() {
                         <div className="absolute top-3 sm:top-3.5 left-[10%] right-[10%] h-1 bg-slate-200 rounded-full overflow-hidden">
                           {/* Active Filled Progress Bar */}
                           <div
-                            className="h-full bg-[#0a7ae6] transition-all duration-700 ease-out"
+                            className="h-full bg-[#000000] transition-all duration-700 ease-out"
                             style={{
                               width: `${(
                                 (order.status?.toUpperCase() === "DELIVERED"
@@ -389,10 +389,10 @@ function OrdersContent() {
                                 <div
                                   className={`size-6 sm:size-7 rounded-full flex items-center justify-center text-[10px] sm:text-xs font-bold transition-all duration-300 ${
                                     isCompleted
-                                      ? "bg-[#0a7ae6] text-white shadow-xs"
+                                      ? "bg-[#000000] text-white shadow-xs"
                                       : isCurrent
-                                      ? "bg-[#0a7ae6] text-white ring-4 ring-blue-100 shadow-sm"
-                                      : "bg-white text-slate-400 border-2 border-slate-300"
+                                      ? "bg-[#000000] text-white ring-4 ring-blue-100 shadow-sm"
+                                      : "bg-[#fbf7ef] text-slate-400 border-2 border-slate-300"
                                   }`}
                                 >
                                   {isCompleted || isCurrent ? (
@@ -429,7 +429,7 @@ function OrdersContent() {
 
                       return (
                         <div key={item.id} className="flex items-center gap-4 py-4">
-                          <div className="relative size-16 shrink-0 overflow-hidden rounded-xl border border-slate-100 bg-white p-1 sm:size-20">
+                          <div className="relative size-16 shrink-0 overflow-hidden rounded-xl border border-slate-100 bg-[#fbf7ef] p-1 sm:size-20">
                             <Image
                               src={image}
                               alt={name}
@@ -443,7 +443,7 @@ function OrdersContent() {
                             {slug ? (
                               <Link prefetch={false}
                                 href={`/product/${slug}`}
-                                className="truncate text-xs font-semibold text-slate-900 hover:text-[#0a7ae6] sm:text-sm block"
+                                className="truncate text-xs font-semibold text-slate-900 hover:text-[#000000] sm:text-sm block"
                               >
                                 {name}
                               </Link>
@@ -479,7 +479,7 @@ function OrdersContent() {
                     </div>
                     <div className="text-left sm:text-right shrink-0">
                       <span className="text-xs text-slate-500 font-normal mr-2">Total Amount Paid:</span>
-                      <span className="text-[#0a7ae6] text-base font-bold">{formatINR(order.total)}</span>
+                      <span className="text-[#000000] text-base font-bold">{formatINR(order.total)}</span>
                     </div>
                   </div>
                 </div>
@@ -494,11 +494,11 @@ function OrdersContent() {
 
 export default function MyOrdersPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#fbf7ef]">
       <Navbar />
       <Suspense fallback={
         <div className="min-h-[60vh] flex items-center justify-center">
-          <div className="size-8 animate-spin rounded-full border-4 border-[#0a7ae6] border-t-transparent" />
+          <div className="size-8 animate-spin rounded-full border-4 border-[#000000] border-t-transparent" />
         </div>
       }>
         <OrdersContent />

@@ -696,7 +696,7 @@ function CheckoutContent() {
             contact: phone,
           },
           theme: {
-            color: "#0a7ae6",
+            color: "#000000",
           },
           modal: {
             ondismiss: () => {
@@ -1007,7 +1007,7 @@ function CheckoutContent() {
   if (orderComplete) {
     return (
       <div className="min-h-[80vh] flex items-center justify-center px-4 py-12">
-        <div className="w-full max-w-lg rounded-3xl border border-slate-100 bg-white p-8 text-center shadow-xl sm:p-10">
+        <div className="w-full max-w-lg rounded-3xl border border-slate-100 bg-[#fbf7ef] p-8 text-center shadow-xl sm:p-10">
           <div className="mx-auto mb-6 flex size-20 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 ring-8 ring-emerald-50/50">
             <Check className="size-10 stroke-[2.5]" />
           </div>
@@ -1049,12 +1049,12 @@ function CheckoutContent() {
             </div>
             <div className="flex justify-between pt-1 text-sm font-semibold text-slate-900">
               <span>Total Paid:</span>
-              <span className="text-[#0a7ae6]">₹{paidTotal.toLocaleString("en-IN")}</span>
+              <span className="text-[#000000]">₹{paidTotal.toLocaleString("en-IN")}</span>
             </div>
           </div>
 
           <div className="mt-4 rounded-xl bg-blue-50/80 border border-blue-200/70 p-3.5 text-xs text-slate-700 text-left flex items-start gap-2.5">
-            <CheckCircle2 className="size-4 text-[#0a7ae6] shrink-0 mt-0.5" />
+            <CheckCircle2 className="size-4 text-[#000000] shrink-0 mt-0.5" />
             <p className="leading-relaxed">
               Order saved to <strong className="text-slate-900">{email}</strong>.
               {currentUser || createAccountOnCheckout
@@ -1066,13 +1066,13 @@ function CheckoutContent() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link prefetch={false}
               href="/orders"
-              className="flex-1 rounded-xl bg-[#0a7ae6] py-3.5 text-center text-sm font-semibold text-white shadow-md shadow-[#0a7ae6]/20 transition-all hover:bg-[#086ac9] flex items-center justify-center gap-2"
+              className="flex-1 rounded-xl bg-[#000000] py-3.5 text-center text-sm font-semibold text-white shadow-md shadow-[#000000]/20 transition-all hover:bg-[#1f1e1b] flex items-center justify-center gap-2"
             >
               <Truck className="size-4" /> Track Shipment
             </Link>
             <Link prefetch={false}
               href="/shop"
-              className="flex-1 rounded-xl border border-slate-200 bg-white py-3.5 text-center text-sm font-semibold text-slate-700 hover:bg-slate-50 flex items-center justify-center"
+              className="flex-1 rounded-xl border border-slate-200 bg-[#fbf7ef] py-3.5 text-center text-sm font-semibold text-slate-700 hover:bg-slate-50 flex items-center justify-center"
             >
               Explore Products
             </Link>
@@ -1086,7 +1086,7 @@ function CheckoutContent() {
   if (!isMounted || productParamLoading || isAuthLoading) {
     return (
       <div className="min-h-[70vh] flex items-center justify-center">
-        <div className="size-8 animate-spin rounded-full border-4 border-slate-200 border-t-[#0a7ae6]" />
+        <div className="size-8 animate-spin rounded-full border-4 border-slate-200 border-t-[#000000]" />
       </div>
     );
   }
@@ -1103,7 +1103,7 @@ function CheckoutContent() {
           <p className="text-sm text-slate-500 mb-6">Looks like you haven&apos;t added anything yet. Browse our products to find something you love!</p>
           <Link prefetch={false}
             href="/shop"
-            className="inline-flex items-center rounded-xl bg-[#0a7ae6] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-[#0a7ae6]/20 hover:bg-[#086ac9] transition-all"
+            className="inline-flex items-center rounded-xl bg-[#000000] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-[#000000]/20 hover:bg-[#1f1e1b] transition-all"
           >
             Explore Products
           </Link>
@@ -1113,7 +1113,7 @@ function CheckoutContent() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#fbf7ef]">
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
         <form onSubmit={handlePlaceOrder} className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14 items-start">
           {/* ─── LEFT COLUMN: BILLING & ADDRESS DETAILS ─── */}
@@ -1126,7 +1126,7 @@ function CheckoutContent() {
             </div>
 
             {/* Coupon Card (Reference UI) */}
-            <div className="rounded-2xl border border-slate-100 bg-[#f8fafc] p-4 sm:p-5">
+            <div className="rounded-2xl border border-slate-100 bg-[#fbf7ef] p-4 sm:p-5">
               <div className="flex items-center justify-between mb-2.5">
                 <label htmlFor="coupon-input" className="block text-xs sm:text-sm font-medium text-slate-600">
                   If you have a coupon code, please apply it below
@@ -1157,7 +1157,7 @@ function CheckoutContent() {
                       value={couponCode}
                       onChange={(e) => setCouponCode(e.target.value)}
                       disabled={Boolean(appliedCoupon)}
-                      className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15 disabled:bg-slate-100"
+                      className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15 disabled:bg-slate-100"
                     />
                   </div>
                   {appliedCoupon ? (
@@ -1172,7 +1172,7 @@ function CheckoutContent() {
                     <button
                       type="button"
                       onClick={handleApplyCoupon}
-                      className="inline-flex items-center justify-center rounded-xl bg-[#0a7ae6] px-5 py-2.5 text-xs font-semibold text-white shadow-sm shadow-[#0a7ae6]/15 transition-all hover:bg-[#086ac9] active:scale-98 cursor-pointer"
+                      className="inline-flex items-center justify-center rounded-xl bg-[#000000] px-5 py-2.5 text-xs font-semibold text-white shadow-sm shadow-[#000000]/15 transition-all hover:bg-[#1f1e1b] active:scale-98 cursor-pointer"
                     >
                       Apply coupon
                     </button>
@@ -1202,7 +1202,7 @@ function CheckoutContent() {
                   <Link
                     prefetch={false}
                     href="/login?redirectTo=/checkout"
-                    className="text-xs font-semibold text-[#0a7ae6] hover:underline"
+                    className="text-xs font-semibold text-[#000000] hover:underline"
                   >
                     Already have an account? Sign in
                   </Link>
@@ -1221,7 +1221,7 @@ function CheckoutContent() {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     placeholder="First name"
-                    className="w-full rounded-xl border border-slate-200 bg-white px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15 transition-all"
+                    className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15 transition-all"
                   />
                 </div>
                 <div>
@@ -1234,7 +1234,7 @@ function CheckoutContent() {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     placeholder="Last name"
-                    className="w-full rounded-xl border border-slate-200 bg-white px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15 transition-all"
+                    className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15 transition-all"
                   />
                 </div>
               </div>
@@ -1251,7 +1251,7 @@ function CheckoutContent() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="+91 98765 43210"
-                    className="w-full rounded-xl border border-slate-200 bg-white px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15 transition-all"
+                    className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15 transition-all"
                   />
                 </div>
                 <div>
@@ -1264,7 +1264,7 @@ function CheckoutContent() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="johndoe@gmail.com"
-                    className="w-full rounded-xl border border-slate-200 bg-white px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15 transition-all"
+                    className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15 transition-all"
                   />
                 </div>
               </div>
@@ -1289,7 +1289,7 @@ function CheckoutContent() {
                   value={addressLine1}
                   onChange={(e) => setAddressLine1(e.target.value)}
                   placeholder="House number, apartment name, street"
-                  className="w-full rounded-xl border border-slate-200 bg-white px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15 transition-all"
+                  className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15 transition-all"
                 />
               </div>
 
@@ -1303,7 +1303,7 @@ function CheckoutContent() {
                   value={addressLine2}
                   onChange={(e) => setAddressLine2(e.target.value)}
                   placeholder="Near landmark or building wing"
-                  className="w-full rounded-xl border border-slate-200 bg-white px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15 transition-all"
+                  className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15 transition-all"
                 />
               </div>
 
@@ -1319,7 +1319,7 @@ function CheckoutContent() {
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
                     placeholder="e.g. Mumbai"
-                    className="w-full rounded-xl border border-slate-200 bg-white px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15 transition-all"
+                    className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15 transition-all"
                   />
                 </div>
                 <div>
@@ -1332,7 +1332,7 @@ function CheckoutContent() {
                     value={postalCode}
                     onChange={(e) => setPostalCode(e.target.value)}
                     placeholder="e.g. 400001"
-                    className="w-full rounded-xl border border-slate-200 bg-white px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15 transition-all"
+                    className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15 transition-all"
                   />
                 </div>
               </div>
@@ -1347,7 +1347,7 @@ function CheckoutContent() {
                     required
                     value={state}
                     onChange={(e) => setState(e.target.value)}
-                    className="w-full appearance-none rounded-xl border border-slate-200 bg-white px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15 transition-all"
+                    className="w-full appearance-none rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 sm:px-4 py-2.5 text-xs sm:text-sm text-slate-900 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15 transition-all"
                   >
                     <option value="" disabled>Select your state</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -1394,7 +1394,7 @@ function CheckoutContent() {
                   value={orderNotes}
                   onChange={(e) => setOrderNotes(e.target.value)}
                   placeholder="Notes about your order, e.g. special delivery instructions."
-                  className="w-full rounded-xl border border-slate-200 bg-white p-3 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15 transition-all"
+                  className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] p-3 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15 transition-all"
                 />
               </div>
             </div>
@@ -1404,8 +1404,8 @@ function CheckoutContent() {
               <div
                 className={`rounded-2xl border p-4 sm:p-5 transition-all duration-200 ${
                   createAccountOnCheckout
-                    ? "border-[#0a7ae6]/40 bg-[#0a7ae6]/[0.03] ring-1 ring-[#0a7ae6]/10"
-                    : "border-slate-200/90 bg-[#f8fafc] hover:border-slate-300"
+                    ? "border-[#000000]/40 bg-[#000000]/[0.03] ring-1 ring-[#000000]/10"
+                    : "border-slate-200/90 bg-[#fbf7ef] hover:border-slate-300"
                 }`}
               >
                 <label className="flex items-start gap-3.5 cursor-pointer select-none">
@@ -1413,14 +1413,14 @@ function CheckoutContent() {
                     type="checkbox"
                     checked={createAccountOnCheckout}
                     onChange={(e) => setCreateAccountOnCheckout(e.target.checked)}
-                    className="mt-0.5 size-4.5 rounded border-slate-300 text-[#0a7ae6] focus:ring-[#0a7ae6] accent-[#0a7ae6] cursor-pointer"
+                    className="mt-0.5 size-4.5 rounded border-slate-300 text-[#000000] focus:ring-[#000000] accent-[#000000] cursor-pointer"
                   />
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <span className="text-xs sm:text-sm font-bold text-slate-900">
                         Create an account with this order
                       </span>
-                      <span className="inline-flex items-center text-[10px] font-semibold text-[#0a7ae6] bg-blue-100/70 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                      <span className="inline-flex items-center text-[10px] font-semibold text-[#000000] bg-blue-100/70 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                         Recommended
                       </span>
                     </div>
@@ -1442,7 +1442,7 @@ function CheckoutContent() {
                         value={accountPassword}
                         onChange={(e) => setAccountPassword(e.target.value)}
                         placeholder="Choose password (at least 6 characters)"
-                        className="w-full rounded-xl border border-slate-200 bg-white px-3.5 sm:px-4 py-2.5 pr-10 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/15"
+                        className="w-full rounded-xl border border-slate-200 bg-[#fbf7ef] px-3.5 sm:px-4 py-2.5 pr-10 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/15"
                       />
                       <button
                         type="button"
@@ -1456,7 +1456,7 @@ function CheckoutContent() {
                     </div>
                     <p className="text-[11px] text-slate-500">
                       Already have an account?{" "}
-                      <Link prefetch={false} href="/login?redirectTo=/checkout" className="font-bold text-[#0a7ae6] hover:underline">
+                      <Link prefetch={false} href="/login?redirectTo=/checkout" className="font-bold text-[#000000] hover:underline">
                         Sign in here
                       </Link>
                     </p>
@@ -1468,7 +1468,7 @@ function CheckoutContent() {
 
           {/* ─── RIGHT COLUMN: YOUR ORDER & PAYMENT METHOD ─── */}
           <div className="lg:col-span-5">
-            <div className="sticky top-28 rounded-2xl sm:rounded-3xl border border-slate-200/80 bg-[#f8fafc] p-3.5 sm:p-6 lg:p-8 shadow-xs">
+            <div className="sticky top-28 rounded-2xl sm:rounded-3xl border border-slate-200/80 bg-[#fbf7ef] p-3.5 sm:p-6 lg:p-8 shadow-xs">
               {/* Order Heading with Item Count Badge */}
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-base sm:text-lg lg:text-xl font-bold tracking-tight text-slate-900">
@@ -1504,7 +1504,7 @@ function CheckoutContent() {
                     <div key={item.id} className="py-3 first:pt-0 last:pb-2">
                       <div className="flex items-start gap-3">
                         {/* Thumbnail */}
-                        <div className="relative size-12 sm:size-14 shrink-0 overflow-hidden rounded-xl border border-slate-200 bg-white p-1 shadow-2xs">
+                        <div className="relative size-12 sm:size-14 shrink-0 overflow-hidden rounded-xl border border-slate-200 bg-[#fbf7ef] p-1 shadow-2xs">
                           <Image
                             src={item.image || "/category-smartphone.png"}
                             alt={item.name}
@@ -1543,7 +1543,7 @@ function CheckoutContent() {
                           {/* Stepper + Unit Price + Remove in one clean row */}
                           <div className="mt-2 flex items-center justify-between gap-2">
                             <div className="flex items-center gap-2">
-                              <div className="inline-flex items-center rounded-lg border border-slate-200/90 bg-white shadow-2xs">
+                              <div className="inline-flex items-center rounded-lg border border-slate-200/90 bg-[#fbf7ef] shadow-2xs">
                                 <button
                                   type="button"
                                   onClick={() => handleQuantityChange(item, -1)}
@@ -1634,7 +1634,7 @@ function CheckoutContent() {
                     <span className="text-base sm:text-lg font-semibold block leading-tight">Total</span>
                     <span className="text-[10px] text-slate-400 font-normal block">Free delivery & taxes included</span>
                   </div>
-                  <span className="text-lg sm:text-xl font-semibold text-[#0a7ae6]">
+                  <span className="text-lg sm:text-xl font-semibold text-[#000000]">
                     ₹{total.toLocaleString("en-IN", {
                       minimumFractionDigits: total % 1 !== 0 ? 2 : 0,
                       maximumFractionDigits: 2,
@@ -1661,22 +1661,22 @@ function CheckoutContent() {
                     onClick={() => setPaymentMethod("razorpay")}
                     className={`w-full relative flex flex-col gap-2 rounded-xl border p-3 sm:p-3.5 text-left transition-all cursor-pointer ${
                       paymentMethod === "razorpay"
-                        ? "border-[#0a7ae6] bg-blue-50/40 text-slate-900 shadow-xs ring-1 ring-[#0a7ae6]/30"
-                        : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
+                        ? "border-[#000000] bg-blue-50/40 text-slate-900 shadow-xs ring-1 ring-[#000000]/30"
+                        : "border-slate-200 bg-[#fbf7ef] text-slate-600 hover:border-slate-300"
                     }`}
                   >
                     <div className="flex items-center justify-between w-full gap-2">
                       <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                         <span className={`size-3.5 shrink-0 rounded-full border flex items-center justify-center ${
-                          paymentMethod === "razorpay" ? "border-[#0a7ae6] bg-[#0a7ae6]" : "border-slate-300"
+                          paymentMethod === "razorpay" ? "border-[#000000] bg-[#000000]" : "border-slate-300"
                         }`}>
-                          {paymentMethod === "razorpay" && <span className="size-1.5 rounded-full bg-white" />}
+                          {paymentMethod === "razorpay" && <span className="size-1.5 rounded-full bg-[#fbf7ef]" />}
                         </span>
                         <div className="flex items-center gap-1.5 flex-wrap min-w-0">
                           <span className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">
                             Instant Online Payment
                           </span>
-                          <span className="rounded-full bg-blue-100 text-[#0a7ae6] px-1.5 py-0.5 text-[8.5px] sm:text-[9px] font-bold uppercase tracking-wider whitespace-nowrap">
+                          <span className="rounded-full bg-blue-100 text-[#000000] px-1.5 py-0.5 text-[8.5px] sm:text-[9px] font-bold uppercase tracking-wider whitespace-nowrap">
                             Fast & Safe
                           </span>
                         </div>
@@ -1686,25 +1686,25 @@ function CheckoutContent() {
 
                     {/* Responsive Multi-Badge Strip for Phone & Desktop */}
                     <div className="flex flex-wrap items-center gap-1 sm:gap-1.5 pl-5 sm:pl-6 pt-0.5">
-                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-white px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
+                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-[#fbf7ef] px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
                         <UpiLogo className="h-3 sm:h-3.5 w-auto" />
                       </div>
-                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-white px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
+                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-[#fbf7ef] px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
                         <GPayLogo className="h-3 sm:h-3.5 w-auto" />
                       </div>
-                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-white px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
+                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-[#fbf7ef] px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
                         <PhonePeLogo className="h-3 sm:h-3.5 w-auto" />
                       </div>
-                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-white px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
+                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-[#fbf7ef] px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
                         <PaytmLogo className="h-2.5 sm:h-3 w-auto" />
                       </div>
-                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-white px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
+                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-[#fbf7ef] px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
                         <VisaLogo className="h-2.5 sm:h-3 w-auto" />
                       </div>
-                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-white px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
+                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-[#fbf7ef] px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
                         <MastercardLogo className="h-3 sm:h-3.5 w-auto" />
                       </div>
-                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-white px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
+                      <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/90 bg-[#fbf7ef] px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
                         <RuPayLogo className="h-2.5 sm:h-3 w-auto" />
                       </div>
                       <div className="flex h-5.5 sm:h-6 items-center justify-center rounded-md border border-slate-200/80 bg-slate-50 px-1.5 sm:px-2 py-0.5 shadow-2xs shrink-0">
@@ -1721,16 +1721,16 @@ function CheckoutContent() {
                     onClick={() => setPaymentMethod("velocity")}
                     className={`w-full relative flex flex-col gap-1.5 rounded-xl border p-3 sm:p-3.5 text-left transition-all cursor-pointer ${
                       paymentMethod === "velocity"
-                        ? "border-[#0a7ae6] bg-blue-50/40 text-slate-900 shadow-xs ring-1 ring-[#0a7ae6]/30"
-                        : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
+                        ? "border-[#000000] bg-blue-50/40 text-slate-900 shadow-xs ring-1 ring-[#000000]/30"
+                        : "border-slate-200 bg-[#fbf7ef] text-slate-600 hover:border-slate-300"
                     }`}
                   >
                     <div className="flex items-center justify-between w-full gap-2">
                       <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                         <span className={`size-3.5 shrink-0 rounded-full border flex items-center justify-center ${
-                          paymentMethod === "velocity" ? "border-[#0a7ae6] bg-[#0a7ae6]" : "border-slate-300"
+                          paymentMethod === "velocity" ? "border-[#000000] bg-[#000000]" : "border-slate-300"
                         }`}>
-                          {paymentMethod === "velocity" && <span className="size-1.5 rounded-full bg-white" />}
+                          {paymentMethod === "velocity" && <span className="size-1.5 rounded-full bg-[#fbf7ef]" />}
                         </span>
                         <div className="flex items-center gap-1.5 flex-wrap min-w-0">
                           <span className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">
@@ -1746,7 +1746,7 @@ function CheckoutContent() {
 
                     <div className="flex items-center justify-between pl-5 sm:pl-6 text-[10.5px] sm:text-[11px] text-slate-500 gap-1 pt-0.5">
                       <span className="truncate">3-month no-cost EMI</span>
-                      <span className="font-bold text-[#0a7ae6] shrink-0 whitespace-nowrap">
+                      <span className="font-bold text-[#000000] shrink-0 whitespace-nowrap">
                         ₹{Math.ceil(total / EMI_TENURE).toLocaleString("en-IN")}/mo
                       </span>
                     </div>
@@ -1758,16 +1758,16 @@ function CheckoutContent() {
                     onClick={() => setPaymentMethod("cod")}
                     className={`w-full relative flex flex-col gap-2 rounded-xl border p-3 sm:p-3.5 text-left transition-all cursor-pointer ${
                       paymentMethod === "cod"
-                        ? "border-[#0a7ae6] bg-blue-50/40 text-slate-900 shadow-xs ring-1 ring-[#0a7ae6]/30"
-                        : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
+                        ? "border-[#000000] bg-blue-50/40 text-slate-900 shadow-xs ring-1 ring-[#000000]/30"
+                        : "border-slate-200 bg-[#fbf7ef] text-slate-600 hover:border-slate-300"
                     }`}
                   >
                     <div className="flex items-center justify-between w-full gap-2">
                       <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                         <span className={`size-3.5 shrink-0 rounded-full border flex items-center justify-center ${
-                          paymentMethod === "cod" ? "border-[#0a7ae6] bg-[#0a7ae6]" : "border-slate-300"
+                          paymentMethod === "cod" ? "border-[#000000] bg-[#000000]" : "border-slate-300"
                         }`}>
-                          {paymentMethod === "cod" && <span className="size-1.5 rounded-full bg-white" />}
+                          {paymentMethod === "cod" && <span className="size-1.5 rounded-full bg-[#fbf7ef]" />}
                         </span>
                         <div className="flex items-center gap-1.5 flex-wrap min-w-0">
                           <span className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">
@@ -1820,7 +1820,7 @@ function CheckoutContent() {
               <button
                 type="submit"
                 disabled={isSubmitting || orderItems.length === 0 || hasOutOfStockItems}
-                className="mt-5 sm:mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0a7ae6] py-3.5 text-center text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-[#0a7ae6]/25 transition-all hover:bg-[#086ac9] hover:shadow-xl active:scale-98 disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer"
+                className="mt-5 sm:mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#000000] py-3.5 text-center text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-[#000000]/25 transition-all hover:bg-[#1f1e1b] hover:shadow-xl active:scale-98 disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer"
               >
                 {isSubmitting ? (
                   <div className="size-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
@@ -1881,7 +1881,7 @@ function CheckoutContent() {
       {/* ─── CASH ON DELIVERY OTP VERIFICATION MODAL (COMPACT & SLEEK) ───── */}
       {isCodOtpModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs animate-in fade-in duration-150">
-          <div className="relative w-full max-w-[390px] rounded-2xl bg-white p-5 sm:p-6 shadow-xl border border-slate-100 text-left space-y-4">
+          <div className="relative w-full max-w-[390px] rounded-2xl bg-[#fbf7ef] p-5 sm:p-6 shadow-xl border border-slate-100 text-left space-y-4">
             {/* Close Button */}
             <button
               type="button"
@@ -1893,7 +1893,7 @@ function CheckoutContent() {
 
             {/* Header */}
             <div className="flex items-center gap-3 pr-6">
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#0a7ae6]">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#000000]">
                 <Smartphone className="size-5" />
               </div>
               <div>
@@ -1920,7 +1920,7 @@ function CheckoutContent() {
                     setOtpError("");
                   }}
                   placeholder="• • • • • •"
-                  className="w-full text-center tracking-[0.4em] font-mono text-xl font-bold rounded-xl border border-slate-300 py-2.5 px-3 text-slate-900 focus:border-[#0a7ae6] focus:ring-2 focus:ring-[#0a7ae6]/15 outline-none transition-all placeholder:tracking-normal placeholder:font-sans placeholder:text-slate-300 placeholder:text-sm"
+                  className="w-full text-center tracking-[0.4em] font-mono text-xl font-bold rounded-xl border border-slate-300 py-2.5 px-3 text-slate-900 focus:border-[#000000] focus:ring-2 focus:ring-[#000000]/15 outline-none transition-all placeholder:tracking-normal placeholder:font-sans placeholder:text-slate-300 placeholder:text-sm"
                 />
               </div>
 
@@ -1959,7 +1959,7 @@ function CheckoutContent() {
                     type="button"
                     disabled={isSendingOtp}
                     onClick={handleSendCodOtp}
-                    className="font-bold text-[#0a7ae6] hover:underline flex items-center gap-1 cursor-pointer disabled:opacity-50"
+                    className="font-bold text-[#000000] hover:underline flex items-center gap-1 cursor-pointer disabled:opacity-50"
                   >
                     {isSendingOtp ? (
                       <RefreshCw className="size-2.5 animate-spin" />
@@ -1975,7 +1975,7 @@ function CheckoutContent() {
                 <button
                   type="submit"
                   disabled={isVerifyingOtp || isSubmitting || codOtp.length < 6}
-                  className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#0a7ae6] py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#0a7ae6]/20 transition-all hover:bg-[#086ac9] disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+                  className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#000000] py-3 text-center text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#000000]/20 transition-all hover:bg-[#1f1e1b] disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {isVerifyingOtp || isSubmitting ? (
                     <div className="size-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
@@ -2009,7 +2009,7 @@ export default function CheckoutPage() {
       <Navbar />
       <Suspense fallback={
         <div className="min-h-[60vh] flex items-center justify-center">
-          <div className="size-8 animate-spin rounded-full border-4 border-[#0a7ae6] border-t-transparent" />
+          <div className="size-8 animate-spin rounded-full border-4 border-[#000000] border-t-transparent" />
         </div>
       }>
         <CheckoutContent />

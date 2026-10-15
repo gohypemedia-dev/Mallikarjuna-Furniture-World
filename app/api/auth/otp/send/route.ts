@@ -24,24 +24,24 @@ export async function POST(request: NextRequest) {
           to: cleanEmail,
           subject: `${otp} is your XElectron verification code`,
           html: `
-            <div style="max-width: 520px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-              <div style="background: #0a7ae6; padding: 24px; text-align: center;">
+            <div style="max-width: 520px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #ffffff; border: 1px solid #d7d4cf; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+              <div style="background: #000000; padding: 24px; text-align: center;">
                 <h1 style="color: #ffffff; margin: 0; font-size: 22px; font-weight: 700; letter-spacing: 0.5px;">XELECTRON</h1>
                 <p style="color: rgba(255,255,255,0.9); margin: 6px 0 0; font-size: 13px;">Official Account Verification</p>
               </div>
-              <div style="padding: 32px 28px; text-align: center; color: #1e293b;">
-                <h2 style="font-size: 18px; font-weight: 600; margin: 0 0 12px; color: #0f172a;">Verify Your Email Address</h2>
-                <p style="font-size: 14px; line-height: 1.5; color: #64748b; margin: 0 0 24px;">
+              <div style="padding: 32px 28px; text-align: center; color: #1f1e1b;">
+                <h2 style="font-size: 18px; font-weight: 600; margin: 0 0 12px; color: #000000;">Verify Your Email Address</h2>
+                <p style="font-size: 14px; line-height: 1.5; color: #5c5951; margin: 0 0 24px;">
                   Thank you for creating an account with XElectron. Use the 6-digit verification code below to verify your email address:
                 </p>
-                <div style="display: inline-block; background: #f8fafc; border: 2px dashed #0a7ae6; border-radius: 12px; padding: 14px 36px; margin: 0 auto 24px;">
-                  <span style="font-size: 32px; font-weight: 800; letter-spacing: 8px; color: #0a7ae6; font-family: monospace;">${otp}</span>
+                <div style="display: inline-block; background: #fbf7ef; border: 2px dashed #000000; border-radius: 12px; padding: 14px 36px; margin: 0 auto 24px;">
+                  <span style="font-size: 32px; font-weight: 800; letter-spacing: 8px; color: #000000; font-family: monospace;">${otp}</span>
                 </div>
-                <p style="font-size: 13px; color: #94a3b8; margin: 0;">
+                <p style="font-size: 13px; color: #8e8a82; margin: 0;">
                   This code will expire in <strong>10 minutes</strong>. Do not share this code with anyone.
                 </p>
               </div>
-              <div style="background: #f8fafc; padding: 16px; text-align: center; border-top: 1px solid #e2e8f0; font-size: 12px; color: #94a3b8;">
+              <div style="background: #fbf7ef; padding: 16px; text-align: center; border-top: 1px solid #d7d4cf; font-size: 12px; color: #8e8a82;">
                 &copy; ${new Date().getFullYear()} XElectron Technologies. All rights reserved.
               </div>
             </div>

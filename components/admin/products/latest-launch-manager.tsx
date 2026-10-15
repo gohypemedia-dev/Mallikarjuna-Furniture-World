@@ -56,7 +56,7 @@ export function LatestLaunchManager({ products, initialIds }: { products: Produc
         <Link prefetch={false} href="/" target="_blank" className="inline-flex items-center gap-1.5 rounded-md py-2 text-xs text-slate-500 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-blue-600">View homepage<ExternalLink className="size-3.5" /></Link>
       </header>
 
-      <section aria-label="Homepage products" className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+      <section aria-label="Homepage products" className="overflow-hidden rounded-xl border border-slate-200 bg-[#fbf7ef]">
         <div className="flex items-center justify-between gap-3 border-b border-slate-100 px-4 py-4 sm:px-5">
           <div className="flex items-center gap-2.5"><h2 className="text-sm font-semibold text-slate-900">Products</h2><span className="text-xs tabular-nums text-slate-500">{ids.length} / {LATEST_LAUNCH_LIMIT}</span></div>
           <button type="button" disabled={saving} onClick={() => { setQuery(""); setPickerOpen(true); }} className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 px-3 py-2 text-xs font-medium text-slate-700 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-blue-600 disabled:opacity-50"><Plus className="size-3.5" />{ids.length === LATEST_LAUNCH_LIMIT ? "Change products" : "Add products"}</button>

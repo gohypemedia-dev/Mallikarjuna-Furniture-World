@@ -103,7 +103,7 @@ const ESSENTIALS = [
 
 export default function PickupDropServicePage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-[#fbf7ef] text-slate-900">
       <Navbar />
 
       <main className="w-full">
@@ -112,7 +112,7 @@ export default function PickupDropServicePage() {
           <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-              <Link href="/" className="hover:text-[#0a7ae6] transition-colors">
+              <Link href="/" className="hover:text-[#000000] transition-colors">
                 Home
               </Link>
               <span aria-hidden="true" className="text-slate-300">/</span>
@@ -123,7 +123,7 @@ export default function PickupDropServicePage() {
 
             <div className="grid items-center gap-8 lg:grid-cols-12">
               <div className="lg:col-span-7">
-                <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/70 bg-[#edf7ff] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#0a7ae6]">
+                <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/70 bg-[#f3f0ea] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#000000]">
                   <Truck className="size-3.5" /> Doorstep Warranty Service
                 </span>
 
@@ -143,7 +143,7 @@ export default function PickupDropServicePage() {
                 <div className="mt-8 flex flex-wrap items-center gap-3">
                   <Link
                     href="/repair-replacement"
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#0a7ae6] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white shadow-sm transition hover:bg-[#0868c4] active:scale-95"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#000000] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white shadow-sm transition hover:bg-[#0868c4] active:scale-95"
                   >
                     Submit Service Request <ArrowRight className="size-3.5" />
                   </Link>
@@ -152,7 +152,7 @@ export default function PickupDropServicePage() {
                     href="https://wa.me/918527312304"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-xs font-semibold uppercase tracking-wider text-slate-800 shadow-2xs transition hover:border-[#0a7ae6] hover:text-[#0a7ae6]"
+                    className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-[#fbf7ef] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-slate-800 shadow-2xs transition hover:border-[#000000] hover:text-[#000000]"
                   >
                     WhatsApp Support: 8527312304
                   </a>
@@ -161,14 +161,14 @@ export default function PickupDropServicePage() {
 
               {/* Turnaround & Service Highlights Card */}
               <div className="lg:col-span-5">
-                <div className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm sm:p-8">
-                  <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0a7ae6]">
+                <div className="rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-6 shadow-sm sm:p-8">
+                  <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#000000]">
                     Service Highlights
                   </h2>
 
                   <div className="mt-5 space-y-4">
                     <div className="flex items-start gap-3.5">
-                      <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#edf7ff] text-[#0a7ae6]">
+                      <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-[#f3f0ea] text-[#000000]">
                         <Clock className="size-4" />
                       </div>
                       <div>
@@ -200,7 +200,7 @@ export default function PickupDropServicePage() {
 
                   <div className="mt-6 border-t border-slate-100 pt-4 text-xs text-slate-500">
                     Need fast help? Call helpline{" "}
-                    <a href="tel:01204550655" className="font-semibold text-slate-800 hover:text-[#0a7ae6]">
+                    <a href="tel:01204550655" className="font-semibold text-slate-800 hover:text-[#000000]">
                       0120-4550655
                     </a>{" "}
                     (10:00 AM – 6:00 PM).
@@ -212,10 +212,10 @@ export default function PickupDropServicePage() {
         </section>
 
         {/* 6-STEP WARRANTY SERVICE PROCESS */}
-        <section className="border-b border-slate-100 bg-white py-14 sm:py-18">
+        <section className="border-b border-slate-100 bg-[#fbf7ef] py-14 sm:py-18">
           <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl">
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0a7ae6]">
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#000000]">
                 How It Works
               </span>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
@@ -232,14 +232,14 @@ export default function PickupDropServicePage() {
                 return (
                   <div
                     key={step.number}
-                    className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-slate-50/40 p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-white hover:shadow-[0_8px_30px_rgba(15,23,42,0.06)]"
+                    className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-slate-50/40 p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-[#fbf7ef] hover:shadow-[0_8px_30px_rgba(15,23,42,0.06)]"
                   >
                     <div>
                       <div className="flex items-center justify-between">
-                        <div className="flex size-11 items-center justify-center rounded-xl bg-[#edf7ff] text-[#0a7ae6] transition group-hover:bg-[#0a7ae6] group-hover:text-white">
+                        <div className="flex size-11 items-center justify-center rounded-xl bg-[#f3f0ea] text-[#000000] transition group-hover:bg-[#000000] group-hover:text-white">
                           <IconComponent className="size-5" />
                         </div>
-                        <span className="font-mono text-xl font-semibold text-slate-300 group-hover:text-[#0a7ae6]">
+                        <span className="font-mono text-xl font-semibold text-slate-300 group-hover:text-[#000000]">
                           {step.number}
                         </span>
                       </div>
@@ -253,7 +253,7 @@ export default function PickupDropServicePage() {
                       </p>
 
                       {step.contacts && (
-                        <div className="mt-4 space-y-1.5 rounded-xl border border-slate-200/60 bg-white p-3 text-xs">
+                        <div className="mt-4 space-y-1.5 rounded-xl border border-slate-200/60 bg-[#fbf7ef] p-3 text-xs">
                           {step.contacts.map((c) => (
                             <div key={c.label} className="flex items-center justify-between gap-2">
                               <span className="text-slate-400">{c.label}:</span>
@@ -261,7 +261,7 @@ export default function PickupDropServicePage() {
                                 href={c.href}
                                 target={c.href.startsWith("http") ? "_blank" : undefined}
                                 rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                                className="font-medium text-[#0a7ae6] hover:underline"
+                                className="font-medium text-[#000000] hover:underline"
                               >
                                 {c.value}
                               </a>
@@ -296,10 +296,10 @@ export default function PickupDropServicePage() {
         </section>
 
         {/* ESSENTIALS REQUIRED */}
-        <section className="border-b border-slate-100 bg-[#f8fafc] py-14 sm:py-18">
+        <section className="border-b border-slate-100 bg-[#fbf7ef] py-14 sm:py-18">
           <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl">
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0a7ae6]">
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#000000]">
                 Checklist
               </span>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
@@ -316,9 +316,9 @@ export default function PickupDropServicePage() {
                 return (
                   <div
                     key={item.title}
-                    className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-2xs"
+                    className="rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-5 shadow-2xs"
                   >
-                    <div className="flex size-10 items-center justify-center rounded-xl bg-[#edf7ff] text-[#0a7ae6]">
+                    <div className="flex size-10 items-center justify-center rounded-xl bg-[#f3f0ea] text-[#000000]">
                       <IconComponent className="size-5" />
                     </div>
                     <h3 className="mt-3.5 text-sm font-semibold text-slate-900">
@@ -335,12 +335,12 @@ export default function PickupDropServicePage() {
         </section>
 
         {/* PACKAGING INSTRUCTIONS & TRANSIT DAMAGE */}
-        <section className="border-b border-slate-100 bg-white py-14 sm:py-18">
+        <section className="border-b border-slate-100 bg-[#fbf7ef] py-14 sm:py-18">
           <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-12">
               {/* Packaging Instructions */}
               <div className="lg:col-span-7">
-                <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0a7ae6]">
+                <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#000000]">
                   Safe Transportation
                 </span>
                 <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
@@ -352,28 +352,28 @@ export default function PickupDropServicePage() {
 
                 <div className="mt-6 space-y-3.5">
                   <div className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
-                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#0a7ae6]" />
+                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#000000]" />
                     <p className="text-xs leading-relaxed text-slate-700">
                       Pack the product in the original XElectron product box (preferred) or another sturdy, hard cardboard box.
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
-                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#0a7ae6]" />
+                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#000000]" />
                     <p className="text-xs leading-relaxed text-slate-700">
                       The box should not be significantly larger than the product. This helps prevent the product from moving or shaking inside the package during transit.
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
-                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#0a7ae6]" />
+                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#000000]" />
                     <p className="text-xs leading-relaxed text-slate-700">
                       Properly cushion and protect the product using at least two layers of bubble wrap or thermocol.
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
-                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#0a7ae6]" />
+                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#000000]" />
                     <p className="text-xs leading-relaxed text-slate-700">
                       Make sure the product is securely packed and cannot move freely inside the box.
                     </p>
@@ -407,7 +407,7 @@ export default function PickupDropServicePage() {
                     In such cases, the applicable pickup and return courier charges will be payable by the customer.
                   </p>
 
-                  <div className="mt-4 flex items-start gap-2 rounded-xl border border-rose-200/80 bg-white p-3 text-xs text-rose-950 font-medium">
+                  <div className="mt-4 flex items-start gap-2 rounded-xl border border-rose-200/80 bg-[#fbf7ef] p-3 text-xs text-rose-950 font-medium">
                     <Video className="mt-0.5 size-4 shrink-0 text-rose-600" />
                     <span>
                       We strongly recommend recording a short video while packing the product to confirm secure packaging prior to courier dispatch.
@@ -441,11 +441,11 @@ export default function PickupDropServicePage() {
         </section>
 
         {/* DOORSTEP AVAILABILITY & DIRECT SHIPPING */}
-        <section className="border-b border-slate-100 bg-[#f8fafc] py-14 sm:py-18">
+        <section className="border-b border-slate-100 bg-[#fbf7ef] py-14 sm:py-18">
           <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-2xl border border-slate-200/80 bg-white p-6 sm:p-8">
-                <div className="flex size-11 items-center justify-center rounded-xl bg-[#edf7ff] text-[#0a7ae6]">
+              <div className="rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-6 sm:p-8">
+                <div className="flex size-11 items-center justify-center rounded-xl bg-[#f3f0ea] text-[#000000]">
                   <Truck className="size-5" />
                 </div>
                 <h3 className="mt-4 text-base font-semibold text-slate-900">
@@ -454,12 +454,12 @@ export default function PickupDropServicePage() {
                 <p className="mt-2 text-xs leading-relaxed text-slate-600">
                   Doorstep Pickup & Drop service is available across all PIN codes across India, subject to logistics partner serviceability in your area.
                 </p>
-                <div className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0a7ae6]">
+                <div className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#000000]">
                   Full PAN-India Serviceable Network
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-slate-200/80 bg-white p-6 sm:p-8">
+              <div className="rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-6 sm:p-8">
                 <div className="flex size-11 items-center justify-center rounded-xl bg-slate-100 text-slate-700">
                   <MapPin className="size-5" />
                 </div>
@@ -478,7 +478,7 @@ export default function PickupDropServicePage() {
             </div>
 
             {/* BOTTOM CALLOUT ACTION */}
-            <div className="mt-10 rounded-2xl bg-[#071a38] p-8 text-white sm:p-10">
+            <div className="mt-10 rounded-2xl bg-[#000000] p-8 text-white sm:p-10">
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="max-w-2xl">
                   <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-sky-300">
@@ -495,7 +495,7 @@ export default function PickupDropServicePage() {
                 <div className="flex flex-wrap items-center gap-3">
                   <Link
                     href="/repair-replacement"
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#0a7ae6] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-blue-600 active:scale-95"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#000000] px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-blue-600 active:scale-95"
                   >
                     Submit Service Request <ChevronRight className="size-3.5" />
                   </Link>

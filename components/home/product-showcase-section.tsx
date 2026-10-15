@@ -42,11 +42,11 @@ export default function ProductShowcaseSection({ products }: { products: Storefr
   if (products.length === 0) return null;
 
   return (
-    <section className="bg-white px-4 py-6 sm:px-6 lg:px-8 lg:py-12">
+    <section className="bg-[#fbf7ef] px-4 py-6 sm:px-6 lg:px-8 lg:py-12">
       <div className="mx-auto max-w-[1600px]">
         <div className="mb-4 flex items-end justify-between gap-4">
           <div>
-            <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#0a7ae6]">
+            <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#000000]">
               Featured Products
             </p>
             <h2 className="mt-1 text-[22px] font-normal tracking-[-0.03em] text-slate-900 sm:text-[28px]">
@@ -57,7 +57,7 @@ export default function ProductShowcaseSection({ products }: { products: Storefr
           <Link
             href="/shop"
             prefetch={false}
-            className="group inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs font-semibold text-slate-800 shadow-xs transition-all duration-200 hover:border-[#0a7ae6] hover:bg-slate-50 hover:text-[#0a7ae6] active:scale-95 shrink-0"
+            className="group inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-[#fbf7ef] px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs font-semibold text-slate-800 shadow-xs transition-all duration-200 hover:border-[#000000] hover:bg-slate-50 hover:text-[#000000] active:scale-95 shrink-0"
           >
             <span>View All</span>
             <ArrowRight className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -77,7 +77,7 @@ export default function ProductShowcaseSection({ products }: { products: Storefr
               className="group block h-full"
               aria-label={`View ${product.name}`}
             >
-              <article className="flex h-full flex-col overflow-hidden rounded-lg border border-slate-200/80 bg-white transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
+              <article className="flex h-full flex-col overflow-hidden rounded-lg border border-slate-200/80 bg-[#fbf7ef] transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
                 <div className="flex flex-1 flex-col p-2.5 sm:p-4 lg:p-5">
                   <div className="relative flex h-[140px] items-center justify-center overflow-hidden rounded-md bg-slate-50/60 p-2 sm:h-[235px] sm:p-4 lg:h-[270px]">
                     {isOutOfStock && (
@@ -101,7 +101,7 @@ export default function ProductShowcaseSection({ products }: { products: Storefr
                           category: product.category,
                         });
                       }}
-                      className="absolute top-2.5 right-2.5 z-10 flex size-8 items-center justify-center rounded-full bg-white/90 shadow-sm text-slate-400 backdrop-blur-xs transition-all duration-200 hover:scale-110 hover:bg-white hover:text-red-500 active:scale-95"
+                      className="absolute top-2.5 right-2.5 z-10 flex size-8 items-center justify-center rounded-full bg-white/90 shadow-sm text-slate-400 backdrop-blur-xs transition-all duration-200 hover:scale-110 hover:bg-[#fbf7ef] hover:text-red-500 active:scale-95"
                     >
                       <Heart
                         className={`size-4 transition-colors ${
@@ -176,7 +176,7 @@ export default function ProductShowcaseSection({ products }: { products: Storefr
                               event.stopPropagation();
                               addProductToCart(product);
                             }}
-                            className="inline-flex h-8 cursor-pointer items-center justify-center rounded-md border border-[#0a7ae6] px-1 text-[10px] font-medium text-[#0a7ae6] truncate transition-colors hover:bg-[#0a7ae6] hover:text-white sm:h-10 sm:text-[12px]"
+                            className="inline-flex h-8 cursor-pointer items-center justify-center rounded-md border border-[#000000] px-1 text-[10px] font-medium text-[#000000] truncate transition-colors hover:bg-[#000000] hover:text-white sm:h-10 sm:text-[12px]"
                           >
                             Add to cart
                           </button>
@@ -188,7 +188,7 @@ export default function ProductShowcaseSection({ products }: { products: Storefr
                               addProductToCart(product);
                               router.push(`/checkout?product=${encodeURIComponent(product.slug || product.id)}`);
                             }}
-                            className="inline-flex h-8 cursor-pointer items-center justify-center rounded-md bg-[#0a7ae6] px-1 text-[10px] font-medium text-white truncate transition-opacity hover:opacity-90 sm:h-10 sm:text-[12px]"
+                            className="inline-flex h-8 cursor-pointer items-center justify-center rounded-md bg-[#000000] px-1 text-[10px] font-medium text-white truncate transition-opacity hover:opacity-90 sm:h-10 sm:text-[12px]"
                           >
                             Buy
                           </button>

@@ -54,22 +54,22 @@ export async function sendInquiryCustomerEmail({
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>We Received Your Message - XElectron</title>
         <style>
-          body { margin: 0; padding: 0; background-color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-          .wrapper { width: 100%; table-layout: fixed; background-color: #f1f5f9; padding: 40px 0; }
-          .main-card { max-width: 580px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05); }
-          .brand-header { background: #0f172a; padding: 28px 32px; text-align: center; border-bottom: 3px solid #0a7ae6; }
+          body { margin: 0; padding: 0; background-color: #f3f0ea; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+          .wrapper { width: 100%; table-layout: fixed; background-color: #f3f0ea; padding: 40px 0; }
+          .main-card { max-width: 580px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; border: 1px solid #d7d4cf; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05); }
+          .brand-header { background: #000000; padding: 28px 32px; text-align: center; border-bottom: 3px solid #000000; }
           .logo-text { color: #ffffff; font-size: 22px; font-weight: 900; letter-spacing: -0.5px; margin: 0; text-transform: uppercase; }
-          .logo-text span { color: #38bdf8; }
+          .logo-text span { color: #b2aea7; }
           .hero-section { padding: 32px 32px 20px 32px; text-align: center; }
           .badge { display: inline-block; background-color: #ecfdf5; border: 1px solid #a7f3d0; color: #059669; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 5px 12px; border-radius: 9999px; margin-bottom: 16px; }
-          .headline { color: #0f172a; font-size: 24px; font-weight: 800; margin: 0 0 10px 0; letter-spacing: -0.5px; line-height: 1.25; }
-          .subtext { color: #64748b; font-size: 14px; line-height: 1.5; margin: 0 auto; max-width: 440px; }
+          .headline { color: #000000; font-size: 24px; font-weight: 800; margin: 0 0 10px 0; letter-spacing: -0.5px; line-height: 1.25; }
+          .subtext { color: #5c5951; font-size: 14px; line-height: 1.5; margin: 0 auto; max-width: 440px; }
           .content-box { padding: 0 32px 32px 32px; }
-          .details-card { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; margin: 16px 0 24px 0; }
+          .details-card { background-color: #fbf7ef; border: 1px solid #d7d4cf; border-radius: 12px; padding: 20px 24px; margin: 16px 0 24px 0; }
           .cta-wrapper { text-align: center; margin: 24px 0 8px 0; }
-          .cta-btn { display: inline-block; background: #0a7ae6; color: #ffffff !important; text-decoration: none; padding: 12px 28px; border-radius: 9999px; font-weight: 700; font-size: 13px; letter-spacing: 0.2px; box-shadow: 0 4px 14px rgba(10, 122, 230, 0.25); }
-          .contact-strip { background-color: #f8fafc; border-top: 1px solid #f1f5f9; padding: 20px 24px; text-align: center; }
-          .footer { padding: 24px 32px; text-align: center; font-size: 11px; color: #94a3b8; line-height: 1.6; }
+          .cta-btn { display: inline-block; background: #000000; color: #ffffff !important; text-decoration: none; padding: 12px 28px; border-radius: 9999px; font-weight: 700; font-size: 13px; letter-spacing: 0.2px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25); }
+          .contact-strip { background-color: #fbf7ef; border-top: 1px solid #f3f0ea; padding: 20px 24px; text-align: center; }
+          .footer { padding: 24px 32px; text-align: center; font-size: 11px; color: #8e8a82; line-height: 1.6; }
         </style>
       </head>
       <body>
@@ -78,7 +78,7 @@ export async function sendInquiryCustomerEmail({
             <!-- Brand Header -->
             <div class="brand-header">
               <h1 class="logo-text">X<span>ELECTRON</span></h1>
-              <p style="margin: 4px 0 0 0; color: #94a3b8; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">Official Customer Experience</p>
+              <p style="margin: 4px 0 0 0; color: #8e8a82; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">Official Customer Experience</p>
             </div>
 
             <!-- Hero Section -->
@@ -94,27 +94,27 @@ export async function sendInquiryCustomerEmail({
             <div class="content-box">
               <div class="details-card">
                 <table style="width: 100%; border-collapse: collapse;">
-                  <tr style="border-bottom: 1px solid #edf2f7;">
-                    <td style="padding: 10px 0; color: #64748b; font-size: 13px; font-weight: 600;">Reference ID</td>
+                  <tr style="border-bottom: 1px solid #f3f0ea;">
+                    <td style="padding: 10px 0; color: #5c5951; font-size: 13px; font-weight: 600;">Reference ID</td>
                     <td style="padding: 10px 0; text-align: right;">
-                      <span style="font-family: monospace; font-size: 12px; font-weight: 700; background: #e2e8f0; color: #1e293b; padding: 3px 8px; border-radius: 6px;">${ticketId}</span>
+                      <span style="font-family: monospace; font-size: 12px; font-weight: 700; background: #d7d4cf; color: #1f1e1b; padding: 3px 8px; border-radius: 6px;">${ticketId}</span>
                     </td>
                   </tr>
-                  <tr style="border-bottom: 1px solid #edf2f7;">
-                    <td style="padding: 10px 0; color: #64748b; font-size: 13px; font-weight: 600;">Department</td>
-                    <td style="padding: 10px 0; text-align: right; color: #0a7ae6; font-size: 13px; font-weight: 700;">${department}</td>
+                  <tr style="border-bottom: 1px solid #f3f0ea;">
+                    <td style="padding: 10px 0; color: #5c5951; font-size: 13px; font-weight: 600;">Department</td>
+                    <td style="padding: 10px 0; text-align: right; color: #000000; font-size: 13px; font-weight: 700;">${department}</td>
                   </tr>
                   <tr>
-                    <td style="padding: 10px 0; color: #64748b; font-size: 13px; font-weight: 600;">Status</td>
+                    <td style="padding: 10px 0; color: #5c5951; font-size: 13px; font-weight: 600;">Status</td>
                     <td style="padding: 10px 0; text-align: right;">
                       <span style="font-size: 12px; font-weight: 700; color: #059669; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 2px 8px; border-radius: 9999px;">● Assigned & In Review</span>
                     </td>
                   </tr>
                 </table>
 
-                <div style="margin-top: 14px; padding-top: 14px; border-top: 1px dashed #e2e8f0;">
-                  <div style="font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: #94a3b8; margin-bottom: 6px;">Your Message</div>
-                  <div style="font-size: 13px; color: #334155; line-height: 1.5; background: #ffffff; padding: 12px 14px; border-radius: 8px; border: 1px solid #e2e8f0; font-style: italic;">
+                <div style="margin-top: 14px; padding-top: 14px; border-top: 1px dashed #d7d4cf;">
+                  <div style="font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: #8e8a82; margin-bottom: 6px;">Your Message</div>
+                  <div style="font-size: 13px; color: #3d3b36; line-height: 1.5; background: #ffffff; padding: 12px 14px; border-radius: 8px; border: 1px solid #d7d4cf; font-style: italic;">
                     "${message.length > 250 ? message.slice(0, 250) + "..." : message}"
                   </div>
                 </div>
@@ -130,17 +130,17 @@ export async function sendInquiryCustomerEmail({
 
             <!-- Quick Contact Strip -->
             <div class="contact-strip">
-              <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 10px;">Need immediate assistance?</div>
+              <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #5c5951; margin-bottom: 10px;">Need immediate assistance?</div>
               <table style="margin: 0 auto; border-collapse: collapse;">
                 <tr>
                   <td style="padding: 0 10px; font-size: 12px; font-weight: 600;">
-                    <a href="tel:8527312304" style="color: #0a7ae6; text-decoration: none;">📞 +91 8527312304</a>
+                    <a href="tel:8527312304" style="color: #000000; text-decoration: none;">📞 +91 8527312304</a>
                   </td>
                   <td style="padding: 0 10px; font-size: 12px; font-weight: 600;">
                     <a href="https://wa.me/918527312304" style="color: #059669; text-decoration: none;" target="_blank">💬 WhatsApp</a>
                   </td>
                   <td style="padding: 0 10px; font-size: 12px; font-weight: 600;">
-                    <a href="mailto:${targetEmail}" style="color: #64748b; text-decoration: none;">✉️ Email Team</a>
+                    <a href="mailto:${targetEmail}" style="color: #5c5951; text-decoration: none;">✉️ Email Team</a>
                   </td>
                 </tr>
               </table>
@@ -148,7 +148,7 @@ export async function sendInquiryCustomerEmail({
 
             <!-- Footer -->
             <div class="footer">
-              <p style="margin: 0 0 4px 0; font-weight: 700; color: #475569;">XElectron Technologies Pvt. Ltd.</p>
+              <p style="margin: 0 0 4px 0; font-weight: 700; color: #5c5951;">XElectron Technologies Pvt. Ltd.</p>
               <p style="margin: 0 0 8px 0;">2417, Tower A, The Corenthum, Sector – 62, Noida, UP – 201301</p>
               <p style="margin: 0;">© ${currentYear} XElectron Technologies. All rights reserved.</p>
             </div>
@@ -229,11 +229,11 @@ export async function sendOrderConfirmationEmail(order: SendOrderConfirmationOpt
   const itemsTableHtml =
     order.items && order.items.length > 0
       ? `
-        <div style="margin-top: 16px; border-top: 1px solid #e2e8f0; padding-top: 14px;">
-          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 8px;">Ordered Products (${order.items.length})</div>
+        <div style="margin-top: 16px; border-top: 1px solid #d7d4cf; padding-top: 14px;">
+          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #5c5951; margin-bottom: 8px;">Ordered Products (${order.items.length})</div>
           <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
             <thead>
-              <tr style="border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 11px;">
+              <tr style="border-bottom: 1px solid #d7d4cf; color: #5c5951; font-size: 11px;">
                 <th style="padding: 6px 0; text-align: left;">Product</th>
                 <th style="padding: 6px 8px; text-align: center;">Qty</th>
                 <th style="padding: 6px 0; text-align: right;">Amount</th>
@@ -246,10 +246,10 @@ export async function sendOrderConfirmationEmail(order: SendOrderConfirmationOpt
                   const unit = item.unitPrice ?? item.price ?? 0;
                   const lineTotal = Math.round(unit * item.quantity);
                   return `
-                    <tr style="border-bottom: 1px solid #f1f5f9;">
-                      <td style="padding: 8px 0; color: #1e293b; font-weight: 500;">${name}</td>
-                      <td style="padding: 8px; text-align: center; color: #475569;">${item.quantity}</td>
-                      <td style="padding: 8px 0; text-align: right; color: #0f172a; font-weight: 600;">₹${lineTotal.toLocaleString("en-IN")}</td>
+                    <tr style="border-bottom: 1px solid #f3f0ea;">
+                      <td style="padding: 8px 0; color: #1f1e1b; font-weight: 500;">${name}</td>
+                      <td style="padding: 8px; text-align: center; color: #5c5951;">${item.quantity}</td>
+                      <td style="padding: 8px 0; text-align: right; color: #000000; font-weight: 600;">₹${lineTotal.toLocaleString("en-IN")}</td>
                     </tr>
                   `;
                 })
@@ -269,19 +269,19 @@ export async function sendOrderConfirmationEmail(order: SendOrderConfirmationOpt
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Order Confirmation - XElectron</title>
         <style>
-          body { margin: 0; padding: 0; background-color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-          .wrapper { width: 100%; table-layout: fixed; background-color: #f1f5f9; padding: 40px 0; }
-          .main-card { max-width: 580px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05); }
-          .brand-header { background: #0f172a; padding: 28px 32px; text-align: center; border-bottom: 3px solid #0a7ae6; }
+          body { margin: 0; padding: 0; background-color: #f3f0ea; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+          .wrapper { width: 100%; table-layout: fixed; background-color: #f3f0ea; padding: 40px 0; }
+          .main-card { max-width: 580px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; border: 1px solid #d7d4cf; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05); }
+          .brand-header { background: #000000; padding: 28px 32px; text-align: center; border-bottom: 3px solid #000000; }
           .logo-text { color: #ffffff; font-size: 22px; font-weight: 900; letter-spacing: -0.5px; margin: 0; text-transform: uppercase; }
-          .logo-text span { color: #38bdf8; }
+          .logo-text span { color: #b2aea7; }
           .hero-section { padding: 32px 32px 20px 32px; text-align: center; }
           .badge { display: inline-block; background-color: #ecfdf5; border: 1px solid #a7f3d0; color: #059669; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 5px 12px; border-radius: 9999px; margin-bottom: 16px; }
-          .headline { color: #0f172a; font-size: 24px; font-weight: 800; margin: 0 0 10px 0; letter-spacing: -0.5px; }
-          .details-card { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin: 20px 32px; }
+          .headline { color: #000000; font-size: 24px; font-weight: 800; margin: 0 0 10px 0; letter-spacing: -0.5px; }
+          .details-card { background-color: #fbf7ef; border: 1px solid #d7d4cf; border-radius: 12px; padding: 20px; margin: 20px 32px; }
           .cta-wrapper { text-align: center; margin: 24px 32px 32px 32px; }
-          .cta-btn { display: inline-block; background: #0a7ae6; color: #ffffff !important; text-decoration: none; padding: 13px 28px; border-radius: 10px; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
-          .footer { padding: 24px 32px; text-align: center; font-size: 11px; color: #94a3b8; line-height: 1.6; border-top: 1px solid #f1f5f9; }
+          .cta-btn { display: inline-block; background: #000000; color: #ffffff !important; text-decoration: none; padding: 13px 28px; border-radius: 10px; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+          .footer { padding: 24px 32px; text-align: center; font-size: 11px; color: #8e8a82; line-height: 1.6; border-top: 1px solid #f3f0ea; }
         </style>
       </head>
       <body>
@@ -289,31 +289,31 @@ export async function sendOrderConfirmationEmail(order: SendOrderConfirmationOpt
           <div class="main-card">
             <div class="brand-header">
               <h1 class="logo-text">X<span>ELECTRON</span></h1>
-              <p style="margin: 4px 0 0 0; color: #94a3b8; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">Official Order Confirmation</p>
+              <p style="margin: 4px 0 0 0; color: #8e8a82; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">Official Order Confirmation</p>
             </div>
 
             <div class="hero-section">
               <span class="badge">✓ Order Confirmed</span>
               <h2 class="headline">Thank you for your order!</h2>
-              <p style="color: #64748b; font-size: 14px; margin: 0;">Hi ${order.customerName || "Valued Customer"}, your order has been received and is being prepared for fulfillment. We will share courier tracking details as soon as your package is dispatched.</p>
+              <p style="color: #5c5951; font-size: 14px; margin: 0;">Hi ${order.customerName || "Valued Customer"}, your order has been received and is being prepared for fulfillment. We will share courier tracking details as soon as your package is dispatched.</p>
             </div>
 
             <div class="details-card">
               <table style="width: 100%; border-collapse: collapse;">
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 13px; font-weight: 600;">Order Number</td>
-                  <td style="padding: 8px 0; color: #0f172a; font-size: 13px; font-weight: 800; text-align: right; font-family: monospace;">${orderNumber}</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 13px; font-weight: 600;">Order Number</td>
+                  <td style="padding: 8px 0; color: #000000; font-size: 13px; font-weight: 800; text-align: right; font-family: monospace;">${orderNumber}</td>
                 </tr>
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 13px; font-weight: 600;">Total Amount</td>
-                  <td style="padding: 8px 0; color: #0a7ae6; font-size: 14px; font-weight: 800; text-align: right;">${formattedTotal}</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 13px; font-weight: 600;">Total Amount</td>
+                  <td style="padding: 8px 0; color: #000000; font-size: 14px; font-weight: 800; text-align: right;">${formattedTotal}</td>
                 </tr>
                 ${
                   order.paymentMethod
                     ? `
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 13px; font-weight: 600;">Payment Mode</td>
-                  <td style="padding: 8px 0; color: #0f172a; font-size: 13px; font-weight: 700; text-align: right;">${order.paymentMethod}</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 13px; font-weight: 600;">Payment Mode</td>
+                  <td style="padding: 8px 0; color: #000000; font-size: 13px; font-weight: 700; text-align: right;">${order.paymentMethod}</td>
                 </tr>
                 `
                     : ""
@@ -321,9 +321,9 @@ export async function sendOrderConfirmationEmail(order: SendOrderConfirmationOpt
                 ${
                   deliveryAddress
                     ? `
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 13px; font-weight: 600; vertical-align: top;">Delivery Address</td>
-                  <td style="padding: 8px 0; color: #334155; font-size: 12px; font-weight: 500; text-align: right; max-width: 280px;">${deliveryAddress}</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 13px; font-weight: 600; vertical-align: top;">Delivery Address</td>
+                  <td style="padding: 8px 0; color: #3d3b36; font-size: 12px; font-weight: 500; text-align: right; max-width: 280px;">${deliveryAddress}</td>
                 </tr>
                 `
                     : ""
@@ -331,9 +331,9 @@ export async function sendOrderConfirmationEmail(order: SendOrderConfirmationOpt
                 ${
                   order.shippingCarrier
                     ? `
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 13px; font-weight: 600;">Carrier Partner</td>
-                  <td style="padding: 8px 0; color: #0f172a; font-size: 13px; font-weight: 700; text-align: right;">${order.shippingCarrier}</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 13px; font-weight: 600;">Carrier Partner</td>
+                  <td style="padding: 8px 0; color: #000000; font-size: 13px; font-weight: 700; text-align: right;">${order.shippingCarrier}</td>
                 </tr>
                 `
                     : ""
@@ -341,9 +341,9 @@ export async function sendOrderConfirmationEmail(order: SendOrderConfirmationOpt
                 ${
                   order.trackingNumber
                     ? `
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 13px; font-weight: 600;">Delhivery AWB</td>
-                  <td style="padding: 8px 0; color: #0a7ae6; font-size: 13px; font-weight: 800; text-align: right; font-family: monospace;">${order.trackingNumber}</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 13px; font-weight: 600;">Delhivery AWB</td>
+                  <td style="padding: 8px 0; color: #000000; font-size: 13px; font-weight: 800; text-align: right; font-family: monospace;">${order.trackingNumber}</td>
                 </tr>
                 `
                     : ""
@@ -352,7 +352,7 @@ export async function sendOrderConfirmationEmail(order: SendOrderConfirmationOpt
                   order.estimatedDelivery
                     ? `
                 <tr>
-                  <td style="padding: 8px 0; color: #64748b; font-size: 13px; font-weight: 600;">Estimated Delivery</td>
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 13px; font-weight: 600;">Estimated Delivery</td>
                   <td style="padding: 8px 0; color: #059669; font-size: 13px; font-weight: 700; text-align: right;">${order.estimatedDelivery}</td>
                 </tr>
                 `
@@ -377,7 +377,7 @@ export async function sendOrderConfirmationEmail(order: SendOrderConfirmationOpt
 
             <div class="footer">
               <p style="margin: 0 0 6px 0;"><strong>XElectron Technologies Pvt. Ltd.</strong></p>
-              <p style="margin: 0 0 4px 0;">Customer Support: <a href="mailto:customercare@xelectron.com" style="color: #0a7ae6; text-decoration: none;">customercare@xelectron.com</a> | Call: +91 8527312304</p>
+              <p style="margin: 0 0 4px 0;">Customer Support: <a href="mailto:customercare@xelectron.com" style="color: #000000; text-decoration: none;">customercare@xelectron.com</a> | Call: +91 8527312304</p>
               <p style="margin: 0 0 10px 0;">2417, Tower A, The Corenthum, Sector – 62, Noida, UP – 201301</p>
               <p style="margin: 0;">© ${currentYear} XElectron Technologies. All rights reserved.</p>
             </div>
@@ -403,19 +403,19 @@ XElectron Technologies Pvt. Ltd.`;
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>New Order Alert - XElectron</title>
         <style>
-          body { margin: 0; padding: 0; background-color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-          .wrapper { width: 100%; table-layout: fixed; background-color: #f1f5f9; padding: 36px 0; }
-          .main-card { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05); }
-          .brand-header { background: #0f172a; padding: 24px 32px; text-align: center; border-bottom: 3px solid #0a7ae6; }
+          body { margin: 0; padding: 0; background-color: #f3f0ea; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+          .wrapper { width: 100%; table-layout: fixed; background-color: #f3f0ea; padding: 36px 0; }
+          .main-card { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; border: 1px solid #d7d4cf; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05); }
+          .brand-header { background: #000000; padding: 24px 32px; text-align: center; border-bottom: 3px solid #000000; }
           .logo-text { color: #ffffff; font-size: 20px; font-weight: 900; letter-spacing: -0.5px; margin: 0; text-transform: uppercase; }
-          .logo-text span { color: #38bdf8; }
+          .logo-text span { color: #b2aea7; }
           .hero-section { padding: 28px 32px 16px 32px; text-align: center; }
           .badge { display: inline-block; background-color: #eff6ff; border: 1px solid #bfdbfe; color: #1d4ed8; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; padding: 5px 14px; border-radius: 9999px; margin-bottom: 12px; }
-          .headline { color: #0f172a; font-size: 22px; font-weight: 800; margin: 0 0 8px 0; letter-spacing: -0.5px; }
-          .details-card { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin: 16px 32px; }
+          .headline { color: #000000; font-size: 22px; font-weight: 800; margin: 0 0 8px 0; letter-spacing: -0.5px; }
+          .details-card { background-color: #fbf7ef; border: 1px solid #d7d4cf; border-radius: 12px; padding: 20px; margin: 16px 32px; }
           .cta-wrapper { text-align: center; margin: 20px 32px 28px 32px; }
-          .cta-btn { display: inline-block; background: #0a7ae6; color: #ffffff !important; text-decoration: none; padding: 12px 26px; border-radius: 10px; font-weight: 700; font-size: 13px; letter-spacing: 0.3px; }
-          .footer { padding: 20px 32px; text-align: center; font-size: 11px; color: #94a3b8; line-height: 1.5; border-top: 1px solid #f1f5f9; background: #fafafa; }
+          .cta-btn { display: inline-block; background: #000000; color: #ffffff !important; text-decoration: none; padding: 12px 26px; border-radius: 10px; font-weight: 700; font-size: 13px; letter-spacing: 0.3px; }
+          .footer { padding: 20px 32px; text-align: center; font-size: 11px; color: #8e8a82; line-height: 1.5; border-top: 1px solid #f3f0ea; background: #fafafa; }
         </style>
       </head>
       <body>
@@ -423,51 +423,51 @@ XElectron Technologies Pvt. Ltd.`;
           <div class="main-card">
             <div class="brand-header">
               <h1 class="logo-text">X<span>ELECTRON</span></h1>
-              <p style="margin: 4px 0 0 0; color: #94a3b8; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">Store Operations • New Order Alert</p>
+              <p style="margin: 4px 0 0 0; color: #8e8a82; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">Store Operations • New Order Alert</p>
             </div>
 
             <div class="hero-section">
               <span class="badge">🔔 New Order Placed</span>
               <h2 class="headline">${orderNumber} • ${formattedTotal}</h2>
-              <p style="color: #64748b; font-size: 13px; margin: 0;">A new order was successfully created on xelectron.com. Please review the customer details and fulfillment requirements below.</p>
+              <p style="color: #5c5951; font-size: 13px; margin: 0;">A new order was successfully created on xelectron.com. Please review the customer details and fulfillment requirements below.</p>
             </div>
 
             <div class="details-card">
               <table style="width: 100%; border-collapse: collapse;">
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 12px; font-weight: 600;">Order Reference</td>
-                  <td style="padding: 8px 0; color: #0f172a; font-size: 13px; font-weight: 800; text-align: right; font-family: monospace;">${orderNumber}</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 12px; font-weight: 600;">Order Reference</td>
+                  <td style="padding: 8px 0; color: #000000; font-size: 13px; font-weight: 800; text-align: right; font-family: monospace;">${orderNumber}</td>
                 </tr>
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 12px; font-weight: 600;">Order Amount</td>
-                  <td style="padding: 8px 0; color: #0a7ae6; font-size: 14px; font-weight: 800; text-align: right;">${formattedTotal}</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 12px; font-weight: 600;">Order Amount</td>
+                  <td style="padding: 8px 0; color: #000000; font-size: 14px; font-weight: 800; text-align: right;">${formattedTotal}</td>
                 </tr>
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 12px; font-weight: 600;">Payment Status / Method</td>
-                  <td style="padding: 8px 0; color: #0f172a; font-size: 12px; font-weight: 700; text-align: right;">${order.paymentMethod || "Online / COD"}</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 12px; font-weight: 600;">Payment Status / Method</td>
+                  <td style="padding: 8px 0; color: #000000; font-size: 12px; font-weight: 700; text-align: right;">${order.paymentMethod || "Online / COD"}</td>
                 </tr>
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 12px; font-weight: 600;">Customer Name</td>
-                  <td style="padding: 8px 0; color: #0f172a; font-size: 13px; font-weight: 700; text-align: right;">${order.customerName || "Not provided"}</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 12px; font-weight: 600;">Customer Name</td>
+                  <td style="padding: 8px 0; color: #000000; font-size: 13px; font-weight: 700; text-align: right;">${order.customerName || "Not provided"}</td>
                 </tr>
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 12px; font-weight: 600;">Customer Phone</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 12px; font-weight: 600;">Customer Phone</td>
                   <td style="padding: 8px 0; text-align: right;">
-                    ${order.customerPhone ? `<a href="tel:${order.customerPhone}" style="color: #0a7ae6; font-weight: 700; text-decoration: none; font-size: 13px;">${order.customerPhone}</a>` : '<span style="color: #94a3b8; font-size: 12px;">N/A</span>'}
+                    ${order.customerPhone ? `<a href="tel:${order.customerPhone}" style="color: #000000; font-weight: 700; text-decoration: none; font-size: 13px;">${order.customerPhone}</a>` : '<span style="color: #8e8a82; font-size: 12px;">N/A</span>'}
                   </td>
                 </tr>
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 12px; font-weight: 600;">Customer Email</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 12px; font-weight: 600;">Customer Email</td>
                   <td style="padding: 8px 0; text-align: right;">
-                    ${order.customerEmail ? `<a href="mailto:${order.customerEmail}" style="color: #0a7ae6; font-weight: 600; text-decoration: none; font-size: 12px;">${order.customerEmail}</a>` : '<span style="color: #94a3b8; font-size: 12px;">Not provided</span>'}
+                    ${order.customerEmail ? `<a href="mailto:${order.customerEmail}" style="color: #000000; font-weight: 600; text-decoration: none; font-size: 12px;">${order.customerEmail}</a>` : '<span style="color: #8e8a82; font-size: 12px;">Not provided</span>'}
                   </td>
                 </tr>
                 ${
                   deliveryAddress
                     ? `
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 8px 0; color: #64748b; font-size: 12px; font-weight: 600; vertical-align: top;">Shipping Address</td>
-                  <td style="padding: 8px 0; color: #1e293b; font-size: 12px; font-weight: 500; text-align: right; max-width: 300px;">${deliveryAddress}</td>
+                <tr style="border-bottom: 1px solid #d7d4cf;">
+                  <td style="padding: 8px 0; color: #5c5951; font-size: 12px; font-weight: 600; vertical-align: top;">Shipping Address</td>
+                  <td style="padding: 8px 0; color: #1f1e1b; font-size: 12px; font-weight: 500; text-align: right; max-width: 300px;">${deliveryAddress}</td>
                 </tr>
                 `
                     : ""
@@ -484,7 +484,7 @@ XElectron Technologies Pvt. Ltd.`;
             </div>
 
             <div class="footer">
-              <p style="margin: 0 0 4px 0; font-weight: 600; color: #475569;">XElectron Operations Notification</p>
+              <p style="margin: 0 0 4px 0; font-weight: 600; color: #5c5951;">XElectron Operations Notification</p>
               <p style="margin: 0;">Dispatched to store operations: info@xelectron.com & customercare@xelectron.com</p>
             </div>
           </div>

@@ -33,8 +33,8 @@ const QUICK_CONTACTS = [
     ],
     whatsapp: "8527312304",
     email: "customercare@xelectron.com",
-    tagColor: "bg-blue-50 text-[#0a7ae6] border-blue-200/80",
-    iconBg: "bg-blue-50 text-[#0a7ae6]",
+    tagColor: "bg-blue-50 text-[#000000] border-blue-200/80",
+    iconBg: "bg-blue-50 text-[#000000]",
   },
   {
     id: "sales-inquiries",
@@ -126,16 +126,16 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#fafafa] text-slate-900 selection:bg-[#0a7ae6] selection:text-white">
+    <main className="min-h-screen bg-[#fafafa] text-slate-900 selection:bg-[#000000] selection:text-white">
       <Navbar />
 
       {/* HERO & PRIMARY CONTACT CHANNELS SECTION */}
-      <section className="relative overflow-hidden bg-white border-b border-slate-200/80 pt-16 pb-16 sm:pt-24 sm:pb-24">
+      <section className="relative overflow-hidden bg-[#fbf7ef] border-b border-slate-200/80 pt-16 pb-16 sm:pt-24 sm:pb-24">
         {/* Technical Grid Background Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_15%,#000_60%,transparent_100%)] pointer-events-none opacity-80" />
         
         {/* Ambient Radial Lighting */}
-        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-[radial-gradient(circle_at_center,rgba(10,122,230,0.08),transparent_70%)] pointer-events-none" />
+        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-[radial-gradient(circle_at_center,rgba(0, 0, 0,0.08),transparent_70%)] pointer-events-none" />
         <div className="absolute top-1/3 -right-20 w-[400px] h-[350px] bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.06),transparent_70%)] pointer-events-none" />
 
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8 relative z-10">
@@ -150,7 +150,7 @@ export default function ContactPage() {
             </div>
 
             <h1 className="mt-5 text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
-              How can we <span className="text-[#0a7ae6]">help you</span> today?
+              How can we <span className="text-[#000000]">help you</span> today?
             </h1>
 
             <p className="mt-4 text-sm sm:text-base text-slate-600 max-w-xl leading-relaxed">
@@ -165,7 +165,7 @@ export default function ContactPage() {
               return (
                 <div
                   key={dept.id}
-                  className="flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-5 sm:p-7 shadow-xs hover:shadow-md hover:border-slate-300 transition-all duration-200"
+                  className="flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-[#fbf7ef] p-5 sm:p-7 shadow-xs hover:shadow-md hover:border-slate-300 transition-all duration-200"
                 >
                   {/* Card Header & Contact Details */}
                   <div>
@@ -208,7 +208,7 @@ export default function ContactPage() {
                         </span>
                         <a
                           href={`mailto:${dept.email}`}
-                          className="flex min-h-11 max-w-full items-center break-all text-sm font-semibold text-[#0a7ae6] hover:underline underline-offset-4 transition"
+                          className="flex min-h-11 max-w-full items-center break-all text-sm font-semibold text-[#000000] hover:underline underline-offset-4 transition"
                         >
                           {dept.email}
                         </a>
@@ -242,7 +242,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="max-w-2xl mb-10 sm:mb-12">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#000000]">
               <MapPin className="size-3.5" /> Experience & Service Hubs
             </span>
             <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">
@@ -260,7 +260,7 @@ export default function ContactPage() {
               return (
                 <div
                   key={loc.name}
-                  className="group flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-xs hover:shadow-lg hover:border-slate-300 transition-all duration-300"
+                  className="group flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-[#fbf7ef] p-6 sm:p-7 shadow-xs hover:shadow-lg hover:border-slate-300 transition-all duration-300"
                 >
                   <div className="space-y-4">
                     {/* Header with Icon and Badge */}
@@ -275,7 +275,7 @@ export default function ContactPage() {
 
                     {/* Name & Address */}
                     <div>
-                      <h3 className="text-base font-bold text-slate-900 group-hover:text-[#0a7ae6] transition-colors leading-snug">
+                      <h3 className="text-base font-bold text-slate-900 group-hover:text-[#000000] transition-colors leading-snug">
                         {loc.name}
                       </h3>
                       <p className="mt-2 text-xs text-slate-600 leading-relaxed">
@@ -306,7 +306,7 @@ export default function ContactPage() {
                         <span className="text-slate-400 flex items-center gap-1.5 text-[11px]">
                           <Mail className="size-3.5 text-slate-400" /> Email
                         </span>
-                        <a href={`mailto:${loc.email}`} className="max-w-full break-all font-semibold text-[#0a7ae6] hover:underline">
+                        <a href={`mailto:${loc.email}`} className="max-w-full break-all font-semibold text-[#000000] hover:underline">
                           {loc.email}
                         </a>
                       </div>
@@ -337,8 +337,8 @@ export default function ContactPage() {
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-12 items-start">
             {/* INQUIRY FORM */}
-            <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-2xl border border-slate-200/90 shadow-xs">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+            <div className="lg:col-span-7 bg-[#fbf7ef] p-6 sm:p-10 rounded-2xl border border-slate-200/90 shadow-xs">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#000000]">
                 Message Us
               </span>
               <h2 className="mt-1 text-2xl font-bold text-slate-900 tracking-tight">
@@ -363,7 +363,7 @@ export default function ContactPage() {
                     </p>
                   </div>
 
-                  <div className="mx-auto max-w-md rounded-xl border border-emerald-300/80 bg-white p-3.5 shadow-2xs text-left space-y-2">
+                  <div className="mx-auto max-w-md rounded-xl border border-emerald-300/80 bg-[#fbf7ef] p-3.5 shadow-2xs text-left space-y-2">
                     <div className="flex items-center justify-between text-xs">
                       <span className="font-semibold text-slate-500">Department:</span>
                       <span className="font-bold text-slate-900">{selectedDepartmentInfo.label}</span>
@@ -373,7 +373,7 @@ export default function ContactPage() {
                         <Mail className="size-3.5 text-emerald-600" />
                         Routed Mailbox:
                       </span>
-                      <span className="font-mono font-bold text-[#0a7ae6]">{sentToEmail || selectedDepartmentInfo.email}</span>
+                      <span className="font-mono font-bold text-[#000000]">{sentToEmail || selectedDepartmentInfo.email}</span>
                     </div>
                   </div>
 
@@ -389,7 +389,7 @@ export default function ContactPage() {
                         setSentToEmail("");
                         setFormData({ name: "", email: "", phone: "", department: "Sales Department", message: "" });
                       }}
-                      className="inline-flex items-center rounded-xl bg-slate-900 px-5 py-2.5 text-xs font-semibold text-white hover:bg-[#0a7ae6] transition cursor-pointer shadow-xs"
+                      className="inline-flex items-center rounded-xl bg-slate-900 px-5 py-2.5 text-xs font-semibold text-white hover:bg-[#000000] transition cursor-pointer shadow-xs"
                     >
                       Send Another Message
                     </button>
@@ -409,7 +409,7 @@ export default function ContactPage() {
                         placeholder="e.g. Rahul Sharma"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition"
                       />
                     </div>
 
@@ -424,7 +424,7 @@ export default function ContactPage() {
                         placeholder="rahul@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition"
                       />
                     </div>
                   </div>
@@ -440,7 +440,7 @@ export default function ContactPage() {
                         placeholder="+91 98702 93008"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition"
                       />
                     </div>
 
@@ -452,7 +452,7 @@ export default function ContactPage() {
                         id="department"
                         value={formData.department}
                         onChange={(e) => setFormData({ ...formData, department: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs font-semibold text-slate-800 outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs font-semibold text-slate-800 outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition"
                       >
                         {CONTACT_DEPARTMENTS.map((dept) => (
                           <option key={dept.value} value={dept.value}>
@@ -466,15 +466,15 @@ export default function ContactPage() {
                   {/* Destination Email Indicator Badge */}
                   <div className="rounded-xl border border-blue-100 bg-blue-50/70 p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
                     <div className="flex items-center gap-2 text-slate-700 min-w-0">
-                      <Mail className="size-4 text-[#0a7ae6] shrink-0" />
+                      <Mail className="size-4 text-[#000000] shrink-0" />
                       <div className="min-w-0">
                         <span className="text-[11px] font-semibold text-slate-500 block">Direct recipient mailbox:</span>
                         <span className="text-[11px] text-slate-600 truncate block">{selectedDepartmentInfo.desc}</span>
                       </div>
                     </div>
-                    <div className="shrink-0 flex items-center gap-1.5 self-start sm:self-auto bg-white border border-blue-200/80 px-2.5 py-1 rounded-lg">
+                    <div className="shrink-0 flex items-center gap-1.5 self-start sm:self-auto bg-[#fbf7ef] border border-blue-200/80 px-2.5 py-1 rounded-lg">
                       <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                      <span className="font-mono font-bold text-[#0a7ae6] text-[11px]">
+                      <span className="font-mono font-bold text-[#000000] text-[11px]">
                         {selectedDepartmentInfo.email}
                       </span>
                     </div>
@@ -491,14 +491,14 @@ export default function ContactPage() {
                       placeholder="Enter your message, product model, or inquiry details..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50/50 p-3.5 text-xs outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition resize-none"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50/50 p-3.5 text-xs outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex h-11 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-slate-900 px-7 text-xs font-bold text-white transition hover:bg-[#0a7ae6] shadow-xs active:scale-95 disabled:opacity-50 cursor-pointer"
+                    className="inline-flex h-11 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-slate-900 px-7 text-xs font-bold text-white transition hover:bg-[#000000] shadow-xs active:scale-95 disabled:opacity-50 cursor-pointer"
                   >
                     <Send className="size-3.5" />
                     <span>{isSubmitting ? "Sending..." : "Submit Inquiry"}</span>
@@ -510,7 +510,7 @@ export default function ContactPage() {
             {/* FREQUENTLY ASKED QUESTIONS */}
             <div className="lg:col-span-5 space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#000000]">
                   Common Questions
                 </span>
                 <h2 className="mt-1 text-2xl font-bold text-slate-900 tracking-tight">
@@ -524,16 +524,16 @@ export default function ContactPage() {
                   return (
                     <div
                       key={faq.question}
-                      className="rounded-xl border border-slate-200/90 bg-white overflow-hidden shadow-2xs transition"
+                      className="rounded-xl border border-slate-200/90 bg-[#fbf7ef] overflow-hidden shadow-2xs transition"
                     >
                       <button
                         type="button"
                         onClick={() => setActiveFaqIndex(isOpen ? null : index)}
-                        className="flex w-full items-center justify-between p-4.5 text-left text-xs font-bold text-slate-900 hover:text-[#0a7ae6] transition cursor-pointer"
+                        className="flex w-full items-center justify-between p-4.5 text-left text-xs font-bold text-slate-900 hover:text-[#000000] transition cursor-pointer"
                       >
                         <span className="pr-4 leading-snug">{faq.question}</span>
                         <ChevronDown
-                          className={`size-4 shrink-0 text-slate-400 transition-transform duration-200 ${isOpen ? "rotate-180 text-[#0a7ae6]" : ""}`}
+                          className={`size-4 shrink-0 text-slate-400 transition-transform duration-200 ${isOpen ? "rotate-180 text-[#000000]" : ""}`}
                         />
                       </button>
                       {isOpen && (
@@ -547,7 +547,7 @@ export default function ContactPage() {
               </div>
 
               <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5 space-y-1.5">
-                <div className="flex items-center gap-2 text-xs font-bold text-[#0a7ae6]">
+                <div className="flex items-center gap-2 text-xs font-bold text-[#000000]">
                   <ShieldCheck className="size-4" /> Pan-India Customer Support
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed">

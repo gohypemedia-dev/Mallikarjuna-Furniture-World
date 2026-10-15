@@ -125,7 +125,7 @@ export function AdminOverview({ data }: { data: DashboardData }) {
   }
 
   return (
-    <section className={`relative flex min-w-0 flex-1 flex-col gap-4 bg-[#f5f5f5] p-4 pt-6 transition-opacity ${isLoading ? "opacity-70 pointer-events-none" : "opacity-100"}`}>
+    <section className={`relative flex min-w-0 flex-1 flex-col gap-4 bg-[#f3f0ea] p-4 pt-6 transition-opacity ${isLoading ? "opacity-70 pointer-events-none" : "opacity-100"}`}>
       <div className="relative flex items-center justify-between gap-4 min-w-0">
         <div className="min-w-0">
           <h1 className="mt-1 truncate text-lg font-semibold tracking-tight text-black">
@@ -139,7 +139,7 @@ export function AdminOverview({ data }: { data: DashboardData }) {
           type="button"
           aria-expanded={isDatePickerOpen}
           onClick={() => setIsDatePickerOpen((open) => !open)}
-          className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-lg border border-black/25 bg-white px-2.5 text-xs font-medium text-black/75 shadow-sm transition-colors hover:bg-black/[0.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/25"
+          className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-lg border border-black/25 bg-[#fbf7ef] px-2.5 text-xs font-medium text-black/75 shadow-sm transition-colors hover:bg-black/[0.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/25"
         >
           {isLoading ? <Loader2 className="size-3.5 animate-spin text-black/65" /> : <CalendarDays className="size-3.5 text-black/65" />}
           {rangeLabel}
@@ -147,7 +147,7 @@ export function AdminOverview({ data }: { data: DashboardData }) {
         </button>
 
         {isDatePickerOpen ? (
-          <div className="absolute right-0 top-10 z-30 flex w-[min(680px,calc(100vw-2rem))] overflow-hidden rounded-xl border border-black/15 bg-white shadow-xl">
+          <div className="absolute right-0 top-10 z-30 flex w-[min(680px,calc(100vw-2rem))] overflow-hidden rounded-xl border border-black/15 bg-[#fbf7ef] shadow-xl">
             <div className="hidden w-40 shrink-0 border-r border-black/10 bg-[#fafafa] p-2 sm:block">
               {["Today", "Yesterday", "Last 7 days", "Last 30 days", "Quarter to date", "Custom range"].map((option) => (
                 <button
@@ -175,7 +175,7 @@ export function AdminOverview({ data }: { data: DashboardData }) {
                   aria-label="Date unit"
                   value={customUnit}
                   onChange={(e) => setCustomUnit(e.target.value)}
-                  className="h-8 rounded-md border border-black/20 bg-white px-2 outline-none focus:border-black/50"
+                  className="h-8 rounded-md border border-black/20 bg-[#fbf7ef] px-2 outline-none focus:border-black/50"
                 >
                   <option>Days</option>
                   <option>Weeks</option>
@@ -208,7 +208,7 @@ export function AdminOverview({ data }: { data: DashboardData }) {
         ) : null}
       </div>
 
-      <div className="relative rounded-xl border border-black/10 bg-white p-2 shadow-sm sm:p-3 min-w-0">
+      <div className="relative rounded-xl border border-black/10 bg-[#fbf7ef] p-2 shadow-sm sm:p-3 min-w-0">
         <button
           type="button"
           aria-label={isExpanded ? "Collapse overview" : "Expand overview"}
@@ -229,7 +229,7 @@ export function AdminOverview({ data }: { data: DashboardData }) {
               className={`relative min-w-0 min-h-14 rounded-lg px-3 py-2 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/25 ${
                 selectedMetric === metric.label
                   ? "bg-[#f0f0f0]"
-                  : "bg-white hover:bg-black/[0.03]"
+                  : "bg-[#fbf7ef] hover:bg-black/[0.03]"
               }`}
             >
               <div className="flex items-center justify-between gap-2 min-w-0">
@@ -316,16 +316,16 @@ export function AdminOverview({ data }: { data: DashboardData }) {
       </div>
 
       <div className="grid gap-2 sm:grid-cols-2">
-        <div className="flex items-center gap-2 rounded-lg border border-black/10 bg-white px-3 py-2 text-sm font-medium min-w-0">
+        <div className="flex items-center gap-2 rounded-lg border border-black/10 bg-[#fbf7ef] px-3 py-2 text-sm font-medium min-w-0">
           <span aria-hidden>▣</span> {currentData.pendingOrders} {currentData.pendingOrders === 1 ? "order" : "orders"} to fulfil
         </div>
-        <div className="flex items-center gap-2 rounded-lg border border-black/10 bg-white px-3 py-2 text-sm font-medium min-w-0">
+        <div className="flex items-center gap-2 rounded-lg border border-black/10 bg-[#fbf7ef] px-3 py-2 text-sm font-medium min-w-0">
           <span aria-hidden>▱</span> Payment capture data unavailable
         </div>
       </div>
 
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)_minmax(0,1fr)]">
-        <section className="min-w-0 rounded-xl border border-black/10 bg-white p-4 shadow-sm">
+        <section className="min-w-0 rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-sm">
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-semibold">Recent orders</h2>
             <Link prefetch={false} href="/dashboard/orders" className="text-xs text-black/55 underline underline-offset-2 hover:text-black">
@@ -347,7 +347,7 @@ export function AdminOverview({ data }: { data: DashboardData }) {
           )}
         </section>
 
-        <section className="min-w-0 rounded-xl border border-black/10 bg-white p-4 shadow-sm">
+        <section className="min-w-0 rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-sm">
           <h2 className="text-sm font-semibold">Top products</h2>
           {currentData.topProducts.length === 0 ? (
             <p className="mt-3 py-3 text-xs text-black/55">Top products will appear after an order is placed in this period.</p>
@@ -363,7 +363,7 @@ export function AdminOverview({ data }: { data: DashboardData }) {
           )}
         </section>
 
-        <section className="min-w-0 rounded-xl border border-black/10 bg-white p-4 shadow-sm">
+        <section className="min-w-0 rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-sm">
           <h2 className="text-sm font-semibold">Quick actions</h2>
           <div className="mt-3 grid gap-2">
             <Link prefetch={false} href="/dashboard/products/new" className="rounded-md border border-black/15 px-3 py-2 text-left text-xs font-medium transition-colors hover:bg-black hover:text-white">Add product</Link>
@@ -373,7 +373,7 @@ export function AdminOverview({ data }: { data: DashboardData }) {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <section className="min-w-0 rounded-xl border border-black/10 bg-white p-4 shadow-sm">
+        <section className="min-w-0 rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-sm">
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-semibold">Store health</h2>
             <span className="size-2 rounded-full bg-black/25" />
@@ -385,12 +385,12 @@ export function AdminOverview({ data }: { data: DashboardData }) {
           </div>
         </section>
 
-        <section className="min-w-0 rounded-xl border border-black/10 bg-white p-4 shadow-sm">
+        <section className="min-w-0 rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-sm">
           <h2 className="text-sm font-semibold">Traffic sources</h2>
           <p className="mt-3 py-3 text-xs text-black/55">No traffic data has been collected yet.</p>
         </section>
 
-        <section className="min-w-0 rounded-xl border border-black/10 bg-white p-4 shadow-sm">
+        <section className="min-w-0 rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-sm">
           <h2 className="text-sm font-semibold">Inventory alerts</h2>
           <div className="mt-3 space-y-3 text-xs">
             <div className="flex items-center justify-between"><span className="text-black/70">Low stock</span><span className="rounded-full bg-amber-100 px-2 py-1 font-medium text-amber-800">{currentData.lowStockCount} items</span></div>
@@ -399,7 +399,7 @@ export function AdminOverview({ data }: { data: DashboardData }) {
           </div>
         </section>
 
-        <section className="min-w-0 rounded-xl border border-black/10 bg-white p-4 shadow-sm">
+        <section className="min-w-0 rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-sm">
           <h2 className="text-sm font-semibold">Customer snapshot</h2>
           <p className="mt-3 text-2xl font-semibold">{currentData.customerCount.toLocaleString("en-IN")}</p>
           <p className="mt-1 text-xs text-black/55">Total customers</p>

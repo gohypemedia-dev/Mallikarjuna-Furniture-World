@@ -12,10 +12,10 @@ type ValueType = "percentage" | "fixed";
 type EligibilityType = "ALL_PRODUCTS" | "SPECIFIC_PRODUCTS";
 
 function SectionCard({ children }: { children: React.ReactNode }) {
-  return <section className="rounded-xl border border-black/10 bg-white p-4 shadow-sm">{children}</section>;
+  return <section className="rounded-xl border border-black/10 bg-[#fbf7ef] p-4 shadow-sm">{children}</section>;
 }
 
-const inputClass = "h-9 w-full rounded-lg border border-black/25 bg-white px-3 text-sm outline-none transition focus:border-black/55 focus:ring-2 focus:ring-black/5";
+const inputClass = "h-9 w-full rounded-lg border border-black/25 bg-[#fbf7ef] px-3 text-sm outline-none transition focus:border-black/55 focus:ring-2 focus:ring-black/5";
 
 type DiscountProduct = { id: string; name: string; price?: string | number };
 
@@ -201,7 +201,7 @@ export function AmountOffProductsEditor() {
   const selectedProductNames = allProducts.filter((p) => selectedProductIds.includes(p.id));
 
   return (
-    <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-5">
+    <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-5">
       <form className="mx-auto max-w-[970px]" onSubmit={saveDiscount}>
         <header className="flex flex-wrap items-center justify-between gap-3">
           <div>
@@ -240,7 +240,7 @@ export function AmountOffProductsEditor() {
                   type="button"
                   onClick={() => setMethod("code")}
                   className={`h-9 px-3 text-xs font-medium cursor-pointer ${
-                    method === "code" ? "bg-black/[0.12]" : "bg-white hover:bg-black/[0.03]"
+                    method === "code" ? "bg-black/[0.12]" : "bg-[#fbf7ef] hover:bg-black/[0.03]"
                   }`}
                 >
                   Discount code
@@ -249,7 +249,7 @@ export function AmountOffProductsEditor() {
                   type="button"
                   onClick={() => setMethod("automatic")}
                   className={`h-9 border-l border-black/15 px-3 text-xs font-medium cursor-pointer ${
-                    method === "automatic" ? "bg-black/[0.12]" : "bg-white hover:bg-black/[0.03]"
+                    method === "automatic" ? "bg-black/[0.12]" : "bg-[#fbf7ef] hover:bg-black/[0.03]"
                   }`}
                 >
                   Automatic discount
@@ -264,7 +264,7 @@ export function AmountOffProductsEditor() {
                     <button
                       type="button"
                       onClick={generateCode}
-                      className="text-xs font-medium text-[#005BD3] hover:underline cursor-pointer"
+                      className="text-xs font-medium text-[#000000] hover:underline cursor-pointer"
                     >
                       Generate code
                     </button>
@@ -357,7 +357,7 @@ export function AmountOffProductsEditor() {
                     <button
                       type="button"
                       onClick={() => setPickerOpen(true)}
-                      className="inline-flex items-center gap-1 text-xs font-semibold text-[#005BD3] hover:underline cursor-pointer"
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-[#000000] hover:underline cursor-pointer"
                     >
                       <Plus className="size-3.5" />
                       Browse products
@@ -452,7 +452,7 @@ export function AmountOffProductsEditor() {
 
           <aside className="space-y-4">
             <SectionCard>
-              <div className="flex size-9 items-center justify-center rounded-lg bg-[#005BD3]/10 text-[#005BD3]">
+              <div className="flex size-9 items-center justify-center rounded-lg bg-[#000000]/10 text-[#000000]">
                 <BadgePercent className="size-5" />
               </div>
               <h2 className="mt-4 text-sm font-semibold">
@@ -492,7 +492,7 @@ export function AmountOffProductsEditor() {
             </SectionCard>
             <SectionCard>
               <div className="flex items-start gap-2.5">
-                <Sparkles className="mt-0.5 size-4 shrink-0 text-[#005BD3]" />
+                <Sparkles className="mt-0.5 size-4 shrink-0 text-[#000000]" />
                 <p className="text-xs leading-relaxed text-black/65">
                   Coupon expiry dates prevent indefinite discount usage and drive campaign urgency.
                 </p>

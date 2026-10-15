@@ -59,7 +59,7 @@ export default function BlogSection() {
   }, []);
 
   return (
-    <section className="relative w-full bg-white px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <section className="relative w-full bg-[#fbf7ef] px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-[1400px]">
         {/* Header */}
         <div className="mb-6 sm:mb-10 flex items-end justify-between gap-3">
@@ -73,7 +73,7 @@ export default function BlogSection() {
           </div>
           <Link prefetch={false}
             href="/blog"
-            className="group flex items-center gap-1 sm:gap-1.5 text-xs sm:text-sm font-bold text-[#0a7ae6] transition-colors hover:text-[#025bb5] shrink-0"
+            className="group flex items-center gap-1 sm:gap-1.5 text-xs sm:text-sm font-bold text-[#000000] transition-colors hover:text-[#000000] shrink-0"
           >
             <span>View all</span>
             <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
@@ -107,7 +107,7 @@ export default function BlogSection() {
             return (
               <div key={post.id} className="flex min-w-0 shrink-0 grow-0 basis-full pl-6 sm:basis-1/2 lg:basis-1/3">
               <article
-                className="group relative flex w-full flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-slate-200"
+                className="group relative flex w-full flex-col overflow-hidden rounded-2xl border border-slate-100 bg-[#fbf7ef] shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-slate-200"
               >
                 {/* Image */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
@@ -119,14 +119,14 @@ export default function BlogSection() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {/* Category badge */}
-                  <span className="absolute top-3 left-3 rounded-full bg-[#0a7ae6] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white shadow-md">
+                  <span className="absolute top-3 left-3 rounded-full bg-[#000000] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white shadow-md">
                     {post.category}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div className="flex flex-1 flex-col p-5">
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug line-clamp-2 group-hover:text-[#0a7ae6] transition-colors duration-200">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug line-clamp-2 group-hover:text-[#000000] transition-colors duration-200">
                     {post.title}
                   </h3>
                   <p className="mt-2 flex-1 text-sm text-slate-500 leading-relaxed line-clamp-2">
@@ -140,7 +140,7 @@ export default function BlogSection() {
                       <span>•</span>
                       <span>{post.readTime || "4 min read"}</span>
                     </div>
-                    <span className="flex items-center gap-1 text-xs font-semibold text-[#0a7ae6] group-hover:text-[#025bb5] transition-colors">
+                    <span className="flex items-center gap-1 text-xs font-semibold text-[#000000] group-hover:text-[#000000] transition-colors">
                       Read story
                       <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
                     </span>

@@ -104,9 +104,9 @@ function TrackingContent({ orderId }: { orderId: string }) {
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <Link prefetch={false} href="/orders" className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-blue-600"><ArrowLeft className="size-4" />My orders</Link>
-          <button type="button" onClick={() => fetchTracking(true)} disabled={loading || refreshing} className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-white focus-visible:outline-2 focus-visible:outline-blue-600 disabled:opacity-50"><RefreshCw className={`size-3.5 ${refreshing ? "motion-safe:animate-spin" : ""}`} />{refreshing ? "Updating..." : "Refresh tracking"}</button>
+          <button type="button" onClick={() => fetchTracking(true)} disabled={loading || refreshing} className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 hover:bg-[#fbf7ef] focus-visible:outline-2 focus-visible:outline-blue-600 disabled:opacity-50"><RefreshCw className={`size-3.5 ${refreshing ? "motion-safe:animate-spin" : ""}`} />{refreshing ? "Updating..." : "Refresh tracking"}</button>
         </div>
-        <div className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm">
+        <div className="overflow-hidden rounded-2xl border border-slate-200/80 bg-[#fbf7ef] shadow-sm">
           <div className="border-b border-slate-100 px-6 py-5 sm:px-8">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600">Your delivery</p>
             <h1 className="mt-1 text-xl font-semibold tracking-tight text-slate-900">Track your order</h1>
@@ -129,7 +129,7 @@ function TrackingContent({ orderId }: { orderId: string }) {
                   <p className="mt-3 max-w-lg text-sm leading-6 text-slate-500">{data.found ? stage.description : "A tracking number has been assigned. We will show your parcel's progress once Delhivery confirms its status."}</p>
                   {data.found && stage.step >= 0 && <ol aria-label="Delivery progress" className="mt-8 grid grid-cols-4">
                     {steps.map((label, index) => <li key={label} aria-current={index === stage.step ? "step" : undefined} className="relative">
-                      <div className="flex items-center"><span className={`relative z-10 flex size-7 shrink-0 items-center justify-center rounded-full border-2 ${index <= stage.step ? "border-blue-600 bg-blue-600 text-white" : "border-slate-200 bg-white text-slate-300"}`}>{index < stage.step ? <Check className="size-3.5" /> : <span className={`size-2 rounded-full ${index === stage.step ? "bg-white" : "bg-slate-200"}`} />}</span>{index < steps.length - 1 && <span className={`h-0.5 w-full ${index < stage.step ? "bg-blue-600" : "bg-slate-100"}`} />}</div>
+                      <div className="flex items-center"><span className={`relative z-10 flex size-7 shrink-0 items-center justify-center rounded-full border-2 ${index <= stage.step ? "border-blue-600 bg-blue-600 text-white" : "border-slate-200 bg-[#fbf7ef] text-slate-300"}`}>{index < stage.step ? <Check className="size-3.5" /> : <span className={`size-2 rounded-full ${index === stage.step ? "bg-[#fbf7ef]" : "bg-slate-200"}`} />}</span>{index < steps.length - 1 && <span className={`h-0.5 w-full ${index < stage.step ? "bg-blue-600" : "bg-slate-100"}`} />}</div>
                       <p className={`mt-3 pr-2 text-[11px] leading-4 sm:text-xs ${index === stage.step ? "font-semibold text-blue-700" : index < stage.step ? "text-slate-700" : "text-slate-400"}`}>{label}</p>
                     </li>)}
                   </ol>}
@@ -166,7 +166,7 @@ function TrackingContent({ orderId }: { orderId: string }) {
 export default function OrderTrackingPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#fbf7ef]">
       <Navbar />
       <TrackingContent orderId={id} />
       <Footer />

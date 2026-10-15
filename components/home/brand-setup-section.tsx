@@ -59,7 +59,7 @@ export default function BrandSetupSection({
     propItems && propItems.length > 0 ? propItems : defaultBrandShowcaseItems;
 
   return (
-    <section className="overflow-hidden bg-white pt-12 sm:pt-16 lg:pt-20 pb-4 sm:pb-6 text-slate-900">
+    <section className="overflow-hidden bg-[#fbf7ef] pt-12 sm:pt-16 lg:pt-20 pb-4 sm:pb-6 text-slate-900">
       <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="mb-6 md:mb-10">
           <h2 className="mt-2 text-[2rem] font-normal leading-[0.96] tracking-tight md:text-[clamp(2.5rem,4vw,3.5rem)] text-slate-900">
@@ -223,14 +223,14 @@ export default function BrandSetupSection({
             textClassName="w-full text-left text-[clamp(2rem,4.3vw,3.8rem)] leading-[1.1] font-semibold tracking-tight"
           >
             <span className="block text-left whitespace-normal sm:whitespace-nowrap">
-              Trusted by <span className="text-[#0a7ae6]">1 Crore+</span> Indians since 2013.
+              Trusted by <span className="text-[#000000]">1 Crore+</span> Indians since 2013.
             </span>
             <span className="block text-left">Built for India.</span>
             <span className="block text-left">
               Designed in USA.
             </span>
             <span className="block text-left">
-              Serviced across <span className="text-[#0a7ae6]">200+ Cities.</span>
+              Serviced across <span className="text-[#000000]">200+ Cities.</span>
             </span>
           </ScrollReveal>
         </div>

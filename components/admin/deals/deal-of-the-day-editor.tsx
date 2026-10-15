@@ -54,11 +54,11 @@ type EditableDeal = {
   isActive: boolean;
 };
 
-const inputClass = "h-9 w-full rounded-lg border border-black/25 bg-white px-3 text-sm outline-none transition focus:border-black/55 focus:ring-2 focus:ring-black/5";
+const inputClass = "h-9 w-full rounded-lg border border-black/25 bg-[#fbf7ef] px-3 text-sm outline-none transition focus:border-black/55 focus:ring-2 focus:ring-black/5";
 
 function SectionCard({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="relative rounded-xl border border-black/10 bg-white shadow-sm">
+    <section className="relative rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
       <div className="px-4 py-4">
         <h2 className="text-sm font-semibold text-black/80">{title}</h2>
       </div>
@@ -107,11 +107,11 @@ function ProductSelectDropdown({
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex min-h-[46px] w-full max-w-full items-center justify-between gap-2.5 overflow-hidden rounded-lg border border-black/25 bg-white px-3 py-1.5 text-left text-sm outline-none transition hover:border-black/40 focus:border-black/55 focus:ring-2 focus:ring-black/5 cursor-pointer"
+        className="flex min-h-[46px] w-full max-w-full items-center justify-between gap-2.5 overflow-hidden rounded-lg border border-black/25 bg-[#fbf7ef] px-3 py-1.5 text-left text-sm outline-none transition hover:border-black/40 focus:border-black/55 focus:ring-2 focus:ring-black/5 cursor-pointer"
       >
         {selectedProduct ? (
           <div className="flex min-w-0 flex-1 items-center gap-2.5">
-            <div className="relative size-8 shrink-0 overflow-hidden rounded border border-slate-200 bg-white p-0.5">
+            <div className="relative size-8 shrink-0 overflow-hidden rounded border border-slate-200 bg-[#fbf7ef] p-0.5">
               <Image
                 src={selectedProduct.image}
                 alt={selectedProduct.name}
@@ -135,7 +135,7 @@ function ProductSelectDropdown({
         <div
           data-lenis-prevent
           onWheel={(e) => e.stopPropagation()}
-          className="absolute left-0 right-0 top-full z-50 mt-1 max-h-64 w-full max-w-full overflow-x-hidden overflow-y-auto rounded-xl border border-slate-200 bg-white py-1 shadow-xl"
+          className="absolute left-0 right-0 top-full z-50 mt-1 max-h-64 w-full max-w-full overflow-x-hidden overflow-y-auto rounded-xl border border-slate-200 bg-[#fbf7ef] py-1 shadow-xl"
         >
           {products.map((product) => {
             const isSelected = product.id === selectedProductId;
@@ -148,11 +148,11 @@ function ProductSelectDropdown({
                   setIsOpen(false);
                 }}
                 className={`flex w-full max-w-full items-center justify-between gap-2.5 px-3 py-2 text-left text-sm transition-colors hover:bg-blue-50/80 cursor-pointer ${
-                  isSelected ? "bg-blue-50 font-semibold text-[#0a7ae6]" : "text-slate-900"
+                  isSelected ? "bg-blue-50 font-semibold text-[#000000]" : "text-slate-900"
                 }`}
               >
                 <div className="flex min-w-0 flex-1 items-center gap-2.5">
-                  <div className="relative size-8 shrink-0 overflow-hidden rounded border border-slate-200 bg-white p-0.5">
+                  <div className="relative size-8 shrink-0 overflow-hidden rounded border border-slate-200 bg-[#fbf7ef] p-0.5">
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -165,7 +165,7 @@ function ProductSelectDropdown({
                     {formatShortTitle(product.name)}
                   </span>
                 </div>
-                <span className="shrink-0 font-semibold text-[#0a7ae6]">{product.price}</span>
+                <span className="shrink-0 font-semibold text-[#000000]">{product.price}</span>
               </button>
             );
           })}
@@ -348,9 +348,9 @@ export function DealOfTheDayEditor({ deal, products }: { deal: EditableDeal | nu
   }
 
   return (
-    <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-5">
+    <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-5">
       <form className="mx-auto max-w-[1050px]" onSubmit={saveDeal}>
-        <header className="sticky top-0 z-40 flex flex-wrap items-center justify-between gap-3 bg-[#f5f5f5] py-3">
+        <header className="sticky top-0 z-40 flex flex-wrap items-center justify-between gap-3 bg-[#f3f0ea] py-3">
           <div>
             <h1 className="flex items-center gap-1.5 text-lg font-semibold"><Flame className="size-4" /><ChevronRight className="size-4 text-black/45" /> Deal of the day</h1>
             <p className="mt-1 text-sm text-black/55">Choose the product and limited-time offer customers see on the home page.</p>
@@ -374,7 +374,7 @@ export function DealOfTheDayEditor({ deal, products }: { deal: EditableDeal | nu
                   />
                 </div>
                 <label className="grid gap-1.5 text-sm font-medium text-black/75">Deal title <input required value={title} onChange={(event) => setTitle(event.target.value)} placeholder="e.g. BLAZE B2000" className={inputClass} /></label>
-                <label className="grid gap-1.5 text-sm font-medium text-black/75">Deal description <textarea required rows={4} value={description} onChange={(event) => setDescription(event.target.value)} placeholder="Describe why this limited-time offer is special" className="w-full resize-none rounded-lg border border-black/25 bg-white p-3 text-sm outline-none transition focus:border-black/55 focus:ring-2 focus:ring-black/5" /></label>
+                <label className="grid gap-1.5 text-sm font-medium text-black/75">Deal description <textarea required rows={4} value={description} onChange={(event) => setDescription(event.target.value)} placeholder="Describe why this limited-time offer is special" className="w-full resize-none rounded-lg border border-black/25 bg-[#fbf7ef] p-3 text-sm outline-none transition focus:border-black/55 focus:ring-2 focus:ring-black/5" /></label>
                 <div className="grid gap-1.5 text-sm font-medium text-black/75"><span>Deal image</span><input ref={imageInputRef} type="file" accept="image/avif,image/gif,image/jpeg,image/png,image/webp" className="sr-only" onChange={(event) => void uploadDealImage(event)} /><button type="button" disabled={isUploading} onClick={() => imageInputRef.current?.click()} className="relative flex h-52 overflow-hidden items-center justify-center rounded-lg border border-dashed border-black/30 bg-black/[0.02] text-sm text-black/60 transition hover:bg-black/[0.04] disabled:cursor-wait">{previewImage ? <><Image src={previewImage} alt="Deal preview" fill sizes="650px" className="object-cover" /><span className="relative rounded bg-white/90 px-3 py-1.5 text-xs font-semibold text-black">{isUploading ? "Uploading…" : "Replace image"}</span></> : <span className="flex flex-col items-center gap-2"><ImagePlus className="size-5" />{isUploading ? "Uploading…" : "Upload image"}</span>}</button>{image ? <button type="button" onClick={() => setImage("")} className="justify-self-start text-xs font-medium text-red-600 hover:underline">Use the product image instead</button> : <p className="text-xs font-normal text-black/55">If no custom image is uploaded, the selected product image is used.</p>}</div>
               </div>
             </SectionCard>
@@ -390,7 +390,7 @@ export function DealOfTheDayEditor({ deal, products }: { deal: EditableDeal | nu
                     <label className="grid gap-1.5 text-sm font-medium text-black/75">
                       <span className="flex items-center justify-between">
                         <span>Product price</span>
-                        <span className="text-[11px] font-semibold text-[#0a7ae6]">Catalog price</span>
+                        <span className="text-[11px] font-semibold text-[#000000]">Catalog price</span>
                       </span>
                       <div className="relative">
                         <input
@@ -417,7 +417,7 @@ export function DealOfTheDayEditor({ deal, products }: { deal: EditableDeal | nu
                           value={discountPercent}
                           onChange={(event) => handleDiscountPercentChange(event.target.value)}
                           placeholder="e.g. 20"
-                          className={`${inputClass} pr-8 font-semibold text-[#0a7ae6]`}
+                          className={`${inputClass} pr-8 font-semibold text-[#000000]`}
                         />
                         <span className="pointer-events-none absolute right-3 top-2 text-sm font-bold text-black/40">%</span>
                       </div>
@@ -438,7 +438,7 @@ export function DealOfTheDayEditor({ deal, products }: { deal: EditableDeal | nu
                   </div>
 
                   {/* Dynamic Offer & Savings Breakdown */}
-                  <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-[#0a7ae6]/20 bg-[#0a7ae6]/[0.04] px-3.5 py-2.5 text-xs">
+                  <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-[#000000]/20 bg-[#000000]/[0.04] px-3.5 py-2.5 text-xs">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="font-semibold text-slate-700">Deal offer:</span>
                       <span className="text-sm font-bold text-slate-950">{effectiveDealPriceFormatted || "—"}</span>
@@ -467,7 +467,7 @@ export function DealOfTheDayEditor({ deal, products }: { deal: EditableDeal | nu
                         setCustomDealPrice(effectiveDealPriceFormatted);
                         setIsCustomPricing(true);
                       }}
-                      className="text-[#0a7ae6] hover:underline font-medium cursor-pointer"
+                      className="text-[#000000] hover:underline font-medium cursor-pointer"
                     >
                       Override price manually
                     </button>
@@ -500,7 +500,7 @@ export function DealOfTheDayEditor({ deal, products }: { deal: EditableDeal | nu
                     <button
                       type="button"
                       onClick={() => setIsCustomPricing(false)}
-                      className="text-[#0a7ae6] hover:underline font-medium cursor-pointer"
+                      className="text-[#000000] hover:underline font-medium cursor-pointer"
                     >
                       Revert to automatic product discount
                     </button>
@@ -518,16 +518,16 @@ export function DealOfTheDayEditor({ deal, products }: { deal: EditableDeal | nu
             </SectionCard>
             <SectionCard title="Storefront preview">
               <p className="mb-3 text-xs leading-5 text-black/55">This is the information customers will see in the Deal of the day section on the home page.</p>
-              {selectedProduct ? <div className="overflow-hidden rounded-xl border border-[#005BD3]/15 bg-[#f7fbff]">
+              {selectedProduct ? <div className="overflow-hidden rounded-xl border border-[#000000]/15 bg-[#f7fbff]">
                 <div className="relative h-32 bg-slate-950">
                   {previewImage ? <Image src={previewImage} alt={title || selectedProduct.name} fill sizes="300px" className="object-cover" /> : <div className="flex h-full items-center justify-center text-xs text-white/60">No product image</div>}
                   <span className="absolute bottom-2 right-2 rounded-md bg-black/80 px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-white">{badge.trim() || "Deal of the day"}</span>
                 </div>
                 <div className="p-3.5">
-                  <div className="flex items-center justify-between gap-3 text-[10px] font-semibold uppercase tracking-wider text-[#005BD3]"><span className="flex items-center gap-1"><Flame className="size-3 fill-current" /> {unitsLeft || "0"} units left</span><span>{hasValidEndDate ? "Limited time" : "Set an end time"}</span></div>
+                  <div className="flex items-center justify-between gap-3 text-[10px] font-semibold uppercase tracking-wider text-[#000000]"><span className="flex items-center gap-1"><Flame className="size-3 fill-current" /> {unitsLeft || "0"} units left</span><span>{hasValidEndDate ? "Limited time" : "Set an end time"}</span></div>
                   <h2 className="mt-2 line-clamp-2 text-base font-semibold leading-5 text-slate-950">{title || selectedProduct.name}</h2>
                   <p className="mt-1 line-clamp-3 text-xs leading-5 text-slate-600">{description || selectedProduct.description}</p>
-                  {previewFeatures.length > 0 ? <div className="mt-3 flex flex-wrap gap-1.5">{previewFeatures.slice(0, 4).map((feature) => <span key={feature} className="rounded-full border border-[#005BD3]/25 bg-white px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-[#005BD3]">{feature}</span>)}</div> : null}
+                  {previewFeatures.length > 0 ? <div className="mt-3 flex flex-wrap gap-1.5">{previewFeatures.slice(0, 4).map((feature) => <span key={feature} className="rounded-full border border-[#000000]/25 bg-[#fbf7ef] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-[#000000]">{feature}</span>)}</div> : null}
                   <div className="mt-3 border-t border-slate-200 pt-3">
                     <div className="flex flex-wrap items-baseline gap-2">
                       <span className="text-lg font-semibold text-slate-950">
@@ -547,16 +547,16 @@ export function DealOfTheDayEditor({ deal, products }: { deal: EditableDeal | nu
                       ) : null}
                     </div>
                     <div className="mt-2 flex items-center justify-between text-[10px] font-semibold uppercase tracking-wide">
-                      <span className="text-[#005BD3]">Selling fast</span>
+                      <span className="text-[#000000]">Selling fast</span>
                       <span className="text-slate-500">{claimedPercent}% claimed</span>
                     </div>
                     <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-slate-200">
-                      <div className="h-full rounded-full bg-[#005BD3] transition-all" style={{ width: `${claimedPercent}%` }} />
+                      <div className="h-full rounded-full bg-[#000000] transition-all" style={{ width: `${claimedPercent}%` }} />
                     </div>
                   </div>
                 </div>
-              </div> : <div className="rounded-xl border border-dashed border-black/20 bg-black/[0.02] px-4 py-8 text-center"><div className="mx-auto flex size-9 items-center justify-center rounded-lg bg-[#005BD3]/10 text-[#005BD3]"><Sparkles className="size-5" /></div><p className="mt-3 text-sm font-medium">Select a product to preview the deal</p><p className="mt-1 text-xs leading-5 text-black/55">The product image, price, and compare-at price will appear here automatically.</p></div>}
-              <div className="mt-4 flex items-center justify-between border-t border-black/10 pt-3 text-xs"><span className={isActive ? "font-medium text-emerald-700" : "font-medium text-black/50"}>{isActive ? "Will show on storefront" : "Hidden from storefront"}</span><Link prefetch={false} href="/" className="inline-flex items-center gap-1 font-medium text-[#005BD3] hover:underline">Open home page <ExternalLink className="size-3" /></Link></div>
+              </div> : <div className="rounded-xl border border-dashed border-black/20 bg-black/[0.02] px-4 py-8 text-center"><div className="mx-auto flex size-9 items-center justify-center rounded-lg bg-[#000000]/10 text-[#000000]"><Sparkles className="size-5" /></div><p className="mt-3 text-sm font-medium">Select a product to preview the deal</p><p className="mt-1 text-xs leading-5 text-black/55">The product image, price, and compare-at price will appear here automatically.</p></div>}
+              <div className="mt-4 flex items-center justify-between border-t border-black/10 pt-3 text-xs"><span className={isActive ? "font-medium text-emerald-700" : "font-medium text-black/50"}>{isActive ? "Will show on storefront" : "Hidden from storefront"}</span><Link prefetch={false} href="/" className="inline-flex items-center gap-1 font-medium text-[#000000] hover:underline">Open home page <ExternalLink className="size-3" /></Link></div>
             </SectionCard>
           </aside>
         </div>

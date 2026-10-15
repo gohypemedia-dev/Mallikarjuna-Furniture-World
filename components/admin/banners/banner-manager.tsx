@@ -698,7 +698,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
             type="button"
             onClick={handleRestoreDefaults}
             disabled={isSubmitting}
-            className="inline-flex h-8 items-center gap-1.5 rounded-lg border border-black/15 bg-white px-3 text-xs font-medium text-black shadow-2xs transition hover:bg-black/5 disabled:opacity-50"
+            className="inline-flex h-8 items-center gap-1.5 rounded-lg border border-black/15 bg-[#fbf7ef] px-3 text-xs font-medium text-black shadow-2xs transition hover:bg-black/5 disabled:opacity-50"
           >
             {isSubmitting ? (
               <Loader2Icon className="size-3.5 animate-spin" />
@@ -720,7 +720,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
       </div>
 
       {/* Main Table Card */}
-      <section className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-xs">
+      <section className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-xs">
         {/* Table Toolbar / Filters */}
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 px-4 py-3">
           {/* Status Tabs */}
@@ -770,7 +770,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search banners by title, CTA, category..."
-                className="h-8 w-full rounded-lg border border-black/15 bg-white pl-8 pr-3 text-xs outline-none focus:border-black"
+                className="h-8 w-full rounded-lg border border-black/15 bg-[#fbf7ef] pl-8 pr-3 text-xs outline-none focus:border-black"
               />
               {searchQuery ? (
                 <button
@@ -789,7 +789,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="h-8 rounded-lg border border-black/15 bg-white px-2.5 text-xs font-medium text-black outline-none focus:border-black"
+                className="h-8 rounded-lg border border-black/15 bg-[#fbf7ef] px-2.5 text-xs font-medium text-black outline-none focus:border-black"
               >
                 <option value="all">All Categories</option>
                 {categories.map((c) => (
@@ -861,7 +861,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
                     type="button"
                     onClick={handleRestoreDefaults}
                     disabled={isSubmitting}
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-black/20 bg-white px-3 py-1.5 text-xs font-semibold text-black shadow-2xs hover:bg-black/5"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-black/20 bg-[#fbf7ef] px-3 py-1.5 text-xs font-semibold text-black shadow-2xs hover:bg-black/5"
                   >
                     <RefreshCwIcon className="size-3.5" />
                     Load Default Banners
@@ -883,7 +883,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
                     setSelectedCategory("all")
                     setStatusFilter("all")
                   }}
-                  className="rounded-lg border border-black/20 bg-white px-3 py-1.5 text-xs font-medium text-black hover:bg-black/5"
+                  className="rounded-lg border border-black/20 bg-[#fbf7ef] px-3 py-1.5 text-xs font-medium text-black hover:bg-black/5"
                 >
                   Clear Filters
                 </button>
@@ -1140,9 +1140,9 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
       {/* Add / Edit Banner Modal */}
       {isModalOpen ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-xs overflow-hidden" data-lenis-prevent>
-          <div className="relative flex flex-col w-full max-w-2xl max-h-[88vh] rounded-2xl border border-black/10 bg-white shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200" data-lenis-prevent>
+          <div className="relative flex flex-col w-full max-w-2xl max-h-[88vh] rounded-2xl border border-black/10 bg-[#fbf7ef] shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200" data-lenis-prevent>
             {/* Modal Header */}
-            <div className="flex items-center justify-between border-b border-black/10 px-6 py-4 bg-white shrink-0">
+            <div className="flex items-center justify-between border-b border-black/10 px-6 py-4 bg-[#fbf7ef] shrink-0">
               <div>
                 <h2 className="text-base font-bold text-black">
                   {editingBanner ? "Edit Hero Banner" : "Add New Hero Banner"}
@@ -1196,7 +1196,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
                           linkUrl: selectedCat ? `/shop?filter=${selectedCat.slug}` : "/shop",
                         })
                       }}
-                      className="mt-1 w-full rounded-lg border border-black/20 bg-white px-3 py-2 text-xs outline-none focus:border-black"
+                      className="mt-1 w-full rounded-lg border border-black/20 bg-[#fbf7ef] px-3 py-2 text-xs outline-none focus:border-black"
                     >
                       <option value="">Select a category</option>
                       {categories.map((cat) => (
@@ -1374,7 +1374,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
                                 {uploadProgressDesktop !== null && (
                                   <div className="w-44 bg-white/20 rounded-full h-1.5 overflow-hidden mt-2">
                                     <div
-                                      className="bg-white h-1.5 rounded-full transition-all duration-150"
+                                      className="bg-[#fbf7ef] h-1.5 rounded-full transition-all duration-150"
                                       style={{ width: `${uploadProgressDesktop}%` }}
                                     />
                                   </div>
@@ -1392,7 +1392,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
 
                             {/* Hover Overlay Controls */}
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 z-20">
-                              <label className="cursor-pointer inline-flex items-center gap-1 rounded bg-white px-2.5 py-1 text-xs font-semibold text-black shadow-sm hover:bg-neutral-100">
+                              <label className="cursor-pointer inline-flex items-center gap-1 rounded bg-[#fbf7ef] px-2.5 py-1 text-xs font-semibold text-black shadow-sm hover:bg-neutral-100">
                                 {isUploadingDesktop ? (
                                   <Loader2Icon className="size-3.5 animate-spin" />
                                 ) : (
@@ -1430,7 +1430,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
 
                           {/* Media Metadata Size Specs */}
                           {(desktopMeta.dimensions || desktopMeta.fileSize || desktopMeta.duration) && (
-                            <div className="flex flex-wrap items-center gap-2 rounded-lg bg-white border border-black/10 px-2.5 py-1.5 text-[11px] text-black/75">
+                            <div className="flex flex-wrap items-center gap-2 rounded-lg bg-[#fbf7ef] border border-black/10 px-2.5 py-1.5 text-[11px] text-black/75">
                               {desktopMeta.dimensions && (
                                 <div className="flex items-center gap-1" title="Resolution">
                                   <Maximize2Icon className="size-3 text-black/50" />
@@ -1511,7 +1511,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
                           className={`flex flex-1 flex-col items-center justify-center rounded-lg border-2 border-dashed p-6 text-center cursor-pointer transition ${
                             isDraggingDesktop
                               ? "border-black bg-black/10 ring-2 ring-black/20"
-                              : "border-black/20 bg-white hover:border-black/40 hover:bg-neutral-50/50"
+                              : "border-black/20 bg-[#fbf7ef] hover:border-black/40 hover:bg-neutral-50/50"
                           }`}
                         >
                           {isUploadingDesktop ? (
@@ -1572,7 +1572,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
                             placeholder="/hero-banner-projector.mp4 or https://..."
                             value={formData.src}
                             onChange={(e) => setFormData({ ...formData, src: e.target.value })}
-                            className="mt-1 w-full rounded-md border border-black/20 bg-white px-2.5 py-1.5 text-xs outline-none focus:border-black"
+                            className="mt-1 w-full rounded-md border border-black/20 bg-[#fbf7ef] px-2.5 py-1.5 text-xs outline-none focus:border-black"
                           />
                         </div>
                       )}
@@ -1708,7 +1708,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
                                 {uploadProgressMobile !== null && (
                                   <div className="w-44 bg-white/20 rounded-full h-1.5 overflow-hidden mt-2">
                                     <div
-                                      className="bg-white h-1.5 rounded-full transition-all duration-150"
+                                      className="bg-[#fbf7ef] h-1.5 rounded-full transition-all duration-150"
                                       style={{ width: `${uploadProgressMobile}%` }}
                                     />
                                   </div>
@@ -1726,7 +1726,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
 
                             {/* Hover Overlay Controls */}
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 z-20">
-                              <label className="cursor-pointer inline-flex items-center gap-1 rounded bg-white px-2.5 py-1 text-xs font-semibold text-black shadow-sm hover:bg-neutral-100">
+                              <label className="cursor-pointer inline-flex items-center gap-1 rounded bg-[#fbf7ef] px-2.5 py-1 text-xs font-semibold text-black shadow-sm hover:bg-neutral-100">
                                 {isUploadingMobile ? (
                                   <Loader2Icon className="size-3.5 animate-spin" />
                                 ) : (
@@ -1764,7 +1764,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
 
                           {/* Media Metadata Size Specs */}
                           {(mobileMeta.dimensions || mobileMeta.fileSize || mobileMeta.duration) && (
-                            <div className="flex flex-wrap items-center gap-2 rounded-lg bg-white border border-black/10 px-2.5 py-1.5 text-[11px] text-black/75">
+                            <div className="flex flex-wrap items-center gap-2 rounded-lg bg-[#fbf7ef] border border-black/10 px-2.5 py-1.5 text-[11px] text-black/75">
                               {mobileMeta.dimensions && (
                                 <div className="flex items-center gap-1" title="Resolution">
                                   <Maximize2Icon className="size-3 text-black/50" />
@@ -1845,7 +1845,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
                           className={`flex flex-1 flex-col items-center justify-center rounded-lg border-2 border-dashed p-6 text-center cursor-pointer transition ${
                             isDraggingMobile
                               ? "border-black bg-black/10 ring-2 ring-black/20"
-                              : "border-black/20 bg-white hover:border-black/40 hover:bg-neutral-50/50"
+                              : "border-black/20 bg-[#fbf7ef] hover:border-black/40 hover:bg-neutral-50/50"
                           }`}
                         >
                           {isUploadingMobile ? (
@@ -1906,7 +1906,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
                             placeholder="/hero-banner-mobile.mp4 or https://..."
                             value={formData.mobileSrc}
                             onChange={(e) => setFormData({ ...formData, mobileSrc: e.target.value })}
-                            className="mt-1 w-full rounded-md border border-black/20 bg-white px-2.5 py-1.5 text-xs outline-none focus:border-black"
+                            className="mt-1 w-full rounded-md border border-black/20 bg-[#fbf7ef] px-2.5 py-1.5 text-xs outline-none focus:border-black"
                           />
                         </div>
                       )}
@@ -1972,7 +1972,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)} disabled={isUploadingDesktop || isUploadingMobile || isSubmitting}
-                  className="rounded-lg border border-black/20 bg-white px-4 py-2 text-xs font-semibold text-black hover:bg-black/5 transition-colors"
+                  className="rounded-lg border border-black/20 bg-[#fbf7ef] px-4 py-2 text-xs font-semibold text-black hover:bg-black/5 transition-colors"
                 >
                   Cancel
                 </button>
@@ -1994,7 +1994,7 @@ export function BannerManager({ initialBanners }: { initialBanners: HeroBannerIt
       {/* Delete Confirmation Modal */}
       {deleteTargetId ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-xs">
-          <div className="w-full max-w-sm rounded-xl border border-black/10 bg-white p-5 shadow-2xl">
+          <div className="w-full max-w-sm rounded-xl border border-black/10 bg-[#fbf7ef] p-5 shadow-2xl">
             <h3 className="text-sm font-bold text-black">Delete Banner?</h3>
             <p className="mt-1 text-xs text-black/60">
               Are you sure you want to delete this hero banner? This action cannot be undone.

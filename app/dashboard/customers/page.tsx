@@ -20,7 +20,7 @@ export default async function CustomersPage() {
       <SidebarProvider className="min-h-svh">
         <AppSidebar />
         <SidebarInset>
-          <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-5">
+          <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <h1 className="flex items-center gap-2 text-lg font-semibold"><UserRound className="size-4" /> Customers</h1>
@@ -29,7 +29,7 @@ export default async function CustomersPage() {
               <button type="button" className="inline-flex h-8 items-center gap-1.5 rounded-lg bg-black px-3 text-xs font-medium text-white hover:bg-black/80"><Plus className="size-3.5" /> Add customer</button>
             </div>
 
-            <section className="mt-3 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+            <section className="mt-3 overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
               {customers.length === 0 ? (
                 <div className="px-4 py-12 text-center">
                   <h2 className="text-sm font-semibold">No customers yet</h2>

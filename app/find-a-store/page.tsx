@@ -90,12 +90,12 @@ export default function FindAStorePage() {
       <Navbar />
 
       {/* Header (Cohesive with Legal/Policy Page design) */}
-      <section className="border-b border-[#0a7ae6]/10 bg-white">
+      <section className="border-b border-[#000000]/10 bg-[#fbf7ef]">
         <div className="mx-auto max-w-5xl px-5 py-12 sm:px-8 sm:py-16">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#edf7ff] px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#0a7ae6]">
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#f3f0ea] px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#000000]">
             <MapPin className="size-3.5" /> LOCATIONS & SERVICE HUBS
           </span>
-          <h1 className="mt-4 max-w-3xl text-3xl font-extrabold tracking-tight text-[#071a38] sm:text-4xl">
+          <h1 className="mt-4 max-w-3xl text-3xl font-extrabold tracking-tight text-[#000000] sm:text-4xl">
             Choose the right XElectron location
           </h1>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
@@ -111,8 +111,8 @@ export default function FindAStorePage() {
       <section className="mx-auto grid max-w-5xl gap-7 px-5 py-10 sm:px-8 sm:py-14 lg:grid-cols-[220px_minmax(0,1fr)]">
         {/* Sticky Left Navigation */}
         <aside className="lg:sticky lg:top-28 lg:h-fit space-y-4">
-          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#0a7ae6]">
+          <div className="rounded-2xl border border-slate-200 bg-[#fbf7ef] p-4 shadow-sm">
+            <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#000000]">
               On this page
             </p>
             <nav className="mt-3 grid gap-1">
@@ -120,7 +120,7 @@ export default function FindAStorePage() {
                 <a
                   key={store.id}
                   href={`#${store.id}`}
-                  className="rounded-lg px-2.5 py-2 text-xs font-semibold text-slate-600 transition hover:bg-[#edf7ff] hover:text-[#0a7ae6]"
+                  className="rounded-lg px-2.5 py-2 text-xs font-semibold text-slate-600 transition hover:bg-[#f3f0ea] hover:text-[#000000]"
                 >
                   {store.shortName}
                 </a>
@@ -129,8 +129,8 @@ export default function FindAStorePage() {
           </div>
 
           {/* Quick Help Card */}
-          <div className="rounded-2xl border border-blue-100 bg-[#edf7ff]/70 p-4 shadow-xs">
-            <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#0a7ae6]">
+          <div className="rounded-2xl border border-blue-100 bg-[#f3f0ea]/70 p-4 shadow-xs">
+            <p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#000000]">
               Need Directions?
             </p>
             <p className="mt-1 text-xs text-slate-600 leading-relaxed">
@@ -139,9 +139,9 @@ export default function FindAStorePage() {
             <div className="mt-3 space-y-2 border-t border-blue-200/50 pt-3 text-xs">
               <a
                 href="tel:01204550655"
-                className="flex items-center gap-2 font-bold text-[#071a38] transition hover:text-[#0a7ae6]"
+                className="flex items-center gap-2 font-bold text-[#000000] transition hover:text-[#000000]"
               >
-                <Phone className="size-3.5 text-[#0a7ae6]" />
+                <Phone className="size-3.5 text-[#000000]" />
                 <span>0120-4550655</span>
               </a>
               <a
@@ -166,7 +166,7 @@ export default function FindAStorePage() {
               <article
                 key={store.id}
                 id={store.id}
-                className="scroll-mt-32 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:border-slate-300"
+                className="scroll-mt-32 overflow-hidden rounded-2xl border border-slate-200 bg-[#fbf7ef] shadow-sm transition-all hover:border-slate-300"
               >
                 {/* Photo Showcase */}
                 <div className="relative aspect-[16/8] w-full overflow-hidden bg-slate-900 sm:aspect-[16/7]">
@@ -177,12 +177,12 @@ export default function FindAStorePage() {
                     sizes="(min-width: 1024px) 720px, 100vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071a38]/80 via-[#071a38]/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/80 via-[#000000]/20 to-transparent" />
 
                   {/* Top Badge */}
                   <div className="absolute top-3 left-3">
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-800 shadow-xs backdrop-blur-md">
-                      <StoreIcon className="size-3 text-[#0a7ae6]" />
+                      <StoreIcon className="size-3 text-[#000000]" />
                       {store.badge}
                     </span>
                   </div>
@@ -190,7 +190,7 @@ export default function FindAStorePage() {
                   {/* Open Days Pill */}
                   <div className="absolute bottom-3 right-3">
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/95 px-3 py-1 text-[10px] font-bold text-white shadow-xs">
-                      <span className="size-1.5 rounded-full bg-white animate-pulse" />
+                      <span className="size-1.5 rounded-full bg-[#fbf7ef] animate-pulse" />
                       {store.openDays}
                     </span>
                   </div>
@@ -199,10 +199,10 @@ export default function FindAStorePage() {
                 {/* Details Section */}
                 <div className="p-6 sm:p-7">
                   <div>
-                    <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#0a7ae6]">
+                    <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#000000]">
                       {store.subtitle}
                     </p>
-                    <h2 className="mt-1 text-xl font-extrabold tracking-tight text-[#071a38] sm:text-2xl">
+                    <h2 className="mt-1 text-xl font-extrabold tracking-tight text-[#000000] sm:text-2xl">
                       {store.name}
                     </h2>
                   </div>
@@ -243,12 +243,12 @@ export default function FindAStorePage() {
                         Contact
                       </span>
                       <div className="flex flex-wrap items-center gap-2">
-                        <Phone className="size-3.5 text-[#0a7ae6] shrink-0" />
+                        <Phone className="size-3.5 text-[#000000] shrink-0" />
                         {store.phones.map((phone, idx) => (
                           <a
                             key={idx}
                             href={`tel:${phone.replace(/[^+\d]/g, "")}`}
-                            className="font-bold text-[#071a38] transition hover:text-[#0a7ae6]"
+                            className="font-bold text-[#000000] transition hover:text-[#000000]"
                           >
                             {phone}
                             {idx < store.phones.length - 1 && (
@@ -283,14 +283,14 @@ export default function FindAStorePage() {
                       href={store.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-xl bg-[#071a38] px-5 py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-[#0a7ae6]"
+                      className="inline-flex items-center gap-2 rounded-xl bg-[#000000] px-5 py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-[#000000]"
                     >
                       <span>Get Directions on Google Maps</span>
                       <ExternalLink className="size-3.5" />
                     </a>
                     <a
                       href={`tel:${store.phones[0].replace(/[^+\d]/g, "")}`}
-                      className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-bold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+                      className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-[#fbf7ef] px-4 py-2.5 text-xs font-bold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
                     >
                       <Phone className="size-3.5 text-slate-500" />
                       <span>Call Center</span>
@@ -302,7 +302,7 @@ export default function FindAStorePage() {
           })}
 
           {/* Bottom Assistance Banner (Matches Legal/Policy page footer) */}
-          <div className="rounded-2xl bg-[#071a38] p-6 text-white sm:p-8">
+          <div className="rounded-2xl bg-[#000000] p-6 text-white sm:p-8">
             <p className="text-base font-bold sm:text-lg">
               Questions before visiting or want a virtual demo?
             </p>

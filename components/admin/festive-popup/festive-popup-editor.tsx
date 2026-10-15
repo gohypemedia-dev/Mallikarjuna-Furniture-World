@@ -177,7 +177,7 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
             type="button"
             onClick={handleSave}
             disabled={isSaving}
-            className="inline-flex items-center gap-2 rounded-lg bg-[#0a7ae6] px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-[#0866c2] transition active:scale-95 disabled:opacity-60 cursor-pointer"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#000000] px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-[#1f1e1b] transition active:scale-95 disabled:opacity-60 cursor-pointer"
           >
             {isSaving ? (
               <>
@@ -506,7 +506,7 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                 }`}
               >
                 {/* Simulated Modal Card */}
-                <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-700/70 bg-[#0c1017] shadow-[0_25px_90px_rgba(0,0,0,0.95),0_0_50px_rgba(240,80,26,0.12)]">
+                <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-700/70 bg-[#000000] shadow-[0_25px_90px_rgba(0,0,0,0.95),0_0_50px_rgba(240,80,26,0.12)]">
                   {/* Close button mock */}
                   <div className="absolute top-2.5 right-2.5 z-30 flex size-7 items-center justify-center rounded-full bg-slate-950/90 text-white border-2 border-white/90 shadow-md">
                     <X className="size-3.5 stroke-[2.5]" />
@@ -532,18 +532,18 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                                 placeholder="Enter Your Email Address"
                                 value={previewEmail}
                                 onChange={(e) => setPreviewEmail(e.target.value)}
-                                className="w-full h-8 rounded-full bg-[#141923]/95 border border-[#0a7ae6]/70 px-3 text-[10px] text-white placeholder:text-slate-400 outline-none"
+                                className="w-full h-8 rounded-full bg-[#141923]/95 border border-[#000000]/70 px-3 text-[10px] text-white placeholder:text-slate-400 outline-none"
                               />
                               <button
                                 type="button"
                                 onClick={() => setPreviewTab("success")}
-                                className="w-full h-8 rounded-full bg-[#0a7ae6] hover:bg-[#0866c2] text-[10px] font-bold uppercase tracking-wider text-white shadow-md transition cursor-pointer flex items-center justify-center gap-1"
+                                className="w-full h-8 rounded-full bg-[#000000] hover:bg-[#1f1e1b] text-[10px] font-bold uppercase tracking-wider text-white shadow-md transition cursor-pointer flex items-center justify-center gap-1"
                               >
                                 <span>{settings.buttonText || "UNLOCK MY 5% OFF"}</span>
                               </button>
                             </div>
                           ) : (
-                            <div className="rounded-xl bg-[#0f141d]/98 border border-[#0a7ae6]/60 p-2 text-center shadow-xl">
+                            <div className="rounded-xl bg-[#0f141d]/98 border border-[#000000]/60 p-2 text-center shadow-xl">
                               <div className="flex items-center justify-center text-[9px] font-bold text-sky-300 uppercase tracking-widest">
                                 <span>Offer Unlocked</span>
                               </div>
@@ -551,7 +551,7 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                                 <span className="font-mono font-bold text-white text-[11px] tracking-wider">
                                   {settings.discountCode}
                                 </span>
-                                <span className="rounded bg-[#0a7ae6] px-1.5 py-0.5 text-[9px] font-bold uppercase text-white">
+                                <span className="rounded bg-[#000000] px-1.5 py-0.5 text-[9px] font-bold uppercase text-white">
                                   Copy
                                 </span>
                               </div>
@@ -585,12 +585,12 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                                 placeholder="Enter Your Email Address"
                                 value={previewEmail}
                                 onChange={(e) => setPreviewEmail(e.target.value)}
-                                className="w-full h-6.5 rounded-full bg-[#141923]/95 border border-[#0a7ae6]/70 px-2.5 text-[8.5px] text-white placeholder:text-slate-400 outline-none"
+                                className="w-full h-6.5 rounded-full bg-[#141923]/95 border border-[#000000]/70 px-2.5 text-[8.5px] text-white placeholder:text-slate-400 outline-none"
                               />
                               <button
                                 type="button"
                                 onClick={() => setPreviewTab("success")}
-                                className="w-full h-6.5 rounded-full bg-[#0a7ae6] hover:bg-[#0866c2] text-[8.5px] font-bold uppercase tracking-wider text-white shadow-md transition cursor-pointer flex items-center justify-center gap-1"
+                                className="w-full h-6.5 rounded-full bg-[#000000] hover:bg-[#1f1e1b] text-[8.5px] font-bold uppercase tracking-wider text-white shadow-md transition cursor-pointer flex items-center justify-center gap-1"
                               >
                                 <span>{settings.buttonText || "UNLOCK MY OFFER"}</span>
                               </button>
@@ -604,7 +604,7 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                                 <span className="font-mono font-bold text-white text-[9px] tracking-wider">
                                   {settings.discountCode}
                                 </span>
-                                <span className="rounded bg-[#0a7ae6] px-1.5 py-0.5 text-[7.5px] font-bold uppercase text-white">
+                                <span className="rounded bg-[#000000] px-1.5 py-0.5 text-[7.5px] font-bold uppercase text-white">
                                   Copy
                                 </span>
                               </div>
@@ -617,7 +617,7 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                       </div>
                     ) : (
                       /* Desktop Split Layout (Custom Banner / Custom Copy) */
-                      <div className="grid grid-cols-12 min-h-[320px] bg-[#0c1017]">
+                      <div className="grid grid-cols-12 min-h-[320px] bg-[#000000]">
                         <div className="col-span-5 relative min-h-[320px] border-r border-slate-800">
                           <Image
                             src={settings.imageUrl}
@@ -628,7 +628,7 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                           />
                         </div>
 
-                        <div className="col-span-7 flex flex-col justify-center p-5 space-y-3 bg-[#0c1017]">
+                        <div className="col-span-7 flex flex-col justify-center p-5 space-y-3 bg-[#000000]">
                           <div className="space-y-1">
                             {settings.badgeTitle && (
                               <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[9px] font-bold uppercase font-serif">
@@ -656,18 +656,18 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                                 placeholder="Enter Your Email Address"
                                 value={previewEmail}
                                 onChange={(e) => setPreviewEmail(e.target.value)}
-                                className="w-full h-8 rounded-full bg-[#141923]/95 border border-[#0a7ae6]/70 px-3 text-[10px] text-white placeholder:text-slate-400 outline-none"
+                                className="w-full h-8 rounded-full bg-[#141923]/95 border border-[#000000]/70 px-3 text-[10px] text-white placeholder:text-slate-400 outline-none"
                               />
                               <button
                                 type="button"
                                 onClick={() => setPreviewTab("success")}
-                                className="w-full h-8 rounded-full bg-[#0a7ae6] hover:bg-[#0866c2] text-[10px] font-bold uppercase tracking-wider text-white shadow-md transition cursor-pointer flex items-center justify-center gap-1"
+                                className="w-full h-8 rounded-full bg-[#000000] hover:bg-[#1f1e1b] text-[10px] font-bold uppercase tracking-wider text-white shadow-md transition cursor-pointer flex items-center justify-center gap-1"
                               >
                                 <span>{settings.buttonText || "UNLOCK MY OFFER"}</span>
                               </button>
                             </div>
                           ) : (
-                            <div className="rounded-xl bg-[#0f141d] border border-[#0a7ae6]/60 p-3 text-center space-y-1.5 shadow-xl">
+                            <div className="rounded-xl bg-[#0f141d] border border-[#000000]/60 p-3 text-center space-y-1.5 shadow-xl">
                               <p className="text-[10px] font-bold text-sky-300 uppercase tracking-wider">
                                 Offer Unlocked!
                               </p>
@@ -675,7 +675,7 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                                 <span className="font-mono font-bold text-white text-xs tracking-wider">
                                   {settings.discountCode}
                                 </span>
-                                <span className="rounded bg-[#0a7ae6] px-2 py-0.5 text-[9px] font-bold uppercase text-white">
+                                <span className="rounded bg-[#000000] px-2 py-0.5 text-[9px] font-bold uppercase text-white">
                                   Copy
                                 </span>
                               </div>
@@ -686,9 +686,9 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                     )
                   ) : (
                     /* Mobile Stacked Preview */
-                    <div className="flex flex-col bg-[#0c1017] text-white">
+                    <div className="flex flex-col bg-[#000000] text-white">
                       <div
-                        className="relative w-full overflow-hidden bg-gradient-to-b from-[#080c14] to-[#0c1017] flex items-center justify-center"
+                        className="relative w-full overflow-hidden bg-gradient-to-b from-[#080c14] to-[#000000] flex items-center justify-center"
                         style={{
                           aspectRatio: `${imageAspect}`,
                           maxHeight: "180px",
@@ -701,7 +701,7 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                           className="object-contain"
                           sizes="340px"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0c1017] via-[#0c1017]/30 to-transparent pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#000000]/30 to-transparent pointer-events-none" />
                       </div>
 
                       <div className="p-4 pt-1 text-center space-y-2.5">
@@ -731,18 +731,18 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                               placeholder="Enter Your Email Address"
                               value={previewEmail}
                               onChange={(e) => setPreviewEmail(e.target.value)}
-                              className="w-full h-8 rounded-full bg-[#141923]/95 border border-[#0a7ae6]/70 px-3 text-[10px] text-white text-center outline-none"
+                              className="w-full h-8 rounded-full bg-[#141923]/95 border border-[#000000]/70 px-3 text-[10px] text-white text-center outline-none"
                             />
                             <button
                               type="button"
                               onClick={() => setPreviewTab("success")}
-                              className="w-full h-8 rounded-full bg-[#0a7ae6] text-[10px] font-bold uppercase tracking-wider text-white shadow-md flex items-center justify-center gap-1"
+                              className="w-full h-8 rounded-full bg-[#000000] text-[10px] font-bold uppercase tracking-wider text-white shadow-md flex items-center justify-center gap-1"
                             >
                               <span>{settings.buttonText || "UNLOCK MY OFFER"}</span>
                             </button>
                           </div>
                         ) : (
-                          <div className="rounded-xl bg-[#0f141d] border border-[#0a7ae6]/60 p-2.5 text-center space-y-1.5">
+                          <div className="rounded-xl bg-[#0f141d] border border-[#000000]/60 p-2.5 text-center space-y-1.5">
                             <p className="text-[10px] font-bold text-sky-300 uppercase">
                               ✨ Offer Unlocked!
                             </p>
@@ -750,7 +750,7 @@ export default function FestivePopupEditor({ initialSettings }: Props) {
                               <span className="font-mono font-bold text-white text-xs pl-1">
                                 {settings.discountCode}
                               </span>
-                              <span className="rounded bg-[#0a7ae6] px-2 py-0.5 text-[9px] font-bold uppercase text-white">
+                              <span className="rounded bg-[#000000] px-2 py-0.5 text-[9px] font-bold uppercase text-white">
                                 Copy
                               </span>
                             </div>

@@ -376,8 +376,8 @@ export function VerifiedReviewsManager({
             onClick={() => setShowCanvasPreview(!showCanvasPreview)}
             className={`inline-flex items-center gap-1.5 rounded-xl border px-3 py-2 text-xs font-medium transition cursor-pointer ${
               showCanvasPreview
-                ? "border-blue-500 bg-blue-50 text-[#0a7ae6]"
-                : "border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
+                ? "border-blue-500 bg-blue-50 text-[#000000]"
+                : "border-slate-300 bg-[#fbf7ef] text-slate-700 hover:bg-slate-50"
             }`}
           >
             <Monitor className="size-3.5" />
@@ -389,7 +389,7 @@ export function VerifiedReviewsManager({
             disabled={isResetting}
             onClick={handleResetDefaults}
             title="Reset to original default reviews"
-            className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-medium text-slate-600 hover:bg-slate-50 transition cursor-pointer disabled:opacity-50"
+            className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 py-2 text-xs font-medium text-slate-600 hover:bg-slate-50 transition cursor-pointer disabled:opacity-50"
           >
             <RefreshCw className={`size-3.5 ${isResetting ? "animate-spin" : ""}`} />
             <span className="hidden sm:inline">Reset Defaults</span>
@@ -398,7 +398,7 @@ export function VerifiedReviewsManager({
           <button
             type="button"
             onClick={handleOpenAddModal}
-            className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-xs sm:text-sm font-medium text-white shadow-xs hover:bg-[#0a7ae6] transition cursor-pointer active:scale-95"
+            className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-xs sm:text-sm font-medium text-white shadow-xs hover:bg-[#000000] transition cursor-pointer active:scale-95"
           >
             <Plus className="size-4" />
             <span>Add Review</span>
@@ -408,7 +408,7 @@ export function VerifiedReviewsManager({
 
       {/* METRIC STAT CARDS */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-        <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-2xs">
+        <div className="rounded-2xl border border-slate-200 bg-[#fbf7ef] p-4 sm:p-5 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 text-xs font-medium">
             <span>Total Reviews</span>
             <Star className="size-4 text-amber-500 fill-amber-500" />
@@ -419,7 +419,7 @@ export function VerifiedReviewsManager({
           </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-2xs">
+        <div className="rounded-2xl border border-slate-200 bg-[#fbf7ef] p-4 sm:p-5 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 text-xs font-medium">
             <span>Live on Homepage</span>
             <ShieldCheck className="size-4 text-emerald-500" />
@@ -430,7 +430,7 @@ export function VerifiedReviewsManager({
           </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-2xs">
+        <div className="rounded-2xl border border-slate-200 bg-[#fbf7ef] p-4 sm:p-5 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 text-xs font-medium">
             <span>Average Rating</span>
             <Star className="size-4 text-amber-500 fill-amber-500" />
@@ -441,7 +441,7 @@ export function VerifiedReviewsManager({
           </div>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-2xs">
+        <div className="rounded-2xl border border-slate-200 bg-[#fbf7ef] p-4 sm:p-5 shadow-2xs">
           <div className="flex items-center justify-between text-slate-500 text-xs font-medium">
             <span>Products Featured</span>
             <CheckCircle2 className="size-4 text-blue-500" />
@@ -466,14 +466,14 @@ export function VerifiedReviewsManager({
             <Link prefetch={false}
               href="/"
               target="_blank"
-              className="text-xs font-semibold text-[#0a7ae6] hover:underline inline-flex items-center gap-1"
+              className="text-xs font-semibold text-[#000000] hover:underline inline-flex items-center gap-1"
             >
               <span>View live homepage</span>
               <ExternalLink className="size-3" />
             </Link>
           </div>
 
-          <div className="relative min-h-[340px] w-full rounded-2xl border border-slate-200/80 bg-white p-4 overflow-hidden select-none">
+          <div className="relative min-h-[340px] w-full rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-4 overflow-hidden select-none">
             {reviews.filter((r) => r.isActive).map((rev, idx) => {
               const isSelected = previewActiveIndex === idx;
               let bubbleClass = "w-12 h-12";
@@ -496,7 +496,7 @@ export function VerifiedReviewsManager({
                     onMouseEnter={() => setPreviewActiveIndex(idx)}
                     className={`relative overflow-hidden rounded-full border-2 bg-slate-100 shadow-md transition-all cursor-pointer ${bubbleClass} ${
                       isSelected
-                        ? "border-[#0a7ae6] ring-4 ring-blue-500/30 scale-110 shadow-blue-500/20"
+                        ? "border-[#000000] ring-4 ring-blue-500/30 scale-110 shadow-blue-500/20"
                         : "border-white hover:scale-105"
                     }`}
                   >
@@ -516,7 +516,7 @@ export function VerifiedReviewsManager({
                           : "left-full ml-3 top-1/2 -translate-y-1/2"
                       }`}
                     >
-                      <div className="rounded-xl border border-slate-200 bg-white p-3.5 shadow-xl">
+                      <div className="rounded-xl border border-slate-200 bg-[#fbf7ef] p-3.5 shadow-xl">
                         <div className="flex items-center justify-between mb-1">
                           <p className="text-[10px] font-bold uppercase tracking-wider text-slate-900">
                             {rev.name}
@@ -544,7 +544,7 @@ export function VerifiedReviewsManager({
       )}
 
       {/* FILTER & SEARCH BAR */}
-      <div className="rounded-2xl border border-slate-200 bg-white p-3.5 sm:p-4 shadow-2xs flex flex-wrap items-center justify-between gap-3">
+      <div className="rounded-2xl border border-slate-200 bg-[#fbf7ef] p-3.5 sm:p-4 shadow-2xs flex flex-wrap items-center justify-between gap-3">
         <div className="relative flex-1 min-w-[220px]">
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
           <input
@@ -552,7 +552,7 @@ export function VerifiedReviewsManager({
             placeholder="Search by customer name, location, product, or quote..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-10 pr-4 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#0a7ae6] focus:bg-white focus:outline-none"
+            className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-10 pr-4 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#000000] focus:bg-[#fbf7ef] focus:outline-none"
           />
         </div>
 
@@ -560,7 +560,7 @@ export function VerifiedReviewsManager({
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value as any)}
-            className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 focus:border-[#0a7ae6] focus:outline-none"
+            className="rounded-xl border border-slate-200 bg-[#fbf7ef] px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 focus:border-[#000000] focus:outline-none"
           >
             <option value="all">All Reviews ({reviews.length})</option>
             <option value="active">Live on Homepage ({activeCount})</option>
@@ -583,7 +583,7 @@ export function VerifiedReviewsManager({
           {filteredReviews.map((rev) => (
             <div
               key={rev.id}
-              className={`rounded-2xl border transition-all flex flex-col justify-between overflow-hidden bg-white shadow-2xs hover:shadow-md ${
+              className={`rounded-2xl border transition-all flex flex-col justify-between overflow-hidden bg-[#fbf7ef] shadow-2xs hover:shadow-md ${
                 rev.isActive ? "border-slate-200" : "border-slate-200/60 opacity-75"
               }`}
             >
@@ -679,7 +679,7 @@ export function VerifiedReviewsManager({
       {/* CLEAN & SIMPLE ADD / EDIT REVIEW MODAL */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-xs animate-in fade-in duration-200">
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-2xl max-w-md w-full p-5 sm:p-6 space-y-4">
+          <div className="bg-[#fbf7ef] rounded-2xl border border-slate-200 shadow-2xl max-w-md w-full p-5 sm:p-6 space-y-4">
             {/* Modal Title (No AI logo, clean Star icon) */}
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div className="flex items-center gap-2">
@@ -709,7 +709,7 @@ export function VerifiedReviewsManager({
                   placeholder="e.g. Muskan A., Mumbai"
                   value={formName}
                   onChange={(e) => setFormName(e.target.value)}
-                  className="w-full rounded-xl border border-slate-300 px-3 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#0a7ae6] focus:outline-none"
+                  className="w-full rounded-xl border border-slate-300 px-3 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#000000] focus:outline-none"
                 />
               </div>
 
@@ -725,7 +725,7 @@ export function VerifiedReviewsManager({
                   placeholder="e.g. Arc Buds"
                   value={formProduct}
                   onChange={(e) => setFormProduct(e.target.value)}
-                  className="w-full rounded-xl border border-slate-300 px-3 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#0a7ae6] focus:outline-none"
+                  className="w-full rounded-xl border border-slate-300 px-3 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#000000] focus:outline-none"
                 />
                 <datalist id="products-datalist">
                   {products.map((p) => (
@@ -773,7 +773,7 @@ export function VerifiedReviewsManager({
                   placeholder="Customer feedback quote..."
                   value={formText}
                   onChange={(e) => setFormText(e.target.value)}
-                  className="w-full rounded-xl border border-slate-300 px-3 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#0a7ae6] focus:outline-none font-normal"
+                  className="w-full rounded-xl border border-slate-300 px-3 py-2 text-xs sm:text-sm text-slate-900 focus:border-[#000000] focus:outline-none font-normal"
                 />
               </div>
 
@@ -799,11 +799,11 @@ export function VerifiedReviewsManager({
                     />
                     <label
                       htmlFor="avatar-file-input"
-                      className="inline-flex items-center gap-1.5 rounded-xl border border-slate-300 bg-white px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50 cursor-pointer transition shrink-0"
+                      className="inline-flex items-center gap-1.5 rounded-xl border border-slate-300 bg-[#fbf7ef] px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50 cursor-pointer transition shrink-0"
                     >
                       {isUploading ? (
                         <>
-                          <Loader2 className="size-3 animate-spin text-[#0a7ae6]" />
+                          <Loader2 className="size-3 animate-spin text-[#000000]" />
                           <span>Uploading...</span>
                         </>
                       ) : (
@@ -818,7 +818,7 @@ export function VerifiedReviewsManager({
                       placeholder="or paste image URL..."
                       value={formAvatar}
                       onChange={(e) => setFormAvatar(e.target.value)}
-                      className="w-full rounded-xl border border-slate-300 px-2.5 py-1.5 text-xs text-slate-900 focus:border-[#0a7ae6] focus:outline-none"
+                      className="w-full rounded-xl border border-slate-300 px-2.5 py-1.5 text-xs text-slate-900 focus:border-[#000000] focus:outline-none"
                     />
                   </div>
                 </div>
@@ -831,7 +831,7 @@ export function VerifiedReviewsManager({
                   id="active-checkbox"
                   checked={formIsActive}
                   onChange={(e) => setFormIsActive(e.target.checked)}
-                  className="size-4 rounded text-[#0a7ae6] focus:ring-[#0a7ae6] cursor-pointer"
+                  className="size-4 rounded text-[#000000] focus:ring-[#000000] cursor-pointer"
                 />
                 <label htmlFor="active-checkbox" className="text-xs font-medium text-slate-700 cursor-pointer">
                   Show on Homepage (Active)
@@ -860,8 +860,8 @@ export function VerifiedReviewsManager({
                             onClick={() => setFormSize(s)}
                             className={`rounded-lg border py-1 text-[11px] font-medium transition cursor-pointer ${
                               formSize === s
-                                ? "border-[#0a7ae6] bg-blue-50 text-[#0a7ae6]"
-                                : "border-slate-200 bg-white text-slate-600 hover:bg-slate-100"
+                                ? "border-[#000000] bg-blue-50 text-[#000000]"
+                                : "border-slate-200 bg-[#fbf7ef] text-slate-600 hover:bg-slate-100"
                             }`}
                           >
                             {s === "sm" ? "Small" : s === "md" ? "Medium" : "Large"}
@@ -881,8 +881,8 @@ export function VerifiedReviewsManager({
                             onClick={() => handleSelectPreset(p.name)}
                             className={`rounded-lg border px-1.5 py-1 text-[10px] font-medium transition cursor-pointer truncate ${
                               formPreset === p.name
-                                ? "border-[#0a7ae6] bg-blue-50 text-[#0a7ae6]"
-                                : "border-slate-200 bg-white text-slate-600 hover:bg-slate-100"
+                                ? "border-[#000000] bg-blue-50 text-[#000000]"
+                                : "border-slate-200 bg-[#fbf7ef] text-slate-600 hover:bg-slate-100"
                             }`}
                           >
                             {p.name}
@@ -906,7 +906,7 @@ export function VerifiedReviewsManager({
                 <button
                   type="submit"
                   disabled={isSubmitting || isUploading}
-                  className="px-4 py-2 rounded-xl bg-slate-900 text-xs font-medium text-white hover:bg-[#0a7ae6] transition shadow-xs disabled:opacity-50 cursor-pointer"
+                  className="px-4 py-2 rounded-xl bg-slate-900 text-xs font-medium text-white hover:bg-[#000000] transition shadow-xs disabled:opacity-50 cursor-pointer"
                 >
                   {isSubmitting ? "Saving..." : editingReview ? "Update Review" : "Save Review"}
                 </button>

@@ -257,7 +257,7 @@ export function BrandMarqueeManager({
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-slate-200/80 pb-5">
         <div className="min-w-0 flex-1 pr-4">
           <div className="flex items-center gap-2.5">
-            <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#0a7ae6]">
+            <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#000000]">
               <Sparkles className="size-5" />
             </div>
             <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 truncate">
@@ -274,7 +274,7 @@ export function BrandMarqueeManager({
             type="button"
             onClick={handleSeedDefaults}
             disabled={isSeeding}
-            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-xs font-semibold text-slate-700 shadow-2xs hover:bg-slate-50 hover:text-slate-900 transition-colors disabled:opacity-50"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-[#fbf7ef] px-3.5 py-2 text-xs font-semibold text-slate-700 shadow-2xs hover:bg-slate-50 hover:text-slate-900 transition-colors disabled:opacity-50"
           >
             {isSeeding ? <Loader2 className="size-3.5 animate-spin" /> : <RefreshCw className="size-3.5" />}
             <span>Reset Defaults</span>
@@ -283,7 +283,7 @@ export function BrandMarqueeManager({
           <button
             type="button"
             onClick={handleOpenAdd}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-[#0a7ae6] px-4 py-2 text-xs font-semibold text-white shadow-2xs hover:bg-[#086ac9] transition-colors"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-[#000000] px-4 py-2 text-xs font-semibold text-white shadow-2xs hover:bg-[#1f1e1b] transition-colors"
           >
             <Plus className="size-4" />
             <span>Add Brand Platform</span>
@@ -305,7 +305,7 @@ export function BrandMarqueeManager({
           </span>
         </div>
 
-        <div className="relative w-full overflow-hidden rounded-xl border border-slate-200/80 bg-white py-6 sm:py-8">
+        <div className="relative w-full overflow-hidden rounded-xl border border-slate-200/80 bg-[#fbf7ef] py-6 sm:py-8">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-24 bg-gradient-to-r from-white to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 sm:w-24 bg-gradient-to-l from-white to-transparent" />
           
@@ -353,7 +353,7 @@ export function BrandMarqueeManager({
             placeholder="Search brand title..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-lg border border-slate-200 bg-white py-2 pl-9 pr-4 text-xs text-slate-800 placeholder-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-1 focus:ring-[#0a7ae6]"
+            className="w-full rounded-lg border border-slate-200 bg-[#fbf7ef] py-2 pl-9 pr-4 text-xs text-slate-800 placeholder-slate-400 focus:border-[#000000] focus:outline-none focus:ring-1 focus:ring-[#000000]"
           />
           {searchQuery && (
             <button
@@ -365,7 +365,7 @@ export function BrandMarqueeManager({
           )}
         </div>
 
-        <div className="flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white p-1 text-xs">
+        <div className="flex items-center gap-1.5 rounded-lg border border-slate-200 bg-[#fbf7ef] p-1 text-xs">
           <button
             type="button"
             onClick={() => setStatusFilter("all")}
@@ -382,7 +382,7 @@ export function BrandMarqueeManager({
             onClick={() => setStatusFilter("active")}
             className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
               statusFilter === "active"
-                ? "bg-[#0a7ae6] text-white"
+                ? "bg-[#000000] text-white"
                 : "text-slate-600 hover:text-slate-900"
             }`}
           >
@@ -403,7 +403,7 @@ export function BrandMarqueeManager({
       </div>
 
       {/* Brand Items Table */}
-      <div className="w-full rounded-2xl border border-slate-200 bg-white shadow-2xs overflow-hidden">
+      <div className="w-full rounded-2xl border border-slate-200 bg-[#fbf7ef] shadow-2xs overflow-hidden">
         {filteredItems.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-16 text-center px-4">
             <div className="flex size-12 items-center justify-center rounded-2xl bg-slate-100 text-slate-400 mb-3">
@@ -419,7 +419,7 @@ export function BrandMarqueeManager({
               <button
                 type="button"
                 onClick={() => setSearchQuery("")}
-                className="mt-4 text-xs font-semibold text-[#0a7ae6] hover:underline"
+                className="mt-4 text-xs font-semibold text-[#000000] hover:underline"
               >
                 Clear Search
               </button>
@@ -427,7 +427,7 @@ export function BrandMarqueeManager({
               <button
                 type="button"
                 onClick={handleOpenAdd}
-                className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-[#0a7ae6] px-3.5 py-2 text-xs font-semibold text-white shadow-2xs hover:bg-[#086ac9]"
+                className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-[#000000] px-3.5 py-2 text-xs font-semibold text-white shadow-2xs hover:bg-[#1f1e1b]"
               >
                 <Plus className="size-3.5" />
                 <span>Add Platform</span>
@@ -461,7 +461,7 @@ export function BrandMarqueeManager({
                     {/* Logo Preview */}
                     <td className="py-3.5 px-4">
                       {item.logoUrl ? (
-                        <div className="relative h-9 w-32 rounded-lg border border-slate-200/80 bg-white p-1.5 flex items-center justify-center overflow-hidden shadow-2xs">
+                        <div className="relative h-9 w-32 rounded-lg border border-slate-200/80 bg-[#fbf7ef] p-1.5 flex items-center justify-center overflow-hidden shadow-2xs">
                           <Image
                             src={item.logoUrl}
                             alt={item.name}
@@ -535,7 +535,7 @@ export function BrandMarqueeManager({
       {/* Add / Edit Modal Dialog */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-xs p-4 overflow-y-auto">
-          <div className="relative w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl animate-in fade-in zoom-in-95 duration-150 my-8">
+          <div className="relative w-full max-w-lg rounded-2xl bg-[#fbf7ef] p-6 shadow-2xl animate-in fade-in zoom-in-95 duration-150 my-8">
             <div className="flex items-center justify-between border-b border-slate-100 pb-4">
               <h2 className="text-lg font-bold text-slate-900">
                 {editingItem ? "Edit Brand Platform" : "Add Brand Platform"}
@@ -561,7 +561,7 @@ export function BrandMarqueeManager({
                   placeholder="e.g. Amazon, Flipkart, Reliance Digital"
                   value={formName}
                   onChange={(e) => setFormName(e.target.value)}
-                  className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-xs text-slate-800 focus:border-[#0a7ae6] focus:outline-none focus:ring-1 focus:ring-[#0a7ae6]"
+                  className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-xs text-slate-800 focus:border-[#000000] focus:outline-none focus:ring-1 focus:ring-[#000000]"
                 />
               </div>
 
@@ -574,14 +574,14 @@ export function BrandMarqueeManager({
                   <button
                     type="button"
                     onClick={() => setShowManualUrl(!showManualUrl)}
-                    className="text-[11px] text-[#0a7ae6] hover:underline font-medium"
+                    className="text-[11px] text-[#000000] hover:underline font-medium"
                   >
                     {showManualUrl ? "Upload File" : "Enter Image URL"}
                   </button>
                 </div>
 
                 {formLogoUrl ? (
-                  <div className="flex items-center justify-between gap-4 rounded-lg border border-slate-200 bg-white p-3 shadow-2xs">
+                  <div className="flex items-center justify-between gap-4 rounded-lg border border-slate-200 bg-[#fbf7ef] p-3 shadow-2xs">
                     <div className="relative h-14 w-36 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center p-2 overflow-hidden">
                       <Image
                         src={formLogoUrl}
@@ -597,7 +597,7 @@ export function BrandMarqueeManager({
                         type="button"
                         onClick={() => fileInputRef.current?.click()}
                         disabled={isUploading}
-                        className="text-xs font-semibold text-[#0a7ae6] hover:underline"
+                        className="text-xs font-semibold text-[#000000] hover:underline"
                       >
                         Change Image
                       </button>
@@ -617,7 +617,7 @@ export function BrandMarqueeManager({
                       placeholder="https://example.com/logo.png"
                       value={formLogoUrl}
                       onChange={(e) => setFormLogoUrl(e.target.value)}
-                      className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-xs text-slate-800 focus:border-[#0a7ae6] focus:outline-none focus:ring-1 focus:ring-[#0a7ae6]"
+                      className="w-full rounded-lg border border-slate-200 bg-[#fbf7ef] px-3.5 py-2 text-xs text-slate-800 focus:border-[#000000] focus:outline-none focus:ring-1 focus:ring-[#000000]"
                     />
                     <p className="text-[11px] text-slate-400">
                       Paste a direct image URL (PNG, SVG, or JPG).
@@ -626,10 +626,10 @@ export function BrandMarqueeManager({
                 ) : (
                   <div
                     onClick={() => fileInputRef.current?.click()}
-                    className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-slate-200 bg-white p-6 text-center cursor-pointer hover:border-[#0a7ae6] hover:bg-blue-50/20 transition-all"
+                    className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-slate-200 bg-[#fbf7ef] p-6 text-center cursor-pointer hover:border-[#000000] hover:bg-blue-50/20 transition-all"
                   >
                     {isUploading ? (
-                      <Loader2 className="size-6 animate-spin text-[#0a7ae6] mb-1.5" />
+                      <Loader2 className="size-6 animate-spin text-[#000000] mb-1.5" />
                     ) : (
                       <Upload className="size-6 text-slate-400 mb-1.5" />
                     )}
@@ -694,14 +694,14 @@ export function BrandMarqueeManager({
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+                  className="rounded-lg border border-slate-200 bg-[#fbf7ef] px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting || isUploading}
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#0a7ae6] px-5 py-2 text-xs font-semibold text-white hover:bg-[#086ac9] shadow-2xs transition-colors disabled:opacity-50"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#000000] px-5 py-2 text-xs font-semibold text-white hover:bg-[#1f1e1b] shadow-2xs transition-colors disabled:opacity-50"
                 >
                   {isSubmitting && <Loader2 className="size-3.5 animate-spin" />}
                   <span>{editingItem ? "Save Changes" : "Add Brand"}</span>
@@ -715,7 +715,7 @@ export function BrandMarqueeManager({
       {/* Delete Confirmation Modal */}
       {deleteTargetId && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-xs p-4">
-          <div className="w-full max-w-sm rounded-2xl bg-white p-6 shadow-2xl animate-in fade-in zoom-in-95 duration-150">
+          <div className="w-full max-w-sm rounded-2xl bg-[#fbf7ef] p-6 shadow-2xl animate-in fade-in zoom-in-95 duration-150">
             <h3 className="text-base font-bold text-slate-900">Delete Brand Platform?</h3>
             <p className="mt-2 text-xs text-slate-500">
               Are you sure you want to remove this brand platform from the scrolling marquee?
@@ -724,7 +724,7 @@ export function BrandMarqueeManager({
               <button
                 type="button"
                 onClick={() => setDeleteTargetId(null)}
-                className="rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                className="rounded-lg border border-slate-200 bg-[#fbf7ef] px-3.5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
               >
                 Cancel
               </button>

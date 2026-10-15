@@ -40,7 +40,7 @@ export function CourierStatus({ trackingNumber, trackingUrl, details, loading, e
       {scan.instructions && <p className="mt-1 text-[11px] leading-5 text-slate-500">{scan.instructions}</p>}
     </li>;
   }
-  return <section className="mb-5 overflow-hidden rounded-xl border border-slate-200 bg-white">
+  return <section className="mb-5 overflow-hidden rounded-xl border border-slate-200 bg-[#fbf7ef]">
     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 px-4 py-3 sm:px-5">
       <div className="flex items-center gap-2"><Truck className="size-4 text-slate-400" /><h3 className="text-sm font-semibold text-slate-900">Courier activity</h3></div>
       <div className="flex items-center gap-1"><button type="button" onClick={onRefresh} disabled={loading} className="inline-flex h-8 items-center gap-1.5 rounded-lg px-2.5 text-xs font-medium text-slate-600 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-blue-500 disabled:opacity-50"><RefreshCw className={`size-3.5 ${loading ? "motion-safe:animate-spin" : ""}`} />{loading ? "Refreshing" : "Refresh"}</button><a href={trackingUrl} target="_blank" rel="noreferrer" className="inline-flex h-8 items-center gap-1 rounded-lg px-2.5 text-xs font-medium text-blue-600 hover:bg-blue-50">Delhivery <ArrowUpRight className="size-3.5" /></a></div>

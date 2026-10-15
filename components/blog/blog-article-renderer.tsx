@@ -84,7 +84,7 @@ function InlineFormattedText({ text }: { text: string }) {
           href={match[5]}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold text-[#0a7ae6] underline decoration-[#0a7ae6]/40 underline-offset-4 hover:text-[#025bb5] transition-colors"
+          className="font-semibold text-[#000000] underline decoration-[#000000]/40 underline-offset-4 hover:text-[#000000] transition-colors"
         >
           {match[4]}
         </a>
@@ -171,8 +171,8 @@ function ArticleBodyContent({ content }: { content: string }) {
         if (block.type === "h2") {
           return (
             <div key={idx} id={block.id} className="scroll-mt-28 pt-10 pb-1">
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#0a7ae6] mb-2">
-                <span className="h-1.5 w-6 rounded-full bg-[#0a7ae6]" />
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#000000] mb-2">
+                <span className="h-1.5 w-6 rounded-full bg-[#000000]" />
                 <span>Section {idx + 1}</span>
               </div>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-slate-900">
@@ -199,7 +199,7 @@ function ArticleBodyContent({ content }: { content: string }) {
             <ul key={idx} className="my-5 space-y-3 rounded-2xl bg-slate-50/70 p-5 sm:p-6 border border-slate-100">
               {(block.text as string[]).map((item, itemIdx) => (
                 <li key={itemIdx} className="flex items-start gap-3 text-slate-700">
-                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#0a7ae6]" />
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#000000]" />
                   <span className="leading-relaxed">
                     <InlineFormattedText text={item} />
                   </span>
@@ -213,9 +213,9 @@ function ArticleBodyContent({ content }: { content: string }) {
           return (
             <div
               key={idx}
-              className="my-8 relative overflow-hidden rounded-2xl border-l-4 border-[#0a7ae6] bg-gradient-to-r from-blue-50/60 to-transparent p-6 sm:p-8"
+              className="my-8 relative overflow-hidden rounded-2xl border-l-4 border-[#000000] bg-gradient-to-r from-blue-50/60 to-transparent p-6 sm:p-8"
             >
-              <Quote className="h-8 w-8 text-[#0a7ae6]/30 mb-2" />
+              <Quote className="h-8 w-8 text-[#000000]/30 mb-2" />
               <p className="text-base sm:text-lg font-medium italic text-slate-800 leading-relaxed">
                 <InlineFormattedText text={block.text as string} />
               </p>
@@ -266,7 +266,7 @@ function BestSellerProductCard({ products }: { products: FeaturedProductItem[] }
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xs hover:shadow-md transition-all duration-300"
+      className="rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-5 shadow-xs hover:shadow-md transition-all duration-300"
     >
       {/* Top Header with Best Seller Badge & Next/Prev Controls */}
       <div className="flex items-center justify-between mb-3">
@@ -281,7 +281,7 @@ function BestSellerProductCard({ products }: { products: FeaturedProductItem[] }
               type="button"
               onClick={handlePrev}
               aria-label="Previous best seller"
-              className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-[#0a7ae6] hover:text-white transition-colors"
+              className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-[#000000] hover:text-white transition-colors"
             >
               <ChevronLeft className="h-3.5 w-3.5" />
             </button>
@@ -289,7 +289,7 @@ function BestSellerProductCard({ products }: { products: FeaturedProductItem[] }
               type="button"
               onClick={handleNext}
               aria-label="Next best seller"
-              className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-[#0a7ae6] hover:text-white transition-colors"
+              className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 text-slate-600 hover:bg-[#000000] hover:text-white transition-colors"
             >
               <ChevronRight className="h-3.5 w-3.5" />
             </button>
@@ -319,7 +319,7 @@ function BestSellerProductCard({ products }: { products: FeaturedProductItem[] }
 
       {/* Title */}
       <Link href={`/product/${current.slug || current.id}`}>
-        <h4 className="text-sm font-bold text-slate-900 line-clamp-2 leading-snug hover:text-[#0a7ae6] transition-colors">
+        <h4 className="text-sm font-bold text-slate-900 line-clamp-2 leading-snug hover:text-[#000000] transition-colors">
           {current.name}
         </h4>
       </Link>
@@ -349,7 +349,7 @@ function BestSellerProductCard({ products }: { products: FeaturedProductItem[] }
       {/* Action button */}
       <Link
         href={`/product/${current.slug || current.id}`}
-        className="mt-3.5 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0a7ae6] py-2.5 text-xs font-bold text-white shadow-xs hover:bg-[#025bb5] transition-colors"
+        className="mt-3.5 flex w-full items-center justify-center gap-2 rounded-xl bg-[#000000] py-2.5 text-xs font-bold text-white shadow-xs hover:bg-[#000000] transition-colors"
       >
         <span>View Product</span>
         <ArrowRight className="h-3.5 w-3.5" />
@@ -366,7 +366,7 @@ function BestSellerProductCard({ products }: { products: FeaturedProductItem[] }
               onClick={() => setIndex(dotIdx)}
               className={`h-1.5 rounded-full transition-all duration-300 ${
                 dotIdx === index
-                  ? "w-5 bg-[#0a7ae6]"
+                  ? "w-5 bg-[#000000]"
                   : "w-1.5 bg-slate-300 hover:bg-slate-400"
               }`}
             />
@@ -472,7 +472,7 @@ export default function BlogArticleRenderer({
   };
 
   return (
-    <article className="w-full bg-white">
+    <article className="w-full bg-[#fbf7ef]">
       {/* Top Breadcrumb Bar - End to End across 1440px */}
       <div className="w-full border-b border-slate-100 bg-slate-50/50 py-3.5 sm:py-4">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-12">
@@ -486,14 +486,14 @@ export default function BlogArticleRenderer({
                 Blog
               </Link>
               <ChevronRight className="h-3 w-3 text-slate-400 shrink-0" />
-              <span className="font-semibold text-[#0a7ae6] truncate max-w-[200px] sm:max-w-md">
+              <span className="font-semibold text-[#000000] truncate max-w-[200px] sm:max-w-md">
                 {post.category}
               </span>
             </nav>
 
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 font-bold text-slate-700 hover:text-[#0a7ae6] transition-colors"
+              className="inline-flex items-center gap-1.5 font-bold text-slate-700 hover:text-[#000000] transition-colors"
             >
               <ArrowLeft className="h-3.5 w-3.5" />
               <span>All Articles</span>
@@ -507,7 +507,7 @@ export default function BlogArticleRenderer({
         {/* Editorial Header Section */}
         <header className="mb-10 lg:mb-12">
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#0a7ae6] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-xs">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#000000] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-xs">
               <Tag className="h-3 w-3" />
               {post.category}
             </span>
@@ -535,7 +535,7 @@ export default function BlogArticleRenderer({
           {/* Author & Share Bar */}
           <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-y border-slate-100 py-4.5">
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0a7ae6] text-white font-black text-sm shadow-xs">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#000000] text-white font-black text-sm shadow-xs">
                 XE
               </div>
               <div>
@@ -553,7 +553,7 @@ export default function BlogArticleRenderer({
               <button
                 type="button"
                 onClick={handleCopyLink}
-                className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3.5 py-2 text-xs font-bold text-slate-700 shadow-xs transition hover:bg-slate-50 hover:border-slate-300"
+                className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-[#fbf7ef] px-3.5 py-2 text-xs font-bold text-slate-700 shadow-xs transition hover:bg-slate-50 hover:border-slate-300"
                 title="Copy article link"
               >
                 {copied ? (
@@ -622,7 +622,7 @@ export default function BlogArticleRenderer({
             {toc.length > 0 && (
               <div className="rounded-2xl border border-slate-100 bg-slate-50/70 p-5 shadow-xs">
                 <div className="flex items-center gap-2 pb-3 border-b border-slate-200/60 text-xs font-bold uppercase tracking-wider text-slate-900">
-                  <ListOrdered className="h-4 w-4 text-[#0a7ae6]" />
+                  <ListOrdered className="h-4 w-4 text-[#000000]" />
                   <span>In This Article</span>
                 </div>
                 <nav className="mt-3 space-y-2">
@@ -630,7 +630,7 @@ export default function BlogArticleRenderer({
                     <a
                       key={idx}
                       href={`#${item.id}`}
-                      className="block text-xs font-medium text-slate-600 hover:text-[#0a7ae6] hover:translate-x-1 transition-all leading-snug line-clamp-2"
+                      className="block text-xs font-medium text-slate-600 hover:text-[#000000] hover:translate-x-1 transition-all leading-snug line-clamp-2"
                     >
                       {item.text}
                     </a>
@@ -642,16 +642,16 @@ export default function BlogArticleRenderer({
             {/* Customer Care & Contact Section */}
             <div className="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-5 shadow-xs space-y-4">
               <div className="flex items-center gap-2 pb-3 border-b border-slate-200/70 text-xs font-bold uppercase tracking-wider text-slate-900">
-                <Headphones className="h-4 w-4 text-[#0a7ae6]" />
+                <Headphones className="h-4 w-4 text-[#000000]" />
                 <span>Customer Care & Contact</span>
               </div>
 
               <div className="space-y-3 text-xs">
                 <a
                   href="tel:8527312304"
-                  className="flex items-center gap-2.5 font-semibold text-slate-800 hover:text-[#0a7ae6] transition-colors group"
+                  className="flex items-center gap-2.5 font-semibold text-slate-800 hover:text-[#000000] transition-colors group"
                 >
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-100/70 text-[#0a7ae6] group-hover:bg-[#0a7ae6] group-hover:text-white transition-colors">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-100/70 text-[#000000] group-hover:bg-[#000000] group-hover:text-white transition-colors">
                     <Phone className="h-4 w-4" />
                   </div>
                   <div>
@@ -677,7 +677,7 @@ export default function BlogArticleRenderer({
 
                 <a
                   href="mailto:customercare@xelectron.com"
-                  className="flex items-center gap-2.5 font-semibold text-slate-800 hover:text-[#0a7ae6] transition-colors group"
+                  className="flex items-center gap-2.5 font-semibold text-slate-800 hover:text-[#000000] transition-colors group"
                 >
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-200/80 text-slate-700 group-hover:bg-slate-700 group-hover:text-white transition-colors">
                     <Mail className="h-4 w-4" />
@@ -691,7 +691,7 @@ export default function BlogArticleRenderer({
 
               <div className="pt-2 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
                 <span>Mon – Sat: 10 AM – 6 PM</span>
-                <Link href="/contact" className="font-bold text-[#0a7ae6] hover:underline">
+                <Link href="/contact" className="font-bold text-[#000000] hover:underline">
                   Visit Contact Page →
                 </Link>
               </div>
@@ -703,14 +703,14 @@ export default function BlogArticleRenderer({
             {/* Key Takeaways Highlight Box */}
             {keyTakeaways.length > 0 && (
               <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50/70 via-slate-50 to-white p-6 shadow-xs">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0a7ae6] mb-3">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#000000] mb-3">
                   <BookOpen className="h-4 w-4" />
                   <span>Key Takeaways at a Glance</span>
                 </div>
                 <ul className="space-y-2.5 text-sm text-slate-700">
                   {keyTakeaways.slice(0, 3).map((point, idx) => (
                     <li key={idx} className="flex items-start gap-2.5">
-                      <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#0a7ae6] text-[10px] font-bold text-white">
+                      <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#000000] text-[10px] font-bold text-white">
                         ✓
                       </span>
                       <span className="leading-relaxed">{point}</span>
@@ -734,8 +734,8 @@ export default function BlogArticleRenderer({
             ) : featuredProduct ? (
               <BestSellerProductCard products={[featuredProduct]} />
             ) : (
-              <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-xs">
-                <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[11px] font-bold uppercase text-[#0a7ae6]">
+              <div className="rounded-2xl border border-slate-100 bg-[#fbf7ef] p-5 shadow-xs">
+                <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[11px] font-bold uppercase text-[#000000]">
                   Sound Engineering
                 </span>
                 <h4 className="mt-3 text-sm font-bold text-slate-900">
@@ -746,7 +746,7 @@ export default function BlogArticleRenderer({
                 </p>
                 <Link
                   href="/shop"
-                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#0a7ae6] hover:underline"
+                  className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#000000] hover:underline"
                 >
                   <span>Explore XElectron Lineup</span>
                   <ArrowRight className="h-3 w-3" />
@@ -779,7 +779,7 @@ export default function BlogArticleRenderer({
                           />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h5 className="text-xs font-bold text-slate-800 line-clamp-2 group-hover:text-[#0a7ae6] transition-colors leading-snug">
+                          <h5 className="text-xs font-bold text-slate-800 line-clamp-2 group-hover:text-[#000000] transition-colors leading-snug">
                             {rel.title}
                           </h5>
                           <span className="mt-1 block text-[11px] text-slate-400">
@@ -796,7 +796,7 @@ export default function BlogArticleRenderer({
         </div>
 
         {/* Bottom Full-Width CTA Banner - Brand Blue Theme with Refined Font Weight */}
-        <div className="mt-16 sm:mt-20 overflow-hidden rounded-3xl bg-gradient-to-r from-[#0a7ae6] via-[#0266c8] to-[#014d99] p-8 sm:p-12 text-white shadow-xl shadow-blue-500/15 border border-blue-400/20">
+        <div className="mt-16 sm:mt-20 overflow-hidden rounded-3xl bg-gradient-to-r from-[#000000] via-[#0266c8] to-[#014d99] p-8 sm:p-12 text-white shadow-xl shadow-blue-500/15 border border-blue-400/20">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
             <div className="max-w-4xl xl:max-w-5xl">
               <span className="rounded-full bg-white/20 backdrop-blur-xs px-3.5 py-1 text-xs font-medium uppercase tracking-wider text-white">
@@ -813,7 +813,7 @@ export default function BlogArticleRenderer({
             <div className="flex flex-wrap items-center gap-3 shrink-0">
               <Link
                 href="/shop"
-                className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-2.5 text-sm font-medium text-[#0a7ae6] shadow-md hover:bg-slate-50 transition active:scale-95"
+                className="inline-flex items-center gap-2 rounded-xl bg-[#fbf7ef] px-6 py-2.5 text-sm font-medium text-[#000000] shadow-md hover:bg-slate-50 transition active:scale-95"
               >
                 <span>Explore Store</span>
                 <ArrowRight className="h-4 w-4" />
@@ -842,7 +842,7 @@ export default function BlogArticleRenderer({
               </div>
               <Link
                 href="/blog"
-                className="text-xs sm:text-sm font-bold text-[#0a7ae6] hover:text-[#025bb5] transition-colors"
+                className="text-xs sm:text-sm font-bold text-[#000000] hover:text-[#000000] transition-colors"
               >
                 View all stories →
               </Link>
@@ -864,7 +864,7 @@ export default function BlogArticleRenderer({
                   <Link
                     key={rel.id}
                     href={`/blog/${relSlug}`}
-                    className="group flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-xs transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-slate-200"
+                    className="group flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-[#fbf7ef] shadow-xs transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-slate-200"
                   >
                     <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                       <Image
@@ -874,12 +874,12 @@ export default function BlogArticleRenderer({
                         sizes="(max-width: 640px) 100vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      <span className="absolute top-3 left-3 rounded-full bg-[#0a7ae6] px-3 py-1 text-[11px] font-bold uppercase text-white shadow-xs">
+                      <span className="absolute top-3 left-3 rounded-full bg-[#000000] px-3 py-1 text-[11px] font-bold uppercase text-white shadow-xs">
                         {rel.category}
                       </span>
                     </div>
                     <div className="flex flex-1 flex-col p-5">
-                      <h4 className="text-base font-bold text-slate-900 line-clamp-2 group-hover:text-[#0a7ae6] transition-colors leading-snug">
+                      <h4 className="text-base font-bold text-slate-900 line-clamp-2 group-hover:text-[#000000] transition-colors leading-snug">
                         {rel.title}
                       </h4>
                       <p className="mt-2 flex-1 text-sm text-slate-500 line-clamp-2 leading-relaxed">

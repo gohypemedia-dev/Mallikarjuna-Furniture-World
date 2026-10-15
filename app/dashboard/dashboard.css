@@ -1,7 +1,7 @@
 .dashboard-shell {
   --admin-canvas: #f6f6f6;
   --admin-surface: #ffffff;
-  --admin-ink: #1a1a1a;
+  --admin-ink: #000000;
   --admin-muted: #656565;
   --admin-line: rgba(0, 0, 0, 0.08);
   --admin-accent: #000000;
@@ -106,25 +106,25 @@
 /* Active White Pill Link */
 .dashboard-shell [data-sidebar="sidebar"] a[data-active="true"] {
   background-color: #ffffff !important;
-  color: #1a1a1a !important;
+  color: #000000 !important;
   font-weight: 600 !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
 }
 
 .dashboard-shell [data-sidebar="sidebar"] a[data-active="true"] svg {
-  color: #1a1a1a !important;
+  color: #000000 !important;
 }
 
 /* Fixed Hover state: Keep text dark charcoal on light hover tint */
 .dashboard-shell [data-sidebar="sidebar"] [data-sidebar="menu-button"]:hover:not([data-active="true"]),
 .dashboard-shell [data-sidebar="sidebar"] [data-slot="sidebar-menu-button"]:hover:not([data-active="true"]) {
   background-color: rgba(0, 0, 0, 0.05) !important;
-  color: #1a1a1a !important;
+  color: #000000 !important;
 }
 
 .dashboard-shell [data-sidebar="sidebar"] [data-sidebar="menu-button"]:hover:not([data-active="true"]) *,
 .dashboard-shell [data-sidebar="sidebar"] [data-slot="sidebar-menu-button"]:hover:not([data-active="true"]) * {
-  color: #1a1a1a !important;
+  color: #000000 !important;
 }
 
 /* Submenu items specific styling matching reference image */
@@ -166,7 +166,7 @@
 
 .dashboard-shell [data-sidebar="menu-sub"] a:hover {
   background-color: rgba(0, 0, 0, 0.04) !important;
-  color: #1a1a1a !important;
+  color: #000000 !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -32,7 +32,7 @@ export default async function ShopPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#fbf7ef]">
       <Navbar />
       <Suspense fallback={<div className="py-20 text-center text-slate-400">Loading products...</div>}>
         <ShopContent products={products} />

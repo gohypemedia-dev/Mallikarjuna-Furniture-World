@@ -30,11 +30,11 @@ type CardProps = {
   actions?: React.ReactNode;
 };
 
-const inputClass = "h-10 w-full rounded-lg border border-black/25 bg-white px-3 text-sm outline-none focus:border-black/50";
+const inputClass = "h-10 w-full rounded-lg border border-black/25 bg-[#fbf7ef] px-3 text-sm outline-none focus:border-black/50";
 
 function Card({ title, children, className = "", actions }: CardProps) {
   return (
-    <section className={`overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm ${className}`}>
+    <section className={`overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm ${className}`}>
       <div className="flex items-center justify-between gap-3 px-4 py-4">
         <h2 className="text-sm font-semibold text-black/75">{title}</h2>
         {actions}

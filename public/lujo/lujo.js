@@ -42,546 +42,282 @@ var Swiper=function(){"use strict";function e(e){return null!==e&&"object"==type
 /* ---- js/data.js ---- */
 /* Product data for the homepage "Live Slow." row. Replace with your own catalogue / API response. */
 window.LUJO_DATA = {
-  "currency": "USD",
+  "currency": "INR",
   "tabs": [
     {
       "id": "all",
       "label": "All"
     },
     {
-      "id": "bean-bags",
-      "label": "Bean bags"
+      "id": "sofas",
+      "label": "Sofas"
     },
     {
-      "id": "hammocks-and-stands-all",
-      "label": "Hammocks"
+      "id": "dining-tables",
+      "label": "Dining Tables"
     },
     {
-      "id": "sun-loungers-daybeds",
-      "label": "Loungers & Daybeds"
+      "id": "cots",
+      "label": "Cots"
     },
     {
-      "id": "side-tables-outdoor",
-      "label": "Side Tables"
+      "id": "curtains",
+      "label": "Curtains"
+    },
+    {
+      "id": "mattresses",
+      "label": "Mattresses"
     }
   ],
   "products": {
     "all": [
       {
-        "id": "free-standing-hammock-taj-single-ostuni",
-        "variant": "47902961926368",
-        "title": "Free-standing hammock - single",
-        "collection": "TAJ COLLECTION",
-        "fabric": "OSTUNI BY MOKUM®",
-        "price": 4990,
-        "tag": "",
-        "alt": "Free-standing hammock - single [Ostuni]",
-        "image": "/lujo/assets/img/products/free-standing-hammock-taj-single-ostuni.png",
-        "hover": "/lujo/assets/img/products/free-standing-hammock-taj-single-ostuni-hover.jpg",
-        "swatches": [
-          {
-            "name": "Garlic",
-            "img": "/lujo/assets/img/swatches/ostuni-garlic.jpg"
-          },
-          {
-            "name": "Driftwood",
-            "img": "/lujo/assets/img/swatches/ostuni-driftwood.jpg"
-          },
-          {
-            "name": "Slate",
-            "img": "/lujo/assets/img/swatches/ostuni-slate.jpg"
-          },
-          {
-            "name": "Obsidian",
-            "img": "/lujo/assets/img/swatches/ostuni-obsidian.jpg"
-          },
-          {
-            "name": "Thyme",
-            "img": "/lujo/assets/img/swatches/ostuni-thyme.jpg"
-          },
-          {
-            "name": "Olive",
-            "img": "/lujo/assets/img/swatches/ostuni-olive.jpg"
-          }
-        ],
-        "more": 6
-      },
-      {
-        "id": "bean-bag-xl-grounded",
-        "variant": "48040890466528",
-        "title": "Bean bag - XL",
-        "collection": "KYOTO COLLECTION",
-        "fabric": "GROUNDED BY JAMES DUNLOP®",
-        "price": 885,
-        "tag": "",
-        "alt": "Bean bag - XL [Grounded]",
-        "image": "/lujo/assets/img/products/bean-bag-xl-grounded.png",
-        "hover": "/lujo/assets/img/products/bean-bag-xl-grounded-hover.jpg",
-        "swatches": [
-          {
-            "name": "Oyster",
-            "img": "/lujo/assets/img/swatches/grounded-oyster.jpg"
-          },
-          {
-            "name": "Limestone",
-            "img": "/lujo/assets/img/swatches/grounded-limestone.jpg"
-          },
-          {
-            "name": "Stone",
-            "img": "/lujo/assets/img/swatches/grounded-stone.jpg"
-          },
-          {
-            "name": "Dove Grey",
-            "img": "/lujo/assets/img/swatches/grounded-dove-grey.jpg"
-          },
-          {
-            "name": "Moss",
-            "img": "/lujo/assets/img/swatches/grounded-moss.jpg"
-          },
-          {
-            "name": "Ink",
-            "img": "/lujo/assets/img/swatches/grounded-ink.jpg"
-          }
-        ],
-        "more": 4
-      },
-      {
-        "id": "outdoor-lounge-chair-ostuni",
-        "variant": "47883580440800",
-        "title": "Outdoor lounge chair",
-        "collection": "SOLACE COLLECTION",
-        "fabric": "OSTUNI BY MOKUM®",
-        "price": 3695,
-        "tag": "NEW",
-        "alt": "Outdoor lounge chair [Ostuni]",
-        "image": "/lujo/assets/img/products/outdoor-lounge-chair-ostuni.png",
-        "hover": "/lujo/assets/img/products/outdoor-lounge-chair-ostuni-hover.jpg",
-        "swatches": [
-          {
-            "name": "Garlic",
-            "img": "/lujo/assets/img/swatches/ostuni-garlic.jpg"
-          },
-          {
-            "name": "Driftwood",
-            "img": "/lujo/assets/img/swatches/ostuni-driftwood.jpg"
-          },
-          {
-            "name": "Slate",
-            "img": "/lujo/assets/img/swatches/ostuni-slate.jpg"
-          },
-          {
-            "name": "Obsidian",
-            "img": "/lujo/assets/img/swatches/ostuni-obsidian.jpg"
-          },
-          {
-            "name": "Thyme",
-            "img": "/lujo/assets/img/swatches/ostuni-thyme.jpg"
-          },
-          {
-            "name": "Olive",
-            "img": "/lujo/assets/img/swatches/ostuni-olive.jpg"
-          }
-        ],
-        "more": 6
-      }
-    ],
-    "bean-bags": [
-      {
-        "id": "bean-bag-chair-fontaine",
-        "variant": "48040960983264",
-        "title": "Bean bag - chair",
-        "collection": "TULUM COLLECTION",
-        "fabric": "FONTAINE BY ZEPEL®",
-        "price": 645,
-        "tag": "",
-        "alt": "Bean bag - chair [Fontaine]",
-        "image": "/lujo/assets/img/products/bean-bag-chair-fontaine.png",
-        "hover": "/lujo/assets/img/products/bean-bag-chair-fontaine-hover.jpg",
-        "swatches": [
-          {
-            "name": "Flax",
-            "img": "/lujo/assets/img/swatches/fontaine-flax.jpg"
-          },
-          {
-            "name": "Papyrus",
-            "img": "/lujo/assets/img/swatches/fontaine-papyrus.jpg"
-          },
-          {
-            "name": "Fog",
-            "img": "/lujo/assets/img/swatches/fontaine-fog.jpg"
-          },
-          {
-            "name": "Rust",
-            "img": "/lujo/assets/img/swatches/fontaine-rust.jpg"
-          },
-          {
-            "name": "Mustard",
-            "img": "/lujo/assets/img/swatches/fontaine-mustard.jpg"
-          },
-          {
-            "name": "Midnight",
-            "img": "/lujo/assets/img/swatches/fontaine-midnight.jpg"
-          }
-        ],
-        "more": 6
-      },
-      {
-        "id": "bean-bag-mini-fontaine",
-        "variant": "47914204528864",
-        "title": "Bean bag - Mini",
-        "collection": "KYOTO COLLECTION",
-        "fabric": "FONTAINE BY ZEPEL®",
-        "price": 585,
-        "tag": "",
-        "alt": "Bean bag - Mini [Fontaine]",
-        "image": "/lujo/assets/img/products/bean-bag-mini-fontaine.png",
-        "hover": "/lujo/assets/img/products/bean-bag-mini-fontaine-hover.jpg",
-        "swatches": [
-          {
-            "name": "Flax",
-            "img": "/lujo/assets/img/swatches/fontaine-flax.jpg"
-          },
-          {
-            "name": "Papyrus",
-            "img": "/lujo/assets/img/swatches/fontaine-papyrus.jpg"
-          },
-          {
-            "name": "Fog",
-            "img": "/lujo/assets/img/swatches/fontaine-fog.jpg"
-          },
-          {
-            "name": "Rust",
-            "img": "/lujo/assets/img/swatches/fontaine-rust.jpg"
-          },
-          {
-            "name": "Mustard",
-            "img": "/lujo/assets/img/swatches/fontaine-mustard.jpg"
-          },
-          {
-            "name": "Midnight",
-            "img": "/lujo/assets/img/swatches/fontaine-midnight.jpg"
-          }
-        ],
-        "more": 6
-      },
-      {
-        "id": "bean-bag-footstool-tulum-fontaine",
-        "variant": "47914088628448",
-        "title": "Bean bag footstool",
-        "collection": "TULUM COLLECTION",
-        "fabric": "FONTAINE BY ZEPEL®",
-        "price": 525,
-        "tag": "",
-        "alt": "Bean bag footstool [Tulum Fontaine]",
-        "image": "/lujo/assets/img/products/bean-bag-footstool-tulum-fontaine.png",
-        "hover": "",
-        "swatches": [
-          {
-            "name": "Flax",
-            "img": "/lujo/assets/img/swatches/fontaine-flax.jpg"
-          },
-          {
-            "name": "Papyrus",
-            "img": "/lujo/assets/img/swatches/fontaine-papyrus.jpg"
-          },
-          {
-            "name": "Fog",
-            "img": "/lujo/assets/img/swatches/fontaine-fog.jpg"
-          },
-          {
-            "name": "Rust",
-            "img": "/lujo/assets/img/swatches/fontaine-rust.jpg"
-          },
-          {
-            "name": "Mustard",
-            "img": "/lujo/assets/img/swatches/fontaine-mustard.jpg"
-          },
-          {
-            "name": "Midnight",
-            "img": "/lujo/assets/img/swatches/fontaine-midnight.jpg"
-          }
-        ],
-        "more": 6
-      }
-    ],
-    "hammocks-and-stands-all": [
-      {
-        "id": "double-hammock-ostuni",
-        "variant": "47902989615328",
-        "title": "Hammock - double",
-        "collection": "HAVEN COLLECTION",
-        "fabric": "OSTUNI BY MOKUM®",
-        "price": 3295,
-        "tag": "",
-        "alt": "Hammock - double [Ostuni]",
-        "image": "/lujo/assets/img/products/double-hammock-ostuni.png",
-        "hover": "",
-        "swatches": [
-          {
-            "name": "Garlic",
-            "img": "/lujo/assets/img/swatches/ostuni-garlic.jpg"
-          },
-          {
-            "name": "Driftwood",
-            "img": "/lujo/assets/img/swatches/ostuni-driftwood.jpg"
-          },
-          {
-            "name": "Slate",
-            "img": "/lujo/assets/img/swatches/ostuni-slate.jpg"
-          },
-          {
-            "name": "Obsidian",
-            "img": "/lujo/assets/img/swatches/ostuni-obsidian.jpg"
-          },
-          {
-            "name": "Thyme",
-            "img": "/lujo/assets/img/swatches/ostuni-thyme.jpg"
-          },
-          {
-            "name": "Olive",
-            "img": "/lujo/assets/img/swatches/ostuni-olive.jpg"
-          }
-        ],
-        "more": 6
-      },
-      {
-        "id": "free-standing-hammock-isla-single-ostuni",
-        "variant": "47902996496608",
-        "title": "Free-standing hammock - single",
-        "collection": "ISLA COLLECTION",
-        "fabric": "OSTUNI BY MOKUM®",
-        "price": 5290,
-        "tag": "",
-        "alt": "Free-standing hammock - single [Ostuni]",
-        "image": "/lujo/assets/img/products/free-standing-hammock-isla-single-ostuni.png",
-        "hover": "",
-        "swatches": [
-          {
-            "name": "Garlic",
-            "img": "/lujo/assets/img/swatches/ostuni-garlic.jpg"
-          },
-          {
-            "name": "Driftwood",
-            "img": "/lujo/assets/img/swatches/ostuni-driftwood.jpg"
-          },
-          {
-            "name": "Slate",
-            "img": "/lujo/assets/img/swatches/ostuni-slate.jpg"
-          },
-          {
-            "name": "Obsidian",
-            "img": "/lujo/assets/img/swatches/ostuni-obsidian.jpg"
-          },
-          {
-            "name": "Thyme",
-            "img": "/lujo/assets/img/swatches/ostuni-thyme.jpg"
-          },
-          {
-            "name": "Olive",
-            "img": "/lujo/assets/img/swatches/ostuni-olive.jpg"
-          }
-        ],
-        "more": 6
-      },
-      {
-        "id": "amalfi-single-hammock",
-        "variant": "45622573760736",
-        "title": "Hammock",
-        "collection": "AMALFI COLLECTION",
-        "fabric": "OSTUNI BY MOKUM®",
-        "price": 1895,
-        "tag": "",
-        "alt": "Hammock [Amalfi]",
-        "image": "/lujo/assets/img/products/amalfi-single-hammock.png",
-        "hover": "/lujo/assets/img/products/amalfi-single-hammock-hover.jpg",
-        "swatches": [
-          {
-            "name": "Garlic",
-            "img": "/lujo/assets/img/swatches/ostuni-garlic.jpg"
-          },
-          {
-            "name": "Driftwood",
-            "img": "/lujo/assets/img/swatches/ostuni-driftwood.jpg"
-          },
-          {
-            "name": "Slate",
-            "img": "/lujo/assets/img/swatches/ostuni-slate.jpg"
-          },
-          {
-            "name": "Obsidian",
-            "img": "/lujo/assets/img/swatches/ostuni-obsidian.jpg"
-          },
-          {
-            "name": "Thyme",
-            "img": "/lujo/assets/img/swatches/ostuni-thyme.jpg"
-          },
-          {
-            "name": "Adriatic",
-            "img": "/lujo/assets/img/swatches/ostuni-adriatic.jpg"
-          }
-        ],
-        "more": 3
-      }
-    ],
-    "sun-loungers-daybeds": [
-      {
-        "id": "sun-lounger-neo",
-        "variant": "47487345590496",
-        "title": "Sun lounger",
-        "collection": "KO LANTA COLLECTION",
-        "fabric": "SOURCE BY SUNBRELLA®",
-        "price": 2995,
-        "tag": "",
-        "alt": "Sun lounger [Source]",
-        "image": "/lujo/assets/img/products/sun-lounger-neo.png",
-        "hover": "/lujo/assets/img/products/sun-lounger-neo-hover.jpg",
-        "swatches": [
-          {
-            "name": "Oak",
-            "img": "/lujo/assets/img/swatches/source-oak.jpg"
-          },
-          {
-            "name": "Meltem",
-            "img": "/lujo/assets/img/swatches/source-meltem.jpg"
-          },
-          {
-            "name": "Fogo",
-            "img": "/lujo/assets/img/swatches/source-fogo.jpg"
-          },
-          {
-            "name": "Sencha",
-            "img": "/lujo/assets/img/swatches/source-sencha.jpg"
-          },
-          {
-            "name": "Nori",
-            "img": "/lujo/assets/img/swatches/marine-nori.jpg"
-          },
-          {
-            "name": "Loch",
-            "img": "/lujo/assets/img/swatches/source-loch.jpg"
-          }
-        ],
-        "more": 6
-      },
-      {
-        "id": "outdoor-bean-bag-lounger-ostuni",
-        "variant": "47914017915104",
-        "title": "Outdoor bean bag lounger",
-        "collection": "TULUM COLLECTION",
-        "fabric": "OSTUNI BY MOKUM®",
-        "price": 1555,
-        "tag": "",
-        "alt": "Outdoor bean bag lounger [Ostuni]",
-        "image": "/lujo/assets/img/products/outdoor-bean-bag-lounger-ostuni.png",
-        "hover": "/lujo/assets/img/products/outdoor-bean-bag-lounger-ostuni-hover.jpg",
-        "swatches": [
-          {
-            "name": "Garlic",
-            "img": "/lujo/assets/img/swatches/ostuni-garlic.jpg"
-          },
-          {
-            "name": "Driftwood",
-            "img": "/lujo/assets/img/swatches/ostuni-driftwood.jpg"
-          },
-          {
-            "name": "Slate",
-            "img": "/lujo/assets/img/swatches/ostuni-slate.jpg"
-          },
-          {
-            "name": "Obsidian",
-            "img": "/lujo/assets/img/swatches/ostuni-obsidian.jpg"
-          },
-          {
-            "name": "Thyme",
-            "img": "/lujo/assets/img/swatches/ostuni-thyme.jpg"
-          },
-          {
-            "name": "Olive",
-            "img": "/lujo/assets/img/swatches/ostuni-olive.jpg"
-          }
-        ],
-        "more": 6
-      },
-      {
-        "id": "daybed-low-source",
-        "variant": "47903167348960",
-        "title": "Daybed - low",
-        "collection": "LAZE COLLECTION",
-        "fabric": "SOURCE BY SUNBRELLA®",
-        "price": 4595,
-        "tag": "NEW",
-        "alt": "Daybed - low [Source]",
-        "image": "/lujo/assets/img/products/daybed-low-source.png",
-        "hover": "/lujo/assets/img/products/daybed-low-source-hover.jpg",
-        "swatches": [
-          {
-            "name": "Oak",
-            "img": "/lujo/assets/img/swatches/source-oak.jpg"
-          },
-          {
-            "name": "Meltem",
-            "img": "/lujo/assets/img/swatches/source-meltem.jpg"
-          },
-          {
-            "name": "Fogo",
-            "img": "/lujo/assets/img/swatches/source-fogo.jpg"
-          },
-          {
-            "name": "Sencha",
-            "img": "/lujo/assets/img/swatches/source-sencha.jpg"
-          },
-          {
-            "name": "Nori",
-            "img": "/lujo/assets/img/swatches/source-nori.jpg"
-          },
-          {
-            "name": "Loch",
-            "img": "/lujo/assets/img/swatches/source-loch.jpg"
-          }
-        ],
-        "more": 6
-      }
-    ],
-    "side-tables-outdoor": [
-      {
-        "id": "side-table-high",
-        "variant": "47887383036128",
-        "title": "Side table",
-        "collection": "SOLACE COLLECTION",
+        "id": "premium-sofa",
+        "variant": "premium-sofa",
+        "title": "Premium Sofa",
+        "collection": "CASABLANCA",
         "fabric": "",
-        "price": 1095,
-        "tag": "NEW",
-        "alt": "Side table [Solace high]",
-        "image": "/lujo/assets/img/products/side-table-high.png",
-        "hover": "/lujo/assets/img/products/side-table-high-hover.jpg",
+        "price": 0,
+        "tag": "",
+        "alt": "Premium Sofa",
+        "image": "/images/home-3.jpg",
+        "hover": "/images/prod-4.jpg",
+        "cutout": false,
         "swatches": [],
         "more": 0
       },
       {
-        "id": "laze-sidetable",
-        "variant": "48073073590496",
-        "title": "Side table",
-        "collection": "LAZE COLLECTION",
+        "id": "living-room-sofa",
+        "variant": "living-room-sofa",
+        "title": "Living Room Sofa",
+        "collection": "CASABLANCA",
         "fabric": "",
-        "price": 995,
-        "tag": "NEW",
-        "alt": "Side table [Laze Med]",
-        "image": "/lujo/assets/img/products/laze-sidetable.png",
-        "hover": "/lujo/assets/img/products/laze-sidetable-hover.jpg",
+        "price": 0,
+        "tag": "",
+        "alt": "Living Room Sofa",
+        "image": "/images/prod-4.jpg",
+        "hover": "/images/home-2.jpg",
+        "cutout": false,
         "swatches": [],
         "more": 0
       },
       {
-        "id": "solace-side-table-low",
-        "variant": "48073062809824",
-        "title": "Side table - low",
-        "collection": "SOLACE COLLECTION",
+        "id": "leather-sofa",
+        "variant": "leather-sofa",
+        "title": "Leather Sofa",
+        "collection": "CASABLANCA",
         "fabric": "",
-        "price": 945,
-        "tag": "NEW",
-        "alt": "Side table - low [Solace]",
-        "image": "/lujo/assets/img/products/solace-side-table-low.png",
-        "hover": "/lujo/assets/img/products/solace-side-table-low-hover.jpg",
+        "price": 0,
+        "tag": "",
+        "alt": "Leather Sofa",
+        "image": "/images/home-2.jpg",
+        "hover": "/images/home-3.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      },
+      {
+        "id": "dining-table",
+        "variant": "dining-table",
+        "title": "Dining Table",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Dining Table",
+        "image": "/images/prod-3.jpg",
+        "hover": "/images/about-2.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      },
+      {
+        "id": "dining-set",
+        "variant": "dining-set",
+        "title": "Dining Set",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Dining Set",
+        "image": "/images/home-4.jpg",
+        "hover": "/images/banner-2.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      },
+      {
+        "id": "cot",
+        "variant": "cot",
+        "title": "Cot",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Cot",
+        "image": "/images/prod-2.jpg",
+        "hover": "/images/prod-1.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      },
+      {
+        "id": "curtains",
+        "variant": "curtains",
+        "title": "Curtains",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Curtains",
+        "image": "/images/banner-2.jpg",
+        "hover": "/images/home-4.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      },
+      {
+        "id": "mattress",
+        "variant": "mattress",
+        "title": "Mattress",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Mattress",
+        "image": "/images/home-5.jpg",
+        "hover": "/images/about-1.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      }
+    ],
+    "sofas": [
+      {
+        "id": "premium-sofa",
+        "variant": "premium-sofa",
+        "title": "Premium Sofa",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Premium Sofa",
+        "image": "/images/home-3.jpg",
+        "hover": "/images/prod-4.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      },
+      {
+        "id": "living-room-sofa",
+        "variant": "living-room-sofa",
+        "title": "Living Room Sofa",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Living Room Sofa",
+        "image": "/images/prod-4.jpg",
+        "hover": "/images/home-2.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      },
+      {
+        "id": "leather-sofa",
+        "variant": "leather-sofa",
+        "title": "Leather Sofa",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Leather Sofa",
+        "image": "/images/home-2.jpg",
+        "hover": "/images/home-3.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      }
+    ],
+    "dining-tables": [
+      {
+        "id": "dining-table",
+        "variant": "dining-table",
+        "title": "Dining Table",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Dining Table",
+        "image": "/images/prod-3.jpg",
+        "hover": "/images/about-2.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      },
+      {
+        "id": "dining-set",
+        "variant": "dining-set",
+        "title": "Dining Set",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Dining Set",
+        "image": "/images/home-4.jpg",
+        "hover": "/images/banner-2.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      }
+    ],
+    "cots": [
+      {
+        "id": "cot",
+        "variant": "cot",
+        "title": "Cot",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Cot",
+        "image": "/images/prod-2.jpg",
+        "hover": "/images/prod-1.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      }
+    ],
+    "curtains": [
+      {
+        "id": "curtains",
+        "variant": "curtains",
+        "title": "Curtains",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Curtains",
+        "image": "/images/banner-2.jpg",
+        "hover": "/images/home-4.jpg",
+        "cutout": false,
+        "swatches": [],
+        "more": 0
+      }
+    ],
+    "mattresses": [
+      {
+        "id": "mattress",
+        "variant": "mattress",
+        "title": "Mattress",
+        "collection": "CASABLANCA",
+        "fabric": "",
+        "price": 0,
+        "tag": "",
+        "alt": "Mattress",
+        "image": "/images/home-5.jpg",
+        "hover": "/images/about-1.jpg",
+        "cutout": false,
         "swatches": [],
         "more": 0
       }
@@ -984,7 +720,7 @@ window.LUJO_DATA = {
 
     navbar.classList.add('hero-transition');
 
-    const at = (ms, fn) => setTimeout(fn, ms);
+    const at = (ms, fn) => { const go = () => setTimeout(fn, ms); (window.__siteLoaderDone === false || document.getElementById('site-loader')) ? document.addEventListener('site-loader-done', go, { once: true }) : go(); };
 
     at(800, () => primary.classList.remove('initial-load'));
     at(800, () => title.classList.remove('initial-load'));
@@ -1115,6 +851,7 @@ window.LUJO_DATA = {
 
     // banner: 5s autoplay, 1s cross-fade, endless
     $$('[data-slideshow]').forEach((section) => {
+      if ($$('.swiper-slide', section).length < 2) return; // single banner: show it as-is, nothing to rotate
       new Swiper($('.swiper', section), {
         loop: true,
         slidesPerView: 1,
@@ -1308,7 +1045,7 @@ window.LUJO_DATA = {
           </div>
 
           <div class="product-card__image">
-            <div class="card-image">
+            <div class="card-image${p.cutout === false ? ' card-image--photo' : ''}">
               ${hover}
               <img src="${esc(p.image)}" alt="${esc(p.alt || p.title)}" loading="lazy" width="800" height="1000">
             </div>
@@ -1322,7 +1059,7 @@ window.LUJO_DATA = {
                   <div class="card-footer__details--top"><p class="product-card__brand t-caps">${esc(p.collection)}</p></div>
                   <div class="card-footer__details--bottom">
                     ${info}
-                    <div class="product-card__price"><span class="sa-price"><span class="sa-price__final t-caps" data-price="${p.price}">${money(p.price)}</span></span></div>
+                    <div class="product-card__price"><span class="sa-price"><span class="sa-price__final t-caps" data-price="${p.price}">${p.price ? money(p.price) : 'Enquire now'}</span></span></div>
                   </div>
                 </div>
               </div>
@@ -1379,7 +1116,7 @@ window.LUJO_DATA = {
 
     // currency switch: re-price every card on the page
     document.addEventListener('lujo:currency', () => {
-      $$('[data-price]').forEach((el) => (el.textContent = money(Number(el.dataset.price))));
+      $$('[data-price]').forEach((el) => { if (Number(el.dataset.price) > 0) el.textContent = money(Number(el.dataset.price)); });
     });
 
     // everything below only exists on pages with the "Live Slow." row
@@ -1437,14 +1174,14 @@ window.LUJO_DATA = {
 
   // static pages / journal entries that can show up in the right-hand column
   const PAGES = [
-    { type: 'Page', title: 'About Casablanca', href: '#about', image: '/lujo/assets/img/menu/about.jpg' },
+    { type: 'Page', title: 'About Casablanca', href: '#about', image: '' },
     { type: 'Page', title: 'Material Library', href: '#materials', image: '/lujo/assets/img/story/our-materials-mobile.jpg' },
-    { type: 'Page', title: 'Bean Bag Filling', href: '#bean-bag-filling', image: '/lujo/assets/img/menu/bean-bags.jpg' },
-    { type: 'Page', title: 'Shipping & Delivery', href: '#shipping', image: '/lujo/assets/img/menu/sun-loungers.jpg' },
+    { type: 'Page', title: 'Bean Bag Filling', href: '#bean-bag-filling', image: '' },
+    { type: 'Page', title: 'Shipping & Delivery', href: '#shipping', image: '' },
     { type: 'Page', title: 'Warranty', href: '#warranty', image: '/lujo/assets/img/benefits/made-to-endure.jpg' },
     { type: 'Page', title: 'Product Care', href: '#product-care', image: '/lujo/assets/img/benefits/designed-to-delight.jpg' },
-    { type: 'Journal', title: 'Sisters Sanctuary — A Space for Stillness', href: '#journal-sisters-sanctuary', image: '/lujo/assets/img/journal/sisters-sanctuary.png' },
-    { type: 'Journal', title: 'Earthy Tones — A Casablanca Colour Story', href: '#journal-earthy-tones', image: '/lujo/assets/img/journal/earthy-tones.jpg' },
+    { type: 'Journal', title: 'Sisters Sanctuary — A Space for Stillness', href: '#journal-sisters-sanctuary', image: '' },
+    { type: 'Journal', title: 'Earthy Tones — A Casablanca Colour Story', href: '#journal-earthy-tones', image: '' },
   ];
 
   const ARROW = '<span class="button__icon"><svg width="12" height="12" aria-hidden="true"><use href="#i-arrow-right-12"/></svg></span>';
@@ -1853,4 +1590,158 @@ window.LUJO_DATA = {
     initVideos();
     initPlaceholderLinks();
   });
+})();
+
+/* FONT-REFRESH: web font changes text sizes after load; recompute pinned/scroll positions. */
+(function(){if(!document.fonts||!document.fonts.ready)return;document.fonts.ready.then(function(){setTimeout(function(){window.ScrollTrigger&&window.ScrollTrigger.refresh();window.dispatchEvent(new Event('resize'));},150);});})();
+
+/* SITE-LOADER: full-page logo loader. Stays for at least 1.6s and until the window has loaded, then fades out. */
+(function(){
+  var el=document.getElementById('site-loader');
+  window.__siteLoaderDone=!el;
+  if(!el)return;
+  var started=Date.now(),finished=false;
+  function finish(){
+    if(finished)return;finished=true;
+    el.classList.add('is-done');
+    setTimeout(function(){
+      el.remove();window.__siteLoaderDone=true;
+      document.dispatchEvent(new Event('site-loader-done'));
+    },700);
+  }
+  function check(){
+    var wait=Math.max(0,1600-(Date.now()-started));
+    setTimeout(finish,wait);
+  }
+  if(document.readyState==='complete')check();else window.addEventListener('load',check);
+  setTimeout(finish,7000);
+})();
+/* CATEGORIES: the card rail slides with a GPU transform (no native scroll/snap, so no jitter);
+   the active dot fills like a loading bar. Drag/swipe supported. Pauses on hover/touch/focus and
+   while off screen; no autoplay with reduced motion. */
+(function () {
+  function init() {
+    var root = document.querySelector('[data-cat-carousel]');
+    if (!root || root.dataset.ready) return;
+    root.dataset.ready = '1';
+    var track = root.querySelector('[data-cat-track]');
+    var dotsWrap = root.querySelector('[data-cat-dots]');
+    var cards = Array.prototype.slice.call(track.children);
+    var rail = document.createElement('div');
+    rail.className = 'cat-carousel__rail';
+    cards.forEach(function (c) { rail.appendChild(c); });
+    track.appendChild(rail);
+    track.appendChild(dotsWrap); // indicator overlays the bottom of the cards
+
+    // --cat-interval may come back as "4500ms" or "4.5s"; convert to milliseconds and never go below 1.5s
+    var rawInterval = getComputedStyle(root).getPropertyValue('--cat-interval').trim();
+    var interval = parseFloat(rawInterval) * (/ms$/.test(rawInterval) ? 1 : /s$/.test(rawInterval) ? 1000 : 1);
+    if (!(interval >= 1500)) interval = 4500;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var index = 0, pages = 1, timer = null, paused = false, onScreen = false;
+
+    function step() { return cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : rail.clientWidth; }
+    function maxShift() { return Math.max(0, rail.scrollWidth - rail.clientWidth); }
+    function shiftFor(i) { return Math.min(i * step(), maxShift()); }
+    function setX(x, animate) {
+      rail.style.transition = animate && !reduce ? '' : 'none';
+      rail.style.transform = 'translate3d(' + (-x) + 'px,0,0)';
+    }
+    function label(i) { return cards[i] ? cards[i].getAttribute('aria-label').replace('Shop ', '') : 'more'; }
+
+    function measure() {
+      pages = Math.max(1, Math.round(maxShift() / step()) + 1);
+      dotsWrap.innerHTML = '';
+      for (var i = 0; i < pages; i++) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'cat-dot';
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-label', 'Show ' + label(i));
+        b.addEventListener('click', (function (n) { return function () { go(n); restart(); }; })(i));
+        dotsWrap.appendChild(b);
+      }
+      dotsWrap.style.display = pages > 1 ? '' : 'none';
+      index = Math.min(index, pages - 1);
+      setX(shiftFor(index), false);
+      mark();
+    }
+    function mark() {
+      var dots = dotsWrap.children;
+      for (var i = 0; i < dots.length; i++) {
+        dots[i].classList.toggle('is-active', i === index);
+        dots[i].setAttribute('aria-selected', i === index ? 'true' : 'false');
+      }
+      var a = dots[index]; // restart the fill animation
+      if (a) { a.classList.remove('is-active'); void a.offsetWidth; a.classList.add('is-active'); }
+    }
+    function go(n) {
+      index = (n + pages) % pages;
+      setX(shiftFor(index), true);
+      mark();
+    }
+    function playing() { return !reduce && !paused && onScreen && pages > 1; }
+    function restart() {
+      clearInterval(timer);
+      root.classList.toggle('is-playing', playing());
+      if (playing()) timer = setInterval(function () { go(index + 1); }, interval);
+    }
+
+    // drag / swipe
+    var startX = 0, startY = 0, dx = 0, dragging = false, moved = false, pid = null;
+    track.addEventListener('pointerdown', function (e) {
+      if (e.button !== 0) return;
+      dragging = true; moved = false; dx = 0; pid = e.pointerId;
+      startX = e.clientX; startY = e.clientY;
+    });
+    track.addEventListener('pointermove', function (e) {
+      if (!dragging || e.pointerId !== pid) return;
+      dx = e.clientX - startX;
+      if (!moved && Math.abs(dx) > 6 && Math.abs(dx) > Math.abs(e.clientY - startY)) {
+        moved = true; paused = true; restart();
+        try { track.setPointerCapture(pid); } catch (err) { /* ignore */ }
+      }
+      if (moved) {
+        var x = shiftFor(index) - dx;
+        if (x < 0) x = x / 3; // rubber band at the ends
+        if (x > maxShift()) x = maxShift() + (x - maxShift()) / 3;
+        setX(x, false);
+      }
+    });
+    function endDrag() {
+      if (!dragging) return;
+      dragging = false;
+      if (moved) {
+        var threshold = Math.min(80, step() / 4);
+        if (dx < -threshold) index = Math.min(index + 1, pages - 1);
+        else if (dx > threshold) index = Math.max(index - 1, 0);
+        setX(shiftFor(index), true);
+        mark();
+        paused = false;
+        restart();
+      }
+    }
+    track.addEventListener('pointerup', endDrag);
+    track.addEventListener('pointercancel', endDrag);
+    // a drag should not also open the card link
+    track.addEventListener('click', function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+    track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+    root.addEventListener('focusin', function (e) { if (e.target.matches(':focus-visible')) { paused = true; restart(); } });
+    root.addEventListener('focusout', function () { paused = false; restart(); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) { onScreen = en[0].isIntersecting; restart(); }, { threshold: 0.35 }).observe(root);
+    } else {
+      onScreen = true;
+    }
+    var resizeT;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeT);
+      resizeT = setTimeout(function () { measure(); restart(); }, 150);
+    });
+
+    measure();
+    restart();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

@@ -58,7 +58,7 @@ function ProductSelectPicker({
     return (
       <div className="flex items-center justify-between rounded-xl border border-black/15 bg-slate-50 p-2.5 shadow-2xs">
         <div className="flex items-center gap-3 min-w-0">
-          <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-white shrink-0 border border-black/10">
+          <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-[#fbf7ef] shrink-0 border border-black/10">
             {selectedProduct.mainImage && <Image
               src={selectedProduct.mainImage}
               alt={selectedProduct.name}
@@ -79,7 +79,7 @@ function ProductSelectPicker({
           <button
             type="button"
             onClick={() => setIsSelecting(true)}
-            className="px-2.5 py-1 text-[11px] font-semibold text-black bg-white border border-black/15 rounded-lg hover:bg-black hover:text-white transition cursor-pointer"
+            className="px-2.5 py-1 text-[11px] font-semibold text-black bg-[#fbf7ef] border border-black/15 rounded-lg hover:bg-black hover:text-white transition cursor-pointer"
           >
             Change
           </button>
@@ -107,13 +107,13 @@ function ProductSelectPicker({
           <PlusIcon className="w-4 h-4 text-black/40" />
           <span>Link a Product to this Video</span>
         </div>
-        <span className="text-[10px] text-black/40 bg-white px-2 py-0.5 rounded-md border border-black/10">Optional</span>
+        <span className="text-[10px] text-black/40 bg-[#fbf7ef] px-2 py-0.5 rounded-md border border-black/10">Optional</span>
       </button>
     )
   }
 
   return (
-    <div className="rounded-xl border border-black/15 bg-white p-3 space-y-2.5 shadow-sm">
+    <div className="rounded-xl border border-black/15 bg-[#fbf7ef] p-3 space-y-2.5 shadow-sm">
       <div className="flex items-center justify-between gap-2 border-b border-black/10 pb-2">
         <span className="font-semibold text-black text-xs">Select Product to Link</span>
         <button
@@ -134,7 +134,7 @@ function ProductSelectPicker({
           placeholder="Search products by name or category..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full rounded-lg border border-black/15 bg-slate-50 pl-8 pr-3 py-1.5 text-xs outline-none focus:border-black focus:bg-white transition"
+          className="w-full rounded-lg border border-black/15 bg-slate-50 pl-8 pr-3 py-1.5 text-xs outline-none focus:border-black focus:bg-[#fbf7ef] transition"
         />
       </div>
 
@@ -470,7 +470,7 @@ export function CreatorVideoManager({
           {videos.map((vid, idx) => (
             <div
               key={vid.id}
-              className={`group relative flex items-center gap-4 bg-white border rounded-xl p-3 transition-all duration-200 hover:shadow-md ${
+              className={`group relative flex items-center gap-4 bg-[#fbf7ef] border rounded-xl p-3 transition-all duration-200 hover:shadow-md ${
                 !vid.isActive ? "opacity-60 border-dashed border-black/15" : "border-black/[0.08] hover:border-black/15"
               }`}
             >
@@ -525,7 +525,7 @@ export function CreatorVideoManager({
                 {/* Linked Product */}
                 {vid.product ? (
                   <div className="inline-flex items-center gap-2 bg-black/[0.04] rounded-lg px-2.5 py-1.5">
-                    <div className="relative w-6 h-6 rounded overflow-hidden bg-white shrink-0 border border-black/10">
+                    <div className="relative w-6 h-6 rounded overflow-hidden bg-[#fbf7ef] shrink-0 border border-black/10">
                       {vid.product.mainImage && <Image
                         src={vid.product.mainImage}
                         alt={vid.product.name}
@@ -586,7 +586,7 @@ export function CreatorVideoManager({
       {/* Add / Edit Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-200 max-h-[90vh] overflow-y-auto">
+          <div className="bg-[#fbf7ef] rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-200 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between pb-3">
               <h3 className="text-base font-bold text-black flex items-center gap-2.5">
                 <div className="w-7 h-7 rounded-lg bg-black flex items-center justify-center">
@@ -611,7 +611,7 @@ export function CreatorVideoManager({
                   placeholder="e.g. Earbuds Unboxing & Review"
                   value={formData.title}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                  className="w-full rounded-lg border border-black/15 bg-black/[0.02] px-3 py-2.5 text-xs outline-none focus:border-black/40 focus:bg-white transition"
+                  className="w-full rounded-lg border border-black/15 bg-black/[0.02] px-3 py-2.5 text-xs outline-none focus:border-black/40 focus:bg-[#fbf7ef] transition"
                 />
               </div>
 
@@ -632,7 +632,7 @@ export function CreatorVideoManager({
                       thumbnailUrl: thumbnailForVideoChange(previous.videoUrl, previous.thumbnailUrl, val),
                     }));
                   }}
-                  className="w-full rounded-lg border border-black/15 bg-black/[0.02] px-3 py-2.5 text-xs outline-none focus:border-black/40 focus:bg-white transition"
+                  className="w-full rounded-lg border border-black/15 bg-black/[0.02] px-3 py-2.5 text-xs outline-none focus:border-black/40 focus:bg-[#fbf7ef] transition"
                 />
                 <p className="mt-1.5 text-[10px] text-black/40">
                   YouTube thumbnails update with the video link. Uploaded images are kept.
@@ -648,7 +648,7 @@ export function CreatorVideoManager({
                       title="Instagram video preview"
                       allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                       allowFullScreen
-                      className="h-96 w-full rounded-lg border border-black/10 bg-white"
+                      className="h-96 w-full rounded-lg border border-black/10 bg-[#fbf7ef]"
                     />
                   </div>
                 )}
@@ -666,7 +666,7 @@ export function CreatorVideoManager({
                     placeholder="Image URL or upload →"
                     value={formData.thumbnailUrl}
                     onChange={(e) => setFormData({ ...formData, thumbnailUrl: e.target.value })}
-                    className="flex-1 rounded-lg border border-black/15 bg-black/[0.02] px-3 py-2.5 text-xs outline-none focus:border-black/40 focus:bg-white transition"
+                    className="flex-1 rounded-lg border border-black/15 bg-black/[0.02] px-3 py-2.5 text-xs outline-none focus:border-black/40 focus:bg-[#fbf7ef] transition"
                   />
                   <label className="inline-flex items-center gap-1.5 rounded-lg border border-black/15 bg-black/[0.03] px-3 py-2.5 font-semibold text-black/70 hover:bg-black/[0.06] transition cursor-pointer">
                     {isUploading ? <Loader2Icon className="w-4 h-4 animate-spin" /> : <UploadIcon className="w-4 h-4" />}
@@ -744,7 +744,7 @@ export function CreatorVideoManager({
       {/* Delete Confirmation Modal */}
       {deleteTargetId && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl space-y-4">
+          <div className="bg-[#fbf7ef] rounded-2xl max-w-sm w-full p-6 shadow-2xl space-y-4">
             <div className="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center mb-1">
               <Trash2Icon className="w-5 h-5 text-rose-600" />
             </div>

@@ -238,12 +238,12 @@ export default function BulkOrderPage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-white text-slate-900 selection:bg-[#0a7ae6] selection:text-white">
+    <div className="min-h-screen w-full bg-[#fbf7ef] text-slate-900 selection:bg-[#000000] selection:text-white">
       <Navbar />
 
       <main className="w-full">
         {/* PREMIUM LIGHT HERO SECTION */}
-        <section className="relative overflow-hidden border-b border-slate-100 bg-gradient-to-b from-[#f8fafc] via-[#f1f5f9]/60 to-white pt-10 pb-16 sm:pt-16 sm:pb-24">
+        <section className="relative overflow-hidden border-b border-slate-100 bg-gradient-to-b from-[#fbf7ef] via-[#f3f0ea]/60 to-white pt-10 pb-16 sm:pt-16 sm:pb-24">
           {/* Subtle geometric background accents */}
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#0a7ae6_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.035]" />
           <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 size-[650px] rounded-full bg-blue-400/10 blur-3xl" />
@@ -252,14 +252,14 @@ export default function BulkOrderPage() {
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
               {/* LEFT COLUMN: HEADLINE & TRUST PROOF */}
               <div className="text-center lg:col-span-7 lg:text-left">
-                <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#0a7ae6] shadow-sm">
+                <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#000000] shadow-sm">
                   <Building2 className="size-3.5" />
                   <span>XElectron For Business</span>
                 </div>
 
                 <h1 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-5xl sm:leading-[1.15] lg:text-6xl">
                   Bulk Procurement &{" "}
-                  <span className="text-[#0a7ae6]">Corporate Gifting</span>
+                  <span className="text-[#000000]">Corporate Gifting</span>
                 </h1>
 
                 <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg lg:text-xl">
@@ -268,19 +268,19 @@ export default function BulkOrderPage() {
 
                 {/* TRUST CHIPS */}
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 lg:justify-start">
-                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-xs">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-[#fbf7ef] px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-xs">
                     <CheckCircle2 className="size-3.5 text-emerald-600" />
                     18% GST Input Credit
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-xs">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-[#fbf7ef] px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-xs">
                     <CheckCircle2 className="size-3.5 text-blue-600" />
                     MOQ From 5 Units
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-xs">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-[#fbf7ef] px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-xs">
                     <CheckCircle2 className="size-3.5 text-purple-600" />
                     Custom Logo Branding
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-xs">
+                  <span className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200/90 bg-[#fbf7ef] px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-xs">
                     <CheckCircle2 className="size-3.5 text-amber-600" />
                     Pan-India Express Delivery
                   </span>
@@ -290,7 +290,7 @@ export default function BulkOrderPage() {
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5 lg:justify-start">
                   <a
                     href="#inquiry-section"
-                    className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#0a7ae6] px-6 text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:bg-[#0867c2] active:scale-95"
+                    className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#000000] px-6 text-sm font-bold text-white shadow-md shadow-blue-500/20 transition-all hover:bg-[#0867c2] active:scale-95"
                   >
                     <span>Request Custom Quote</span>
                     <ArrowRight className="size-4" />
@@ -299,7 +299,7 @@ export default function BulkOrderPage() {
                     href="https://wa.me/919870293008?text=Hello%20XElectron%20Corporate%20Sales,%20I%20am%20interested%20in%20a%20bulk%20order%20quotation."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-12 items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 text-sm font-semibold text-slate-800 shadow-xs transition hover:border-[#25D366] hover:bg-emerald-50/50 hover:text-emerald-700"
+                    className="inline-flex h-12 items-center justify-center gap-2 rounded-xl border border-slate-300 bg-[#fbf7ef] px-5 text-sm font-semibold text-slate-800 shadow-xs transition hover:border-[#25D366] hover:bg-emerald-50/50 hover:text-emerald-700"
                   >
                     <span className="size-2 rounded-full bg-[#25D366]" />
                     <span>WhatsApp Sales Desk</span>
@@ -309,10 +309,10 @@ export default function BulkOrderPage() {
 
               {/* RIGHT COLUMN: INTERACTIVE B2B PRODUCT SHOWCASE BENTO */}
               <div className="lg:col-span-5">
-                <div className="relative rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xl shadow-slate-200/60 sm:p-6">
+                <div className="relative rounded-3xl border border-slate-200/80 bg-[#fbf7ef] p-5 shadow-xl shadow-slate-200/60 sm:p-6">
                   <div className="flex items-center justify-between border-b border-slate-100 pb-3.5">
                     <div>
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#0a7ae6]">
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#000000]">
                         Institutional Portfolio
                       </p>
                       <h3 className="text-sm font-bold text-slate-900">
@@ -334,7 +334,7 @@ export default function BulkOrderPage() {
                           const el = document.getElementById("inquiry-section");
                           el?.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="group flex flex-col justify-between rounded-2xl border border-slate-100 bg-[#f8fafc] p-3 transition-all hover:border-[#0a7ae6] hover:bg-white hover:shadow-md cursor-pointer"
+                        className="group flex flex-col justify-between rounded-2xl border border-slate-100 bg-[#fbf7ef] p-3 transition-all hover:border-[#000000] hover:bg-[#fbf7ef] hover:shadow-md cursor-pointer"
                       >
                         <div className="relative mx-auto size-24 shrink-0 sm:size-28">
                           <Image
@@ -358,7 +358,7 @@ export default function BulkOrderPage() {
                           <span className="inline-block text-[10px] font-medium text-slate-500">
                             {item.tag}
                           </span>
-                          <p className="text-xs font-bold text-slate-800 group-hover:text-[#0a7ae6] truncate">
+                          <p className="text-xs font-bold text-slate-800 group-hover:text-[#000000] truncate">
                             {item.name}
                           </p>
                         </div>
@@ -370,7 +370,7 @@ export default function BulkOrderPage() {
                     Need customized models or special software integration?{" "}
                     <a
                       href="tel:9870293008"
-                      className="font-bold text-[#0a7ae6] hover:underline"
+                      className="font-bold text-[#000000] hover:underline"
                     >
                       Call +91 9870293008
                     </a>
@@ -385,7 +385,7 @@ export default function BulkOrderPage() {
         <section className="bg-slate-50/50 py-14 sm:py-20 border-b border-slate-100">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#0a7ae6]">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#000000]">
                 XElectron Enterprise Advantages
               </span>
               <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
@@ -402,9 +402,9 @@ export default function BulkOrderPage() {
                 return (
                   <div
                     key={idx}
-                    className="flex flex-col rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition-all hover:border-[#0a7ae6] hover:shadow-md"
+                    className="flex flex-col rounded-2xl border border-slate-200/80 bg-[#fbf7ef] p-6 shadow-xs transition-all hover:border-[#000000] hover:shadow-md"
                   >
-                    <div className="flex size-11 items-center justify-center rounded-xl bg-blue-50 text-[#0a7ae6]">
+                    <div className="flex size-11 items-center justify-center rounded-xl bg-blue-50 text-[#000000]">
                       <Icon className="size-5" />
                     </div>
                     <h3 className="mt-4 text-base font-bold text-slate-900">{adv.title}</h3>
@@ -417,10 +417,10 @@ export default function BulkOrderPage() {
         </section>
 
         {/* VOLUME PROCUREMENT SLABS */}
-        <section className="border-b border-slate-100 bg-white py-14 sm:py-18">
+        <section className="border-b border-slate-100 bg-[#fbf7ef] py-14 sm:py-18">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#0a7ae6]">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#000000]">
                 Institutional Slabs
               </span>
               <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
@@ -440,10 +440,10 @@ export default function BulkOrderPage() {
                     const el = document.getElementById("inquiry-section");
                     el?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-[#f8fafc] p-6 text-center transition-all hover:-translate-y-1 hover:border-[#0a7ae6] hover:bg-white hover:shadow-xl cursor-pointer"
+                  className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-[#fbf7ef] p-6 text-center transition-all hover:-translate-y-1 hover:border-[#000000] hover:bg-[#fbf7ef] hover:shadow-xl cursor-pointer"
                 >
                   <div>
-                    <span className="inline-block rounded-full bg-blue-50 border border-blue-200/80 px-3 py-1 text-xs font-bold text-[#0a7ae6]">
+                    <span className="inline-block rounded-full bg-blue-50 border border-blue-200/80 px-3 py-1 text-xs font-bold text-[#000000]">
                       {tier.badge}
                     </span>
                     <h3 className="mt-4 text-2xl font-extrabold text-slate-900 tracking-tight">
@@ -454,7 +454,7 @@ export default function BulkOrderPage() {
                     </p>
                   </div>
                   <div className="mt-6 pt-4 border-t border-slate-200/70">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0a7ae6] group-hover:underline">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#000000] group-hover:underline">
                       Select This Tier <ArrowRight className="size-3" />
                     </span>
                   </div>
@@ -470,10 +470,10 @@ export default function BulkOrderPage() {
             <div className="grid gap-10 lg:grid-cols-12">
               {/* LEFT: INTERACTIVE QUOTATION FORM */}
               <div className="lg:col-span-7">
-                <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-100 sm:p-9">
+                <div className="rounded-3xl border border-slate-200 bg-[#fbf7ef] p-6 shadow-xl shadow-slate-100 sm:p-9">
                   <div className="mb-6">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="inline-block rounded-md bg-blue-50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-[#0a7ae6]">
+                      <span className="inline-block rounded-md bg-blue-50 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-[#000000]">
                         Official Quotation Form
                       </span>
                       <span className="inline-flex items-center gap-1.5 rounded-md bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">
@@ -485,7 +485,7 @@ export default function BulkOrderPage() {
                       Request Commercial Quotation
                     </h2>
                     <p className="mt-1 text-xs text-slate-600 sm:text-sm">
-                      Fill in your institutional requirements. Your request is sent directly to our Sales Desk at <a href="mailto:sales@xelectron.com" className="font-semibold text-[#0a7ae6] hover:underline">sales@xelectron.com</a> with a guaranteed formal quote within 2–4 hours.
+                      Fill in your institutional requirements. Your request is sent directly to our Sales Desk at <a href="mailto:sales@xelectron.com" className="font-semibold text-[#000000] hover:underline">sales@xelectron.com</a> with a guaranteed formal quote within 2–4 hours.
                     </p>
                   </div>
 
@@ -500,7 +500,7 @@ export default function BulkOrderPage() {
                       <p className="mt-2 text-xs text-emerald-800 sm:text-sm">
                         Your commercial inquiry has been routed directly to <strong>sales@xelectron.com</strong> under reference:
                       </p>
-                      <div className="mx-auto mt-3 inline-block rounded-xl border border-emerald-300 bg-white px-5 py-2.5 font-mono text-sm font-semibold text-emerald-900 shadow-xs">
+                      <div className="mx-auto mt-3 inline-block rounded-xl border border-emerald-300 bg-[#fbf7ef] px-5 py-2.5 font-mono text-sm font-semibold text-emerald-900 shadow-xs">
                         #{submittedReference.slice(-8).toUpperCase()}
                       </div>
                       <p className="mt-3.5 text-xs text-emerald-700">
@@ -521,7 +521,7 @@ export default function BulkOrderPage() {
                         <button
                           type="button"
                           onClick={resetForm}
-                          className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition cursor-pointer"
+                          className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-[#fbf7ef] px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition cursor-pointer"
                         >
                           Submit Another Inquiry
                         </button>
@@ -545,8 +545,8 @@ export default function BulkOrderPage() {
                                 onClick={() => setFormData({ ...formData, requirementType: opt.label })}
                                 className={`flex flex-col items-center gap-1.5 rounded-xl border p-2.5 text-center text-xs font-semibold transition cursor-pointer ${
                                   isSelected
-                                    ? "border-[#0a7ae6] bg-blue-50/80 text-[#0a7ae6] shadow-xs"
-                                    : "border-slate-200 bg-slate-50/50 text-slate-600 hover:border-slate-300 hover:bg-white"
+                                    ? "border-[#000000] bg-blue-50/80 text-[#000000] shadow-xs"
+                                    : "border-slate-200 bg-slate-50/50 text-slate-600 hover:border-slate-300 hover:bg-[#fbf7ef]"
                                 }`}
                               >
                                 <Icon className="size-4" />
@@ -569,7 +569,7 @@ export default function BulkOrderPage() {
                             placeholder="e.g. Vikram Verma"
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3.5 text-sm text-slate-900 outline-none transition focus:border-[#0a7ae6] focus:bg-white focus:ring-3 focus:ring-blue-500/10"
+                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3.5 text-sm text-slate-900 outline-none transition focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-3 focus:ring-blue-500/10"
                           />
                         </div>
 
@@ -582,7 +582,7 @@ export default function BulkOrderPage() {
                             placeholder="e.g. Reliance / Wipro / School"
                             value={formData.company}
                             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3.5 text-sm text-slate-900 outline-none transition focus:border-[#0a7ae6] focus:bg-white focus:ring-3 focus:ring-blue-500/10"
+                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3.5 text-sm text-slate-900 outline-none transition focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-3 focus:ring-blue-500/10"
                           />
                         </div>
                       </div>
@@ -599,7 +599,7 @@ export default function BulkOrderPage() {
                             placeholder="vikram@company.com"
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3.5 text-sm text-slate-900 outline-none transition focus:border-[#0a7ae6] focus:bg-white focus:ring-3 focus:ring-blue-500/10"
+                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3.5 text-sm text-slate-900 outline-none transition focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-3 focus:ring-blue-500/10"
                           />
                         </div>
 
@@ -613,7 +613,7 @@ export default function BulkOrderPage() {
                             placeholder="+91 98765 43210"
                             value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3.5 text-sm text-slate-900 outline-none transition focus:border-[#0a7ae6] focus:bg-white focus:ring-3 focus:ring-blue-500/10"
+                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3.5 text-sm text-slate-900 outline-none transition focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-3 focus:ring-blue-500/10"
                           />
                         </div>
                       </div>
@@ -627,7 +627,7 @@ export default function BulkOrderPage() {
                           <select
                             value={formData.productCategory}
                             onChange={(e) => setFormData({ ...formData, productCategory: e.target.value })}
-                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3 text-xs sm:text-sm text-slate-900 outline-none transition focus:border-[#0a7ae6] focus:bg-white focus:ring-3 focus:ring-blue-500/10 cursor-pointer"
+                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3 text-xs sm:text-sm text-slate-900 outline-none transition focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-3 focus:ring-blue-500/10 cursor-pointer"
                           >
                             <option value="Smart Projectors">Smart Projectors (Android / 4K / FHD)</option>
                             <option value="Digital Photo Frames">Digital Photo Frames (WiFi / IPS)</option>
@@ -645,7 +645,7 @@ export default function BulkOrderPage() {
                           <select
                             value={formData.quantity}
                             onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3 text-xs sm:text-sm text-slate-900 outline-none transition focus:border-[#0a7ae6] focus:bg-white focus:ring-3 focus:ring-blue-500/10 cursor-pointer"
+                            className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3 text-xs sm:text-sm text-slate-900 outline-none transition focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-3 focus:ring-blue-500/10 cursor-pointer"
                           >
                             {QUANTITY_TIERS.map((t, idx) => (
                               <option key={idx} value={t.label}>
@@ -666,7 +666,7 @@ export default function BulkOrderPage() {
                           placeholder="e.g. Mumbai - 400001, Maharashtra"
                           value={formData.deliveryLocation}
                           onChange={(e) => setFormData({ ...formData, deliveryLocation: e.target.value })}
-                          className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3.5 text-sm text-slate-900 outline-none transition focus:border-[#0a7ae6] focus:bg-white focus:ring-3 focus:ring-blue-500/10"
+                          className="mt-1.5 h-11 w-full rounded-xl border border-slate-200 bg-slate-50/40 px-3.5 text-sm text-slate-900 outline-none transition focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-3 focus:ring-blue-500/10"
                         />
                       </div>
 
@@ -681,7 +681,7 @@ export default function BulkOrderPage() {
                           placeholder="Mention specific model numbers, delivery deadlines, custom boot-screen logo requirements, or budget criteria..."
                           value={formData.message}
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          className="mt-1.5 w-full resize-none rounded-xl border border-slate-200 bg-slate-50/40 p-3 text-sm text-slate-900 outline-none transition focus:border-[#0a7ae6] focus:bg-white focus:ring-3 focus:ring-blue-500/10"
+                          className="mt-1.5 w-full resize-none rounded-xl border border-slate-200 bg-slate-50/40 p-3 text-sm text-slate-900 outline-none transition focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-3 focus:ring-blue-500/10"
                         />
                       </div>
 
@@ -689,7 +689,7 @@ export default function BulkOrderPage() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0a7ae6] px-6 text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:bg-[#0867c2] active:scale-[0.99] disabled:opacity-60 cursor-pointer"
+                        className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#000000] px-6 text-sm font-bold text-white shadow-md shadow-blue-500/25 transition-all hover:bg-[#0867c2] active:scale-[0.99] disabled:opacity-60 cursor-pointer"
                       >
                         {isSubmitting ? (
                           <>
@@ -711,9 +711,9 @@ export default function BulkOrderPage() {
               {/* RIGHT: DIRECT CORPORATE SALES DESK CARD */}
               <div className="space-y-6 lg:col-span-5">
                 {/* DIRECT DESK */}
-                <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-100 sm:p-7">
+                <div className="rounded-3xl border border-slate-200 bg-[#fbf7ef] p-6 shadow-xl shadow-slate-100 sm:p-7">
                   <div className="flex items-center gap-3">
-                    <div className="flex size-10 items-center justify-center rounded-xl border border-blue-100 bg-blue-50 text-[#0a7ae6]">
+                    <div className="flex size-10 items-center justify-center rounded-xl border border-blue-100 bg-blue-50 text-[#000000]">
                       <Headphones className="size-5" />
                     </div>
                     <div>
@@ -724,27 +724,27 @@ export default function BulkOrderPage() {
 
                   <div className="mt-5 space-y-3.5 border-t border-slate-100 pt-5 text-xs">
                     <div className="flex items-start gap-3">
-                      <Phone className="mt-0.5 size-4 text-[#0a7ae6] shrink-0" />
+                      <Phone className="mt-0.5 size-4 text-[#000000] shrink-0" />
                       <div>
                         <p className="text-slate-500 font-medium">Direct Sales Hotline</p>
-                        <a href="tel:9870293008" className="text-sm font-bold text-slate-900 hover:text-[#0a7ae6] transition">
+                        <a href="tel:9870293008" className="text-sm font-bold text-slate-900 hover:text-[#000000] transition">
                           +91 9870293008
                         </a>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <Mail className="mt-0.5 size-4 text-[#0a7ae6] shrink-0" />
+                      <Mail className="mt-0.5 size-4 text-[#000000] shrink-0" />
                       <div>
                         <p className="text-slate-500 font-medium">Institutional Email</p>
-                        <a href="mailto:sales@xelectron.com" className="text-sm font-bold text-[#0a7ae6] hover:underline transition">
+                        <a href="mailto:sales@xelectron.com" className="text-sm font-bold text-[#000000] hover:underline transition">
                           sales@xelectron.com
                         </a>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <Clock className="mt-0.5 size-4 text-[#0a7ae6] shrink-0" />
+                      <Clock className="mt-0.5 size-4 text-[#000000] shrink-0" />
                       <div>
                         <p className="text-slate-500 font-medium">Business Desk Hours</p>
                         <p className="text-sm font-semibold text-slate-800">Mon – Sat: 10:00 AM – 06:00 PM</p>
@@ -773,8 +773,8 @@ export default function BulkOrderPage() {
                 </div>
 
                 {/* EXPERIENCE CENTER CARD */}
-                <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xs sm:p-7">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0a7ae6]">
+                <div className="rounded-3xl border border-slate-200 bg-[#fbf7ef] p-6 shadow-xs sm:p-7">
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#000000]">
                     <MapPin className="size-4" />
                     <span>Live Product Experience Center</span>
                   </div>
@@ -784,7 +784,7 @@ export default function BulkOrderPage() {
                   <p className="mt-1.5 text-xs leading-relaxed text-slate-600">
                     Evaluate 4K projection throw distance, optical clarity, and build quality in person before submitting commercial purchase orders.
                   </p>
-                  <div className="mt-3.5 rounded-xl border border-slate-100 bg-[#f8fafc] p-3 text-xs text-slate-700">
+                  <div className="mt-3.5 rounded-xl border border-slate-100 bg-[#fbf7ef] p-3 text-xs text-slate-700">
                     <p className="font-bold text-slate-900">XElectron Experience Lounge:</p>
                     <p className="mt-0.5 text-slate-600">LGF-22, Spectrum Metro Mall, Sector-75, Noida, UP 201301</p>
                     <p className="mt-1 text-[11px] font-semibold text-slate-500">Open Daily: 01:00 PM – 09:00 PM</p>
@@ -799,7 +799,7 @@ export default function BulkOrderPage() {
         <section className="border-t border-slate-100 bg-slate-50/50 py-16">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#0a7ae6]">
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#000000]">
                 Frequently Asked Questions
               </span>
               <h2 className="mt-2.5 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
@@ -811,17 +811,17 @@ export default function BulkOrderPage() {
               {FAQS.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs transition"
+                  className="overflow-hidden rounded-2xl border border-slate-200 bg-[#fbf7ef] shadow-xs transition"
                 >
                   <button
                     type="button"
                     onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
-                    className="flex w-full items-center justify-between px-5 py-4 text-left text-sm font-bold text-slate-900 transition hover:text-[#0a7ae6] cursor-pointer"
+                    className="flex w-full items-center justify-between px-5 py-4 text-left text-sm font-bold text-slate-900 transition hover:text-[#000000] cursor-pointer"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
                       className={`size-4 text-slate-400 transition-transform duration-200 ${
-                        activeFaq === idx ? "rotate-180 text-[#0a7ae6]" : ""
+                        activeFaq === idx ? "rotate-180 text-[#000000]" : ""
                       }`}
                     />
                   </button>

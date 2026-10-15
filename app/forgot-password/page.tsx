@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <main className="min-h-screen bg-white flex flex-col justify-between"><Navbar /><Suspense fallback={<p role="status" className="p-12 text-center">Loading...</p>}><PasswordRecoveryForm mode="request" /></Suspense></main>;
+  return <main className="min-h-screen bg-[#fbf7ef] flex flex-col justify-between"><Navbar /><Suspense fallback={<p role="status" className="p-12 text-center">Loading...</p>}><PasswordRecoveryForm mode="request" /></Suspense></main>;
 }

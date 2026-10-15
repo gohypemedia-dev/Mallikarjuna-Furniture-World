@@ -108,7 +108,7 @@ export default function WarrantyRegistrationPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white text-slate-900">
+    <main className="min-h-screen bg-[#fbf7ef] text-slate-900">
       <Navbar />
 
       {/* HERO SECTION */}
@@ -121,7 +121,7 @@ export default function WarrantyRegistrationPage() {
             <span aria-hidden="true">/</span>
             <span aria-current="page">Warranty Registration</span>
           </nav>
-          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#0876d5]">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#1f1e1b]">
             <ShieldCheck className="h-3.5 w-3.5" /> Product care & support
           </span>
           <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-[42px] text-slate-950">
@@ -132,12 +132,12 @@ export default function WarrantyRegistrationPage() {
           </p>
 
           {/* TAB SWITCHER */}
-          <div className="mt-6 inline-flex w-full max-w-md rounded-xl border border-blue-100 bg-white p-1">
+          <div className="mt-6 inline-flex w-full max-w-md rounded-xl border border-blue-100 bg-[#fbf7ef] p-1">
             <button
               aria-pressed={activeTab === "register"}
               onClick={() => setActiveTab("register")}
               className={`flex-1 px-3 py-3 rounded-lg text-xs sm:text-sm font-semibold transition cursor-pointer ${
-                activeTab === "register" ? "bg-[#0a7ae6] text-white shadow-sm" : "text-slate-600 hover:bg-slate-50"
+                activeTab === "register" ? "bg-[#000000] text-white shadow-sm" : "text-slate-600 hover:bg-slate-50"
               }`}
             >
               Register a device
@@ -146,7 +146,7 @@ export default function WarrantyRegistrationPage() {
               aria-pressed={activeTab === "check"}
               onClick={() => setActiveTab("check")}
               className={`flex-1 px-3 py-3 rounded-lg text-xs sm:text-sm font-semibold transition cursor-pointer ${
-                activeTab === "check" ? "bg-[#0a7ae6] text-white shadow-sm" : "text-slate-600 hover:bg-slate-50"
+                activeTab === "check" ? "bg-[#000000] text-white shadow-sm" : "text-slate-600 hover:bg-slate-50"
               }`}
             >
               Warranty status
@@ -159,7 +159,7 @@ export default function WarrantyRegistrationPage() {
       <section className="py-8 sm:py-10">
         <div className="mx-auto grid max-w-[1200px] items-start gap-6 px-5 sm:px-8 lg:grid-cols-[minmax(0,1fr)_280px]">
           {activeTab === "register" ? (
-            <div className="min-w-0 bg-white p-5 sm:p-7 rounded-2xl border border-slate-200">
+            <div className="min-w-0 bg-[#fbf7ef] p-5 sm:p-7 rounded-2xl border border-slate-200">
               <div className="border-b border-slate-100 pb-5">
                 <h2 className="text-xl font-semibold tracking-tight text-slate-900">Device registration</h2>
                 <p className="mt-2 text-sm leading-6 text-slate-500">
@@ -197,7 +197,7 @@ export default function WarrantyRegistrationPage() {
                         placeholder="e.g. Vikram Malhotra"
                         value={regData.name}
                         onChange={(e) => setRegData({ ...regData, name: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition"
                       />
                     </div>
 
@@ -211,7 +211,7 @@ export default function WarrantyRegistrationPage() {
                         placeholder="vikram@example.com"
                         value={regData.email}
                         onChange={(e) => setRegData({ ...regData, email: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition"
                       />
                     </div>
                   </div>
@@ -227,7 +227,7 @@ export default function WarrantyRegistrationPage() {
                         placeholder="+91 98765 43210"
                         value={regData.phone}
                         onChange={(e) => setRegData({ ...regData, phone: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition"
                       />
                     </div>
 
@@ -241,7 +241,7 @@ export default function WarrantyRegistrationPage() {
                         placeholder="e.g. XElectron Techno 14 Projector"
                         value={regData.productModel}
                         onChange={(e) => setRegData({ ...regData, productModel: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition"
                       />
                     </div>
                   </div>
@@ -257,7 +257,7 @@ export default function WarrantyRegistrationPage() {
                         placeholder="XE-9908123"
                         value={regData.serialNumber}
                         onChange={(e) => setRegData({ ...regData, serialNumber: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition uppercase font-mono"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition uppercase font-mono"
                       />
                     </div>
 
@@ -270,7 +270,7 @@ export default function WarrantyRegistrationPage() {
                         required
                         value={regData.purchaseDate}
                         onChange={(e) => setRegData({ ...regData, purchaseDate: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition"
                       />
                     </div>
 
@@ -284,7 +284,7 @@ export default function WarrantyRegistrationPage() {
                         placeholder="INV-2026-8801"
                         value={regData.invoiceNumber}
                         onChange={(e) => setRegData({ ...regData, invoiceNumber: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition"
+                        className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-3 text-base sm:text-sm outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition"
                       />
                     </div>
                   </div>
@@ -292,7 +292,7 @@ export default function WarrantyRegistrationPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#0a7ae6] px-8 text-sm font-semibold text-white hover:bg-blue-600 transition shadow-md shadow-blue-500/25 active:scale-95 disabled:opacity-50 cursor-pointer"
+                    className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#000000] px-8 text-sm font-semibold text-white hover:bg-blue-600 transition shadow-md shadow-blue-500/25 active:scale-95 disabled:opacity-50 cursor-pointer"
                   >
                     <ShieldCheck className="size-4" />
                     {isSubmitting ? "Registering..." : "Submit registration"}
@@ -302,7 +302,7 @@ export default function WarrantyRegistrationPage() {
             </div>
           ) : (
             /* CHECK WARRANTY STATUS TAB */
-            <div className="min-w-0 bg-white p-5 sm:p-7 rounded-2xl border border-slate-200 space-y-6">
+            <div className="min-w-0 bg-[#fbf7ef] p-5 sm:p-7 rounded-2xl border border-slate-200 space-y-6">
               <div>
                 <h2 className="text-xl font-semibold tracking-tight text-slate-900">Check Your Warranty Status</h2>
                 <p className="mt-2 text-sm leading-6 text-slate-500">
@@ -317,12 +317,12 @@ export default function WarrantyRegistrationPage() {
                   placeholder="Enter Serial Number or Invoice (e.g. XE-9908123)..."
                   value={searchSerial}
                   onChange={(e) => setSearchSerial(e.target.value)}
-                  className="flex-1 rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base sm:text-sm outline-none focus:border-[#0a7ae6] focus:bg-white focus:ring-2 focus:ring-[#0a7ae6]/10 transition uppercase font-mono"
+                  className="flex-1 rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-base sm:text-sm outline-none focus:border-[#000000] focus:bg-[#fbf7ef] focus:ring-2 focus:ring-[#000000]/10 transition uppercase font-mono"
                 />
                 <button
                   type="submit"
                   disabled={isChecking}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3 text-xs font-bold text-white hover:bg-[#0a7ae6] transition cursor-pointer disabled:opacity-60 shadow-sm"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3 text-xs font-bold text-white hover:bg-[#000000] transition cursor-pointer disabled:opacity-60 shadow-sm"
                 >
                   {isChecking ? (
                     <>
@@ -389,7 +389,7 @@ export default function WarrantyRegistrationPage() {
                     </Link>
                     <Link
                       href="/contact"
-                      className="inline-flex items-center gap-1.5 rounded-xl bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs font-bold px-4 py-2 transition"
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-[#fbf7ef] hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs font-bold px-4 py-2 transition"
                     >
                       Contact Customer Support
                     </Link>
@@ -417,7 +417,7 @@ export default function WarrantyRegistrationPage() {
                     </button>
                     <Link
                       href="/contact"
-                      className="inline-flex items-center gap-1.5 rounded-xl bg-white hover:bg-amber-100/50 text-amber-900 border border-amber-300 text-xs font-bold px-4 py-2 transition"
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-[#fbf7ef] hover:bg-amber-100/50 text-amber-900 border border-amber-300 text-xs font-bold px-4 py-2 transition"
                     >
                       Contact Support
                     </Link>
@@ -427,7 +427,7 @@ export default function WarrantyRegistrationPage() {
             </div>
           )}
           <aside className="rounded-2xl bg-slate-50 p-6">
-            <FileText aria-hidden="true" className="mb-4 size-6 text-[#0a7ae6]" />
+            <FileText aria-hidden="true" className="mb-4 size-6 text-[#000000]" />
             <h2 className="text-base font-semibold">Before you start</h2>
             <ul className="mt-4 space-y-4 text-sm text-slate-600">
               <li><span className="block font-medium text-slate-900">Purchase invoice</span><span className="mt-1 block text-xs leading-6">Use the invoice number and date from your proof of purchase.</span></li>
@@ -435,8 +435,8 @@ export default function WarrantyRegistrationPage() {
               <li><span className="block font-medium text-slate-900">What happens next?</span><span className="mt-1 block text-xs leading-6">Our team reviews your registration and purchase details to confirm coverage.</span></li>
             </ul>
             <div className="mt-5 space-y-3 border-t border-slate-200 pt-5">
-              <Link href="/warranty-terms" className="block text-sm font-medium text-[#0876d5] hover:underline">Read warranty terms</Link>
-              <Link href="/contact" className="block text-sm font-medium text-[#0876d5] hover:underline">Need help? Contact support</Link>
+              <Link href="/warranty-terms" className="block text-sm font-medium text-[#1f1e1b] hover:underline">Read warranty terms</Link>
+              <Link href="/contact" className="block text-sm font-medium text-[#1f1e1b] hover:underline">Need help? Contact support</Link>
             </div>
           </aside>
         </div>

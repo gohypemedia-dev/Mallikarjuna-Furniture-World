@@ -25,13 +25,19 @@ const nextConfig: NextConfig = {
     },
   },
   async redirects() {
-    return [
-      {
-        source: "/about",
-        destination: "/about-us",
-        permanent: true,
-      },
+    // TEMPORARY: only the home page is designed so far. Every other storefront page sends
+    // visitors back to "/" until it is built. Remove a path from this list to switch that page back on.
+    // (dashboard, login/signup/password pages, api and checkout are left alone on purpose.)
+    const notBuiltYet = [
+      "about", "about-us", "blog", "bulk-order", "bulk-orders", "careers", "contact", "contact-us",
+      "downloads", "find-a-store", "firmware-updates", "orders", "pickup-drop-service", "privacy-choices",
+      "privacy-policy", "product", "repair-replacement", "service-centers", "shop", "support",
+      "terms-of-use", "terms-policy", "troubleshooting", "warranty", "warranty-registration", "warranty-terms",
     ];
+    return notBuiltYet.flatMap((page) => [
+      { source: `/${page}`, destination: "/", permanent: false },
+      { source: `/${page}/:path*`, destination: "/", permanent: false },
+    ]);
   },
   async headers() {
     return [

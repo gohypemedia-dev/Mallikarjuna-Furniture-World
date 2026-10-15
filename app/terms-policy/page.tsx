@@ -78,11 +78,11 @@ export default function TermsPolicyPage() {
 
       <section className="mx-auto grid w-full max-w-[1800px] gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[260px_minmax(0,1fr)] lg:px-12 lg:py-14">
         <aside className="lg:sticky lg:top-28 lg:h-fit">
-          <div className="rounded-2xl border border-blue-100 bg-white p-4 shadow-sm">
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#0a7ae6]">On this page</p>
+          <div className="rounded-2xl border border-blue-100 bg-[#fbf7ef] p-4 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#000000]">On this page</p>
             <nav className="mt-3 grid gap-1">
             {policySections.map((section) => (
-              <a key={section.title} href={`#${section.title.replaceAll(" ", "-")}`} className="rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-blue-50 hover:text-[#0a7ae6]">
+              <a key={section.title} href={`#${section.title.replaceAll(" ", "-")}`} className="rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-blue-50 hover:text-[#000000]">
                 {section.title}
               </a>
             ))}
@@ -97,8 +97,8 @@ export default function TermsPolicyPage() {
               { icon: RotateCcw, label: "Replacement help", detail: "For eligible early issues" },
               { icon: Wrench, label: "Authorised repairs", detail: "Trained technical service" },
             ].map(({ icon: Icon, label, detail }) => (
-              <div key={label} className="rounded-xl border border-blue-100 bg-white p-4 shadow-sm">
-                <span className="flex size-9 items-center justify-center rounded-lg bg-blue-50 text-[#0a7ae6]"><Icon className="size-4.5" /></span>
+              <div key={label} className="rounded-xl border border-blue-100 bg-[#fbf7ef] p-4 shadow-sm">
+                <span className="flex size-9 items-center justify-center rounded-lg bg-blue-50 text-[#000000]"><Icon className="size-4.5" /></span>
                 <p className="mt-3 text-sm font-bold text-slate-900">{label}</p>
                 <p className="mt-1 text-xs text-slate-500">{detail}</p>
               </div>
@@ -107,11 +107,11 @@ export default function TermsPolicyPage() {
 
           <div className="mt-5 grid gap-4">
             {policySections.map((section, index) => (
-              <article key={section.title} id={section.title.replaceAll(" ", "-")} className="scroll-mt-40 rounded-2xl border border-blue-100 bg-white px-6 py-6 shadow-sm transition-colors hover:border-[#0a7ae6]/30 sm:px-8 lg:px-10">
+              <article key={section.title} id={section.title.replaceAll(" ", "-")} className="scroll-mt-40 rounded-2xl border border-blue-100 bg-[#fbf7ef] px-6 py-6 shadow-sm transition-colors hover:border-[#000000]/30 sm:px-8 lg:px-10">
                 <div className="flex gap-3">
-                  <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[#0a7ae6]"><CheckCircle2 className="size-4" /></span>
+                  <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[#000000]"><CheckCircle2 className="size-4" /></span>
                   <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#0a7ae6]">Policy detail {index + 1}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#000000]">Policy detail {index + 1}</p>
                     <h2 className="mt-1 text-lg font-bold capitalize text-slate-900">{section.title}</h2>
                     <p className="mt-2 max-w-5xl text-sm leading-6 text-slate-600">{section.text}</p>
                   </div>
@@ -120,13 +120,13 @@ export default function TermsPolicyPage() {
             ))}
           </div>
 
-          <div className="mt-6 flex flex-col justify-between gap-4 rounded-2xl bg-[#0a7ae6] p-6 text-white shadow-lg shadow-blue-500/20 sm:flex-row sm:items-center sm:p-7">
+          <div className="mt-6 flex flex-col justify-between gap-4 rounded-2xl bg-[#000000] p-6 text-white shadow-lg shadow-blue-500/20 sm:flex-row sm:items-center sm:p-7">
             <div>
               <p className="text-lg font-bold">Need help with a service request?</p>
               <p className="mt-1 text-sm text-blue-50">Find an authorised center or submit a repair request.</p>
             </div>
             <div className="flex gap-3">
-              <Link prefetch={false} href="/service-centers" className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-bold text-[#0a7ae6] transition hover:bg-blue-50">
+              <Link prefetch={false} href="/service-centers" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#fbf7ef] px-4 py-2.5 text-sm font-bold text-[#000000] transition hover:bg-blue-50">
                 Service centers <ArrowRight className="size-4" />
               </Link>
             </div>

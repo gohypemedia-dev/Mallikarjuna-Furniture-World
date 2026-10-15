@@ -64,7 +64,7 @@ export default async function CustomerDetailPage({ params }: { params: Promise<{
               <div className="flex items-center gap-2">
                 <Link prefetch={false}
                   href="/dashboard/customers"
-                  className="inline-flex size-8 items-center justify-center rounded-lg border border-black/10 bg-white text-black/70 hover:bg-black/5 transition-colors"
+                  className="inline-flex size-8 items-center justify-center rounded-lg border border-black/10 bg-[#fbf7ef] text-black/70 hover:bg-black/5 transition-colors"
                   title="Back to customers"
                 >
                   <ArrowLeft className="size-4" />
@@ -81,7 +81,7 @@ export default async function CustomerDetailPage({ params }: { params: Promise<{
               </div>
 
               {/* Metric Banner Card */}
-              <section className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-xs">
+              <section className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-xs">
                 <div className="grid grid-cols-1 divide-y divide-black/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
                   <div className="p-4 sm:p-5">
                     <p className="text-xs font-medium text-black/60">Amount spent</p>
@@ -108,7 +108,7 @@ export default async function CustomerDetailPage({ params }: { params: Promise<{
                 <div className="space-y-5 lg:col-span-8">
                   {/* Last Order Placed Card */}
                   {latestOrder && (
-                    <section className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-xs">
+                    <section className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-xs">
                       <div className="border-b border-black/10 px-5 py-3.5 flex items-center justify-between">
                         <h2 className="text-xs font-bold uppercase tracking-wider text-black/75">
                           Last order placed
@@ -122,7 +122,7 @@ export default async function CustomerDetailPage({ params }: { params: Promise<{
                             <div className="flex items-center gap-2">
                               <Link prefetch={false}
                                 href={`/dashboard/orders/${latestOrder.id}`}
-                                className="text-sm font-bold text-[#005BD3] hover:underline"
+                                className="text-sm font-bold text-[#000000] hover:underline"
                               >
                                 {orderReference(latestOrder.id)}
                               </Link>
@@ -164,7 +164,7 @@ export default async function CustomerDetailPage({ params }: { params: Promise<{
                                 className="flex items-center justify-between gap-3 pt-2 first:pt-0"
                               >
                                 <div className="flex items-center gap-3">
-                                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-black/10 bg-white p-1">
+                                  <div className="relative size-10 shrink-0 overflow-hidden rounded-lg border border-black/10 bg-[#fbf7ef] p-1">
                                     <Image
                                       src={item.product?.mainImage || "/category-smartphone.png"}
                                       alt={item.product?.name || "Product"}
@@ -193,7 +193,7 @@ export default async function CustomerDetailPage({ params }: { params: Promise<{
                         <div className="flex items-center justify-end pt-2">
                           <Link prefetch={false}
                             href="/dashboard/orders"
-                            className="inline-flex h-8 items-center rounded-lg border border-black/15 bg-white px-3 text-xs font-semibold text-black/80 hover:bg-black/5 transition-colors"
+                            className="inline-flex h-8 items-center rounded-lg border border-black/15 bg-[#fbf7ef] px-3 text-xs font-semibold text-black/80 hover:bg-black/5 transition-colors"
                           >
                             View all orders
                           </Link>
@@ -203,7 +203,7 @@ export default async function CustomerDetailPage({ params }: { params: Promise<{
                   )}
 
                   {/* All Orders Table Card */}
-                  <section className="overflow-hidden rounded-xl border border-black/10 bg-white shadow-xs">
+                  <section className="overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-xs">
                     <div className="border-b border-black/10 px-5 py-3.5 flex items-center justify-between">
                       <h2 className="text-xs font-bold uppercase tracking-wider text-black/75">
                         Order history ({customer.orders.length})
@@ -243,7 +243,7 @@ export default async function CustomerDetailPage({ params }: { params: Promise<{
                 {/* RIGHT COLUMN: Customer Details (35%) */}
                 <div className="space-y-4 lg:col-span-4">
                   {/* Customer Info Card */}
-                  <section className="rounded-xl border border-black/10 bg-white p-5 shadow-xs space-y-4">
+                  <section className="rounded-xl border border-black/10 bg-[#fbf7ef] p-5 shadow-xs space-y-4">
                     <div className="flex items-center justify-between border-b border-black/10 pb-3">
                       <h2 className="text-xs font-bold uppercase tracking-wider text-black/75 flex items-center gap-2">
                         <User className="size-4 text-black/60" /> Customer
@@ -258,7 +258,7 @@ export default async function CustomerDetailPage({ params }: { params: Promise<{
                       <p className="text-xs font-bold text-black/75">Contact information</p>
                       <a
                         href={`mailto:${customer.email}`}
-                        className="flex items-center gap-1.5 text-xs text-[#005BD3] hover:underline"
+                        className="flex items-center gap-1.5 text-xs text-[#000000] hover:underline"
                       >
                         <Mail className="size-3.5 shrink-0" />
                         <span className="truncate">{customer.email}</span>
@@ -266,7 +266,7 @@ export default async function CustomerDetailPage({ params }: { params: Promise<{
                       {customer.phone ? (
                         <a
                           href={`tel:${customer.phone}`}
-                          className="flex items-center gap-1.5 text-xs text-black/80 hover:text-[#005BD3]"
+                          className="flex items-center gap-1.5 text-xs text-black/80 hover:text-[#000000]"
                         >
                           <Phone className="size-3.5 shrink-0 text-black/60" />
                           <span>{customer.phone}</span>

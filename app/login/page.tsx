@@ -235,7 +235,7 @@ function AuthForm() {
   };
 
   return (
-    <div className="w-full flex-1 flex bg-white">
+    <div className="w-full flex-1 flex bg-[#fbf7ef]">
       <div className="grid w-full min-h-[calc(100vh-70px)] lg:grid-cols-12">
         {/* Left Side: Editorial Lifestyle Photo (50% Width, 100% Height) */}
         <div className="relative hidden lg:block lg:col-span-6 bg-slate-100 min-h-[650px] lg:min-h-full overflow-hidden">
@@ -250,7 +250,7 @@ function AuthForm() {
         </div>
 
         {/* Right Side: Editorial Form (50% Width, Centered) */}
-        <div className="lg:col-span-6 min-h-[650px] lg:min-h-full flex flex-col items-center justify-center px-6 py-10 sm:px-12 lg:px-16 xl:px-20 bg-white">
+        <div className="lg:col-span-6 min-h-[650px] lg:min-h-full flex flex-col items-center justify-center px-6 py-10 sm:px-12 lg:px-16 xl:px-20 bg-[#fbf7ef]">
           <div className="w-full max-w-[480px] my-auto py-4">
             {/* Mode Subtitle & Info */}
             <div className="mb-6">
@@ -287,7 +287,7 @@ function AuthForm() {
                       onChange={(e) =>
                         setFormData({ ...formData, fullName: e.target.value })
                       }
-                      className="w-full rounded-none border border-slate-900 bg-white py-2.5 px-3.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                      className="w-full rounded-none border border-slate-900 bg-[#fbf7ef] py-2.5 px-3.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                     />
                   </div>
 
@@ -315,7 +315,7 @@ function AuthForm() {
                           setFormData({ ...formData, email: e.target.value });
                           if (isOtpVerified) setIsOtpVerified(false);
                         }}
-                        className="flex-1 rounded-none border border-slate-900 bg-white py-2.5 px-3.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 disabled:bg-slate-50 disabled:text-slate-500 transition-all"
+                        className="flex-1 rounded-none border border-slate-900 bg-[#fbf7ef] py-2.5 px-3.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 disabled:bg-slate-50 disabled:text-slate-500 transition-all"
                       />
 
                       {!isOtpVerified && (
@@ -364,7 +364,7 @@ function AuthForm() {
                           onChange={(e) =>
                             setFormData({ ...formData, otp: e.target.value.replace(/[^0-9]/g, "") })
                           }
-                          className="flex-1 rounded-none border border-slate-900 bg-white py-2.5 px-3 text-center font-mono text-base font-semibold tracking-[0.4em] text-slate-900 placeholder:tracking-widest placeholder:text-slate-300 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                          className="flex-1 rounded-none border border-slate-900 bg-[#fbf7ef] py-2.5 px-3 text-center font-mono text-base font-semibold tracking-[0.4em] text-slate-900 placeholder:tracking-widest placeholder:text-slate-300 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                         />
                         <button
                           type="button"
@@ -396,7 +396,7 @@ function AuthForm() {
                     <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-900 mb-1.5">
                       PHONE NUMBER <span className="text-rose-500">*</span>
                     </label>
-                    <div className="flex items-center border border-slate-900 bg-white px-3">
+                    <div className="flex items-center border border-slate-900 bg-[#fbf7ef] px-3">
                       <span className="text-xs font-medium text-slate-500 pr-2 border-r border-slate-200 shrink-0">
                         +91
                       </span>
@@ -431,7 +431,7 @@ function AuthForm() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full rounded-none border border-slate-900 bg-white py-2.5 px-3.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                    className="w-full rounded-none border border-slate-900 bg-[#fbf7ef] py-2.5 px-3.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                   />
                 </div>
               )}
@@ -452,7 +452,7 @@ function AuthForm() {
                         onChange={(e) =>
                           setFormData({ ...formData, password: e.target.value })
                         }
-                        className="w-full rounded-none border border-slate-900 bg-white py-2.5 pl-3.5 pr-9 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                        className="w-full rounded-none border border-slate-900 bg-[#fbf7ef] py-2.5 pl-3.5 pr-9 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                       />
                       <button
                         type="button"
@@ -484,7 +484,7 @@ function AuthForm() {
                             confirmPassword: e.target.value,
                           })
                         }
-                        className="w-full rounded-none border border-slate-900 bg-white py-2.5 pl-3.5 pr-9 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                        className="w-full rounded-none border border-slate-900 bg-[#fbf7ef] py-2.5 pl-3.5 pr-9 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                       />
                       <button
                         type="button"
@@ -524,7 +524,7 @@ function AuthForm() {
                       onChange={(e) =>
                         setFormData({ ...formData, password: e.target.value })
                       }
-                      className="w-full rounded-none border border-slate-900 bg-white py-2.5 pl-3.5 pr-9 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
+                      className="w-full rounded-none border border-slate-900 bg-[#fbf7ef] py-2.5 pl-3.5 pr-9 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all"
                     />
                     <button
                       type="button"
@@ -646,7 +646,7 @@ function AuthForm() {
 
 export default function LoginPage() {
   return (
-    <main className="min-h-screen bg-white flex flex-col justify-between">
+    <main className="min-h-screen bg-[#fbf7ef] flex flex-col justify-between">
       <Navbar />
       <Suspense fallback={<div className="py-20 text-center text-slate-400">Loading authentication form...</div>}>
         <AuthForm />

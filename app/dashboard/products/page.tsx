@@ -31,7 +31,7 @@ export default async function ProductsPage() {
       <SidebarProvider className="min-h-svh">
         <AppSidebar />
         <SidebarInset>
-          <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-5">
+          <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <h1 className="flex items-center gap-2 text-lg font-semibold">
                 <Tag className="size-4" /> Products ({dbProducts.length})
@@ -64,7 +64,7 @@ export default async function ProductsPage() {
               </div>
             </div>
 
-            <section className="mt-3 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+            <section className="mt-3 overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
               <div className="grid grid-cols-2 divide-x divide-y divide-black/10 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0">
                 <div className="flex items-center gap-2 px-4 py-4 text-xs font-medium">
                   <CalendarDays className="size-4" /> 30 days

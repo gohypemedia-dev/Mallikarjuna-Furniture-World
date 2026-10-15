@@ -29,13 +29,13 @@ export function ProductFeaturesSection({ features, onChange }: ProductFeaturesSe
   }
 
   return (
-    <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+    <section className="mt-4 overflow-hidden rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm">
       <div className="flex items-start justify-between gap-4 px-4 py-4">
         <div>
           <h2 className="text-sm font-semibold text-black/75">Key Features</h2>
           <p className="mt-1 text-xs leading-5 text-black/50">Add short, punchy bullet points to highlight the product's main selling points.</p>
         </div>
-        <Button type="button" variant="outline" size="sm" onClick={addFeature} className="shrink-0 cursor-pointer border-black/15 bg-white text-black/70 shadow-none hover:bg-black/[0.03]">
+        <Button type="button" variant="outline" size="sm" onClick={addFeature} className="shrink-0 cursor-pointer border-black/15 bg-[#fbf7ef] text-black/70 shadow-none hover:bg-black/[0.03]">
           <Plus className="size-3.5 mr-1" /> Add feature
         </Button>
       </div>
@@ -50,7 +50,7 @@ export function ProductFeaturesSection({ features, onChange }: ProductFeaturesSe
                   value={feature}
                   onChange={(event) => updateFeature(index, event.target.value)}
                   placeholder="e.g. 180° Rotating Gimbal Stand"
-                  className="border-black/20 bg-white shadow-none focus-visible:border-black/45 focus-visible:ring-black/10 flex-1"
+                  className="border-black/20 bg-[#fbf7ef] shadow-none focus-visible:border-black/45 focus-visible:ring-black/10 flex-1"
                 />
                 <Button type="button" variant="ghost" size="icon" aria-label="Remove feature" onClick={() => removeFeature(index)} className="cursor-pointer text-black/40 hover:bg-red-50 hover:text-red-700 shrink-0">
                   <Trash2 className="size-4" />

@@ -24,7 +24,7 @@ export function NavbarShowcaseToggle({ checked, onCheckedChange }: NavbarShowcas
       >
         <span
           aria-hidden="true"
-          className={`size-5 rounded-full bg-white shadow-sm transition-transform ${
+          className={`size-5 rounded-full bg-[#fbf7ef] shadow-sm transition-transform ${
             checked ? "translate-x-5" : "translate-x-0.5"
           }`}
         />

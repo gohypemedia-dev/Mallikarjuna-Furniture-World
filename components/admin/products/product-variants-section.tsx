@@ -30,7 +30,7 @@ type ProductVariantsSectionProps = {
 const PRESET_COLORS: { name: string; hex: string }[] = [
   { name: "Black", hex: "#171717" },
   { name: "White", hex: "#ffffff" },
-  { name: "Silver / Grey", hex: "#94a3b8" },
+  { name: "Silver / Grey", hex: "#8e8a82" },
   { name: "Midnight Blue", hex: "#1e3a8a" },
   { name: "Emerald Green", hex: "#047857" },
   { name: "Crimson Red", hex: "#b91c1c" },
@@ -57,7 +57,7 @@ export function ProductVariantsSection({
   const addColor = (preset?: { name: string; hex: string }) => {
     const newColor: AdminProductColor = preset
       ? { name: preset.name, bgHex: preset.hex }
-      : { name: "New Color", bgHex: "#0a7ae6" };
+      : { name: "New Color", bgHex: "#000000" };
     setColors((prev) => [...prev, newColor]);
   };
 
@@ -100,11 +100,11 @@ export function ProductVariantsSection({
   return (
     <div className="space-y-6">
       {/* 1. COLOR SWATCHES MANAGEMENT (Crossbeats style) */}
-      <div className="rounded-xl border border-black/10 bg-white p-4 sm:p-5 shadow-sm space-y-4">
+      <div className="rounded-xl border border-black/10 bg-[#fbf7ef] p-4 sm:p-5 shadow-sm space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-black/10 pb-3">
           <div>
             <h3 className="text-sm font-semibold text-black/80 flex items-center gap-2">
-              <Palette className="size-4 text-[#0a7ae6]" />
+              <Palette className="size-4 text-[#000000]" />
               <span>Color Options & Swatches</span>
             </h3>
             <p className="text-xs text-black/55 mt-0.5">
@@ -114,7 +114,7 @@ export function ProductVariantsSection({
           <button
             type="button"
             onClick={() => addColor()}
-            className="inline-flex items-center gap-1 rounded-lg border border-black/20 bg-white px-2.5 py-1.5 text-xs font-semibold text-black/80 hover:bg-black/5 cursor-pointer"
+            className="inline-flex items-center gap-1 rounded-lg border border-black/20 bg-[#fbf7ef] px-2.5 py-1.5 text-xs font-semibold text-black/80 hover:bg-black/5 cursor-pointer"
           >
             <Plus className="size-3.5" />
             <span>Add Color</span>
@@ -161,14 +161,14 @@ export function ProductVariantsSection({
                   value={c.name}
                   onChange={(e) => updateColor(idx, "name", e.target.value)}
                   placeholder="Color Name (e.g. Midnight Black)"
-                  className="flex-1 h-8 rounded border border-black/15 bg-white px-2.5 text-xs text-black focus:border-black focus:outline-none"
+                  className="flex-1 h-8 rounded border border-black/15 bg-[#fbf7ef] px-2.5 text-xs text-black focus:border-black focus:outline-none"
                 />
                 <input
                   type="text"
                   value={c.bgHex}
                   onChange={(e) => updateColor(idx, "bgHex", e.target.value)}
                   placeholder="#HEX"
-                  className="w-20 h-8 rounded border border-black/15 bg-white px-2 text-xs font-mono text-black focus:border-black focus:outline-none uppercase"
+                  className="w-20 h-8 rounded border border-black/15 bg-[#fbf7ef] px-2 text-xs font-mono text-black focus:border-black focus:outline-none uppercase"
                 />
                 <button
                   type="button"
@@ -185,11 +185,11 @@ export function ProductVariantsSection({
       </div>
 
       {/* 2. PRODUCT EDITIONS / SIZE / MODEL VARIANTS */}
-      <div className="rounded-xl border border-black/10 bg-white p-4 sm:p-5 shadow-sm space-y-4">
+      <div className="rounded-xl border border-black/10 bg-[#fbf7ef] p-4 sm:p-5 shadow-sm space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-black/10 pb-3">
           <div>
             <h3 className="text-sm font-semibold text-black/80 flex items-center gap-2">
-              <Layers className="size-4 text-[#0a7ae6]" />
+              <Layers className="size-4 text-[#000000]" />
               <span>Product Variants & Specifications</span>
             </h3>
             <p className="text-xs text-black/55 mt-0.5">
@@ -199,7 +199,7 @@ export function ProductVariantsSection({
           <button
             type="button"
             onClick={addVariant}
-            className="inline-flex items-center gap-1 rounded-lg border border-black/20 bg-white px-2.5 py-1.5 text-xs font-semibold text-black/80 hover:bg-black/5 cursor-pointer"
+            className="inline-flex items-center gap-1 rounded-lg border border-black/20 bg-[#fbf7ef] px-2.5 py-1.5 text-xs font-semibold text-black/80 hover:bg-black/5 cursor-pointer"
           >
             <Plus className="size-3.5" />
             <span>Add Variant</span>
@@ -226,7 +226,7 @@ export function ProductVariantsSection({
                     value={v.name}
                     onChange={(e) => updateVariant(idx, "name", e.target.value)}
                     placeholder="e.g. 1080p Full HD or 64GB"
-                    className="w-full h-8 rounded border border-black/15 bg-white px-2.5 text-xs text-black focus:border-black focus:outline-none"
+                    className="w-full h-8 rounded border border-black/15 bg-[#fbf7ef] px-2.5 text-xs text-black focus:border-black focus:outline-none"
                   />
                 </div>
 
@@ -239,7 +239,7 @@ export function ProductVariantsSection({
                     value={v.sku || ""}
                     onChange={(e) => updateVariant(idx, "sku", e.target.value)}
                     placeholder="SKU-VAR-01"
-                    className="w-full h-8 rounded border border-black/15 bg-white px-2 text-xs font-mono text-black focus:border-black focus:outline-none uppercase"
+                    className="w-full h-8 rounded border border-black/15 bg-[#fbf7ef] px-2 text-xs font-mono text-black focus:border-black focus:outline-none uppercase"
                   />
                 </div>
 
@@ -252,7 +252,7 @@ export function ProductVariantsSection({
                     value={v.price || ""}
                     onChange={(e) => updateVariant(idx, "price", e.target.value)}
                     placeholder="e.g. 7999"
-                    className="w-full h-8 rounded border border-black/15 bg-white px-2 text-xs text-black focus:border-black focus:outline-none"
+                    className="w-full h-8 rounded border border-black/15 bg-[#fbf7ef] px-2 text-xs text-black focus:border-black focus:outline-none"
                   />
                 </div>
 
@@ -265,7 +265,7 @@ export function ProductVariantsSection({
                     value={v.stock ?? 0}
                     onChange={(e) => updateVariant(idx, "stock", parseInt(e.target.value) || 0)}
                     placeholder="0"
-                    className="w-full h-8 rounded border border-black/15 bg-white px-2 text-xs text-black focus:border-black focus:outline-none"
+                    className="w-full h-8 rounded border border-black/15 bg-[#fbf7ef] px-2 text-xs text-black focus:border-black focus:outline-none"
                   />
                 </div>
 

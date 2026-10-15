@@ -410,7 +410,7 @@ export function BrandShowcaseManager({
           <button
             type="button"
             onClick={handleSeedDefaults}
-            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 shadow-2xs transition"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-[#fbf7ef] px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 shadow-2xs transition"
           >
             <RefreshCw className="size-3.5 text-slate-400" />
             Reset to Defaults
@@ -418,7 +418,7 @@ export function BrandShowcaseManager({
           <button
             type="button"
             onClick={openCreateModal}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-[#0a7ae6] px-3.5 py-1.5 text-xs font-semibold text-white shadow-2xs hover:bg-[#096ecf] transition active:scale-95"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-[#000000] px-3.5 py-1.5 text-xs font-semibold text-white shadow-2xs hover:bg-[#096ecf] transition active:scale-95"
           >
             <Plus className="size-3.5" />
             Add Showcase Item
@@ -438,7 +438,7 @@ export function BrandShowcaseManager({
                 <p className="font-bold text-slate-900 text-sm">
                   Showcase Banner Image Guidelines
                 </p>
-                <span className="rounded-full bg-blue-100 text-[#0a7ae6] px-2 py-0.5 text-[10px] font-bold">
+                <span className="rounded-full bg-blue-100 text-[#000000] px-2 py-0.5 text-[10px] font-bold">
                   Fastest growing Consumer Electronics Brand in India
                 </span>
               </div>
@@ -448,7 +448,7 @@ export function BrandShowcaseManager({
             </div>
           </div>
           <div className="shrink-0 flex items-center gap-2 text-[11px]">
-            <span className="rounded-md bg-white border border-blue-200 px-2.5 py-1 font-semibold text-slate-700 shadow-2xs">
+            <span className="rounded-md bg-[#fbf7ef] border border-blue-200 px-2.5 py-1 font-semibold text-slate-700 shadow-2xs">
               PNG, JPG, WEBP • Max 5MB
             </span>
           </div>
@@ -471,7 +471,7 @@ export function BrandShowcaseManager({
       </div>
 
       {/* FILTER & SEARCH CONTROLS */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-3 rounded-xl border border-slate-200/90 shadow-2xs">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-[#fbf7ef] p-3 rounded-xl border border-slate-200/90 shadow-2xs">
         <div className="relative w-full sm:w-80">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-3.5 text-slate-400" />
           <input
@@ -479,7 +479,7 @@ export function BrandShowcaseManager({
             placeholder="Search showcase items..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-lg border border-slate-200 bg-slate-50/50 py-1.5 pl-8 pr-3 text-xs text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-[#0a7ae6] focus:outline-none"
+            className="w-full rounded-lg border border-slate-200 bg-slate-50/50 py-1.5 pl-8 pr-3 text-xs text-slate-900 placeholder:text-slate-400 focus:bg-[#fbf7ef] focus:border-[#000000] focus:outline-none"
           />
         </div>
 
@@ -521,7 +521,7 @@ export function BrandShowcaseManager({
       </div>
 
       {/* DATA TABLE FORMAT */}
-      <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xs">
+      <div className="overflow-hidden rounded-xl border border-slate-200 bg-[#fbf7ef] shadow-xs">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs text-slate-600">
             <thead className="border-b border-slate-200 bg-slate-50/80 text-[11px] font-bold uppercase tracking-wider text-slate-500">
@@ -612,14 +612,14 @@ export function BrandShowcaseManager({
                             target="_blank"
                             className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-[11px] font-semibold transition ${
                               dest.type === "category"
-                                ? "bg-blue-50 text-[#0a7ae6] hover:bg-blue-100/80"
+                                ? "bg-blue-50 text-[#000000] hover:bg-blue-100/80"
                                 : dest.type === "store"
                                 ? "bg-indigo-50 text-indigo-700 hover:bg-indigo-100/80"
                                 : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                             }`}
                           >
                             {dest.type === "category" ? (
-                              <Tag className="size-3 text-[#0a7ae6]" />
+                              <Tag className="size-3 text-[#000000]" />
                             ) : dest.type === "store" ? (
                               <ShoppingBag className="size-3 text-indigo-600" />
                             ) : (
@@ -695,7 +695,7 @@ export function BrandShowcaseManager({
       {/* CREATE / EDIT MODAL */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-xs">
-          <div className="relative w-full max-w-xl rounded-2xl bg-white p-6 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto">
+          <div className="relative w-full max-w-xl rounded-2xl bg-[#fbf7ef] p-6 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
               <div>
                 <h2 className="text-base font-bold text-slate-900">
@@ -725,7 +725,7 @@ export function BrandShowcaseManager({
                   placeholder="e.g. Smart Home Cinema"
                   value={formTitle}
                   onChange={(e) => setFormTitle(e.target.value)}
-                  className="w-full rounded-lg border border-slate-200 px-3 py-2 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-2 focus:ring-[#0a7ae6]/20"
+                  className="w-full rounded-lg border border-slate-200 px-3 py-2 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-2 focus:ring-[#000000]/20"
                 />
               </div>
 
@@ -738,7 +738,7 @@ export function BrandShowcaseManager({
                   placeholder="e.g. Up to 300-inch 4K projection for movie nights"
                   value={formSubtitle}
                   onChange={(e) => setFormSubtitle(e.target.value)}
-                  className="w-full rounded-lg border border-slate-200 px-3 py-2 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none"
+                  className="w-full rounded-lg border border-slate-200 px-3 py-2 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none"
                 />
               </div>
 
@@ -747,7 +747,7 @@ export function BrandShowcaseManager({
                   <label className="block text-xs font-semibold text-slate-700">
                     Desktop Banner Image <span className="text-rose-500">*</span>
                   </label>
-                  <span className="inline-flex items-center gap-1 rounded-md bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-[#0a7ae6] border border-blue-200/80">
+                  <span className="inline-flex items-center gap-1 rounded-md bg-blue-50 px-2 py-0.5 text-[10px] font-bold text-[#000000] border border-blue-200/80">
                     Target: 1200 × 500 px (21:9) or 16:9
                   </span>
                 </div>
@@ -897,27 +897,27 @@ export function BrandShowcaseManager({
                   ) : (
                     <div
                       onClick={() => fileInputRef.current?.click()}
-                      className="group flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-200 p-6 text-center hover:border-[#0a7ae6] hover:bg-blue-50/20 cursor-pointer bg-slate-50/60 transition"
+                      className="group flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-200 p-6 text-center hover:border-[#000000] hover:bg-blue-50/20 cursor-pointer bg-slate-50/60 transition"
                     >
                       {isUploading ? (
                         <div className="flex flex-col items-center gap-2 py-3">
-                          <Loader2 className="size-6 animate-spin text-[#0a7ae6]" />
+                          <Loader2 className="size-6 animate-spin text-[#000000]" />
                           <span className="text-xs font-semibold text-slate-700">Uploading banner image...</span>
                         </div>
                       ) : (
                         <>
-                          <div className="flex size-10 items-center justify-center rounded-full bg-blue-50 text-[#0a7ae6] group-hover:scale-110 group-hover:bg-[#0a7ae6] group-hover:text-white transition">
+                          <div className="flex size-10 items-center justify-center rounded-full bg-blue-50 text-[#000000] group-hover:scale-110 group-hover:bg-[#000000] group-hover:text-white transition">
                             <Upload className="size-5" />
                           </div>
                           <p className="mt-2.5 text-xs font-bold text-slate-800">
                             Click to upload banner image
                           </p>
                           <div className="mt-2 flex items-center justify-center gap-1.5 text-[11px]">
-                            <span className="rounded-md bg-white border border-slate-200 px-2 py-0.5 font-bold font-mono text-slate-800 shadow-2xs">
+                            <span className="rounded-md bg-[#fbf7ef] border border-slate-200 px-2 py-0.5 font-bold font-mono text-slate-800 shadow-2xs">
                               1200 × 500 px
                             </span>
                             <span className="text-slate-400 text-[10px]">or</span>
-                            <span className="rounded-md bg-white border border-slate-200 px-2 py-0.5 font-bold font-mono text-slate-800 shadow-2xs">
+                            <span className="rounded-md bg-[#fbf7ef] border border-slate-200 px-2 py-0.5 font-bold font-mono text-slate-800 shadow-2xs">
                               1200 × 675 px (16:9)
                             </span>
                           </div>
@@ -944,7 +944,7 @@ export function BrandShowcaseManager({
                     <button
                       type="button"
                       onClick={() => setShowUrlInput((prev) => !prev)}
-                      className="inline-flex items-center gap-1 text-[#0a7ae6] hover:text-[#096ecf] hover:underline font-semibold cursor-pointer"
+                      className="inline-flex items-center gap-1 text-[#000000] hover:text-[#096ecf] hover:underline font-semibold cursor-pointer"
                     >
                       {showUrlInput ? "Hide custom URL input" : "Or enter custom Image URL"}
                     </button>
@@ -961,7 +961,7 @@ export function BrandShowcaseManager({
                           setFormImage(e.target.value);
                           setImageMeta(null);
                         }}
-                        className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none focus:ring-1 focus:ring-[#0a7ae6]/20"
+                        className="w-full rounded-lg border border-slate-200 bg-[#fbf7ef] px-3 py-2 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none focus:ring-1 focus:ring-[#000000]/20"
                       />
                       <p className="text-[10px] text-slate-500">
                         Direct link to a landscape banner image. Ideal dimensions: <span className="font-semibold text-slate-700 font-mono">1200 × 500 px</span> (~21:9).
@@ -978,19 +978,19 @@ export function BrandShowcaseManager({
                   <p className="mt-1 text-[11px] leading-relaxed text-slate-500">Shown on phones instead of the desktop banner. Use a portrait image, around 900 × 1200 px. Leave empty to use the desktop image.</p>
                 </div>
                 {formMobileImage && (
-                  <div className="relative mx-auto aspect-[3/4] w-40 overflow-hidden rounded-xl border border-slate-200 bg-white">
+                  <div className="relative mx-auto aspect-[3/4] w-40 overflow-hidden rounded-xl border border-slate-200 bg-[#fbf7ef]">
                     <Image src={formMobileImage} alt="Phone banner preview" fill unoptimized sizes="160px" className="object-cover" />
                   </div>
                 )}
                 <div className="flex items-center gap-3">
-                  <label className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700">
+                  <label className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-[#fbf7ef] px-3 py-2 text-xs font-semibold text-slate-700">
                     {isUploadingMobile ? <Loader2 className="size-4 animate-spin" /> : <Upload className="size-4" />}
                     {isUploadingMobile ? "Uploading…" : formMobileImage ? "Replace phone image" : "Upload phone image"}
                     <input type="file" accept="image/*" className="hidden" disabled={isUploadingMobile || isSubmitting} onChange={handleMobileUpload} />
                   </label>
                   {formMobileImage && <button type="button" disabled={isUploadingMobile || isSubmitting} onClick={() => setFormMobileImage("")} className="text-xs font-medium text-rose-600 hover:underline disabled:opacity-50">Remove</button>}
                 </div>
-                <input id="showcase-mobile-image" type="text" value={formMobileImage} disabled={isUploadingMobile} onChange={(e) => setFormMobileImage(e.target.value)} placeholder="Or paste a phone image URL" className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs outline-none focus:border-[#0a7ae6]" />
+                <input id="showcase-mobile-image" type="text" value={formMobileImage} disabled={isUploadingMobile} onChange={(e) => setFormMobileImage(e.target.value)} placeholder="Or paste a phone image URL" className="w-full rounded-lg border border-slate-200 bg-[#fbf7ef] px-3 py-2 text-xs outline-none focus:border-[#000000]" />
               </div>
 
               <div>
@@ -1001,7 +1001,7 @@ export function BrandShowcaseManager({
                   <select
                     value={selectedLinkType}
                     onChange={(e) => handleLinkTypeChange(e.target.value)}
-                    className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-medium text-slate-900 focus:border-[#0a7ae6] focus:outline-none"
+                    className="w-full rounded-lg border border-slate-200 bg-[#fbf7ef] px-3 py-2 text-xs font-medium text-slate-900 focus:border-[#000000] focus:outline-none"
                   >
                     <option value="">No link (Display only)</option>
                     <option value="/shop">All Store Products</option>
@@ -1023,7 +1023,7 @@ export function BrandShowcaseManager({
                       placeholder="e.g. /repair-replacement or https://..."
                       value={formLinkUrl}
                       onChange={(e) => setFormLinkUrl(e.target.value)}
-                      className="w-full rounded-lg border border-slate-200 px-3 py-2 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#0a7ae6] focus:outline-none"
+                      className="w-full rounded-lg border border-slate-200 px-3 py-2 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#000000] focus:outline-none"
                     />
                   )}
                 </div>
@@ -1035,7 +1035,7 @@ export function BrandShowcaseManager({
                   id="formIsActiveToggle"
                   checked={formIsActive}
                   onChange={(e) => setFormIsActive(e.target.checked)}
-                  className="size-4 rounded border-slate-300 text-[#0a7ae6] focus:ring-[#0a7ae6]"
+                  className="size-4 rounded border-slate-300 text-[#000000] focus:ring-[#000000]"
                 />
                 <label
                   htmlFor="formIsActiveToggle"
@@ -1056,7 +1056,7 @@ export function BrandShowcaseManager({
                 <button
                   type="submit"
                   disabled={isSubmitting || isUploading || isUploadingMobile}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#0a7ae6] px-4 py-2 text-xs font-semibold text-white hover:bg-[#096ecf] transition disabled:opacity-50"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#000000] px-4 py-2 text-xs font-semibold text-white hover:bg-[#096ecf] transition disabled:opacity-50"
                 >
                   {isSubmitting && <Loader2 className="size-3 animate-spin" />}
                   {editingItem ? "Save Changes" : "Create Item"}
@@ -1070,7 +1070,7 @@ export function BrandShowcaseManager({
       {/* DELETE CONFIRMATION MODAL */}
       {deleteTargetId && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-xs">
-          <div className="w-full max-w-sm rounded-2xl bg-white p-5 shadow-2xl border border-slate-200 text-center">
+          <div className="w-full max-w-sm rounded-2xl bg-[#fbf7ef] p-5 shadow-2xl border border-slate-200 text-center">
             <h3 className="text-sm font-bold text-slate-900">Delete Showcase Item?</h3>
             <p className="mt-1 text-xs text-slate-500">
               Are you sure you want to remove this item from the showcase?

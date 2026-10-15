@@ -101,7 +101,7 @@ export function TroubleshootingEditor({ initialContent }: { initialContent: Trou
           <section id="panel-guides" role="tabpanel" aria-labelledby="tab-guides" hidden={tab !== "guides"} className="space-y-3">
             <p className="pb-1 text-sm text-muted-foreground">{content.guides.length} guides. Select a guide to edit it.</p>
             {content.guides.map((guide, index) => (
-              <details key={guide.id} open={!guide.title || undefined} className="group rounded-lg border bg-white">
+              <details key={guide.id} open={!guide.title || undefined} className="group rounded-lg border bg-[#fbf7ef]">
                 <summary className="flex cursor-pointer list-none items-center gap-3 px-4 py-4 text-sm [&::-webkit-details-marker]:hidden">
                   <span className="min-w-0 flex-1"><span className="block font-medium">{guide.title || "New guide"}</span><span className="mt-1 block text-xs text-muted-foreground">{content.categories.find(cat => cat.id === guide.category)?.name} &middot; {guide.steps.length} steps</span></span>
                   <ChevronDown className="size-4 shrink-0 text-muted-foreground group-open:rotate-180" />
@@ -116,7 +116,7 @@ export function TroubleshootingEditor({ initialContent }: { initialContent: Trou
             ))}
             <Button type="button" variant="outline" onClick={() => setContent(c => ({ ...c, guides: [...c.guides, { id: crypto.randomUUID(), category: c.categories[0].id, title: "", steps: [""] }] }))}><Plus className="size-4" /> Add guide</Button>
           </section>
-          <div className="sticky bottom-0 flex flex-wrap items-center gap-3 border-t bg-white py-4">
+          <div className="sticky bottom-0 flex flex-wrap items-center gap-3 border-t bg-[#fbf7ef] py-4">
             <Button type="submit" disabled={saving || !dirty}>{saving ? "Saving..." : "Save changes"}</Button>
             <Button type="button" variant="ghost" disabled={!dirty} onClick={() => { setContent(JSON.parse(saved)); setMessage(""); }}>Discard changes</Button>
             <Link href="/troubleshooting" target="_blank" className="ml-auto text-sm text-muted-foreground underline underline-offset-4">View live page</Link>

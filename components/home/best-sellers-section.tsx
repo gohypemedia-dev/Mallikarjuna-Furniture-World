@@ -172,18 +172,18 @@ function MobileBestSellers({ items }: { items: BestSellerItem[] }) {
   if (items.length === 0) return null;
 
   return (
-    <section ref={sectionRef} className="block lg:hidden bg-white py-10 px-4 sm:px-6 text-slate-900 overflow-hidden">
+    <section ref={sectionRef} className="block lg:hidden bg-[#fbf7ef] py-10 px-4 sm:px-6 text-slate-900 overflow-hidden">
       <div className="mx-auto max-w-md sm:max-w-xl">
         {/* SECTION HEADER */}
         <div className="mb-6 flex flex-col items-center text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#0a7ae6]">
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#000000]">
             Best Sellers
           </p>
           <div className="inline-block relative">
             <h2 className="mt-1.5 text-2xl font-normal tracking-tight text-slate-900 sm:text-3xl">
               Shop Best Sellers
             </h2>
-            <div className="mt-2 h-0.5 w-12 rounded-full bg-[#0a7ae6] ml-auto" />
+            <div className="mt-2 h-0.5 w-12 rounded-full bg-[#000000] ml-auto" />
           </div>
         </div>
 
@@ -212,14 +212,14 @@ function MobileBestSellers({ items }: { items: BestSellerItem[] }) {
                 key={`mobile-bestseller-${item.id}`}
                 href={`/product/${item.slug || item.id}`}
                 prefetch={false}
-                className="mobile-best-seller-card group w-full shrink-0 snap-start flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-2.5 sm:p-3 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0a7ae6] hover:shadow-md select-none"
+                className="mobile-best-seller-card group w-full shrink-0 snap-start flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-[#fbf7ef] p-2.5 sm:p-3 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-[#000000] hover:shadow-md select-none"
               >
                 {/* PRODUCT IMAGE CONTAINER */}
                 <div className="relative w-full aspect-square rounded-xl bg-slate-50/70 border border-slate-100 flex items-center justify-center p-2 mb-2 overflow-hidden">
                   {/* TOP LEFT: ONLY DISCOUNT (IF ANY) */}
                   {calculatedDiscount && (
                     <div className="absolute top-2 left-2 z-10">
-                      <span className="rounded-full bg-[#0a7ae6] px-2.5 py-1 text-[11px] font-bold text-white shadow-xs tracking-wide">
+                      <span className="rounded-full bg-[#000000] px-2.5 py-1 text-[11px] font-bold text-white shadow-xs tracking-wide">
                         {calculatedDiscount}
                       </span>
                     </div>
@@ -243,7 +243,7 @@ function MobileBestSellers({ items }: { items: BestSellerItem[] }) {
                         });
                         toast.success(`${item.name} added to cart!`);
                       }}
-                      className="flex size-9 sm:size-10 items-center justify-center rounded-full bg-[#0a7ae6] text-white shadow-xs hover:bg-[#086ac9] transition-transform active:scale-90 cursor-pointer"
+                      className="flex size-9 sm:size-10 items-center justify-center rounded-full bg-[#000000] text-white shadow-xs hover:bg-[#1f1e1b] transition-transform active:scale-90 cursor-pointer"
                     >
                       <Plus className="size-4 stroke-[2.5]" />
                     </button>
@@ -264,14 +264,14 @@ function MobileBestSellers({ items }: { items: BestSellerItem[] }) {
                 {/* TEXT CONTENT */}
                 <div className="flex flex-col items-center text-center px-0.5">
                   {/* PRODUCT TITLE */}
-                  <h4 className="mt-1 text-xs sm:text-sm font-semibold text-slate-800 group-hover:text-[#0a7ae6] line-clamp-1 leading-snug w-full transition-colors">
+                  <h4 className="mt-1 text-xs sm:text-sm font-semibold text-slate-800 group-hover:text-[#000000] line-clamp-1 leading-snug w-full transition-colors">
                     {item.name}
                   </h4>
 
                   {/* PRICING WITH DISCOUNT */}
                   <div className="mt-1.5 flex items-baseline justify-center gap-1.5 w-full">
                     {calculatedDiscount && (
-                      <span className="text-[11px] font-semibold text-[#0a7ae6]">
+                      <span className="text-[11px] font-semibold text-[#000000]">
                         {calculatedDiscount}
                       </span>
                     )}
@@ -298,7 +298,7 @@ function MobileBestSellers({ items }: { items: BestSellerItem[] }) {
                   onClick={() => scrollToPage(index)}
                   className={`transition-all duration-300 cursor-pointer rounded-full ${
                     isActive
-                      ? "w-6 h-1 bg-[#0a7ae6] shadow-[0_0_8px_rgba(10,122,230,0.7)]"
+                      ? "w-6 h-1 bg-[#000000] shadow-[0_0_8px_rgba(0, 0, 0,0.7)]"
                       : "w-2.5 h-1 bg-slate-300 hover:bg-slate-400 hover:w-3.5"
                   }`}
                 />
@@ -378,7 +378,7 @@ export default function BestSellersSection({ additionalItems = [] }: { additiona
         if (!title) return;
         gsap.set(title, {
           opacity: i === 0 ? 1 : 0.35,
-          color: i === 0 ? "#0f172a" : "#cbd5e1",
+          color: i === 0 ? "#000000" : "#b2aea7",
         });
       });
 
@@ -435,7 +435,7 @@ export default function BestSellersSection({ additionalItems = [] }: { additiona
         if (titleCur) {
           tl.to(
             titleCur,
-            { opacity: 0.35, color: "#cbd5e1", ease: "power1.inOut", duration: 0.5 },
+            { opacity: 0.35, color: "#b2aea7", ease: "power1.inOut", duration: 0.5 },
             tStart + 0.25
           );
         }
@@ -475,7 +475,7 @@ export default function BestSellersSection({ additionalItems = [] }: { additiona
         if (titleNext) {
           tl.to(
             titleNext,
-            { opacity: 1, color: "#0f172a", ease: "power1.inOut", duration: 0.5 },
+            { opacity: 1, color: "#000000", ease: "power1.inOut", duration: 0.5 },
             tStart + 0.25
           );
         }
@@ -517,7 +517,7 @@ export default function BestSellersSection({ additionalItems = [] }: { additiona
       <div className="hidden lg:block w-full">
         <section
           ref={sectionRef}
-          className="relative min-h-screen h-screen bg-white text-slate-900 overflow-hidden"
+          className="relative min-h-screen h-screen bg-[#fbf7ef] text-slate-900 overflow-hidden"
         >
 
 
@@ -527,7 +527,7 @@ export default function BestSellersSection({ additionalItems = [] }: { additiona
       >
         {/* TOP HEADER BLOCK: Badge + Giant Title Rail */}
         <div className="relative z-20 shrink-0 flex flex-col items-center mb-2 sm:mb-3 lg:mb-4 xl:mb-5">
-          <p className="text-center text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.12em] text-[#0a7ae6]">
+          <p className="text-center text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.12em] text-[#000000]">
             Best sellers
           </p>
 
@@ -565,7 +565,7 @@ export default function BestSellersSection({ additionalItems = [] }: { additiona
               >
                 <div className="relative z-10 w-full max-w-[560px] xl:max-w-[620px] rounded-[20px] sm:rounded-[24px] xl:rounded-[28px] border border-slate-200/80 bg-white/95 backdrop-blur-md p-4 sm:p-5 lg:p-5 xl:p-7 shadow-[0_15px_50px_rgba(15,23,42,0.06)]">
                   <div className="border-b border-slate-200/80 pb-2.5 sm:pb-3 xl:pb-3.5">
-                    <p className="text-[10px] sm:text-[11px] xl:text-[12px] font-bold uppercase tracking-[0.2em] text-[#0a7ae6]">
+                    <p className="text-[10px] sm:text-[11px] xl:text-[12px] font-bold uppercase tracking-[0.2em] text-[#000000]">
                       XElectron
                     </p>
                     <h3 className="mt-0.5 sm:mt-1 text-[18px] sm:text-[20px] lg:text-[22px] xl:text-[26px] font-bold tracking-tight text-slate-900">
@@ -581,7 +581,7 @@ export default function BestSellersSection({ additionalItems = [] }: { additiona
                         </span>
                       )}
                       {item.discount && (
-                        <span className="text-[12px] sm:text-[13px] xl:text-[15px] font-semibold text-[#0a7ae6]">
+                        <span className="text-[12px] sm:text-[13px] xl:text-[15px] font-semibold text-[#000000]">
                           {item.discount}
                         </span>
                       )}
@@ -601,7 +601,7 @@ export default function BestSellersSection({ additionalItems = [] }: { additiona
                   <Link
                     href={`/product/${item.slug || item.id}`}
                     prefetch={false}
-                    className="mt-3 sm:mt-4 xl:mt-5 inline-flex h-9 sm:h-10 lg:h-11 xl:h-12 w-full items-center justify-center rounded-full bg-[#0a7ae6] px-5 text-[12px] sm:text-[13px] xl:text-[14px] font-medium text-white transition-all hover:bg-[#086ac9] shadow-md shadow-blue-500/15 active:scale-[0.99]"
+                    className="mt-3 sm:mt-4 xl:mt-5 inline-flex h-9 sm:h-10 lg:h-11 xl:h-12 w-full items-center justify-center rounded-full bg-[#000000] px-5 text-[12px] sm:text-[13px] xl:text-[14px] font-medium text-white transition-all hover:bg-[#1f1e1b] shadow-md shadow-blue-500/15 active:scale-[0.99]"
                   >
                     View Details & Buy
                   </Link>
@@ -625,7 +625,7 @@ export default function BestSellersSection({ additionalItems = [] }: { additiona
                     ref={(node) => {
                       glowRefs.current[index] = node;
                     }}
-                    className="absolute inset-0 rounded-full bg-[radial-gradient(circle,_rgba(10,122,230,0.22)_0%,_rgba(10,122,230,0.09)_35%,_rgba(10,122,230,0)_70%)] blur-3xl pointer-events-none will-change-[opacity]"
+                    className="absolute inset-0 rounded-full bg-[radial-gradient(circle,_rgba(0, 0, 0,0.22)_0%,_rgba(0, 0, 0,0.09)_35%,_rgba(0, 0, 0,0)_70%)] blur-3xl pointer-events-none will-change-[opacity]"
                   />
                   <div className="relative w-full h-full p-1 lg:p-2 flex items-center justify-center">
                     <SafeBestSellerImage

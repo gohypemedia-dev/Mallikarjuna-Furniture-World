@@ -56,7 +56,7 @@ export function DeliveryBookingForm({ orderId, paymentOrder, booking, disabled, 
   const savedError = booking?.error && (manifested || pickupLocation === booking.parcel.pickupLocation) ? booking.error : "";
   const notice = message || savedError;
   const noticeIsError = message ? messageIsError : Boolean(savedError);
-  const inputClass = "h-11 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm font-normal text-slate-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 disabled:bg-slate-50";
+  const inputClass = "h-11 w-full rounded-lg border border-slate-200 bg-[#fbf7ef] px-3 text-sm font-normal text-slate-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 disabled:bg-slate-50";
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setBusy(true);
@@ -96,7 +96,7 @@ export function DeliveryBookingForm({ orderId, paymentOrder, booking, disabled, 
     {blocked && <p className="mt-2 text-xs text-amber-900">Replacement confirmation is pending. Check Delhivery One before trying again.</p>}
     <a href="https://one.delhivery.com/" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-amber-900 underline">View in Delhivery One <ArrowUpRight className="size-3.5" /></a>
   </div>;
-  return <div className="mb-5 overflow-hidden rounded-xl border border-slate-200 bg-white">
+  return <div className="mb-5 overflow-hidden rounded-xl border border-slate-200 bg-[#fbf7ef]">
     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 px-5 py-4">
       <div>
         <h3 className="text-base font-semibold tracking-tight text-slate-900">{booking?.pickupId ? "Pickup requested" : manifested ? "Schedule your pickup" : replacing ? "Create a replacement shipment" : "Prepare your shipment"}</h3>
@@ -116,10 +116,10 @@ export function DeliveryBookingForm({ orderId, paymentOrder, booking, disabled, 
           {!manifested ? <div className="grid gap-3 sm:grid-cols-2">
             {pickupLocations.map((location) => <label key={location.name} className="relative block cursor-pointer">
               <input type="radio" name="pickupLocation" value={location.name} checked={pickupLocation === location.name} required onChange={() => { setPickupLocation(location.name); setLocationEdited(true); setMessage(""); }} className="peer sr-only" />
-              <div className="h-full rounded-xl border border-slate-200 bg-white p-4 transition-colors peer-checked:border-blue-500 peer-checked:bg-blue-50/50 peer-focus-visible:ring-2 peer-focus-visible:ring-blue-500 peer-focus-visible:ring-offset-2 peer-disabled:cursor-not-allowed">
+              <div className="h-full rounded-xl border border-slate-200 bg-[#fbf7ef] p-4 transition-colors peer-checked:border-blue-500 peer-checked:bg-blue-50/50 peer-focus-visible:ring-2 peer-focus-visible:ring-blue-500 peer-focus-visible:ring-offset-2 peer-disabled:cursor-not-allowed">
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-semibold text-slate-900">{location.name}</span>
-                  {location.name === defaultLocation && <span className="rounded bg-white px-1.5 py-0.5 text-[10px] font-medium text-blue-700 ring-1 ring-blue-100">Default</span>}
+                  {location.name === defaultLocation && <span className="rounded bg-[#fbf7ef] px-1.5 py-0.5 text-[10px] font-medium text-blue-700 ring-1 ring-blue-100">Default</span>}
                   <span className={`ml-auto flex size-4 shrink-0 items-center justify-center rounded-full border ${pickupLocation === location.name ? "border-blue-600 bg-blue-600 text-white" : "border-slate-300"}`}>{pickupLocation === location.name && <Check className="size-3" />}</span>
                 </div>
                 <p className="mt-2 text-xs leading-relaxed text-slate-500">{location.address}</p>

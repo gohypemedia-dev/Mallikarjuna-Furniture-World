@@ -149,14 +149,14 @@ export default function ShopContent({ products: initialProducts }: { products: S
   return (
     <div className="mx-auto max-w-[1600px] px-4 py-8 sm:px-6 lg:px-8">
       <div className="mb-10 text-center md:text-left">
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#0a7ae6]">
+        <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#000000]">
           Collection
         </p>
         <div className="inline-block relative">
           <h1 className="mt-1.5 text-3xl font-normal tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
             {heading}
           </h1>
-          <div className="mt-2.5 h-0.5 w-14 rounded-full bg-[#0a7ae6] ml-auto" />
+          <div className="mt-2.5 h-0.5 w-14 rounded-full bg-[#000000] ml-auto" />
         </div>
         <p className="mt-3 max-w-xl text-sm text-slate-500 md:text-base">
           Explore our premium setup gear designed for ultimate performance, convenience, and immersive entertainment.
@@ -178,10 +178,10 @@ export default function ShopContent({ products: initialProducts }: { products: S
       {recommendations.length > 0 ? (
         <section className="mt-8 border-t border-slate-100 pt-6 sm:mt-16 sm:pt-12">
           <div className="mb-4 flex flex-col items-center text-center sm:mb-6">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#0a7ae6]">Recommendations</p>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#000000]">Recommendations</p>
             <div className="inline-block relative">
               <h2 className="mt-1.5 text-2xl font-normal tracking-tight text-slate-900 sm:text-3xl">You May Also Like</h2>
-              <div className="mt-2 h-0.5 w-12 rounded-full bg-[#0a7ae6] ml-auto" />
+              <div className="mt-2 h-0.5 w-12 rounded-full bg-[#000000] ml-auto" />
             </div>
           </div>
 
@@ -195,10 +195,10 @@ export default function ShopContent({ products: initialProducts }: { products: S
 
       <section className="mt-8 border-t border-slate-100 pt-6 sm:mt-16 sm:pt-12">
         <div className="mb-4 flex flex-col items-center text-center sm:mb-6">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#0a7ae6]">Your history</p>
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#000000]">Your history</p>
           <div className="inline-block relative">
             <h2 className="mt-1.5 text-2xl font-normal tracking-tight text-slate-900 sm:text-3xl">Recently Viewed</h2>
-            <div className="mt-2 h-0.5 w-12 rounded-full bg-[#0a7ae6] ml-auto" />
+            <div className="mt-2 h-0.5 w-12 rounded-full bg-[#000000] ml-auto" />
           </div>
         </div>
 
@@ -233,7 +233,7 @@ function ProductCard({
       className="group block h-full"
       aria-label={`View ${product.name}`}
     >
-      <article className="flex h-full flex-col overflow-hidden rounded-lg border border-slate-200/80 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
+      <article className="flex h-full flex-col overflow-hidden rounded-lg border border-slate-200/80 bg-[#fbf7ef] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
         <div className="relative flex h-[140px] items-center justify-center bg-[#ffffff] p-2 sm:h-[250px] sm:p-4 lg:h-[280px]">
           {isOutOfStock && (
             <span className="absolute left-2.5 top-2.5 z-10 rounded-[3px] bg-slate-900/85 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white shadow-xs sm:text-[10px]">
@@ -263,7 +263,7 @@ function ProductCard({
         </div>
 
         <div className="flex flex-1 flex-col p-2.5 sm:p-4">
-          <p className="text-[9px] font-semibold uppercase tracking-[0.12em] text-[#0a7ae6] sm:text-[11px] sm:tracking-[0.15em]">
+          <p className="text-[9px] font-semibold uppercase tracking-[0.12em] text-[#000000] sm:text-[11px] sm:tracking-[0.15em]">
             {product.category}
           </p>
           <h3 className="mt-1 truncate text-[12px] font-medium leading-4 text-slate-900 sm:text-[14px]">{product.name}</h3>
@@ -288,7 +288,7 @@ function ProductCard({
                 <button
                   type="button"
                   onClick={(event) => onAddToCart(product, event)}
-                  className="inline-flex h-8 items-center justify-center truncate rounded-md border border-[#0a7ae6] px-1 text-[10px] font-medium text-[#0a7ae6] transition-colors group-hover:bg-[#0a7ae6]/5 sm:h-10 sm:text-[13px]"
+                  className="inline-flex h-8 items-center justify-center truncate rounded-md border border-[#000000] px-1 text-[10px] font-medium text-[#000000] transition-colors group-hover:bg-[#000000]/5 sm:h-10 sm:text-[13px]"
                 >
                   Add to cart
                 </button>
@@ -298,7 +298,7 @@ function ProductCard({
                     onAddToCart(product, event);
                     router.push(`/checkout?product=${encodeURIComponent(product.slug || product.id)}`);
                   }}
-                  className="inline-flex h-8 items-center justify-center truncate rounded-md bg-[#0a7ae6] px-1 text-[10px] font-medium text-white transition-opacity group-hover:opacity-90 sm:h-10 sm:text-[13px]"
+                  className="inline-flex h-8 items-center justify-center truncate rounded-md bg-[#000000] px-1 text-[10px] font-medium text-white transition-opacity group-hover:opacity-90 sm:h-10 sm:text-[13px]"
                 >
                   Buy now
                 </button>
@@ -323,7 +323,7 @@ function CompactProductCard({ product }: { product: ShopProduct }) {
       className="group block h-full"
       aria-label={`View ${product.name}`}
     >
-      <article className="flex h-full flex-col overflow-hidden rounded-lg border border-slate-200/80 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
+      <article className="flex h-full flex-col overflow-hidden rounded-lg border border-slate-200/80 bg-[#fbf7ef] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
         <div className="relative flex h-[120px] items-center justify-center bg-[#ffffff] p-2 sm:h-[180px] sm:p-4">
           {isOutOfStock && (
             <span className="absolute left-2 top-2 z-10 rounded-[3px] bg-slate-900/85 px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-wider text-white shadow-xs">
@@ -352,7 +352,7 @@ function CompactProductCard({ product }: { product: ShopProduct }) {
           ) : null}
         </div>
         <div className="flex flex-1 flex-col p-2.5 sm:p-4">
-          <p className="text-[9px] font-semibold uppercase tracking-[0.12em] text-[#0a7ae6]">{product.category}</p>
+          <p className="text-[9px] font-semibold uppercase tracking-[0.12em] text-[#000000]">{product.category}</p>
           <h3 className="mt-1 truncate text-[12px] font-medium leading-4 text-slate-900 sm:text-[14px]">{product.name}</h3>
           
           <div className="mt-auto flex items-center justify-between gap-2 pt-3">
@@ -385,7 +385,7 @@ function CompactProductCard({ product }: { product: ShopProduct }) {
                   });
                   router.push(`/checkout?product=${encodeURIComponent(product.slug || product.id)}`);
                 }}
-                className="inline-flex h-8 shrink-0 items-center justify-center rounded-md bg-[#0a7ae6] px-3 text-[11px] font-semibold text-white transition-opacity hover:opacity-90 sm:h-9 sm:px-4 sm:text-[12px]"
+                className="inline-flex h-8 shrink-0 items-center justify-center rounded-md bg-[#000000] px-3 text-[11px] font-semibold text-white transition-opacity hover:opacity-90 sm:h-9 sm:px-4 sm:text-[12px]"
               >
                 Buy now
               </button>

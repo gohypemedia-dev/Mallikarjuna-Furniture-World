@@ -328,11 +328,11 @@ export default function HeroShowcase({ initialBanners }: { initialBanners?: Bann
   };
 
   return (
-    <section className="group relative w-full bg-white overflow-hidden select-none">
+    <section className="group relative w-full bg-[#fbf7ef] overflow-hidden select-none">
       {/* BANNER VIEWPORT */}
       <div
         ref={viewportRef}
-        className="relative w-full aspect-[9/16] sm:aspect-[1672/941] overflow-hidden bg-white touch-pan-y"
+        className="relative w-full aspect-[9/16] sm:aspect-[1672/941] overflow-hidden bg-[#fbf7ef] touch-pan-y"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         onTouchStart={handleTouchStart}
@@ -459,7 +459,7 @@ export default function HeroShowcase({ initialBanners }: { initialBanners?: Bann
               transition: "opacity 300ms ease-out, scale 300ms cubic-bezier(0.16, 1, 0.3, 1)",
             }}
           >
-            <div className="w-12 h-12 rounded-full bg-[#0a7ae6] text-white flex items-center justify-center shadow-[0_4px_22px_rgba(10,122,230,0.65)] scale-105">
+            <div className="w-12 h-12 rounded-full bg-[#000000] text-white flex items-center justify-center shadow-[0_4px_22px_rgba(0, 0, 0,0.65)] scale-105">
               <ChevronRight className="w-6 h-6 stroke-[3] text-white ml-0.5" />
             </div>
           </div>
@@ -482,8 +482,8 @@ export default function HeroShowcase({ initialBanners }: { initialBanners?: Bann
                   }}
                   className={`transition-all duration-300 cursor-pointer rounded-full ${
                     isActive
-                      ? "w-1 sm:w-1.5 h-6 sm:h-7 bg-[#0a7ae6] shadow-[0_0_10px_rgba(10,122,230,0.85)]"
-                      : "w-1 sm:w-1.5 h-3 sm:h-3.5 bg-white/90 hover:bg-white hover:h-4.5 shadow-[0_1px_3px_rgba(0,0,0,0.35)]"
+                      ? "w-1 sm:w-1.5 h-6 sm:h-7 bg-[#000000] shadow-[0_0_10px_rgba(0, 0, 0,0.85)]"
+                      : "w-1 sm:w-1.5 h-3 sm:h-3.5 bg-white/90 hover:bg-[#fbf7ef] hover:h-4.5 shadow-[0_1px_3px_rgba(0,0,0,0.35)]"
                   }`}
                 />
               );

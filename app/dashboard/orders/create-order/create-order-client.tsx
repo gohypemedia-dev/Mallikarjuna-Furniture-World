@@ -47,7 +47,7 @@ function productCategory(product: DashboardProduct) {
 
 function Card({ title, children, action }: { title: string; children: React.ReactNode; action?: React.ReactNode }) {
   return (
-    <section className="rounded-xl border border-black/10 bg-white shadow-sm overflow-hidden">
+    <section className="rounded-xl border border-black/10 bg-[#fbf7ef] shadow-sm overflow-hidden">
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 px-4 py-3.5 bg-black/[0.01]">
         <h2 className="text-sm font-semibold text-black/80">{title}</h2>
         {action}
@@ -126,7 +126,7 @@ function ProductPicker({
         </div>
         <div data-lenis-prevent className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
           <table className="w-full table-fixed border-collapse text-left text-sm">
-            <thead className="sticky top-0 z-10 bg-white text-xs text-black/55">
+            <thead className="sticky top-0 z-10 bg-[#fbf7ef] text-xs text-black/55">
               <tr>
                 <th className="w-11 border-b border-black/10 px-4 py-3">
                   <input
@@ -354,7 +354,7 @@ export function CreateOrderClient() {
       <SidebarProvider className="min-h-svh">
         <AppSidebar />
         <SidebarInset>
-          <main className="min-h-full flex-1 bg-[#f5f5f5] p-4 text-black sm:p-5">
+          <main className="min-h-full flex-1 bg-[#f3f0ea] p-4 text-black sm:p-5">
             <header className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <h1 className="flex items-center gap-2 text-lg font-semibold">
@@ -588,7 +588,7 @@ export function CreateOrderClient() {
                     </div>
                     <div className="flex justify-between gap-3 border-t border-black/10 pt-2.5 font-bold text-sm">
                       <dt>Total</dt>
-                      <dd className="text-[#0a7ae6]">{formatINR(subtotal)}</dd>
+                      <dd className="text-[#000000]">{formatINR(subtotal)}</dd>
                     </div>
                   </dl>
                 </Card>
